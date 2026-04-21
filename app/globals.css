@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-clinical: #2E5A88;
+  --color-paper: #F5F1E8;
+  --color-moss: #7A9A7E;
+  --color-amber: #C89968;
+  --color-alert: #B74A4A;
+  --color-charcoal: #242424;
+  --color-sage: #7A9A7E;
+  --color-cream: #F5F1E8;
+  --color-pine: #2E5A88;
+  --color-coral: #C89968;
+  --color-forest: #2E5A88;
+  --color-terracotta: #C89968;
+}
+
+html {
+  font-family: "IBM Plex Sans", "Inter", system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  color: var(--color-clinical);
+}
+
+::selection { background: var(--color-clinical); color: var(--color-paper); }
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.prose p { margin-bottom: 1.1em; line-height: 1.75; }
+.prose h2 { font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-clinical); }
+.prose h3 { font-size: 1.375rem; margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--color-clinical); }
+.prose ul, .prose ol { margin: 1em 0; padding-left: 1.5em; }
+.prose ul { list-style: disc; } .prose ol { list-style: decimal; }
+.prose a { color: var(--color-clinical); text-decoration: underline; text-underline-offset: 2px; }
+
+.font-mono, code, pre, .numeric { font-family: "IBM Plex Mono", ui-monospace, monospace; }
