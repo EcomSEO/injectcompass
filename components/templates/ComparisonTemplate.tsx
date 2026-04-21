@@ -94,6 +94,8 @@ export function ComparisonTemplate({ post }: { post: Post }) {
           </section>
         )}
 
+        <PostBodyRenderer slug={post.slug} />
+
         {post.faq && post.faq.length > 0 && (
           <section className="mt-10">
             <h2 className="font-serif text-2xl text-forest mb-3">
