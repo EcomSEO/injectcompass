@@ -8,6 +8,7 @@ import { AuthorBio } from "../AuthorBio";
 import { RelatedPosts } from "../RelatedPosts";
 import { SourcesList } from "../SourcesList";
 import { EmailCapture } from "../EmailCapture";
+import { PostBodyRenderer } from "../PostBodyRenderer";
 import { PostReviewStamp } from "../MedicalDisclaimer";
 import { ArticleJsonLd } from "../schema/ArticleJsonLd";
 import { BreadcrumbJsonLd } from "../schema/BreadcrumbJsonLd";
@@ -53,13 +54,23 @@ export function ClusterTemplate({ post }: { post: Post }) {
           {post.description}
         </p>
 
-        <Callout variant="note" title="Status">
-          Stub. The direct-answer paragraph, body, and FAQ land once the draft clears review.
-        </Callout>
+        <PostBodyRenderer slug={post.slug} />
 
-        <div className="prose prose-lg mt-8 text-charcoal">
-          <p className="text-charcoal/60 italic">TODO: draft body per brief.</p>
-        </div>
+        {post.faq && post.faq.length > 0 && (
+          <section className="mt-10">
+            <h2 className="font-serif text-2xl text-clinical mb-3">
+              Frequently asked questions
+            </h2>
+            <div className="space-y-4">
+              {post.faq.map((f, i) => (
+                <div key={i}>
+                  <h3 className="font-serif text-lg text-clinical">{f.q}</h3>
+                  <p className="text-charcoal/80">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <SourcesList sources={post.sources ?? []} />
         <AuthorBio />

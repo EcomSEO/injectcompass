@@ -4,11 +4,11 @@ import { relatedPosts } from "@/lib/content/posts";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { ReviewStamp } from "../ReviewStamp";
 import { AffiliateDisclosure } from "../AffiliateDisclosure";
-import { Callout } from "../Callout";
 import { AuthorBio } from "../AuthorBio";
 import { RelatedPosts } from "../RelatedPosts";
 import { SourcesList } from "../SourcesList";
 import { EmailCapture } from "../EmailCapture";
+import { PostBodyRenderer } from "../PostBodyRenderer";
 import { PostReviewStamp } from "../MedicalDisclaimer";
 import { ArticleJsonLd } from "../schema/ArticleJsonLd";
 import { BreadcrumbJsonLd } from "../schema/BreadcrumbJsonLd";
@@ -94,16 +94,6 @@ export function ComparisonTemplate({ post }: { post: Post }) {
           </section>
         )}
 
-        <section className="mt-12">
-          <h2 className="font-serif text-2xl text-forest mb-3">How we tested</h2>
-          <p className="text-charcoal/80">TODO: methodology section (per brief).</p>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="font-serif text-2xl text-forest mb-3">What to look for</h2>
-          <p className="text-charcoal/80">TODO: buyer&apos;s criteria section.</p>
-        </section>
-
         {post.faq && post.faq.length > 0 && (
           <section className="mt-10">
             <h2 className="font-serif text-2xl text-forest mb-3">
@@ -119,11 +109,6 @@ export function ComparisonTemplate({ post }: { post: Post }) {
             </div>
           </section>
         )}
-
-        <Callout variant="note" title="Status">
-          This comparison is a stub. Product rankings, test methodology, and
-          affiliate links will populate once the brief clears editorial review.
-        </Callout>
 
         <SourcesList sources={post.sources ?? []} />
         <AuthorBio />
