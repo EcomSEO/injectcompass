@@ -1,4 +1,6 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useRef, type ReactNode } from "react";
 
 /**
  * ClinicalCallout — InjectCompass safety-callout system.
@@ -8,8 +10,10 @@ import type { ReactNode } from "react";
  *   variant="check" — stone. "When in doubt, check." Measured caution.
  *   variant="caution" — amber. Pause-and-check. A documented edge case.
  *
- * This is the component that replaces generic <Callout>. Use it wherever a
- * safety signal matters.
+ * The "stop" variant is additionally wired to flash its border once, at 0.6s,
+ * the first time it enters the viewport. Subsequent scrolls do nothing — the
+ * reader has already seen it. Respects prefers-reduced-motion (CSS neutralises
+ * the animation).
  */
 
 type Variant = "stop" | "tip" | "check" | "caution";
@@ -128,10 +132,36 @@ export function ClinicalCallout({
   children: ReactNode;
 }) {
   const c = config[variant];
+  const ref = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (variant !== "stop") return;
+    const node = ref.current;
+    if (!node) return;
+    if (typeof IntersectionObserver === "undefined") return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in-view-once");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.35, rootMargin: "0px 0px -10% 0px" },
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, [variant]);
+
+  const stopClass = variant === "stop" ? "callout-stop" : "";
+
   return (
     <aside
+      ref={ref}
       role="note"
-      className={`my-7 border-l-[3px] ${c.border} ${c.bg} pl-5 pr-5 py-5 rounded-r-sm`}
+      className={`my-7 border-l-[3px] ${c.border} ${c.bg} pl-5 pr-5 py-5 rounded-r-sm ${stopClass}`}
     >
       <div className="flex items-center gap-2.5 mb-2">
         <span className="shrink-0">{c.icon}</span>

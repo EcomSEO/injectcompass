@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { DotRule, ClinicalRule } from "@/components/editorial/DotRule";
 import { RankNumeral } from "@/components/editorial/RankNumeral";
 import { EmailCapture } from "@/components/EmailCapture";
+import { ScrollReveal, AnimatedHairline } from "@/components/editorial/ScrollReveal";
 
 const typeLabel: Record<string, string> = {
   pillar: "Guide",
@@ -44,22 +45,26 @@ export default function HomePage() {
   return (
     <main>
       {/* === HERO: clinical-reference front page === */}
-      <section className="border-b border-clinical/15">
+      {/* Crosshair cursor over the hero — echoes the wordmark mark.
+          Staggered page-load reveal: eyebrow → headline → body → CTAs → aside. */}
+      <section className="cursor-crosshair border-b border-clinical/15">
         <div className="mx-auto max-w-6xl px-6 pt-14 md:pt-20 pb-14 md:pb-20">
           <div className="grid md:grid-cols-12 gap-10 items-start">
-            <div className="md:col-span-8 fade-up">
-              <Eyebrow tone="clinical">
-                Reference No. 01 · The Launch Edition
-              </Eyebrow>
-              <h1 className="display-headline text-clinical-deep mt-5 text-[2.6rem] sm:text-5xl md:text-[4rem] leading-[1.04]">
+            <div className="md:col-span-8">
+              <div className="reveal-masthead-0">
+                <Eyebrow tone="clinical">
+                  Reference No. 01 · The Launch Edition
+                </Eyebrow>
+              </div>
+              <h1 className="reveal-masthead-1 display-headline text-clinical-deep mt-5 text-[2.6rem] sm:text-5xl md:text-[4rem] leading-[1.04]">
                 Injections, <em className="not-italic text-clinical">done right.</em>
               </h1>
-              <p className="mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55]">
+              <p className="reveal-masthead-2 mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55]">
                 Step-numbered technique, reconstitution math, calculators, and
                 printable cheat sheets — for people prescribed injectable
                 medications. Cited. Clinical. No drama.
               </p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <div className="reveal-masthead-3 mt-9 flex flex-wrap gap-3">
                 <Link href="/peptide-calculator" className="btn-primary">
                   Open the Peptide Calculator <span aria-hidden>→</span>
                 </Link>
@@ -70,7 +75,7 @@ export default function HomePage() {
             </div>
 
             {/* "In this reference" sidebar */}
-            <aside className="md:col-span-4 md:pl-8 md:border-l md:border-clinical/15 fade-up-delay-1">
+            <aside className="reveal-masthead-4 md:col-span-4 md:pl-8 md:border-l md:border-clinical/15">
               <div className="eyebrow text-stone mb-4">In this reference</div>
               <ul className="space-y-4">
                 {[featured, ...latestPosts(4).filter((p) => p.slug !== featured?.slug)]
@@ -104,9 +109,10 @@ export default function HomePage() {
       </section>
 
       {/* === CALCULATOR GRID — the signature assets, above the fold === */}
-      <section id="tools" className="border-b border-clinical/15 bg-paper">
+      {/* Calculator zone also gets the crosshair cursor — this is the heart of the site. */}
+      <section id="tools" className="cursor-crosshair border-b border-clinical/15 bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <div className="flex items-end justify-between flex-wrap gap-3 mb-10">
+          <ScrollReveal as="div" className="reveal flex items-end justify-between flex-wrap gap-3 mb-10">
             <div>
               <Eyebrow tone="clinical">The Calculators</Eyebrow>
               <h2 className="font-serif text-3xl md:text-4xl text-clinical-deep mt-3 leading-tight">
@@ -118,8 +124,9 @@ export default function HomePage() {
                 calculated tick mark, and a "verify with your prescriber" note
                 beside every output.
               </p>
+              <AnimatedHairline className="mt-6 max-w-sm" />
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-0 border-t border-clinical/20">
             {tools.map((tool, i) => (
@@ -151,7 +158,7 @@ export default function HomePage() {
       {/* === START HERE — for Rachel, the scared first-timer === */}
       <section id="start-here" className="border-b border-clinical/15">
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <div className="grid md:grid-cols-12 gap-10 items-start">
+          <ScrollReveal as="div" className="reveal grid md:grid-cols-12 gap-10 items-start">
             <div className="md:col-span-5">
               <Eyebrow tone="moss">Start here</Eyebrow>
               <h2 className="font-serif text-3xl md:text-4xl text-clinical-deep mt-3 leading-[1.1]">
@@ -191,19 +198,20 @@ export default function HomePage() {
                 </span>
               </Link>
             </article>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* === THE FIVE HUBS — clinical index === */}
       <section id="hubs" className="border-b border-clinical/15">
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+          <ScrollReveal as="div" className="reveal flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
               <Eyebrow tone="clinical">The table of contents</Eyebrow>
               <h2 className="font-serif text-3xl md:text-4xl text-clinical-deep mt-3 leading-tight">
                 Five hubs. Cited, step-numbered, printable.
               </h2>
+              <AnimatedHairline className="mt-4 max-w-xs" />
             </div>
             <Link
               href="/about"
@@ -211,7 +219,7 @@ export default function HomePage() {
             >
               Why we write it this way →
             </Link>
-          </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-0 border-t border-clinical/20">
             {hubs.map((hub, i) => (
@@ -241,14 +249,15 @@ export default function HomePage() {
       {/* === LATEST — editorial index === */}
       <section className="border-b border-clinical/15">
         <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+          <ScrollReveal as="div" className="reveal flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
               <Eyebrow tone="clinical">The Latest</Eyebrow>
               <h2 className="font-serif text-3xl md:text-4xl text-clinical-deep mt-3 leading-tight">
                 New references, freshly cited.
               </h2>
+              <AnimatedHairline className="mt-4 max-w-xs" />
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-12 gap-10">
             {recent[0] && (

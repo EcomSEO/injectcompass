@@ -1,10 +1,17 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useRef, type ReactNode } from "react";
 
 /**
  * TechniqueCard — InjectCompass signature component.
  * A numbered-step card with an illustration slot, gauge/length/site
  * callouts, and a "common mistakes" section. Blue accent bar at the left
  * mimics a clinical reference slip.
+ *
+ * When the card enters the viewport, each step reveals sequentially with a
+ * clinical-blue hairline drawing from left, and each step numeral
+ * (01, 02, 03) fades in one at a time. Evokes a clinician reading a
+ * protocol step by step. Respects prefers-reduced-motion via CSS.
  */
 
 type TechniqueStep = {
@@ -32,8 +39,35 @@ export function TechniqueCard({
   illustration?: ReactNode;
   footnote?: string;
 }) {
+  const ref = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    if (typeof IntersectionObserver === "undefined") {
+      node.classList.add("tc-in-view");
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("tc-in-view");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -6% 0px" },
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <article className="my-10 relative bg-paper border border-clinical/25 rounded-sm overflow-hidden">
+    <article
+      ref={ref}
+      className="my-10 relative bg-paper border border-clinical/25 rounded-sm overflow-hidden"
+    >
       {/* Solid blue accent bar at left — the "clinical" signature. */}
       <span aria-hidden className="absolute top-0 left-0 w-1.5 h-full bg-clinical" />
 
@@ -61,11 +95,15 @@ export function TechniqueCard({
         )}
 
         <div className="mt-6 grid md:grid-cols-[1fr_auto] gap-8">
-          {/* Numbered steps */}
-          <ol className="space-y-5">
-            {steps.map((step) => (
-              <li key={step.n} className="grid grid-cols-[auto_1fr] gap-5">
-                <span className="step-numeral pt-1 tnum">
+          {/* Numbered steps — each staggers in as the card scrolls into view. */}
+          <ol className="space-y-6">
+            {steps.map((step, i) => (
+              <li
+                key={step.n}
+                className="tc-step grid grid-cols-[auto_1fr] gap-5"
+                style={{ ["--i" as string]: i } as React.CSSProperties}
+              >
+                <span className="step-numeral pt-1 tnum tc-step-numeral">
                   {String(step.n).padStart(2, "0")}
                 </span>
                 <div>
@@ -75,6 +113,8 @@ export function TechniqueCard({
                   <p className="mt-1.5 text-[15px] text-charcoal/85 leading-relaxed">
                     {step.detail}
                   </p>
+                  {/* Clinical-blue hairline drawing in from the left. */}
+                  <span aria-hidden className="tc-step-rule mt-4" />
                 </div>
               </li>
             ))}

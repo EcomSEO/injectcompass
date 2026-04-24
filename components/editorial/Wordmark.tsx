@@ -33,7 +33,7 @@ export function Wordmark({
           height: size === "sm" ? "18px" : size === "lg" || size === "xl" ? "26px" : "20px",
         }}
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-clinical w-full h-full">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-clinical w-full h-full crosshair-calibrate">
           <circle cx="12" cy="12" r="10.5" />
           <line x1="12" y1="2" x2="12" y2="22" />
           <line x1="2" y1="12" x2="22" y2="12" />

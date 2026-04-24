@@ -6,6 +6,7 @@ import { hubs } from "@/lib/content/hubs";
 import { Wordmark } from "./editorial/Wordmark";
 import { Dateline } from "./editorial/Dateline";
 import { MedicalDisclaimerStrip } from "./editorial/MedicalDisclaimerStrip";
+import { ReadingProgressBar } from "./editorial/ReadingProgressBar";
 
 /**
  * Clinical-reference Header.
@@ -28,7 +29,10 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-paper-soft/95 backdrop-blur sticky top-0 z-40 border-b border-clinical/15">
+    <header className="relative bg-paper-soft/95 backdrop-blur sticky top-0 z-40 border-b border-clinical/15">
+      {/* Reading progress — thin clinical-blue fill across the top of the masthead. */}
+      <ReadingProgressBar />
+
       {/* 1. Medical disclaimer — always above the masthead. */}
       <MedicalDisclaimerStrip />
 
@@ -153,8 +157,10 @@ export function Header() {
             About
           </Link>
 
-          <Link href="/newsletter" className="btn-primary !py-2.5 !px-4 !text-sm">
-            Cheat sheet →
+          <Link href="/newsletter" className="btn-cheatsheet">
+            <span aria-hidden className="num text-[0.7rem] text-clinical/60">{"//"}</span>
+            Cheat sheet
+            <span aria-hidden>→</span>
           </Link>
         </nav>
 

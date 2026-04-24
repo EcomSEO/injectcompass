@@ -39,15 +39,30 @@ html {
   font-feature-settings: "ss01", "cv11";
 }
 
+/*
+ * Clinical chart-paper grid, fixed behind everything.
+ * Faint paper-rule lines at ~4% opacity on a 28px grid — evokes a real
+ * patient-information leaflet without ever becoming literal.
+ * The body sits above it, translucent, with a soft clinical-blue radial
+ * wash toward the top that fades into the cream below.
+ */
 body {
+  position: relative;
   background-color: var(--color-paper-soft);
-  /* Subtle blue-grid wash — evokes a lined reference sheet without being literal */
   background-image:
-    linear-gradient(
-      to bottom,
-      rgba(46, 90, 136, 0.015) 0,
-      rgba(46, 90, 136, 0) 320px
-    );
+    /* Soft radial wash — clinical-blue fading into the paper ground */
+    radial-gradient(
+      ellipse 900px 560px at 50% -80px,
+      rgba(46, 90, 136, 0.10) 0%,
+      rgba(46, 90, 136, 0.045) 32%,
+      rgba(46, 90, 136, 0) 70%
+    ),
+    /* The chart-paper grid — paper-rule ink on cream */
+    linear-gradient(to right, rgba(46, 90, 136, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46, 90, 136, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+  background-attachment: fixed, fixed, fixed;
+  background-position: top center, 0 0, 0 0;
   color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,6 +81,42 @@ h1, h2, h3, h4, h5 {
 ::selection {
   background: var(--color-clinical);
   color: var(--color-paper);
+}
+::-moz-selection {
+  background: var(--color-clinical);
+  color: var(--color-paper);
+}
+
+/* Thin clinical-on-cream scrollbar. Firefox uses scrollbar-* shorthand. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(46, 90, 136, 0.45) rgba(245, 241, 232, 0.6);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(245, 241, 232, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 90, 136, 0.35);
+  border: 2px solid var(--color-paper-soft);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 90, 136, 0.6);
+}
+
+/*
+ * Custom crosshair cursor — used over the hero and calculator interactive
+ * zones via .cursor-crosshair. Subtle clinical-blue, echoes the wordmark's
+ * crosshair mark. Falls back to `crosshair` on older engines.
+ */
+.cursor-crosshair,
+.cursor-crosshair * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><circle cx='14' cy='14' r='11' fill='none' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='14' y1='2' x2='14' y2='26' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='2' y1='14' x2='26' y2='14' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><circle cx='14' cy='14' r='1.6' fill='%232E5A88'/></svg>") 14 14, crosshair;
 }
 
 /* === Editorial utilities — clinical reference === */
@@ -244,7 +295,7 @@ h1, h2, h3, h4, h5 {
   border: 0;
 }
 
-/* Nav link — clinical blue hover underline, not flashy. */
+/* Nav link — clinical-blue hairline drawing in from the left on hover. */
 .nav-link {
   position: relative;
   color: var(--color-clinical-deep);
@@ -261,7 +312,7 @@ h1, h2, h3, h4, h5 {
   background: var(--color-clinical);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .nav-link:hover::after,
@@ -281,11 +332,15 @@ h1, h2, h3, h4, h5 {
   font-size: 0.9375rem;
   letter-spacing: 0.005em;
   border-radius: 2px;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.08s ease;
 }
 
 .btn-primary:hover {
   background: var(--color-clinical-deep);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
 }
 
 .btn-secondary {
@@ -299,12 +354,57 @@ h1, h2, h3, h4, h5 {
   font-weight: 500;
   font-size: 0.9375rem;
   border-radius: 2px;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.08s ease;
 }
 
 .btn-secondary:hover {
   background: var(--color-clinical);
   color: var(--color-paper);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+}
+
+/*
+ * "Cheat sheet" header CTA — paper-ruled border that briefly highlights
+ * clinical-blue on hover. Used on the header newsletter button.
+ */
+.btn-cheatsheet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem;
+  background: var(--color-paper-soft);
+  color: var(--color-clinical-deep);
+  border: 1px solid var(--color-paper-rule);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
+  position: relative;
+  transition: border-color 0.2s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.btn-cheatsheet::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed rgba(46, 90, 136, 0.25);
+  border-radius: 1px;
+  pointer-events: none;
+  transition: border-color 0.2s ease;
+}
+
+.btn-cheatsheet:hover {
+  border-color: var(--color-clinical);
+  color: var(--color-clinical);
+  background: var(--color-clinical-tint);
+}
+
+.btn-cheatsheet:hover::before {
+  border-color: rgba(46, 90, 136, 0.5);
 }
 
 /* Tier badge (used on ranked reference products). */
@@ -367,11 +467,18 @@ h1, h2, h3, h4, h5 {
 /* Print-ready adjustments — tech cards literally are patient handouts. */
 @media print {
   .no-print { display: none !important; }
-  body { background: #fff; }
+  body {
+    background: #fff;
+    background-image: none;
+  }
   .card-clinical { break-inside: avoid; }
 }
 
-/* Animation — subtle */
+/* ============================================================ */
+/* MOTION                                                        */
+/* ============================================================ */
+
+/* Staggered fade-up for page load (masthead strip → dateline → wordmark → headline). */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -380,3 +487,198 @@ h1, h2, h3, h4, h5 {
 .fade-up { animation: fadeUp 0.5s ease-out both; }
 .fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
 .fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
+
+/* Longer-form staggered page-load reveal — used to walk the reader through
+ * the masthead like a clinician walking through a checklist. */
+@keyframes clinicalReveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-masthead-0 { animation: clinicalReveal 0.45s ease-out 0s both; }
+.reveal-masthead-1 { animation: clinicalReveal 0.45s ease-out 0.15s both; }
+.reveal-masthead-2 { animation: clinicalReveal 0.5s ease-out 0.32s both; }
+.reveal-masthead-3 { animation: clinicalReveal 0.55s ease-out 0.52s both; }
+.reveal-masthead-4 { animation: clinicalReveal 0.55s ease-out 0.72s both; }
+
+/* Scroll-triggered reveal — JS toggles .in-view. */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Clinical hairline — animated left-to-right scale when in view. */
+.hairline,
+.clinical-rule {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: rgba(46, 90, 136, 0.28);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hairline.in-view,
+.clinical-rule.in-view {
+  transform: scaleX(1);
+}
+
+/* TechniqueCard step draw-in. Each <li> gets a staggered delay via --i. */
+.tc-step {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+.tc-step .tc-step-rule {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(46, 90, 136, 0.28);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 110ms + 60ms);
+}
+.tc-step-numeral {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  transition-delay: calc(var(--i, 0) * 110ms + 150ms);
+}
+
+.tc-in-view .tc-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tc-in-view .tc-step .tc-step-rule { transform: scaleX(1); }
+.tc-in-view .tc-step-numeral { opacity: 1; }
+
+/* ClinicalCallout — "stop" variant one-time border flash on first reveal. */
+@keyframes stopFlash {
+  0%   { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 0 rgba(183, 74, 74, 0); }
+  25%  { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 4px rgba(183, 74, 74, 0.18); }
+  100% { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 0 rgba(183, 74, 74, 0); }
+}
+
+.callout-stop.in-view-once {
+  animation: stopFlash 0.6s ease-out 1;
+}
+
+/* Reading progress bar on masthead — JS sets --progress from 0→1. */
+.reading-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 50;
+}
+.reading-progress-fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--color-clinical);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 0.08s linear;
+}
+
+/* Header crosshair — one-shot 90° rotation on page load. */
+@keyframes crosshairCalibrate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}
+
+.crosshair-calibrate {
+  animation: crosshairCalibrate 3.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+  transform-origin: center;
+}
+
+/* EmailCapture focus affordance. */
+.email-field {
+  position: relative;
+}
+.email-field input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.email-field::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-clinical);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  pointer-events: none;
+}
+.email-field:focus-within::after {
+  transform: scaleX(1);
+}
+.email-field:focus-within input {
+  border-color: var(--color-clinical);
+  box-shadow: 0 0 0 3px rgba(46, 90, 136, 0.15);
+}
+
+/* ============================================================ */
+/* REDUCED MOTION                                                */
+/* ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-up,
+  .fade-up-delay-1,
+  .fade-up-delay-2,
+  .reveal-masthead-0,
+  .reveal-masthead-1,
+  .reveal-masthead-2,
+  .reveal-masthead-3,
+  .reveal-masthead-4,
+  .reveal,
+  .tc-step,
+  .tc-step-numeral {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hairline,
+  .clinical-rule,
+  .tc-step .tc-step-rule {
+    transform: scaleX(1) !important;
+  }
+
+  .crosshair-calibrate {
+    animation: none !important;
+    transform: rotate(90deg) !important;
+  }
+
+  .callout-stop.in-view-once {
+    animation: none !important;
+  }
+}

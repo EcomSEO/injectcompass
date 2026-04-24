@@ -48,15 +48,17 @@ export function EmailCapture({
             <label htmlFor="email" className="sr-only">
               Email address
             </label>
-            <input
-              id="email"
-              type="email"
-              required
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 rounded-sm border border-clinical/25 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-clinical/40"
-            />
+            <div className="email-field flex-1 relative">
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full rounded-sm border border-clinical/25 border-b-paper-rule px-4 py-3 bg-white focus:outline-none"
+              />
+            </div>
             <button
               type="submit"
               disabled={status === "loading"}

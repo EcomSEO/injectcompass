@@ -113,6 +113,16 @@ export default function NotFound() {
             InjectCompass &middot; Reference not found &middot;{" "}
             <span className="num normal-case tracking-normal">404</span>
           </p>
+
+          {/* Clinical-book footer: fake chart-paper pagination, monospace, stone. */}
+          <div
+            aria-hidden
+            className="mt-10 flex items-center gap-3 num text-[11px] tracking-[0.14em] uppercase text-stone/80"
+          >
+            <span className="h-px flex-1 bg-stone/20" />
+            <span>404 &middot; page 404 of 404</span>
+            <span className="h-px flex-1 bg-stone/20" />
+          </div>
         </div>
       </section>
     </main>

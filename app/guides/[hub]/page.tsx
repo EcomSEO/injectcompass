@@ -10,6 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { ClinicalRule, DotRule } from "@/components/editorial/DotRule";
 import { RankNumeral } from "@/components/editorial/RankNumeral";
+import { ScrollReveal, AnimatedHairline } from "@/components/editorial/ScrollReveal";
 
 const typeLabel: Record<string, string> = {
   pillar: "Guide",
@@ -70,7 +71,7 @@ export default async function HubPage({
 
             <div className="mt-8 grid md:grid-cols-12 gap-10 items-end">
               <div className="md:col-span-8">
-                <div className="flex items-center gap-4">
+                <div className="reveal-masthead-0 flex items-center gap-4">
                   <span className="rank-numeral !text-[3rem]">
                     {String(hubIndex + 1).padStart(2, "0")}
                   </span>
@@ -78,14 +79,14 @@ export default async function HubPage({
                     Hub {hubIndex + 1} of {hubs.length}
                   </Eyebrow>
                 </div>
-                <h1 className="display-headline text-clinical-deep mt-3 text-[2.4rem] md:text-[3.4rem] leading-[1.04]">
+                <h1 className="reveal-masthead-1 display-headline text-clinical-deep mt-3 text-[2.4rem] md:text-[3.4rem] leading-[1.04]">
                   {hub.name}
                 </h1>
-                <p className="mt-6 font-serif italic text-xl md:text-[1.4rem] text-charcoal/80 max-w-2xl leading-[1.4]">
+                <p className="reveal-masthead-2 mt-6 font-serif italic text-xl md:text-[1.4rem] text-charcoal/80 max-w-2xl leading-[1.4]">
                   {hub.oneLiner}
                 </p>
               </div>
-              <div className="md:col-span-4 md:pl-6 md:border-l md:border-clinical/15">
+              <div className="reveal-masthead-3 md:col-span-4 md:pl-6 md:border-l md:border-clinical/15">
                 <Eyebrow tone="stone">Hub thesis</Eyebrow>
                 <p className="mt-3 text-[14.5px] text-charcoal/85 leading-relaxed">
                   {hub.thesis}
@@ -142,14 +143,15 @@ export default async function HubPage({
         {comparisons.length > 0 && (
           <section className="border-b border-clinical/15">
             <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-              <div className="flex items-end justify-between flex-wrap gap-3 mb-8">
+              <ScrollReveal as="div" className="reveal flex items-end justify-between flex-wrap gap-3 mb-8">
                 <div>
                   <Eyebrow tone="clinical">Reference comparisons</Eyebrow>
                   <h2 className="font-serif text-3xl md:text-4xl text-clinical-deep mt-3 leading-tight">
                     What the literature compares.
                   </h2>
+                  <AnimatedHairline className="mt-4 max-w-xs" />
                 </div>
-              </div>
+              </ScrollReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-clinical/20">
                 {comparisons.map((p, i) => (
                   <Link
