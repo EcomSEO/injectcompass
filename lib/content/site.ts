@@ -12,6 +12,6 @@ export const SITE = {
     "Practical injection technique, reconstitution math, calculators, and supply guides for people prescribed injectable medications. Patient-education only.",
   author: "The InjectCompass Editorial Team",
   email: "hello@injectcompass.com",
-  launched: false,
+  launched: true,
   requiresMedicalDisclaimer: true,
 } as const;
