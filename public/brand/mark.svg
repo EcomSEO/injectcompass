@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60" role="img" aria-label="InjectCompass mark">
+  <title>InjectCompass</title>
+  <circle cx="30" cy="30" r="18" fill="none" stroke="#2E5A88" stroke-width="1.6"/>
+  <circle cx="30" cy="30" r="10" fill="none" stroke="#2E5A88" stroke-width="1" opacity="0.55"/>
+  <line x1="30" y1="6" x2="30" y2="20" stroke="#2E5A88" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="30" y1="40" x2="30" y2="54" stroke="#2E5A88" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="6" y1="30" x2="20" y2="30" stroke="#2E5A88" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="40" y1="30" x2="54" y2="30" stroke="#2E5A88" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="30" cy="30" r="2.2" fill="#2E5A88"/>
+</svg>

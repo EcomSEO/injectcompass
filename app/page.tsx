@@ -61,8 +61,9 @@ export default function HomePage() {
               </h1>
               <p className="reveal-masthead-2 mt-7 text-lg md:text-xl text-charcoal/85 max-w-2xl leading-[1.55]">
                 Step-numbered technique, reconstitution math, calculators, and
-                printable cheat sheets — for people prescribed injectable
-                medications. Cited. Clinical. No drama.
+                printable cheat sheets for people prescribed injectable
+                medications. Every procedure is cited to the nursing-education
+                literature or the manufacturer package insert.
               </p>
               <div className="reveal-masthead-3 mt-9 flex flex-wrap gap-3">
                 <Link href="/peptide-calculator" className="btn-primary">
@@ -119,10 +120,10 @@ export default function HomePage() {
                 Safety-critical math, unit-tested.
               </h2>
               <p className="mt-3 text-charcoal/80 max-w-2xl text-[15.5px] leading-relaxed">
-                Every calculator on this site has a tested pure-function math
-                library, a visual U-100 insulin syringe that highlights the
-                calculated tick mark, and a "verify with your prescriber" note
-                beside every output.
+                Every calculator on this site runs on a tested pure-function
+                math library. The output is paired with a visual U-100 insulin
+                syringe that highlights the calculated tick mark, and a "verify
+                with your prescriber" note sits beside every number.
               </p>
               <AnimatedHairline className="mt-6 max-w-sm" />
             </div>
@@ -165,11 +166,10 @@ export default function HomePage() {
                 If you're new to injecting.
               </h2>
               <p className="mt-5 text-charcoal/80 text-[15.5px] leading-relaxed">
-                The first subcutaneous injection is about 90 seconds of actual
-                injecting and a lot of overthinking beforehand. We've tried to
-                strip the overthinking out — with a seven-step procedure, a
-                visual syringe, and a printable one-pager you can tape to the
-                fridge.
+                The first subcutaneous injection takes about 90 seconds of
+                actual injecting, plus a lot of overthinking beforehand. Our
+                pillar guide walks you through the seven steps, with a visual
+                syringe and a printable one-pager you can tape to the fridge.
               </p>
             </div>
 
@@ -342,9 +342,10 @@ export default function HomePage() {
                 Triangulated sources.
               </h3>
               <p className="text-paper/85 text-[14.5px] leading-relaxed">
-                Published nursing-education literature, manufacturer package
-                inserts, peer-reviewed injection-technique research. At least
-                two independent sources before we publish.
+                We work from published nursing-education literature,
+                manufacturer package inserts, and peer-reviewed injection-
+                technique research. At least two independent sources have to
+                agree before a post goes live.
               </p>
             </div>
             <div>
@@ -353,10 +354,10 @@ export default function HomePage() {
                 Credentialed review.
               </h3>
               <p className="text-paper/85 text-[14.5px] leading-relaxed">
-                Launch content is reviewed by The Editorial Team against
-                published best practice. A named RN, NP, or PharmD joins the
-                masthead by month 6 and their review note appears on every
-                technique post thereafter.
+                The Editorial Team reviews launch content against published
+                best practice. A named RN, NP, or PharmD joins the masthead by
+                month 6, and their review note appears on every technique post
+                after that.
               </p>
             </div>
             <div>
@@ -367,7 +368,7 @@ export default function HomePage() {
               <p className="text-paper/85 text-[14.5px] leading-relaxed">
                 When a manufacturer Instructions for Use exists for a specific
                 pen, we follow it. When the IFU updates, we version the post.
-                We never substitute our judgment for what came in the box.
+                Our judgment never replaces what came in the box.
               </p>
             </div>
           </div>

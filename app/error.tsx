@@ -38,8 +38,8 @@ export default function Error({
               <div className="mt-8 max-w-2xl text-charcoal/85 text-[17px] leading-[1.7] space-y-4">
                 <p>
                   The page you requested didn&apos;t finish loading. This is
-                  our problem, not yours, and it doesn&apos;t affect any
-                  information you&apos;ve saved or printed from this site.
+                  our problem, not yours. It does not affect any information
+                  you have saved or printed from this site.
                 </p>
                 <p>
                   Try reloading the page first. If it happens again, the home

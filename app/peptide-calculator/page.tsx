@@ -45,9 +45,9 @@ export default function PeptideCalculatorPage() {
 
         <p className="mt-7 text-[1.08rem] md:text-[1.14rem] leading-[1.65] text-charcoal/85 max-w-[62ch]">
           Enter the amount of peptide in your vial, the volume of bacteriostatic
-          water you're adding, and your target dose. The calculator returns the
-          number of units to draw on a U-100 insulin syringe, with the exact
-          tick mark highlighted on the visual syringe.
+          water you are adding, and your target dose. The calculator returns
+          the number of units to draw on a U-100 insulin syringe, and the
+          visual syringe highlights the exact tick mark.
         </p>
 
         <ClinicalCallout variant="check" title="Educational reference — not medical advice">
@@ -66,17 +66,17 @@ export default function PeptideCalculatorPage() {
             The math behind the calculator
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
-            Every peptide vial is a dry powder that must be reconstituted with
-            bacteriostatic water before it can be drawn into a syringe. Once
-            reconstituted, the peptide is in solution at a concentration
-            determined by the dry amount divided by the volume of diluent
-            added, per the USP &lt;797&gt; compounded sterile preparation
-            reference.
+            A peptide vial contains a dry powder that has to be reconstituted
+            with bacteriostatic water before it can be drawn into a syringe.
+            Once reconstituted, the concentration equals the dry mass divided
+            by the volume of diluent added. This is the standard dilution
+            identity described in the USP &lt;797&gt; compounded sterile
+            preparation reference.
           </p>
           <p className="mt-4 text-charcoal/90 leading-relaxed">
-            On a U-100 insulin syringe, 100 units equal 1 millilitre. So the
+            On a U-100 insulin syringe, 100 units equals 1 millilitre. The
             number of units to draw for a given dose equals the target dose
-            divided by the concentration, scaled to the U-100 graduation.
+            divided by the concentration, then scaled to the U-100 graduation.
           </p>
 
           <div className="my-6 p-4 md:p-5 bg-paper border border-clinical/25 rounded-sm font-mono text-[13.5px] text-clinical-deep leading-loose">
@@ -115,10 +115,11 @@ export default function PeptideCalculatorPage() {
           </h2>
           <p className="text-charcoal/90 leading-relaxed">
             U-100 insulin syringes do not subdivide below 1 unit, so the
-            calculator rounds to the nearest whole unit. The unrounded value is
-            shown secondarily. When rounding creates a &gt;2% dose error, the
-            calculator displays a warning and suggests adjusting bacteriostatic
-            water volume to bring the dose onto a cleaner tick mark.
+            calculator rounds to the nearest whole unit. The unrounded value
+            appears as a secondary figure. If rounding introduces more than a
+            2% dose error, the calculator displays a warning and suggests
+            adjusting the bacteriostatic water volume to bring the dose onto a
+            cleaner tick mark.
           </p>
         </section>
 
@@ -130,11 +131,11 @@ export default function PeptideCalculatorPage() {
           <ul className="text-charcoal/90 leading-relaxed space-y-2 list-disc pl-6">
             <li>
               If units &gt; 100, the whole dose cannot be drawn on a single
-              U-100 syringe — reconstitute with less diluent, or split the
+              U-100 syringe. Reconstitute with less diluent, or split the
               dose.
             </li>
             <li>
-              If units round to 0, concentration is too low — reconstitute with
+              If units round to 0, concentration is too low. Reconstitute with
               less diluent.
             </li>
             <li>
@@ -142,7 +143,7 @@ export default function PeptideCalculatorPage() {
               to land on a cleaner mark.
             </li>
             <li>
-              If concentration &gt; 50 mg/mL, double-check inputs — that is
+              If concentration &gt; 50 mg/mL, double-check inputs. That is
               unusually high.
             </li>
           </ul>

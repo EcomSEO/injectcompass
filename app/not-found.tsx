@@ -25,15 +25,14 @@ export default function NotFound() {
               <div className="mt-8 max-w-2xl text-charcoal/85 text-[17px] leading-[1.7] space-y-4">
                 <p>
                   The link you followed points to a page we haven&apos;t
-                  published, or to an older draft we&apos;ve since archived.
+                  published, or to an older draft we have since archived.
                   Nothing is broken on your end.
                 </p>
                 <p>
-                  A few places will usually get you to what you were looking
-                  for: the five reference hubs below, the calculators in the
-                  top navigation, or the home page. If you arrived here from a
-                  bookmark, it may be worth updating it once you land on the
-                  current version of the page.
+                  The five reference hubs below will usually get you to what
+                  you were looking for. The calculators live in the top
+                  navigation. If you arrived here from a bookmark, update it
+                  once you land on the current version of the page.
                 </p>
               </div>
 

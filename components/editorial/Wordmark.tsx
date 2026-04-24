@@ -23,31 +23,35 @@ export function Wordmark({
       ? "text-lg"
       : "text-xl md:text-2xl";
 
+  const markSize =
+    size === "xl"
+      ? "h-10 w-10 md:h-12 md:w-12"
+      : size === "lg"
+      ? "h-9 w-9 md:h-10 md:w-10"
+      : size === "sm"
+      ? "h-5 w-5"
+      : "h-7 w-7 md:h-8 md:w-8";
+
   const inner = (
-    <span className={`inline-flex items-baseline gap-0 ${className}`}>
-      <span
+    <span className={`inline-flex items-center gap-2 ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/brand/mark.svg"
+        alt=""
         aria-hidden
-        className="inline-flex items-center justify-center mr-2 shrink-0"
-        style={{
-          width: size === "sm" ? "18px" : size === "lg" || size === "xl" ? "26px" : "20px",
-          height: size === "sm" ? "18px" : size === "lg" || size === "xl" ? "26px" : "20px",
-        }}
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-clinical w-full h-full crosshair-calibrate">
-          <circle cx="12" cy="12" r="10.5" />
-          <line x1="12" y1="2" x2="12" y2="22" />
-          <line x1="2" y1="12" x2="22" y2="12" />
-        </svg>
-      </span>
-      <span
-        className={`font-serif ${sizeClass} text-clinical-deep font-semibold tracking-tight`}
-      >
-        Inject
-      </span>
-      <span
-        className={`font-serif ${sizeClass} text-charcoal font-semibold tracking-tight`}
-      >
-        Compass
+        className={`${markSize} shrink-0 crosshair-calibrate`}
+      />
+      <span className="inline-flex items-baseline gap-0">
+        <span
+          className={`font-serif ${sizeClass} text-clinical-deep font-semibold tracking-tight`}
+        >
+          Inject
+        </span>
+        <span
+          className={`font-serif ${sizeClass} text-charcoal font-semibold tracking-tight`}
+        >
+          Compass
+        </span>
       </span>
     </span>
   );

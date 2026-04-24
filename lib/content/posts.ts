@@ -46,7 +46,7 @@ export const posts: Post[] = [
         rank: 2,
         name: "Primary output: units on a U-100 insulin syringe",
         summary:
-          "A U-100 insulin syringe is graduated such that 100 units corresponds to 1 mL. The calculator converts the computed per-dose volume to the equivalent tick mark on the barrel.",
+          "On a U-100 insulin syringe, 100 units equals 1 mL. The calculator converts the computed per-dose volume to the equivalent tick mark on the barrel.",
       },
       {
         rank: 3,
@@ -58,13 +58,13 @@ export const posts: Post[] = [
         rank: 4,
         name: "Visual syringe highlight",
         summary:
-          "An SVG representation of a 1 mL U-100 insulin syringe with the computed tick mark highlighted. Included as a visual aid for cross-checking numeric outputs.",
+          "An SVG of a 1 mL U-100 insulin syringe with the computed tick mark highlighted. It is a visual cross-check against the numeric output.",
       },
       {
         rank: 5,
         name: "Worked reference example (BPC-157, as published)",
         summary:
-          "A 5 mg vial reconstituted in 2 mL of bacteriostatic water yields a 2.5 mg/mL solution. The research literature on BPC-157 (Sikiric et al.) describes animal-model dosing in micrograms per kilogram; per-dose volumes in that literature follow from the computed concentration.",
+          "A 5 mg vial reconstituted in 2 mL of bacteriostatic water gives a 2.5 mg/mL solution. The research literature on BPC-157 (Sikiric et al.) reports animal-model dosing in micrograms per kilogram; per-dose volumes in that literature follow from the computed concentration.",
       },
       {
         rank: 6,
@@ -112,7 +112,7 @@ export const posts: Post[] = [
       },
       {
         q: "How are outputs intended to be verified?",
-        a: "Outputs are intended to be verified against the primary published source for any given protocol and, where applicable, against the manufacturer package insert. The visual syringe is provided as a cross-check against the numeric output and not as a substitute for independent verification.",
+        a: "Verify outputs against the primary published source for any given protocol and, where applicable, against the manufacturer package insert. The visual syringe is a cross-check against the numeric output, not a substitute for independent verification.",
       },
     ],
     sources: [
@@ -178,7 +178,7 @@ export const posts: Post[] = [
         rank: 4,
         name: "Pinch versus stretch",
         summary:
-          "The skin-pinch technique raises the subcutaneous layer away from underlying muscle and is described as the default approach for short (5/16\") insulin needles in lean individuals. Stretching is described for sites with abundant subcutaneous tissue and shorter needles, per Frid et al. 2016 Mayo Clinic Proceedings.",
+          "The skin-pinch technique raises the subcutaneous layer away from the underlying muscle. Frid et al. 2016 (Mayo Clinic Proceedings) describe this as the default approach for short (5/16\") insulin needles in lean individuals. The same paper describes stretching for sites with abundant subcutaneous tissue and shorter needles.",
       },
       {
         rank: 5,
@@ -408,9 +408,9 @@ export const posts: Post[] = [
       },
       {
         rank: 5,
-        name: "Gentle swirl — not shaken",
+        name: "Gentle swirl, not shaken",
         summary:
-          "The vial is swirled gently until the lyophilized powder is fully dissolved. The shake-versus-swirl distinction is described in multiple peptide-stability references; vigorous agitation is associated with denaturation of labile peptide structures in published pharmaceutical literature.",
+          "Swirl the vial gently until the lyophilized powder is fully dissolved. Peptide-stability references describe the swirl-versus-shake distinction; vigorous agitation is associated with denaturation of labile peptide structures in the published pharmaceutical literature.",
       },
       {
         rank: 6,

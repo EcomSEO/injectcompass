@@ -245,11 +245,12 @@ export default async function HubPage({
         {hubPosts.length === 0 && (
           <section className="mx-auto max-w-6xl px-6 py-20">
             <p className="text-charcoal/70 text-lg">
-              Posts land here as they clear editorial review. See the{" "}
+              Posts appear here once they clear editorial review. Until then,
+              the{" "}
               <Link href="/" className="text-clinical underline">
                 home page
               </Link>{" "}
-              for what's live today.
+              lists what is live today.
             </p>
           </section>
         )}
