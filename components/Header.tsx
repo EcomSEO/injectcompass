@@ -68,8 +68,9 @@ export function Header() {
             onMouseLeave={() => setToolsOpen(false)}
           >
             <button
+              type="button"
               onClick={() => setToolsOpen((v) => !v)}
-              className="nav-link flex items-center gap-1"
+              className="nav-link flex items-center gap-1 cursor-pointer"
               aria-expanded={toolsOpen}
               aria-haspopup="menu"
             >
@@ -113,8 +114,9 @@ export function Header() {
             onMouseLeave={() => setGuidesOpen(false)}
           >
             <button
+              type="button"
               onClick={() => setGuidesOpen((v) => !v)}
-              className="nav-link flex items-center gap-1"
+              className="nav-link flex items-center gap-1 cursor-pointer"
               aria-expanded={guidesOpen}
               aria-haspopup="menu"
             >
@@ -165,11 +167,14 @@ export function Header() {
         </nav>
 
         <button
+          type="button"
           onClick={() => setMobileOpen(true)}
-          className="md:hidden text-clinical-deep"
+          className="md:hidden inline-flex items-center justify-center h-11 w-11 -mr-2 text-clinical-deep cursor-pointer rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clinical focus-visible:ring-offset-2"
           aria-label="Open menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav"
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
             <line x1="3" y1="7" x2="21" y2="7" />
             <line x1="3" y1="12" x2="21" y2="12" />
             <line x1="3" y1="17" x2="21" y2="17" />
@@ -178,15 +183,22 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-paper-soft md:hidden overflow-auto">
+        <div
+          id="mobile-nav"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+          className="fixed inset-0 z-50 bg-paper-soft md:hidden overflow-auto"
+        >
           <div className="flex items-center justify-between px-6 py-4 border-b border-clinical/15">
             <Wordmark size="sm" />
             <button
+              type="button"
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
-              className="text-clinical-deep"
+              className="inline-flex items-center justify-center h-11 w-11 -mr-2 text-clinical-deep cursor-pointer rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clinical focus-visible:ring-offset-2"
             >
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>

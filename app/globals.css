@@ -87,6 +87,23 @@ h1, h2, h3, h4, h5 {
   color: var(--color-paper);
 }
 
+/*
+ * Global keyboard-focus ring. Applies to all interactive elements so the
+ * crosshair cursor over the hero never hides the focus indicator from
+ * keyboard users. Individual components may override with their own
+ * focus-visible utilities; this is the baseline safety net.
+ */
+:where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus-visible {
+  outline: 2px solid var(--color-clinical);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default outline only when our ring is provided. */
+:where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* Thin clinical-on-cream scrollbar. Firefox uses scrollbar-* shorthand. */
 * {
   scrollbar-width: thin;
@@ -117,6 +134,32 @@ h1, h2, h3, h4, h5 {
 .cursor-crosshair,
 .cursor-crosshair * {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><circle cx='14' cy='14' r='11' fill='none' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='14' y1='2' x2='14' y2='26' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='2' y1='14' x2='26' y2='14' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><circle cx='14' cy='14' r='1.6' fill='%232E5A88'/></svg>") 14 14, crosshair;
+}
+
+/*
+ * Within a crosshair zone, interactive elements still get a pointer/text
+ * cursor so clickables feel clickable and inputs feel typable. The crosshair
+ * stays the ambient cursor; the focus ring (defined above) still appears on
+ * keyboard focus regardless of cursor.
+ */
+.cursor-crosshair a,
+.cursor-crosshair button,
+.cursor-crosshair [role="button"],
+.cursor-crosshair [role="menuitem"],
+.cursor-crosshair label {
+  cursor: pointer;
+}
+
+.cursor-crosshair input,
+.cursor-crosshair textarea,
+.cursor-crosshair select {
+  cursor: text;
+}
+
+.cursor-crosshair input[type="number"],
+.cursor-crosshair input[type="checkbox"],
+.cursor-crosshair input[type="radio"] {
+  cursor: pointer;
 }
 
 /* === Editorial utilities — clinical reference === */
@@ -332,6 +375,8 @@ h1, h2, h3, h4, h5 {
   font-size: 0.9375rem;
   letter-spacing: 0.005em;
   border-radius: 2px;
+  cursor: pointer;
+  min-height: 44px;
   transition: background 0.15s ease, transform 0.08s ease;
 }
 
@@ -354,6 +399,8 @@ h1, h2, h3, h4, h5 {
   font-weight: 500;
   font-size: 0.9375rem;
   border-radius: 2px;
+  cursor: pointer;
+  min-height: 44px;
   transition: background 0.15s ease, transform 0.08s ease;
 }
 
@@ -384,6 +431,7 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.01em;
   border-radius: 2px;
   position: relative;
+  cursor: pointer;
   transition: border-color 0.2s ease, color 0.15s ease, background 0.15s ease;
 }
 
