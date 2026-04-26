@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost, posts } from "@/lib/content/posts";
-import { PillarTemplate } from "@/components/templates/PillarTemplate";
-import { ComparisonTemplate } from "@/components/templates/ComparisonTemplate";
-import { ClusterTemplate } from "@/components/templates/ClusterTemplate";
-import { ListicleTemplate } from "@/components/templates/ListicleTemplate";
+import { ChapterTemplate } from "@/components/atlas/ChapterTemplate";
 import { pageMetadata } from "@/lib/seo";
 
 // Avoid colliding with /about, /contact, etc — static pages take precedence over this dynamic route.
@@ -59,15 +56,7 @@ export default async function PostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
-  switch (post.postType) {
-    case "pillar":
-      return <PillarTemplate post={post} />;
-    case "comparison":
-      return <ComparisonTemplate post={post} />;
-    case "listicle":
-      return <ListicleTemplate post={post} />;
-    case "cluster":
-    default:
-      return <ClusterTemplate post={post} />;
-  }
+  // All post types render through the atlas chapter shell — every post is
+  // a numbered chapter in the atlas, regardless of internal type.
+  return <ChapterTemplate post={post} />;
 }

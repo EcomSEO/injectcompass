@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Technique",
+    "navSites": "Sites",
+    "navTroubleshooting": "Dépannage",
+    "navMethodology": "Méthodologie",
+    "navPipeline": "Chantier",
+    "search": "Rechercher dans l’atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Édition 01 · Printemps 2026",
+    "subtitle": "Un atlas d’orientation pour l’injection de peptides — sites, technique, rotation et les cent petites choses qui peuvent mal tourner.",
+    "meta": "Information patient uniquement · Aucun lien vendeur · Relu sur la notice du fabricant",
+    "partI": "Fondamentaux",
+    "partII": "Sites",
+    "partIII": "Technique",
+    "partIV": "Dépannage"
+  },
+  "atlas": {
+    "tableOfContents": "Sommaire",
+    "indexHeading": "L’atlas — index",
+    "indexSubhead": "Présenté dans l’ordre où une infirmière enseignerait la matière. Les numéros de page restent stables d’une édition à l’autre.",
+    "openIndex": "Ouvrir l’index",
+    "howWeReview": "Comment nous relisons",
+    "atlasNotShelf": "Un atlas, pas une étagère d’articles.",
+    "atlasNotShelfBody": "Chaque entrée du site est un chapitre numéroté, regroupé dans l’une des quatre parties. Vous pouvez lire l’atlas de bout en bout ou ouvrir l’index et sauter directement à la page qui vous concerne."
+  },
+  "methodology": {
+    "label": "Méthodologie · Édition v1.2",
+    "title": "Comment un chapitre est écrit.",
+    "body": "Nous travaillons à partir des Instructions d’utilisation du fabricant, des recommandations actuelles du CDC et de l’OMS sur la sécurité des injections et de la littérature de formation en soins infirmiers. Deux sources indépendantes doivent concorder avant qu’un chapitre soit publié.",
+    "cta": "Lire la méthodologie v1.2"
+  },
+  "pipeline": {
+    "label": "Chantier · 8 en recherche",
+    "title": "Les chapitres en cours.",
+    "body": "Le chantier est public. Chaque chapitre en cours de recherche est listé avec son titre de travail, les questions qu’il cherche à éclaircir et les sources déjà consultées.",
+    "cta": "Ouvrir le chantier"
+  },
+  "stop": {
+    "title": "Stop · contactez votre prescripteur",
+    "body": "Rien sur InjectCompass ne remplace les instructions fournies avec votre médicament ni l’avis de la personne qui vous l’a prescrit."
+  },
+  "footer": {
+    "edition": "Atlas Édition 01",
+    "lastReviewed": "Dernière relecture",
+    "notMedicalAdvice": "Pas d’avis médical",
+    "patientEducationOnly": "Usage éducatif et information patient uniquement. Nous ne renvoyons jamais vers des vendeurs de peptides de recherche et n’acceptons aucun paiement de fabricants pharmaceutiques ou de cliniques de télémédecine."
+  }
+}

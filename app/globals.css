@@ -3,278 +3,443 @@
 @tailwind utilities;
 
 /*
- * InjectCompass — clinical-reference design system.
- * Target feel: patient-education handout × well-designed clinic waiting room.
- * Palette is from content/brand-book.md §5. Typography is IBM Plex Serif + Sans + Mono.
+ * InjectCompass — CLINICAL WAYFINDING ATLAS.
+ * Visual register: surgical atlas × transit-map IA × technical manual.
+ * Paper-white ground, ink-blue strokes, surgical-red marker accents,
+ * thin-line technical drawing aesthetic, condensed numerals, small caps.
  */
 
 :root {
   color-scheme: light;
 
-  /* Brand tokens (do not rename) */
-  --color-clinical: #2E5A88;
-  --color-clinical-deep: #1F3F60;
-  --color-clinical-tint: #E7EEF6;
-  --color-paper: #F5F1E8;       /* warm cream */
-  --color-paper-soft: #FBF8F1;  /* slightly lighter paper for body ground */
-  --color-paper-rule: #E9E2D1;
-  --color-moss: #7A9A7E;        /* success / confirm */
-  --color-amber: #C89968;       /* caution */
-  --color-alert: #B74A4A;       /* stop / call-your-prescriber */
-  --color-stone: #6B6664;
-  --color-charcoal: #242424;
+  /* Atlas tokens */
+  --color-ink: #1B3A6E;
+  --color-ink-deep: #0F2348;
+  --color-ink-soft: #3D5A87;
+  --color-paper: #FAFAF7;
+  --color-paper-warm: #F4F1E8;
+  --color-paper-rule: #E5E1D5;
+  --color-surgical: #C8463C;
+  --color-surgical-deep: #9C2F26;
+  --color-slate: #5B6470;
+  --color-slate-soft: #8A919A;
+  --color-slate-rule: #D8DCE2;
 
-  /* Legacy aliases kept for components shared with other sites */
-  --color-sage: #7A9A7E;
-  --color-cream: #F5F1E8;
-  --color-pine: #2E5A88;
-  --color-coral: #C89968;
-  --color-forest: #2E5A88;
-  --color-terracotta: #C89968;
+  /* Legacy aliases (keep so shared components still compile) */
+  --color-clinical: #1B3A6E;
+  --color-clinical-deep: #0F2348;
+  --color-clinical-tint: #E7EBF2;
+  --color-paper-soft: #FAFAF7;
+  --color-moss: #5C7A65;
+  --color-amber: #B8782F;
+  --color-alert: #C8463C;
+  --color-stone: #5B6470;
+  --color-charcoal: #1A1F2A;
+  --color-sage: #5C7A65;
+  --color-cream: #F4F1E8;
+  --color-pine: #1B3A6E;
+  --color-coral: #C8463C;
+  --color-forest: #1B3A6E;
+  --color-terracotta: #C8463C;
 }
 
 html {
-  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  font-family: "Inter Tight", "IBM Plex Sans", system-ui, sans-serif;
   scroll-behavior: smooth;
   font-feature-settings: "ss01", "cv11";
 }
 
 /*
- * Clinical chart-paper grid, fixed behind everything.
- * Faint paper-rule lines at ~4% opacity on a 28px grid — evokes a real
- * patient-information leaflet without ever becoming literal.
- * The body sits above it, translucent, with a soft clinical-blue radial
- * wash toward the top that fades into the cream below.
+ * Atlas paper ground — flat paper-white, no gradient. The blueprint grid
+ * is applied selectively only where wanted (e.g. .atlas-grid on the hero).
  */
 body {
-  position: relative;
-  background-color: var(--color-paper-soft);
-  background-image:
-    /* Soft radial wash — clinical-blue fading into the paper ground */
-    radial-gradient(
-      ellipse 900px 560px at 50% -80px,
-      rgba(46, 90, 136, 0.10) 0%,
-      rgba(46, 90, 136, 0.045) 32%,
-      rgba(46, 90, 136, 0) 70%
-    ),
-    /* The chart-paper grid — paper-rule ink on cream */
-    linear-gradient(to right, rgba(46, 90, 136, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(46, 90, 136, 0.045) 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px, 28px 28px;
-  background-attachment: fixed, fixed, fixed;
-  background-position: top center, 0 0, 0 0;
-  color: var(--color-charcoal);
+  background-color: var(--color-paper);
+  color: var(--color-ink-deep);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 17px;
+  font-size: 16.5px;
   line-height: 1.6;
 }
 
-/* Serif headlines — IBM Plex Serif. Slight letterspacing tightening, conservative. */
+/* Headings — technical sans, 400 weight, ink color, mild letter-spacing tightening. */
 h1, h2, h3, h4, h5 {
-  font-family: "IBM Plex Serif", Georgia, serif;
-  letter-spacing: -0.008em;
-  font-weight: 600;
-  color: var(--color-clinical-deep);
+  font-family: "Inter Tight", "IBM Plex Sans", system-ui, sans-serif;
+  letter-spacing: -0.012em;
+  font-weight: 500;
+  color: var(--color-ink-deep);
 }
 
 ::selection {
-  background: var(--color-clinical);
+  background: var(--color-ink);
   color: var(--color-paper);
 }
 ::-moz-selection {
-  background: var(--color-clinical);
+  background: var(--color-ink);
   color: var(--color-paper);
 }
 
-/*
- * Global keyboard-focus ring. Applies to all interactive elements so the
- * crosshair cursor over the hero never hides the focus indicator from
- * keyboard users. Individual components may override with their own
- * focus-visible utilities; this is the baseline safety net.
- */
+/* Keyboard focus baseline. */
 :where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus-visible {
-  outline: 2px solid var(--color-clinical);
+  outline: 2px solid var(--color-ink);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
-/* Remove default outline only when our ring is provided. */
-:where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus:not(:focus-visible) {
-  outline: none;
+/* Atlas blueprint grid — applied only inside .atlas-grid containers. */
+.atlas-grid {
+  background-image:
+    linear-gradient(to right, rgba(27, 58, 110, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 58, 110, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
 }
 
-/* Thin clinical-on-cream scrollbar. Firefox uses scrollbar-* shorthand. */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(46, 90, 136, 0.45) rgba(245, 241, 232, 0.6);
+.atlas-grid-fine {
+  background-image:
+    linear-gradient(to right, rgba(27, 58, 110, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 58, 110, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px, 16px 16px;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(245, 241, 232, 0.6);
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(46, 90, 136, 0.35);
-  border: 2px solid var(--color-paper-soft);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(46, 90, 136, 0.6);
-}
+/* === Atlas typography utilities === */
 
-/*
- * Custom crosshair cursor — used over the hero and calculator interactive
- * zones via .cursor-crosshair. Subtle clinical-blue, echoes the wordmark's
- * crosshair mark. Falls back to `crosshair` on older engines.
- */
-.cursor-crosshair,
-.cursor-crosshair * {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><circle cx='14' cy='14' r='11' fill='none' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='14' y1='2' x2='14' y2='26' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><line x1='2' y1='14' x2='26' y2='14' stroke='%232E5A88' stroke-width='1.2' opacity='0.85'/><circle cx='14' cy='14' r='1.6' fill='%232E5A88'/></svg>") 14 14, crosshair;
-}
-
-/*
- * Within a crosshair zone, interactive elements still get a pointer/text
- * cursor so clickables feel clickable and inputs feel typable. The crosshair
- * stays the ambient cursor; the focus ring (defined above) still appears on
- * keyboard focus regardless of cursor.
- */
-.cursor-crosshair a,
-.cursor-crosshair button,
-.cursor-crosshair [role="button"],
-.cursor-crosshair [role="menuitem"],
-.cursor-crosshair label {
-  cursor: pointer;
-}
-
-.cursor-crosshair input,
-.cursor-crosshair textarea,
-.cursor-crosshair select {
-  cursor: text;
-}
-
-.cursor-crosshair input[type="number"],
-.cursor-crosshair input[type="checkbox"],
-.cursor-crosshair input[type="radio"] {
-  cursor: pointer;
-}
-
-/* === Editorial utilities — clinical reference === */
-
-.eyebrow {
-  font-family: "IBM Plex Sans", sans-serif;
+/* Small-caps tracking label — "PART II · SITES" */
+.atlas-label {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-clinical);
+  color: var(--color-ink);
 }
 
-.eyebrow-stone { color: var(--color-stone); }
-.eyebrow-moss { color: var(--color-moss); }
-.eyebrow-amber { color: var(--color-amber); }
-.eyebrow-alert { color: var(--color-alert); }
+.atlas-label-slate { color: var(--color-slate); }
+.atlas-label-surgical { color: var(--color-surgical); }
 
-.caps-label {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-stone);
-}
-
-/* The dateline — "COMPASS · REFERENCE NO. N · APRIL 2026" — clinical masthead cue. */
-.dateline {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-stone);
-}
-
-.display-headline {
-  font-family: "IBM Plex Serif", serif;
+/* Smaller label */
+.atlas-mini {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: -0.014em;
-  line-height: 1.05;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-slate);
 }
 
-/* Numeric / dosage — always monospace. Safety-critical. */
+/* Big chapter numeral — "04" at 200px, weight 200, slate. */
+.atlas-chapter-numeral {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 200;
+  font-size: clamp(7rem, 18vw, 14rem);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--color-slate-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mid-size chapter numeral — for ChapterIndex listings. */
+.atlas-chapter-num {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-slate);
+  letter-spacing: -0.01em;
+}
+
+/* Atlas wordmark — INJECTCOMPASS condensed-feel uppercase. */
+.atlas-wordmark {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-deep);
+  text-transform: uppercase;
+}
+
+/* Atlas display headline — h1 ~36px, weight 400-500. */
+.atlas-display {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  color: var(--color-ink-deep);
+  line-height: 1.08;
+}
+
+/* Numeric / safety-critical — monospace. */
 .num, .tnum {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
 }
 
-/* Large step numeral — for technique procedures. */
-.step-numeral {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-variant-numeric: tabular-nums;
-  font-weight: 500;
-  font-size: 2.25rem;
-  line-height: 1;
-  color: var(--color-clinical);
-  letter-spacing: -0.02em;
+/* Surgical-red marker chip — used for warning numbers, footnote refs. */
+.atlas-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4em;
+  height: 1.4em;
+  padding: 0 0.4em;
+  background: var(--color-surgical);
+  color: var(--color-paper);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  border-radius: 1px;
 }
 
-/* Rank numeral (for ranked lists, hub numbers). */
-.rank-numeral {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 500;
-  color: var(--color-clinical);
-  font-variant-numeric: tabular-nums;
+/* Footnote-style superscript marker (red). */
+.atlas-fn {
+  font-size: 0.65em;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--color-surgical);
+  font-weight: 600;
+  margin-left: 0.15em;
 }
 
-/* Thin clinical ruler — the horizontal divider between reference sections. */
-.rule-clinical {
+/* === Atlas dot-leader for ChapterIndex === */
+.atlas-leader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.atlas-leader > .atlas-leader-line {
+  flex: 1;
+  border-bottom: 1px dotted rgba(27, 58, 110, 0.3);
+  position: relative;
+  top: -0.25em;
+  margin: 0 0.5rem;
+}
+
+/* === Atlas rules === */
+
+/* Thin ink rule used between sections. */
+.atlas-rule {
+  border-color: rgba(27, 58, 110, 0.2);
+}
+
+/* Section-divider with small-caps label. */
+.atlas-divider {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+  color: var(--color-slate);
 }
 
-.rule-clinical::before {
-  content: "";
-  flex: 0 0 1.75rem;
-  height: 2px;
-  background: var(--color-clinical);
-}
-
-.rule-clinical::after {
+.atlas-divider::before,
+.atlas-divider::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--color-clinical);
-  opacity: 0.2;
+  background: rgba(27, 58, 110, 0.18);
 }
 
-/* Prose body — tight reading column, serif headings with clinical-blue headings. */
-.prose { max-width: 68ch; }
+/* === Atlas buttons === */
+
+.atlas-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.15rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.atlas-btn:hover {
+  background: var(--color-ink-deep);
+}
+
+.atlas-btn:active {
+  transform: translateY(1px);
+}
+
+.atlas-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.15rem;
+  background: transparent;
+  color: var(--color-ink-deep);
+  border: 1px solid var(--color-ink);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.atlas-btn-ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* === Atlas warning callout === */
+.atlas-warning {
+  border: 1px solid var(--color-surgical);
+  border-left-width: 4px;
+  background: rgba(200, 70, 60, 0.04);
+  padding: 1.1rem 1.2rem;
+  border-radius: 1px;
+}
+
+.atlas-warning-title {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-surgical);
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === Reference leaflet (folded technical-leaflet sidebar) === */
+.atlas-leaflet {
+  border: 1px solid rgba(27, 58, 110, 0.25);
+  background: var(--color-paper-warm);
+  padding: 1.3rem 1.4rem;
+  border-radius: 1px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--color-ink-deep);
+  position: relative;
+}
+
+.atlas-leaflet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 14px 14px 0;
+  border-color: transparent var(--color-paper) transparent transparent;
+}
+
+.atlas-leaflet ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: ref;
+}
+
+.atlas-leaflet li {
+  counter-increment: ref;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.4rem;
+  padding: 0.45rem 0;
+  border-top: 1px dashed rgba(27, 58, 110, 0.18);
+}
+
+.atlas-leaflet li:first-child {
+  border-top: none;
+}
+
+.atlas-leaflet li::before {
+  content: counter(ref);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  color: var(--color-surgical);
+  font-size: 0.7rem;
+}
+
+/* === Stepper rail === */
+.atlas-stepper {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.atlas-stepper-current {
+  position: relative;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--color-surgical);
+  color: var(--color-ink-deep);
+  font-weight: 500;
+}
+
+.atlas-stepper-prev,
+.atlas-stepper-next {
+  padding-left: 0.85rem;
+  border-left: 1px solid rgba(27, 58, 110, 0.2);
+  color: var(--color-slate);
+}
+
+.atlas-stepper-prev:hover,
+.atlas-stepper-next:hover {
+  color: var(--color-ink-deep);
+  border-left-color: var(--color-ink);
+}
+
+/* === Outline rail === */
+.atlas-outline {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.atlas-outline-item {
+  display: block;
+  padding: 0.3rem 0 0.3rem 0.85rem;
+  border-left: 1px solid rgba(27, 58, 110, 0.15);
+  color: var(--color-slate);
+  transition: color 0.15s ease, border-left-color 0.15s ease;
+}
+
+.atlas-outline-item:hover {
+  color: var(--color-ink-deep);
+  border-left-color: var(--color-ink);
+}
+
+.atlas-outline-item-active {
+  color: var(--color-ink-deep);
+  border-left-color: var(--color-surgical);
+  font-weight: 500;
+}
+
+/* === Prose body — narrow column (max-w-2xl), atlas voice. === */
+.prose { max-width: 44rem; }
 
 .prose p {
-  margin-bottom: 1.1em;
-  line-height: 1.72;
+  margin-bottom: 1.05em;
+  line-height: 1.7;
   font-size: 1.0625rem;
+  color: var(--color-ink-deep);
 }
 
 .prose h2 {
-  font-size: 1.7rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.85rem;
-  color: var(--color-clinical-deep);
-  letter-spacing: -0.01em;
+  font-size: 1.55rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.7rem;
+  color: var(--color-ink-deep);
+  font-weight: 500;
+  letter-spacing: -0.012em;
 }
 
 .prose h3 {
-  font-size: 1.3rem;
-  margin-top: 1.8rem;
-  margin-bottom: 0.6rem;
-  color: var(--color-clinical-deep);
+  font-size: 1.2rem;
+  margin-top: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-ink-deep);
+  font-weight: 500;
 }
 
 .prose ul, .prose ol {
@@ -288,29 +453,204 @@ h1, h2, h3, h4, h5 {
 .prose li { margin-bottom: 0.35em; }
 
 .prose a {
-  color: var(--color-clinical);
+  color: var(--color-ink);
   text-decoration: underline;
-  text-decoration-color: rgba(46, 90, 136, 0.35);
-  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgba(27, 58, 110, 0.4);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s ease;
 }
 
 .prose a:hover {
-  text-decoration-color: var(--color-clinical);
+  text-decoration-color: var(--color-ink);
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--color-clinical);
+  border-left: 2px solid var(--color-surgical);
   padding-left: 1.1em;
-  font-family: "IBM Plex Serif", serif;
   font-style: italic;
-  font-size: 1.1rem;
-  color: var(--color-clinical-deep);
+  color: var(--color-ink-deep);
   margin: 1.5em 0;
 }
 
-/* Utility */
+/* === Legacy class shims so existing components still render === */
+.eyebrow {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.caps-label {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+.dateline {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+.display-headline {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.014em;
+  line-height: 1.05;
+}
+.step-numeral {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 300;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+.rank-numeral {
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.2rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+.btn-primary:hover { background: var(--color-ink-deep); }
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.2rem;
+  color: var(--color-ink-deep);
+  background: transparent;
+  border: 1px solid var(--color-ink);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.btn-secondary:hover { background: var(--color-ink); color: var(--color-paper); }
+
+.btn-cheatsheet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem;
+  background: var(--color-paper);
+  color: var(--color-ink-deep);
+  border: 1px solid rgba(27, 58, 110, 0.25);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.btn-cheatsheet:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.22rem 0.6rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 1px;
+}
+.tier-badge::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--color-paper);
+  border-radius: 50%;
+}
+.tier-badge-mid { background: var(--color-moss); }
+.tier-badge-budget { background: var(--color-amber); color: #3a2a14; }
+.tier-badge-budget::before { background: #3a2a14; }
+.tier-badge-skip { background: var(--color-slate); }
+
+.card-clinical {
+  background: var(--color-paper);
+  border: 1px solid var(--color-ink);
+  border-left-width: 4px;
+  border-radius: 1px;
+}
+.card-clinical-soft {
+  background: #fff;
+  border: 1px solid rgba(27, 58, 110, 0.2);
+  border-radius: 1px;
+}
+
+.ref-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.9rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--color-ink-deep);
+  transition: color 0.15s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: var(--color-surgical);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
 
 .line-clamp-2 {
   display: -webkit-box;
@@ -318,7 +658,6 @@ h1, h2, h3, h4, h5 {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -338,218 +677,32 @@ h1, h2, h3, h4, h5 {
   border: 0;
 }
 
-/* Nav link — clinical-blue hairline drawing in from the left on hover. */
-.nav-link {
-  position: relative;
-  color: var(--color-clinical-deep);
-  transition: color 0.15s ease;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 1.5px;
-  background: var(--color-clinical);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.nav-link:hover::after,
-.nav-link[aria-current="page"]::after {
-  transform: scaleX(1);
-}
-
-/* Button styles — square corners, clinical blue, no shadows. */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.3rem;
-  background: var(--color-clinical);
-  color: var(--color-paper);
-  font-weight: 500;
-  font-size: 0.9375rem;
-  letter-spacing: 0.005em;
-  border-radius: 2px;
-  cursor: pointer;
-  min-height: 44px;
-  transition: background 0.15s ease, transform 0.08s ease;
-}
-
-.btn-primary:hover {
-  background: var(--color-clinical-deep);
-}
-
-.btn-primary:active {
-  transform: translateY(1px);
-}
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.3rem;
-  color: var(--color-clinical-deep);
-  background: transparent;
-  border: 1px solid var(--color-clinical);
-  font-weight: 500;
-  font-size: 0.9375rem;
-  border-radius: 2px;
-  cursor: pointer;
-  min-height: 44px;
-  transition: background 0.15s ease, transform 0.08s ease;
-}
-
-.btn-secondary:hover {
-  background: var(--color-clinical);
-  color: var(--color-paper);
-}
-
-.btn-secondary:active {
-  transform: translateY(1px);
-}
-
-/*
- * "Cheat sheet" header CTA — paper-ruled border that briefly highlights
- * clinical-blue on hover. Used on the header newsletter button.
- */
-.btn-cheatsheet {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0.95rem;
-  background: var(--color-paper-soft);
-  color: var(--color-clinical-deep);
-  border: 1px solid var(--color-paper-rule);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.8125rem;
-  letter-spacing: 0.01em;
-  border-radius: 2px;
-  position: relative;
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.15s ease, background 0.15s ease;
-}
-
-.btn-cheatsheet::before {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  border: 1px dashed rgba(46, 90, 136, 0.25);
-  border-radius: 1px;
-  pointer-events: none;
-  transition: border-color 0.2s ease;
-}
-
-.btn-cheatsheet:hover {
-  border-color: var(--color-clinical);
-  color: var(--color-clinical);
-  background: var(--color-clinical-tint);
-}
-
-.btn-cheatsheet:hover::before {
-  border-color: rgba(46, 90, 136, 0.5);
-}
-
-/* Tier badge (used on ranked reference products). */
-.tier-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.22rem 0.6rem;
-  background: var(--color-clinical);
-  color: var(--color-paper);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 2px;
-}
-
-.tier-badge::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: var(--color-paper);
-  border-radius: 50%;
-}
-
-.tier-badge-mid { background: var(--color-moss); }
-.tier-badge-budget { background: var(--color-amber); color: #3a2a14; }
-.tier-badge-budget::before { background: #3a2a14; }
-.tier-badge-skip { background: var(--color-stone); }
-
-/* Printable-style card — evokes a reference slip. */
-.card-clinical {
-  background: var(--color-paper);
-  border: 1px solid var(--color-clinical);
-  border-left-width: 4px;
-  border-radius: 2px;
-}
-
-.card-clinical-soft {
-  background: #fff;
-  border: 1px solid rgba(46, 90, 136, 0.2);
-  border-radius: 2px;
-}
-
-/* "Reference slip" header bar — used on calculator/technique cards. */
-.ref-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0.9rem;
-  background: var(--color-clinical);
-  color: var(--color-paper);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.6875rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-/* Print-ready adjustments — tech cards literally are patient handouts. */
+/* Print */
 @media print {
   .no-print { display: none !important; }
-  body {
-    background: #fff;
-    background-image: none;
-  }
-  .card-clinical { break-inside: avoid; }
+  body { background: #fff; }
+  .card-clinical, .atlas-warning, .atlas-leaflet { break-inside: avoid; }
 }
 
-/* ============================================================ */
-/* MOTION                                                        */
-/* ============================================================ */
-
-/* Staggered fade-up for page load (masthead strip → dateline → wordmark → headline). */
+/* Page-load reveal */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .fade-up { animation: fadeUp 0.5s ease-out both; }
 .fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
 .fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
 
-/* Longer-form staggered page-load reveal — used to walk the reader through
- * the masthead like a clinician walking through a checklist. */
 @keyframes clinicalReveal {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .reveal-masthead-0 { animation: clinicalReveal 0.45s ease-out 0s both; }
 .reveal-masthead-1 { animation: clinicalReveal 0.45s ease-out 0.15s both; }
 .reveal-masthead-2 { animation: clinicalReveal 0.5s ease-out 0.32s both; }
 .reveal-masthead-3 { animation: clinicalReveal 0.55s ease-out 0.52s both; }
 .reveal-masthead-4 { animation: clinicalReveal 0.55s ease-out 0.72s both; }
 
-/* Scroll-triggered reveal — JS toggles .in-view. */
 .reveal {
   opacity: 0;
   transform: translateY(10px);
@@ -558,175 +711,53 @@ h1, h2, h3, h4, h5 {
     transform 0.7s ease-out;
   will-change: opacity, transform;
 }
-
 .reveal.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Clinical hairline — animated left-to-right scale when in view. */
 .hairline,
 .clinical-rule {
   position: relative;
   display: block;
   height: 1px;
-  background: rgba(46, 90, 136, 0.28);
+  background: rgba(27, 58, 110, 0.28);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-
 .hairline.in-view,
 .clinical-rule.in-view {
   transform: scaleX(1);
 }
 
-/* TechniqueCard step draw-in. Each <li> gets a staggered delay via --i. */
-.tc-step {
-  opacity: 0;
-  transform: translateY(4px);
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out;
-  transition-delay: calc(var(--i, 0) * 110ms);
-}
-.tc-step .tc-step-rule {
-  display: block;
-  height: 1px;
-  width: 100%;
-  background: rgba(46, 90, 136, 0.28);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition-delay: calc(var(--i, 0) * 110ms + 60ms);
-}
-.tc-step-numeral {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-  transition-delay: calc(var(--i, 0) * 110ms + 150ms);
-}
-
-.tc-in-view .tc-step {
-  opacity: 1;
-  transform: translateY(0);
-}
-.tc-in-view .tc-step .tc-step-rule { transform: scaleX(1); }
-.tc-in-view .tc-step-numeral { opacity: 1; }
-
-/* ClinicalCallout — "stop" variant one-time border flash on first reveal. */
-@keyframes stopFlash {
-  0%   { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 0 rgba(183, 74, 74, 0); }
-  25%  { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 4px rgba(183, 74, 74, 0.18); }
-  100% { box-shadow: inset 3px 0 0 var(--color-alert), 0 0 0 0 rgba(183, 74, 74, 0); }
-}
-
-.callout-stop.in-view-once {
-  animation: stopFlash 0.6s ease-out 1;
-}
-
-/* Reading progress bar on masthead — JS sets --progress from 0→1. */
-.reading-progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 2px;
-  width: 100%;
-  background: transparent;
-  pointer-events: none;
-  z-index: 50;
-}
-.reading-progress-fill {
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: var(--color-clinical);
-  transform-origin: left center;
-  transform: scaleX(var(--progress, 0));
-  transition: transform 0.08s linear;
-}
-
-/* Header crosshair — one-shot 90° rotation on page load. */
-@keyframes crosshairCalibrate {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(90deg); }
-}
-
-.crosshair-calibrate {
-  animation: crosshairCalibrate 3.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
-  transform-origin: center;
-}
-
-/* EmailCapture focus affordance. */
-.email-field {
-  position: relative;
-}
-.email-field input {
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.email-field::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--color-clinical);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
-  pointer-events: none;
-}
-.email-field:focus-within::after {
-  transform: scaleX(1);
-}
-.email-field:focus-within input {
-  border-color: var(--color-clinical);
-  box-shadow: 0 0 0 3px rgba(46, 90, 136, 0.15);
-}
-
-/* ============================================================ */
-/* REDUCED MOTION                                                */
-/* ============================================================ */
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-
-  .fade-up,
-  .fade-up-delay-1,
-  .fade-up-delay-2,
-  .reveal-masthead-0,
-  .reveal-masthead-1,
-  .reveal-masthead-2,
-  .reveal-masthead-3,
-  .reveal-masthead-4,
-  .reveal,
-  .tc-step,
-  .tc-step-numeral {
-    opacity: 1 !important;
-    transform: none !important;
+  .fade-up, .fade-up-delay-1, .fade-up-delay-2,
+  .reveal-masthead-0, .reveal-masthead-1, .reveal-masthead-2,
+  .reveal-masthead-3, .reveal-masthead-4, .reveal {
+    opacity: 1 !important; transform: none !important;
   }
-
-  .hairline,
-  .clinical-rule,
-  .tc-step .tc-step-rule {
-    transform: scaleX(1) !important;
-  }
-
-  .crosshair-calibrate {
-    animation: none !important;
-    transform: rotate(90deg) !important;
-  }
-
-  .callout-stop.in-view-once {
-    animation: none !important;
-  }
+  .hairline, .clinical-rule { transform: scaleX(1) !important; }
 }
+
+/* Scrollbar — paper-soft on ink. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(27, 58, 110, 0.4) rgba(250, 250, 247, 0.6);
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(250, 250, 247, 0.6); }
+::-webkit-scrollbar-thumb {
+  background: rgba(27, 58, 110, 0.3);
+  border: 2px solid var(--color-paper);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(27, 58, 110, 0.55); }

@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Technik",
+    "navSites": "Stellen",
+    "navTroubleshooting": "Problemlösung",
+    "navMethodology": "Methodik",
+    "navPipeline": "Werkstatt",
+    "search": "Atlas durchsuchen"
+  },
+  "hero": {
+    "edition": "Atlas · Ausgabe 01 · Frühjahr 2026",
+    "subtitle": "Ein Wegweiser-Atlas für die Peptidinjektion — Stellen, Technik, Rotation und die hundert kleinen Dinge, die schiefgehen können.",
+    "meta": "Patientenaufklärung · Keine Anbieterlinks · Geprüft anhand der Fachinformation",
+    "partI": "Grundlagen",
+    "partII": "Stellen",
+    "partIII": "Technik",
+    "partIV": "Problemlösung"
+  },
+  "atlas": {
+    "tableOfContents": "Inhaltsverzeichnis",
+    "indexHeading": "Der Atlas — Index",
+    "indexSubhead": "Aufgeführt in der Reihenfolge, in der eine Pflegekraft den Stoff vermitteln würde. Seitenzahlen bleiben über Auflagen hinweg stabil.",
+    "openIndex": "Index öffnen",
+    "howWeReview": "Wie wir prüfen",
+    "atlasNotShelf": "Ein Atlas, kein Artikelregal.",
+    "atlasNotShelfBody": "Jeder Eintrag auf dieser Seite ist ein nummeriertes Kapitel, zugeordnet zu einem der vier Teile. Sie können den Atlas vom Anfang bis zum Ende lesen oder das Inhaltsverzeichnis öffnen und direkt zur gesuchten Seite springen."
+  },
+  "methodology": {
+    "label": "Methodik · Ausgabe v1.2",
+    "title": "So entsteht ein Kapitel.",
+    "body": "Wir arbeiten aus der Gebrauchsinformation des Herstellers, den einschlägigen Empfehlungen von CDC und WHO zur Injektionssicherheit sowie der pflegewissenschaftlichen Literatur. Zwei unabhängige Quellen müssen übereinstimmen, bevor ein Kapitel veröffentlicht wird.",
+    "cta": "Methodik v1.2 lesen"
+  },
+  "pipeline": {
+    "label": "Werkstatt · 8 in Recherche",
+    "title": "Die Kapitel, an denen wir gerade arbeiten.",
+    "body": "Die Werkstatt ist öffentlich. Jedes Kapitel, an dem wir recherchieren, ist mit Arbeitstitel, den Fragen, die es beantworten soll, und den bisher gelesenen Quellen aufgeführt.",
+    "cta": "Werkstatt öffnen"
+  },
+  "stop": {
+    "title": "Stopp · Verschreibende Person hinzuziehen",
+    "body": "Nichts auf InjectCompass ersetzt die Gebrauchsinformation, die Ihrem Medikament beiliegt, oder den Rat der Person, die Ihnen das Medikament verschrieben hat."
+  },
+  "footer": {
+    "edition": "Atlas Ausgabe 01",
+    "lastReviewed": "Zuletzt geprüft",
+    "notMedicalAdvice": "Keine medizinische Beratung",
+    "patientEducationOnly": "Ausschließlich zu Bildungs- und Patientenaufklärungszwecken. Wir verlinken nicht zu Anbietern von Forschungs-Peptiden und nehmen keine Zahlungen von Pharmaherstellern oder Telemedizin-Anbietern entgegen."
+  }
+}

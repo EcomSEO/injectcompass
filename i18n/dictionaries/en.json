@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Technique",
+    "navSites": "Sites",
+    "navTroubleshooting": "Troubleshooting",
+    "navMethodology": "Methodology",
+    "navPipeline": "Pipeline",
+    "search": "Search the atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Edition 01 · Spring 2026",
+    "subtitle": "A wayfinding atlas for peptide injection — sites, technique, rotation, and the troubleshooting of a hundred small things that go wrong.",
+    "meta": "Patient-education only · No vendor links · Reviewed against the package insert",
+    "partI": "Fundamentals",
+    "partII": "Sites",
+    "partIII": "Technique",
+    "partIV": "Troubleshooting"
+  },
+  "atlas": {
+    "tableOfContents": "Table of contents",
+    "indexHeading": "The atlas — index",
+    "indexSubhead": "Listed in the order a clinician would teach the material. Page numbers are stable across editions.",
+    "openIndex": "Open the index",
+    "howWeReview": "How we review",
+    "atlasNotShelf": "An atlas, not an article shelf.",
+    "atlasNotShelfBody": "Each entry in this site is a numbered chapter, grouped into one of four parts. You can read it cover to cover, or open the index and jump to the page you need."
+  },
+  "methodology": {
+    "label": "Methodology · Edition v1.2",
+    "title": "How a chapter gets written.",
+    "body": "We work from the manufacturer Instructions for Use, the relevant CDC and WHO injection-safety guidance, and the nursing-education literature. Two independent sources have to agree before a chapter is published.",
+    "cta": "Read methodology v1.2"
+  },
+  "pipeline": {
+    "label": "Pipeline · 8 in research",
+    "title": "The chapters we are working on.",
+    "body": "The pipeline is public. Every chapter we are researching is listed with its working title, the questions it tries to answer, and the sources we have read so far.",
+    "cta": "Open the pipeline"
+  },
+  "stop": {
+    "title": "Stop · seek prescriber",
+    "body": "Nothing on InjectCompass is a substitute for the instructions that came with your medication or for advice from the clinician who prescribed it."
+  },
+  "footer": {
+    "edition": "Atlas Edition 01",
+    "lastReviewed": "Last reviewed",
+    "notMedicalAdvice": "Not medical advice",
+    "patientEducationOnly": "Educational and patient-education purposes only. We do not link to research-peptide vendors. We do not accept payment from drug manufacturers or telehealth clinics."
+  }
+}

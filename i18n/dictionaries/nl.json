@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Techniek",
+    "navSites": "Plekken",
+    "navTroubleshooting": "Problemen",
+    "navMethodology": "Methodiek",
+    "navPipeline": "Werkplaats",
+    "search": "Atlas doorzoeken"
+  },
+  "hero": {
+    "edition": "Atlas · Editie 01 · Voorjaar 2026",
+    "subtitle": "Een wegwijsatlas voor peptide-injectie — plekken, techniek, rotatie en de honderd kleine dingen die mis kunnen gaan.",
+    "meta": "Patiëntinformatie · Geen aanbiederlinks · Getoetst aan de bijsluiter",
+    "partI": "Grondslagen",
+    "partII": "Plekken",
+    "partIII": "Techniek",
+    "partIV": "Problemen"
+  },
+  "atlas": {
+    "tableOfContents": "Inhoudsopgave",
+    "indexHeading": "De atlas — index",
+    "indexSubhead": "Geordend zoals een verpleegkundige de stof zou onderwijzen. Paginanummers blijven stabiel tussen edities.",
+    "openIndex": "Index openen",
+    "howWeReview": "Hoe wij toetsen",
+    "atlasNotShelf": "Een atlas, geen artikelenrek.",
+    "atlasNotShelfBody": "Elke ingang van de site is een genummerd hoofdstuk, ondergebracht in een van de vier delen. Lees het van kaft tot kaft of sla via de index direct de pagina op die je nodig hebt."
+  },
+  "methodology": {
+    "label": "Methodiek · Editie v1.2",
+    "title": "Hoe een hoofdstuk geschreven wordt.",
+    "body": "We werken vanuit de gebruiksaanwijzing van de fabrikant, de actuele richtlijnen van CDC en WHO over injectieveiligheid en de verpleegkundige scholingsliteratuur. Twee onafhankelijke bronnen moeten het eens zijn voordat een hoofdstuk verschijnt.",
+    "cta": "Methodiek v1.2 lezen"
+  },
+  "pipeline": {
+    "label": "Werkplaats · 8 in onderzoek",
+    "title": "De hoofdstukken waar we aan werken.",
+    "body": "De werkplaats is openbaar. Elk hoofdstuk in onderzoek staat vermeld met werktitel, de vragen die het probeert te beantwoorden en de tot nu toe gelezen bronnen.",
+    "cta": "Werkplaats openen"
+  },
+  "stop": {
+    "title": "Stop · raadpleeg de voorschrijver",
+    "body": "Niets op InjectCompass vervangt de bijsluiter die bij je medicijn zit of het advies van de persoon die het heeft voorgeschreven."
+  },
+  "footer": {
+    "edition": "Atlas Editie 01",
+    "lastReviewed": "Laatst getoetst",
+    "notMedicalAdvice": "Geen medisch advies",
+    "patientEducationOnly": "Uitsluitend voor educatieve en patiëntinformatieve doeleinden. We linken niet naar verkopers van onderzoekspeptiden en accepteren geen betalingen van fabrikanten of telezorgklinieken."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Technika",
+    "navSites": "Miejsca",
+    "navTroubleshooting": "Rozwiązywanie",
+    "navMethodology": "Metodyka",
+    "navPipeline": "Pracownia",
+    "search": "Przeszukaj atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Wydanie 01 · Wiosna 2026",
+    "subtitle": "Atlas drogowskazowy dla iniekcji peptydów — miejsca, technika, rotacja i sto drobiazgów, które mogą pójść nie tak.",
+    "meta": "Edukacja pacjenta · Bez linków sprzedawców · Skonfrontowane z ulotką producenta",
+    "partI": "Podstawy",
+    "partII": "Miejsca",
+    "partIII": "Technika",
+    "partIV": "Rozwiązywanie"
+  },
+  "atlas": {
+    "tableOfContents": "Spis treści",
+    "indexHeading": "Atlas — indeks",
+    "indexSubhead": "Ułożony tak, jak pielęgniarka uczyłaby tej materii. Numery stron są stabilne między wydaniami.",
+    "openIndex": "Otwórz indeks",
+    "howWeReview": "Jak weryfikujemy",
+    "atlasNotShelf": "Atlas, nie półka z artykułami.",
+    "atlasNotShelfBody": "Każdy wpis w serwisie to numerowany rozdział, przypisany do jednej z czterech części. Możesz czytać od deski do deski albo otworzyć indeks i przeskoczyć od razu do potrzebnej strony."
+  },
+  "methodology": {
+    "label": "Metodyka · Wydanie v1.2",
+    "title": "Jak powstaje rozdział.",
+    "body": "Pracujemy na podstawie ulotki producenta, aktualnych wytycznych CDC i WHO dotyczących bezpieczeństwa iniekcji oraz literatury z zakresu edukacji pielęgniarskiej. Dwa niezależne źródła muszą się zgadzać, zanim rozdział zostanie opublikowany.",
+    "cta": "Przeczytaj metodykę v1.2"
+  },
+  "pipeline": {
+    "label": "Pracownia · 8 w badaniu",
+    "title": "Rozdziały, nad którymi pracujemy.",
+    "body": "Pracownia jest jawna. Każdy badany rozdział jest wymieniony z tytułem roboczym, pytaniami, na które ma odpowiedzieć, oraz dotychczas przeczytanymi źródłami.",
+    "cta": "Otwórz pracownię"
+  },
+  "stop": {
+    "title": "Stop · skontaktuj się z osobą przepisującą lek",
+    "body": "Nic w InjectCompass nie zastępuje instrukcji dołączonej do leku ani porady osoby, która go przepisała."
+  },
+  "footer": {
+    "edition": "Atlas Wydanie 01",
+    "lastReviewed": "Ostatnia weryfikacja",
+    "notMedicalAdvice": "To nie jest porada lekarska",
+    "patientEducationOnly": "Wyłącznie w celach edukacyjnych i informacji dla pacjenta. Nie linkujemy do sprzedawców peptydów badawczych i nie przyjmujemy płatności od producentów leków ani klinik telemedycznych."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Tehnică",
+    "navSites": "Locuri",
+    "navTroubleshooting": "Probleme",
+    "navMethodology": "Metodologie",
+    "navPipeline": "Atelier",
+    "search": "Caută în atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Ediția 01 · Primăvara 2026",
+    "subtitle": "Un atlas de orientare pentru injecția cu peptide — locuri, tehnică, rotație și o sută de mici lucruri care pot merge prost.",
+    "meta": "Informare pentru pacient · Fără linkuri către vânzători · Verificat după prospectul producătorului",
+    "partI": "Fundamente",
+    "partII": "Locuri",
+    "partIII": "Tehnică",
+    "partIV": "Probleme"
+  },
+  "atlas": {
+    "tableOfContents": "Cuprins",
+    "indexHeading": "Atlasul — index",
+    "indexSubhead": "Ordonat așa cum o asistentă ar preda materia. Numerele de pagină rămân stabile între ediții.",
+    "openIndex": "Deschide indexul",
+    "howWeReview": "Cum verificăm",
+    "atlasNotShelf": "Un atlas, nu un raft de articole.",
+    "atlasNotShelfBody": "Fiecare intrare din site este un capitol numerotat, încadrat într-una din cele patru părți. Poți citi din scoarță în scoarță sau deschide indexul și sări direct la pagina de care ai nevoie."
+  },
+  "methodology": {
+    "label": "Metodologie · Ediția v1.2",
+    "title": "Cum se scrie un capitol.",
+    "body": "Lucrăm pornind de la Instrucțiunile de utilizare ale producătorului, de la recomandările actuale ale CDC și OMS privind siguranța injecției și de la literatura de formare a asistenților medicali. Două surse independente trebuie să coincidă înainte ca un capitol să fie publicat.",
+    "cta": "Citește metodologia v1.2"
+  },
+  "pipeline": {
+    "label": "Atelier · 8 în cercetare",
+    "title": "Capitolele la care lucrăm.",
+    "body": "Atelierul este public. Fiecare capitol în cercetare este listat cu titlul de lucru, întrebările la care încearcă să răspundă și sursele citite până acum.",
+    "cta": "Deschide atelierul"
+  },
+  "stop": {
+    "title": "Stop · contactează cine prescrie",
+    "body": "Nimic din InjectCompass nu înlocuiește prospectul medicamentului tău sau sfatul persoanei care ți l-a prescris."
+  },
+  "footer": {
+    "edition": "Atlas Ediția 01",
+    "lastReviewed": "Ultima verificare",
+    "notMedicalAdvice": "Nu este sfat medical",
+    "patientEducationOnly": "Doar în scop educativ și de informare a pacientului. Nu trimitem către vânzători de peptide de cercetare și nu acceptăm plăți de la producători farmaceutici sau clinici de telemedicină."
+  }
+}

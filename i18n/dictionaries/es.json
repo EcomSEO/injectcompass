@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Técnica",
+    "navSites": "Zonas",
+    "navTroubleshooting": "Resolución",
+    "navMethodology": "Metodología",
+    "navPipeline": "Taller",
+    "search": "Buscar en el atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Edición 01 · Primavera 2026",
+    "subtitle": "Un atlas de orientación para la inyección de péptidos — zonas, técnica, rotación y las cien pequeñas cosas que pueden salir mal.",
+    "meta": "Información al paciente · Sin enlaces a vendedores · Revisado contra el prospecto del fabricante",
+    "partI": "Fundamentos",
+    "partII": "Zonas",
+    "partIII": "Técnica",
+    "partIV": "Resolución"
+  },
+  "atlas": {
+    "tableOfContents": "Índice",
+    "indexHeading": "El atlas — índice",
+    "indexSubhead": "Ordenado tal como una enfermera enseñaría la materia. Los números de página son estables entre ediciones.",
+    "openIndex": "Abrir el índice",
+    "howWeReview": "Cómo revisamos",
+    "atlasNotShelf": "Un atlas, no una estantería de artículos.",
+    "atlasNotShelfBody": "Cada entrada del sitio es un capítulo numerado, agrupado en una de las cuatro partes. Puedes leerlo de principio a fin o abrir el índice y saltar directamente a la página que te interesa."
+  },
+  "methodology": {
+    "label": "Metodología · Edición v1.2",
+    "title": "Cómo se escribe un capítulo.",
+    "body": "Trabajamos a partir de las Instrucciones de uso del fabricante, las recomendaciones vigentes del CDC y la OMS sobre seguridad en la inyección y la literatura de formación de enfermería. Dos fuentes independientes deben coincidir antes de publicar un capítulo.",
+    "cta": "Leer metodología v1.2"
+  },
+  "pipeline": {
+    "label": "Taller · 8 en investigación",
+    "title": "Los capítulos en los que trabajamos.",
+    "body": "El taller es público. Cada capítulo en investigación aparece con su título provisional, las preguntas que intenta responder y las fuentes leídas hasta ahora.",
+    "cta": "Abrir el taller"
+  },
+  "stop": {
+    "title": "Alto · consulta a quien receta",
+    "body": "Nada en InjectCompass sustituye las instrucciones que vienen con tu medicamento ni el consejo de la persona que te lo recetó."
+  },
+  "footer": {
+    "edition": "Atlas Edición 01",
+    "lastReviewed": "Última revisión",
+    "notMedicalAdvice": "No es consejo médico",
+    "patientEducationOnly": "Solo con fines educativos y de información al paciente. No enlazamos con vendedores de péptidos de investigación ni aceptamos pagos de fabricantes farmacéuticos o clínicas de telemedicina."
+  }
+}

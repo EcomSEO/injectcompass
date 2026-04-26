@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlante",
+    "navTechnique": "Tecnica",
+    "navSites": "Sedi",
+    "navTroubleshooting": "Problemi",
+    "navMethodology": "Metodologia",
+    "navPipeline": "Officina",
+    "search": "Cerca nell’atlante"
+  },
+  "hero": {
+    "edition": "Atlante · Edizione 01 · Primavera 2026",
+    "subtitle": "Un atlante di orientamento per l’iniezione di peptidi — sedi, tecnica, rotazione e le cento piccole cose che possono andare storte.",
+    "meta": "Solo informazione al paziente · Nessun link a venditori · Verificato sul foglietto illustrativo",
+    "partI": "Fondamenti",
+    "partII": "Sedi",
+    "partIII": "Tecnica",
+    "partIV": "Problemi"
+  },
+  "atlas": {
+    "tableOfContents": "Indice",
+    "indexHeading": "L’atlante — indice",
+    "indexSubhead": "Presentato nell’ordine in cui un infermiere insegnerebbe la materia. I numeri di pagina restano stabili tra le edizioni.",
+    "openIndex": "Apri l’indice",
+    "howWeReview": "Come revisioniamo",
+    "atlasNotShelf": "Un atlante, non uno scaffale di articoli.",
+    "atlasNotShelfBody": "Ogni voce del sito è un capitolo numerato, raggruppato in una delle quattro parti. Puoi leggerlo dall’inizio alla fine o aprire l’indice e saltare direttamente alla pagina che ti serve."
+  },
+  "methodology": {
+    "label": "Metodologia · Edizione v1.2",
+    "title": "Come nasce un capitolo.",
+    "body": "Lavoriamo a partire dalle Istruzioni per l’uso del produttore, dalle attuali raccomandazioni di CDC e OMS sulla sicurezza delle iniezioni e dalla letteratura di formazione infermieristica. Due fonti indipendenti devono concordare prima che un capitolo venga pubblicato.",
+    "cta": "Leggi la metodologia v1.2"
+  },
+  "pipeline": {
+    "label": "Officina · 8 in ricerca",
+    "title": "I capitoli su cui stiamo lavorando.",
+    "body": "L’officina è pubblica. Ogni capitolo in ricerca è elencato con il titolo provvisorio, le domande a cui cerca di rispondere e le fonti già lette.",
+    "cta": "Apri l’officina"
+  },
+  "stop": {
+    "title": "Stop · contatta chi prescrive",
+    "body": "Nulla su InjectCompass sostituisce le istruzioni fornite con il farmaco né il parere della persona che te lo ha prescritto."
+  },
+  "footer": {
+    "edition": "Atlante Edizione 01",
+    "lastReviewed": "Ultima revisione",
+    "notMedicalAdvice": "Non è un parere medico",
+    "patientEducationOnly": "A solo scopo educativo e di informazione al paziente. Non rimandiamo a venditori di peptidi da ricerca e non accettiamo pagamenti da produttori farmaceutici o cliniche di telemedicina."
+  }
+}

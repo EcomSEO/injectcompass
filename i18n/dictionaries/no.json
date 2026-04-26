@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Teknikk",
+    "navSites": "Steder",
+    "navTroubleshooting": "Feilsøking",
+    "navMethodology": "Metodikk",
+    "navPipeline": "Verksted",
+    "search": "Søk i atlaset"
+  },
+  "hero": {
+    "edition": "Atlas · Utgave 01 · Våren 2026",
+    "subtitle": "Et veivisende atlas for peptidinjeksjon — steder, teknikk, rotasjon og de hundre små tingene som kan gå galt.",
+    "meta": "Pasientinformasjon · Ingen selgerlenker · Kryssjekket mot pakningsvedlegget",
+    "partI": "Grunnleggende",
+    "partII": "Steder",
+    "partIII": "Teknikk",
+    "partIV": "Feilsøking"
+  },
+  "atlas": {
+    "tableOfContents": "Innhold",
+    "indexHeading": "Atlaset — register",
+    "indexSubhead": "Ordnet slik en sykepleier ville ha lært bort stoffet. Sidetallene står stabile mellom utgaver.",
+    "openIndex": "Åpne registeret",
+    "howWeReview": "Slik etterprøver vi",
+    "atlasNotShelf": "Et atlas, ikke en artikkelhylle.",
+    "atlasNotShelfBody": "Hver oppføring på siden er et nummerert kapittel, plassert i én av de fire delene. Les fra perm til perm eller åpne registeret og hopp rett til siden du trenger."
+  },
+  "methodology": {
+    "label": "Metodikk · Utgave v1.2",
+    "title": "Slik blir et kapittel til.",
+    "body": "Vi arbeider ut fra produsentens bruksanvisning, gjeldende anbefalinger fra CDC og WHO om injeksjonssikkerhet og sykepleielitteraturen. To uavhengige kilder må være enige før et kapittel publiseres.",
+    "cta": "Les metodikk v1.2"
+  },
+  "pipeline": {
+    "label": "Verksted · 8 under arbeid",
+    "title": "Kapitlene vi jobber med nå.",
+    "body": "Verkstedet er åpent. Hvert kapittel under arbeid er ført opp med arbeidstittel, spørsmålene det prøver å svare på og kildene vi hittil har lest.",
+    "cta": "Åpne verkstedet"
+  },
+  "stop": {
+    "title": "Stopp · kontakt forskriveren",
+    "body": "Ingenting på InjectCompass erstatter pakningsvedlegget som følger legemiddelet ditt eller råd fra personen som har skrevet det ut."
+  },
+  "footer": {
+    "edition": "Atlas Utgave 01",
+    "lastReviewed": "Sist etterprøvd",
+    "notMedicalAdvice": "Ikke medisinsk råd",
+    "patientEducationOnly": "Kun for opplæring og pasientinformasjon. Vi lenker ikke til selgere av forskningspeptider og tar ikke imot betaling fra legemiddelprodusenter eller telemedisinklinikker."
+  }
+}

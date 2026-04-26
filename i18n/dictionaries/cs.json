@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Technika",
+    "navSites": "Místa",
+    "navTroubleshooting": "Řešení",
+    "navMethodology": "Metodika",
+    "navPipeline": "Dílna",
+    "search": "Prohledat atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Vydání 01 · Jaro 2026",
+    "subtitle": "Orientační atlas pro injekci peptidů — místa, technika, rotace a sto drobností, které se mohou pokazit.",
+    "meta": "Pouze informace pro pacienta · Žádné odkazy na prodejce · Ověřeno proti příbalové informaci",
+    "partI": "Základy",
+    "partII": "Místa",
+    "partIII": "Technika",
+    "partIV": "Řešení"
+  },
+  "atlas": {
+    "tableOfContents": "Obsah",
+    "indexHeading": "Atlas — rejstřík",
+    "indexSubhead": "Seřazeno tak, jak by látku učila zdravotní sestra. Čísla stránek zůstávají stabilní mezi vydáními.",
+    "openIndex": "Otevřít rejstřík",
+    "howWeReview": "Jak ověřujeme",
+    "atlasNotShelf": "Atlas, ne polička s články.",
+    "atlasNotShelfBody": "Každý záznam na webu je číslovaná kapitola, zařazená do jedné ze čtyř částí. Můžete jej číst od desek k deskám nebo otevřít rejstřík a přeskočit rovnou na stránku, kterou potřebujete."
+  },
+  "methodology": {
+    "label": "Metodika · Vydání v1.2",
+    "title": "Jak vzniká kapitola.",
+    "body": "Pracujeme z příbalových informací výrobce, aktuálních doporučení CDC a WHO k bezpečnosti injekcí a z literatury pro vzdělávání zdravotních sester. Dva nezávislé zdroje se musí shodnout, než kapitola vyjde.",
+    "cta": "Přečíst metodiku v1.2"
+  },
+  "pipeline": {
+    "label": "Dílna · 8 ve výzkumu",
+    "title": "Kapitoly, na kterých pracujeme.",
+    "body": "Dílna je veřejná. Každá zkoumaná kapitola je uvedena s pracovním názvem, otázkami, na které se snaží odpovědět, a se zdroji dosud přečtenými.",
+    "cta": "Otevřít dílnu"
+  },
+  "stop": {
+    "title": "Stop · obraťte se na předepisujícího",
+    "body": "Nic na InjectCompass nenahrazuje příbalovou informaci vašeho léku ani radu osoby, která vám lék předepsala."
+  },
+  "footer": {
+    "edition": "Atlas Vydání 01",
+    "lastReviewed": "Naposledy ověřeno",
+    "notMedicalAdvice": "Není to lékařská rada",
+    "patientEducationOnly": "Pouze pro vzdělávací účely a informaci pacienta. Neodkazujeme na prodejce výzkumných peptidů a nepřijímáme platby od farmaceutických výrobců ani telemedicínských klinik."
+  }
+}

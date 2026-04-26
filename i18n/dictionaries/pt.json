@@ -1,0 +1,52 @@
+{
+  "header": {
+    "wordmark": "INJECTCOMPASS",
+    "navAtlas": "Atlas",
+    "navTechnique": "Técnica",
+    "navSites": "Locais",
+    "navTroubleshooting": "Resolução",
+    "navMethodology": "Metodologia",
+    "navPipeline": "Oficina",
+    "search": "Pesquisar no atlas"
+  },
+  "hero": {
+    "edition": "Atlas · Edição 01 · Primavera de 2026",
+    "subtitle": "Um atlas de orientação para a injeção de péptidos — locais, técnica, rotação e as cem pequenas coisas que podem correr mal.",
+    "meta": "Apenas informação ao doente · Sem ligações a vendedores · Verificado contra o folheto informativo",
+    "partI": "Fundamentos",
+    "partII": "Locais",
+    "partIII": "Técnica",
+    "partIV": "Resolução"
+  },
+  "atlas": {
+    "tableOfContents": "Índice",
+    "indexHeading": "O atlas — índice",
+    "indexSubhead": "Ordenado como um enfermeiro ensinaria a matéria. Os números de página mantêm-se estáveis entre edições.",
+    "openIndex": "Abrir o índice",
+    "howWeReview": "Como revemos",
+    "atlasNotShelf": "Um atlas, não uma estante de artigos.",
+    "atlasNotShelfBody": "Cada entrada do site é um capítulo numerado, integrado numa das quatro partes. Pode ler de capa a capa ou abrir o índice e ir directamente para a página que procura."
+  },
+  "methodology": {
+    "label": "Metodologia · Edição v1.2",
+    "title": "Como nasce um capítulo.",
+    "body": "Trabalhamos a partir das Instruções de Utilização do fabricante, das recomendações actuais do CDC e da OMS sobre segurança das injeções e da literatura de formação de enfermagem. Duas fontes independentes têm de coincidir antes de um capítulo ser publicado.",
+    "cta": "Ler metodologia v1.2"
+  },
+  "pipeline": {
+    "label": "Oficina · 8 em investigação",
+    "title": "Os capítulos em curso.",
+    "body": "A oficina é pública. Cada capítulo em investigação aparece com o título provisório, as perguntas que tenta responder e as fontes lidas até ao momento.",
+    "cta": "Abrir a oficina"
+  },
+  "stop": {
+    "title": "Pare · contacte quem prescreveu",
+    "body": "Nada no InjectCompass substitui o folheto informativo do seu medicamento ou o conselho da pessoa que o prescreveu."
+  },
+  "footer": {
+    "edition": "Atlas Edição 01",
+    "lastReviewed": "Última revisão",
+    "notMedicalAdvice": "Não é aconselhamento médico",
+    "patientEducationOnly": "Apenas para fins educativos e de informação ao doente. Não estabelecemos ligações a vendedores de péptidos de investigação nem aceitamos pagamentos de fabricantes farmacêuticos ou clínicas de telemedicina."
+  }
+}
