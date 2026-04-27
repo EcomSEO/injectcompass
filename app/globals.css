@@ -3,761 +3,476 @@
 @tailwind utilities;
 
 /*
- * InjectCompass — CLINICAL WAYFINDING ATLAS.
- * Visual register: surgical atlas × transit-map IA × technical manual.
- * Paper-white ground, ink-blue strokes, surgical-red marker accents,
- * thin-line technical drawing aesthetic, condensed numerals, small caps.
+ * InjectCompass — Healthline-grade medical publisher.
+ * Locked tokens — see tailwind.config.ts for the source of truth.
+ *
+ * Body: Inter 18/28 weight 400, ink #1A1F2E
+ * Editorial pillar H1: Merriweather 700 40/48
+ * Container: 1200px home, 720px article
  */
 
 :root {
   color-scheme: light;
 
-  /* Atlas tokens */
-  --color-ink: #1B3A6E;
-  --color-ink-deep: #0F2348;
-  --color-ink-soft: #3D5A87;
-  --color-paper: #FAFAF7;
-  --color-paper-warm: #F4F1E8;
-  --color-paper-rule: #E5E1D5;
-  --color-surgical: #C8463C;
-  --color-surgical-deep: #9C2F26;
-  --color-slate: #5B6470;
-  --color-slate-soft: #8A919A;
-  --color-slate-rule: #D8DCE2;
+  /* === Locked publisher tokens === */
+  --color-teal-50: #E8F5F2;
+  --color-teal-100: #D1EBE5;
+  --color-teal-500: #0E8A7A;
+  --color-teal-600: #0A6F61;
+  --color-teal-700: #08594E;
+  --color-ink: #1A1F2E;
+  --color-ink-muted: #5A6573;
+  --color-ink-soft: #8A92A1;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F9FB;
+  --color-rule: #E5E9EE;
+  --color-rule-strong: #CDD3DA;
+  --color-success: #10A26A;
+  --color-danger: #C8463C;
+  --color-reviewed-bg: #E8F5F2;
+  --color-reviewed-text: #0A6F61;
 
-  /* Legacy aliases (keep so shared components still compile) */
-  --color-clinical: #1B3A6E;
-  --color-clinical-deep: #0F2348;
-  --color-clinical-tint: #E7EBF2;
-  --color-paper-soft: #FAFAF7;
-  --color-moss: #5C7A65;
+  /* Legacy alias parity (keep so legacy components still compile) */
+  --color-clinical: var(--color-teal-500);
+  --color-clinical-deep: var(--color-teal-600);
+  --color-clinical-tint: var(--color-teal-50);
+  --color-ink-deep: var(--color-ink);
+  --color-paper: #FFFFFF;
+  --color-paper-warm: #F4F1E8;
+  --color-paper-rule: var(--color-rule);
+  --color-paper-soft: #FFFFFF;
+  --color-surgical: var(--color-danger);
+  --color-surgical-deep: #9C2F26;
+  --color-slate: var(--color-ink-muted);
+  --color-slate-soft: var(--color-ink-soft);
+  --color-slate-rule: var(--color-rule-strong);
+  --color-moss: #10A26A;
   --color-amber: #B8782F;
   --color-alert: #C8463C;
-  --color-stone: #5B6470;
-  --color-charcoal: #1A1F2A;
-  --color-sage: #5C7A65;
+  --color-stone: var(--color-ink-muted);
+  --color-charcoal: var(--color-ink);
+  --color-sage: #10A26A;
   --color-cream: #F4F1E8;
-  --color-pine: #1B3A6E;
+  --color-pine: var(--color-teal-600);
   --color-coral: #C8463C;
-  --color-forest: #1B3A6E;
+  --color-forest: var(--color-teal-500);
   --color-terracotta: #C8463C;
 }
 
 html {
-  font-family: "Inter Tight", "IBM Plex Sans", system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   scroll-behavior: smooth;
-  font-feature-settings: "ss01", "cv11";
-}
-
-/*
- * Atlas paper ground — flat paper-white, no gradient. The blueprint grid
- * is applied selectively only where wanted (e.g. .atlas-grid on the hero).
- */
-body {
-  background-color: var(--color-paper);
-  color: var(--color-ink-deep);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16.5px;
-  line-height: 1.6;
 }
 
-/* Headings — technical sans, 400 weight, ink color, mild letter-spacing tightening. */
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 24px;
+  text-rendering: optimizeLegibility;
+}
+
+/* === Editorial heading defaults === */
 h1, h2, h3, h4, h5 {
-  font-family: "Inter Tight", "IBM Plex Sans", system-ui, sans-serif;
+  color: var(--color-ink);
+  font-family: "Inter", system-ui, sans-serif;
   letter-spacing: -0.012em;
-  font-weight: 500;
-  color: var(--color-ink-deep);
+  font-weight: 700;
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-paper);
-}
-::-moz-selection {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-teal-500);
+  color: #fff;
 }
 
-/* Keyboard focus baseline. */
 :where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus-visible {
-  outline: 2px solid var(--color-ink);
+  outline: 2px solid var(--color-teal-500);
   outline-offset: 2px;
-  border-radius: 1px;
+  border-radius: 4px;
 }
 
-/* Atlas blueprint grid — applied only inside .atlas-grid containers. */
-.atlas-grid {
-  background-image:
-    linear-gradient(to right, rgba(27, 58, 110, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(27, 58, 110, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px, 32px 32px;
+/* Anchor offset for sticky-header in-page jumps. */
+:target {
+  scroll-margin-top: 96px;
 }
 
-.atlas-grid-fine {
-  background-image:
-    linear-gradient(to right, rgba(27, 58, 110, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(27, 58, 110, 0.04) 1px, transparent 1px);
-  background-size: 16px 16px, 16px 16px;
-}
+/* === Utility shims === */
 
-/* === Atlas typography utilities === */
-
-/* Small-caps tracking label — "PART II · SITES" */
-.atlas-label {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.6875rem;
+.eyebrow {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: var(--color-teal-600);
+}
+
+.eyebrow-muted { color: var(--color-ink-muted); }
+.eyebrow-danger { color: var(--color-danger); }
+
+.dateline {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+/* === Editorial article prose — narrow column, 720px max === */
+.article-prose {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-ink);
+  max-width: 720px;
+}
+
+.article-prose p {
+  margin: 0 0 24px;
+}
+
+.article-prose h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  letter-spacing: -0.012em;
+  scroll-margin-top: 96px;
+}
+
+.article-prose h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  letter-spacing: -0.008em;
+  scroll-margin-top: 96px;
+}
+
+.article-prose h4 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.article-prose ul,
+.article-prose ol {
+  padding-left: 24px;
+  margin: 0 0 24px;
+}
+
+.article-prose ul { list-style: disc; }
+.article-prose ol { list-style: decimal; }
+
+.article-prose li {
+  margin-bottom: 8px;
+  line-height: 28px;
+}
+
+.article-prose a {
+  color: var(--color-teal-600);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(10, 111, 97, 0.4);
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.article-prose a:hover {
+  text-decoration-color: var(--color-teal-600);
+  color: var(--color-teal-700);
+}
+
+.article-prose strong { font-weight: 600; color: var(--color-ink); }
+
+.article-prose blockquote {
+  border-left: 3px solid var(--color-teal-500);
+  background: var(--color-surface-alt);
+  padding: 16px 20px;
+  margin: 24px 0;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
   color: var(--color-ink);
 }
 
-.atlas-label-slate { color: var(--color-slate); }
-.atlas-label-surgical { color: var(--color-surgical); }
-
-/* Smaller label */
-.atlas-mini {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-slate);
+/* Editorial pillar H1 — Merriweather, only on article hero. */
+.editorial-h1 {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.5vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  color: var(--color-ink);
 }
 
-/* Big chapter numeral — "04" at 200px, weight 200, slate. */
+/* === Legacy class shims === */
+.prose { max-width: 720px; }
+.prose p { margin: 0 0 24px; line-height: 28px; font-size: 18px; color: var(--color-ink); }
+.prose h2 { font-size: 28px; line-height: 36px; font-weight: 700; margin: 48px 0 16px; }
+.prose h3 { font-size: 22px; line-height: 30px; font-weight: 600; margin: 32px 0 12px; }
+.prose ul, .prose ol { padding-left: 24px; margin: 0 0 24px; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose a { color: var(--color-teal-600); text-decoration: underline; }
+.prose blockquote { border-left: 3px solid var(--color-teal-500); padding: 16px 20px; font-style: italic; }
+
+/* atlas-* legacy class shims (no-op styling fallback so legacy pages still render) */
+.atlas-label, .atlas-mini, .caps-label {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-teal-600);
+}
+.atlas-label-slate, .atlas-label-muted { color: var(--color-ink-muted); }
+.atlas-label-surgical { color: var(--color-danger); }
+
+.atlas-display, .display-headline {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  color: var(--color-ink);
+  line-height: 1.1;
+}
+.atlas-wordmark {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
 .atlas-chapter-numeral {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-weight: 200;
   font-size: clamp(7rem, 18vw, 14rem);
   line-height: 0.85;
   letter-spacing: -0.03em;
-  color: var(--color-slate-soft);
+  color: var(--color-ink-soft);
   font-variant-numeric: tabular-nums;
 }
-
-/* Mid-size chapter numeral — for ChapterIndex listings. */
 .atlas-chapter-num {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-weight: 300;
   font-variant-numeric: tabular-nums;
-  color: var(--color-slate);
-  letter-spacing: -0.01em;
+  color: var(--color-ink-muted);
 }
-
-/* Atlas wordmark — INJECTCOMPASS condensed-feel uppercase. */
-.atlas-wordmark {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-ink-deep);
-  text-transform: uppercase;
-}
-
-/* Atlas display headline — h1 ~36px, weight 400-500. */
-.atlas-display {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.018em;
-  color: var(--color-ink-deep);
-  line-height: 1.08;
-}
-
-/* Numeric / safety-critical — monospace. */
-.num, .tnum {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-variant-numeric: tabular-nums;
-}
-
-/* Surgical-red marker chip — used for warning numbers, footnote refs. */
-.atlas-marker {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.4em;
-  height: 1.4em;
-  padding: 0 0.4em;
-  background: var(--color-surgical);
-  color: var(--color-paper);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  border-radius: 1px;
-}
-
-/* Footnote-style superscript marker (red). */
-.atlas-fn {
-  font-size: 0.65em;
-  vertical-align: super;
-  line-height: 0;
-  color: var(--color-surgical);
-  font-weight: 600;
-  margin-left: 0.15em;
-}
-
-/* === Atlas dot-leader for ChapterIndex === */
-.atlas-leader {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.atlas-leader > .atlas-leader-line {
-  flex: 1;
-  border-bottom: 1px dotted rgba(27, 58, 110, 0.3);
-  position: relative;
-  top: -0.25em;
-  margin: 0 0.5rem;
-}
-
-/* === Atlas rules === */
-
-/* Thin ink rule used between sections. */
-.atlas-rule {
-  border-color: rgba(27, 58, 110, 0.2);
-}
-
-/* Section-divider with small-caps label. */
-.atlas-divider {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--color-slate);
-}
-
-.atlas-divider::before,
-.atlas-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(27, 58, 110, 0.18);
-}
-
-/* === Atlas buttons === */
 
 .atlas-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.7rem 1.15rem;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: 1px;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--color-teal-500);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
   cursor: pointer;
   min-height: 44px;
   transition: background 0.15s ease, transform 0.08s ease;
 }
-
-.atlas-btn:hover {
-  background: var(--color-ink-deep);
-}
-
-.atlas-btn:active {
-  transform: translateY(1px);
-}
+.atlas-btn:hover { background: var(--color-teal-600); }
+.atlas-btn:active { transform: translateY(1px); }
 
 .atlas-btn-ghost {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.7rem 1.15rem;
+  gap: 8px;
+  padding: 12px 20px;
   background: transparent;
-  color: var(--color-ink-deep);
-  border: 1px solid var(--color-ink);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  cursor: pointer;
+  color: var(--color-teal-700);
+  border: 1px solid var(--color-teal-500);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
   min-height: 44px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
+.atlas-btn-ghost:hover { background: var(--color-teal-50); }
 
-.atlas-btn-ghost:hover {
-  background: var(--color-ink);
-  color: var(--color-paper);
-}
-
-/* === Atlas warning callout === */
-.atlas-warning {
-  border: 1px solid var(--color-surgical);
-  border-left-width: 4px;
-  background: rgba(200, 70, 60, 0.04);
-  padding: 1.1rem 1.2rem;
-  border-radius: 1px;
-}
-
-.atlas-warning-title {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-surgical);
-  font-size: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* === Reference leaflet (folded technical-leaflet sidebar) === */
-.atlas-leaflet {
-  border: 1px solid rgba(27, 58, 110, 0.25);
-  background: var(--color-paper-warm);
-  padding: 1.3rem 1.4rem;
-  border-radius: 1px;
-  font-size: 0.82rem;
-  line-height: 1.55;
-  color: var(--color-ink-deep);
-  position: relative;
-}
-
-.atlas-leaflet::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 14px 14px 0;
-  border-color: transparent var(--color-paper) transparent transparent;
-}
-
-.atlas-leaflet ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: ref;
-}
-
-.atlas-leaflet li {
-  counter-increment: ref;
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 0.4rem;
-  padding: 0.45rem 0;
-  border-top: 1px dashed rgba(27, 58, 110, 0.18);
-}
-
-.atlas-leaflet li:first-child {
-  border-top: none;
-}
-
-.atlas-leaflet li::before {
-  content: counter(ref);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-  color: var(--color-surgical);
-  font-size: 0.7rem;
-}
-
-/* === Stepper rail === */
-.atlas-stepper {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.atlas-stepper-current {
-  position: relative;
-  padding-left: 0.85rem;
-  border-left: 2px solid var(--color-surgical);
-  color: var(--color-ink-deep);
-  font-weight: 500;
-}
-
-.atlas-stepper-prev,
-.atlas-stepper-next {
-  padding-left: 0.85rem;
-  border-left: 1px solid rgba(27, 58, 110, 0.2);
-  color: var(--color-slate);
-}
-
-.atlas-stepper-prev:hover,
-.atlas-stepper-next:hover {
-  color: var(--color-ink-deep);
-  border-left-color: var(--color-ink);
-}
-
-/* === Outline rail === */
-.atlas-outline {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.78rem;
-  line-height: 1.4;
-}
-
-.atlas-outline-item {
-  display: block;
-  padding: 0.3rem 0 0.3rem 0.85rem;
-  border-left: 1px solid rgba(27, 58, 110, 0.15);
-  color: var(--color-slate);
-  transition: color 0.15s ease, border-left-color 0.15s ease;
-}
-
-.atlas-outline-item:hover {
-  color: var(--color-ink-deep);
-  border-left-color: var(--color-ink);
-}
-
-.atlas-outline-item-active {
-  color: var(--color-ink-deep);
-  border-left-color: var(--color-surgical);
-  font-weight: 500;
-}
-
-/* === Prose body — narrow column (max-w-2xl), atlas voice. === */
-.prose { max-width: 44rem; }
-
-.prose p {
-  margin-bottom: 1.05em;
-  line-height: 1.7;
-  font-size: 1.0625rem;
-  color: var(--color-ink-deep);
-}
-
-.prose h2 {
-  font-size: 1.55rem;
-  margin-top: 2.4rem;
-  margin-bottom: 0.7rem;
-  color: var(--color-ink-deep);
-  font-weight: 500;
-  letter-spacing: -0.012em;
-}
-
-.prose h3 {
-  font-size: 1.2rem;
-  margin-top: 1.7rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-ink-deep);
-  font-weight: 500;
-}
-
-.prose ul, .prose ol {
-  margin: 1em 0 1.3em;
-  padding-left: 1.5em;
-}
-
-.prose ul { list-style: disc; }
-.prose ol { list-style: decimal; }
-
-.prose li { margin-bottom: 0.35em; }
-
-.prose a {
-  color: var(--color-ink);
-  text-decoration: underline;
-  text-decoration-color: rgba(27, 58, 110, 0.4);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
-}
-
-.prose a:hover {
-  text-decoration-color: var(--color-ink);
-}
-
-.prose blockquote {
-  border-left: 2px solid var(--color-surgical);
-  padding-left: 1.1em;
-  font-style: italic;
-  color: var(--color-ink-deep);
-  margin: 1.5em 0;
-}
-
-/* === Legacy class shims so existing components still render === */
-.eyebrow {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-}
-.caps-label {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-slate);
-}
-.dateline {
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-slate);
-}
-.display-headline {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.014em;
-  line-height: 1.05;
-}
-.step-numeral {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-variant-numeric: tabular-nums;
-  font-weight: 300;
-  font-size: 2.25rem;
-  line-height: 1;
-  color: var(--color-ink);
-  letter-spacing: -0.02em;
-}
-.rank-numeral {
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 300;
-  color: var(--color-ink);
-  font-variant-numeric: tabular-nums;
-}
-
-.btn-primary {
+.btn-primary, .btn-secondary, .btn-cheatsheet {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.75rem 1.2rem;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: 1px;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--color-teal-500);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 999px;
   cursor: pointer;
   min-height: 44px;
-  transition: background 0.15s ease, transform 0.08s ease;
+  transition: background 0.15s ease;
 }
-.btn-primary:hover { background: var(--color-ink-deep); }
-.btn-primary:active { transform: translateY(1px); }
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.75rem 1.2rem;
-  color: var(--color-ink-deep);
-  background: transparent;
-  border: 1px solid var(--color-ink);
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  cursor: pointer;
-  min-height: 44px;
-}
-.btn-secondary:hover { background: var(--color-ink); color: var(--color-paper); }
-
-.btn-cheatsheet {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0.95rem;
-  background: var(--color-paper);
-  color: var(--color-ink-deep);
-  border: 1px solid rgba(27, 58, 110, 0.25);
-  font-weight: 500;
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: 1px;
-  cursor: pointer;
-}
-.btn-cheatsheet:hover {
-  border-color: var(--color-ink);
-  color: var(--color-ink);
-}
+.btn-primary:hover { background: var(--color-teal-600); }
+.btn-secondary { background: transparent; color: var(--color-teal-700); border: 1px solid var(--color-teal-500); }
+.btn-secondary:hover { background: var(--color-teal-50); }
+.btn-cheatsheet { background: var(--color-surface-alt); color: var(--color-ink); border: 1px solid var(--color-rule); font-size: 13px; padding: 8px 14px; }
+.btn-cheatsheet:hover { border-color: var(--color-teal-500); color: var(--color-teal-700); }
 
 .tier-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.22rem 0.6rem;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.65rem;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--color-teal-500);
+  color: #fff;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 999px;
 }
-.tier-badge::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  background: var(--color-paper);
-  border-radius: 50%;
-}
-.tier-badge-mid { background: var(--color-moss); }
+.tier-badge::before { content: ""; width: 5px; height: 5px; background: #fff; border-radius: 999px; }
+.tier-badge-mid { background: var(--color-success); }
 .tier-badge-budget { background: var(--color-amber); color: #3a2a14; }
 .tier-badge-budget::before { background: #3a2a14; }
-.tier-badge-skip { background: var(--color-slate); }
+.tier-badge-skip { background: var(--color-ink-muted); }
 
 .card-clinical {
-  background: var(--color-paper);
-  border: 1px solid var(--color-ink);
-  border-left-width: 4px;
-  border-radius: 1px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-left: 4px solid var(--color-teal-500);
+  border-radius: 6px;
 }
 .card-clinical-soft {
-  background: #fff;
-  border: 1px solid rgba(27, 58, 110, 0.2);
-  border-radius: 1px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
 }
 
 .ref-strip {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.9rem;
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-family: "Inter Tight", "IBM Plex Sans", sans-serif;
-  font-size: 0.65rem;
+  padding: 10px 14px;
+  background: var(--color-teal-600);
+  color: #fff;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  border-radius: 6px;
 }
 
-.nav-link {
-  position: relative;
-  color: var(--color-ink-deep);
-  transition: color 0.15s ease;
+.atlas-rule { border-color: var(--color-rule); }
+.atlas-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-ink-muted);
 }
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 1px;
-  background: var(--color-surgical);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-.nav-link:hover::after,
-.nav-link[aria-current="page"]::after {
-  transform: scaleX(1);
+.atlas-divider::before, .atlas-divider::after {
+  content: ""; flex: 1; height: 1px; background: var(--color-rule);
 }
 
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.atlas-warning {
+  border: 1px solid var(--color-danger);
+  border-left-width: 4px;
+  background: rgba(200, 70, 60, 0.04);
+  padding: 16px 20px;
+  border-radius: 6px;
 }
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.atlas-warning-title {
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-danger); font-size: 12px;
+  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
 }
+.atlas-leaflet {
+  border: 1px solid var(--color-rule);
+  background: var(--color-surface-alt);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-ink);
+}
+.atlas-leaflet ol { list-style: none; padding: 0; margin: 0; counter-reset: ref; }
+.atlas-leaflet li {
+  counter-increment: ref;
+  display: grid; grid-template-columns: 32px 1fr; gap: 8px;
+  padding: 8px 0; border-top: 1px dashed var(--color-rule);
+}
+.atlas-leaflet li:first-child { border-top: none; }
+.atlas-leaflet li::before { content: counter(ref); font-weight: 600; color: var(--color-teal-600); font-size: 13px; }
+
+.atlas-stepper { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.4; }
+.atlas-stepper-current { padding-left: 12px; border-left: 2px solid var(--color-teal-500); color: var(--color-ink); font-weight: 600; }
+.atlas-stepper-prev, .atlas-stepper-next { padding-left: 12px; border-left: 1px solid var(--color-rule); color: var(--color-ink-muted); }
+.atlas-stepper-prev:hover, .atlas-stepper-next:hover { color: var(--color-ink); border-left-color: var(--color-teal-500); }
+
+.atlas-outline { font-family: "Inter", sans-serif; font-size: 13px; line-height: 1.5; }
+.atlas-outline-item {
+  display: block; padding: 6px 0 6px 12px;
+  border-left: 1px solid var(--color-rule);
+  color: var(--color-ink-muted);
+  transition: color 0.15s ease, border-left-color 0.15s ease;
+}
+.atlas-outline-item:hover { color: var(--color-ink); border-left-color: var(--color-teal-500); }
+.atlas-outline-item-active { color: var(--color-teal-700); border-left-color: var(--color-teal-500); font-weight: 600; }
+
+.num, .tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* Print */
-@media print {
-  .no-print { display: none !important; }
-  body { background: #fff; }
-  .card-clinical, .atlas-warning, .atlas-leaflet { break-inside: avoid; }
+.hairline, .clinical-rule {
+  display: block; height: 1px; background: var(--color-rule);
 }
 
-/* Page-load reveal */
+.fade-up { animation: fadeUp 0.5s ease-out both; }
+.fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
+.fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
+.reveal-masthead-0, .reveal-masthead-1, .reveal-masthead-2,
+.reveal-masthead-3, .reveal-masthead-4 { animation: fadeUp 0.5s ease-out both; }
+.reveal { opacity: 1; transform: none; }
+.reveal.in-view { opacity: 1; transform: none; }
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.fade-up { animation: fadeUp 0.5s ease-out both; }
-.fade-up-delay-1 { animation: fadeUp 0.5s ease-out 0.08s both; }
-.fade-up-delay-2 { animation: fadeUp 0.5s ease-out 0.16s both; }
 
-@keyframes clinicalReveal {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.reveal-masthead-0 { animation: clinicalReveal 0.45s ease-out 0s both; }
-.reveal-masthead-1 { animation: clinicalReveal 0.45s ease-out 0.15s both; }
-.reveal-masthead-2 { animation: clinicalReveal 0.5s ease-out 0.32s both; }
-.reveal-masthead-3 { animation: clinicalReveal 0.55s ease-out 0.52s both; }
-.reveal-masthead-4 { animation: clinicalReveal 0.55s ease-out 0.72s both; }
-
-.reveal {
-  opacity: 0;
-  transform: translateY(10px);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out;
-  will-change: opacity, transform;
-}
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.25); }
 }
 
-.hairline,
-.clinical-rule {
-  position: relative;
-  display: block;
-  height: 1px;
-  background: rgba(27, 58, 110, 0.28);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.hairline.in-view,
-.clinical-rule.in-view {
-  transform: scaleX(1);
-}
+.pulse-dot { animation: pulseDot 1.5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
   }
-  .fade-up, .fade-up-delay-1, .fade-up-delay-2,
-  .reveal-masthead-0, .reveal-masthead-1, .reveal-masthead-2,
-  .reveal-masthead-3, .reveal-masthead-4, .reveal {
-    opacity: 1 !important; transform: none !important;
-  }
-  .hairline, .clinical-rule { transform: scaleX(1) !important; }
+  .pulse-dot { animation: none !important; }
 }
 
-/* Scrollbar — paper-soft on ink. */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(27, 58, 110, 0.4) rgba(250, 250, 247, 0.6);
-}
+/* Scrollbar — subtle */
+* { scrollbar-width: thin; scrollbar-color: var(--color-rule-strong) transparent; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: rgba(250, 250, 247, 0.6); }
-::-webkit-scrollbar-thumb {
-  background: rgba(27, 58, 110, 0.3);
-  border: 2px solid var(--color-paper);
-  border-radius: 8px;
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-rule-strong); border: 2px solid var(--color-surface); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-soft); }
+
+/* Print — strip nav, force B/W */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(27, 58, 110, 0.55); }

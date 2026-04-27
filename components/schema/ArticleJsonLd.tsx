@@ -8,12 +8,22 @@ export function ArticleJsonLd({
   description,
   datePublished,
   dateModified,
+  authorName = SITE.author,
+  authorJobTitle,
+  reviewerName,
+  reviewerJobTitle,
+  imageUrl,
 }: {
   path: string;
   headline: string;
   description: string;
   datePublished: string;
   dateModified: string;
+  authorName?: string;
+  authorJobTitle?: string;
+  reviewerName?: string;
+  reviewerJobTitle?: string;
+  imageUrl?: string;
 }) {
   return (
     <JsonLd
@@ -25,18 +35,32 @@ export function ArticleJsonLd({
         mainEntityOfPage: { "@type": "WebPage", "@id": canonical(path) },
         datePublished,
         dateModified,
-        author: {
-          "@type": "Organization",
-          name: SITE.author,
-          url: SITE.url,
-        },
+        image: imageUrl,
+        author: authorJobTitle
+          ? {
+              "@type": "Person",
+              name: authorName,
+              jobTitle: authorJobTitle,
+            }
+          : {
+              "@type": "Organization",
+              name: authorName,
+              url: SITE.url,
+            },
+        reviewedBy: reviewerName
+          ? {
+              "@type": "Person",
+              name: reviewerName,
+              jobTitle: reviewerJobTitle,
+            }
+          : undefined,
         publisher: {
           "@type": "Organization",
           name: SITE.name,
           url: SITE.url,
           logo: {
             "@type": "ImageObject",
-            url: `${SITE.url}/logo.png`,
+            url: `${SITE.url}/icon`,
           },
         },
       }}

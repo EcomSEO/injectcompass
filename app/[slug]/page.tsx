@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost, posts } from "@/lib/content/posts";
-import { ChapterTemplate } from "@/components/atlas/ChapterTemplate";
+import { ArticleTemplate } from "@/components/ArticleTemplate";
 import { pageMetadata } from "@/lib/seo";
 
-// Avoid colliding with /about, /contact, etc — static pages take precedence over this dynamic route.
 const RESERVED = new Set([
   "about",
   "contact",
@@ -34,12 +33,8 @@ export async function generateMetadata({
   if (RESERVED.has(slug)) return {};
   const post = getPost(slug);
   if (!post) return {};
-  const suffix =
-    post.postType === "comparison"
-      ? ` (Tested ${new Date(post.updatedAt).getFullYear()})`
-      : "";
   return pageMetadata({
-    title: `${post.title}${suffix}`,
+    title: post.title,
     description: post.description,
     path: `/${post.slug}`,
     ogType: "article",
@@ -56,7 +51,5 @@ export default async function PostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
-  // All post types render through the atlas chapter shell — every post is
-  // a numbered chapter in the atlas, regardless of internal type.
-  return <ChapterTemplate post={post} />;
+  return <ArticleTemplate post={post} />;
 }

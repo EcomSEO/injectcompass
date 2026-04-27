@@ -1,70 +1,270 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { MegaMenu, type MegaMenuColumn } from "./MegaMenu";
 
 /**
- * Atlas Header — paper-white sticky bar, ink wordmark left, condensed
- * uppercase nav, tiny search icon right. Thin 1px ink rule under the bar.
- * No dark masthead, no big rounded search.
+ * Healthline-grade publisher header.
+ * Sticky white bar, h-16, logo left, primary nav center (with mega-menu on hover),
+ * search 320px right, locale switcher, "Newsletter" pill button.
+ *
+ * Mobile: hamburger drawer + collapsed search icon.
  */
 
-const NAV = [
-  { href: "/#atlas-index", label: "Atlas" },
-  { href: "/guides/injection-technique", label: "Technique" },
-  { href: "/guides/reconstitution", label: "Sites" },
-  { href: "/guides/troubleshooting", label: "Troubleshooting" },
-  { href: "/methodology", label: "Methodology" },
-  { href: "/pipeline", label: "Pipeline" },
+type SimpleNav = { href: string; label: string };
+type MegaNav = {
+  label: string;
+  megaMenu: MegaMenuColumn[];
+  featured?: { eyebrow: string; title: string; href: string; dek: string };
+};
+type NavItem = SimpleNav | MegaNav;
+
+function isMega(item: NavItem): item is MegaNav {
+  return (item as MegaNav).megaMenu !== undefined;
+}
+
+const NAV: NavItem[] = [
+  {
+    label: "Conditions",
+    megaMenu: [
+      {
+        title: "Diabetes & GLP-1",
+        items: [
+          { label: "Subcutaneous injection sites", href: "/subcutaneous-injection-sites" },
+          { label: "Site rotation", href: "/injection-site-rotation" },
+          { label: "Reading insulin syringes", href: "/reading-insulin-syringes" },
+        ],
+      },
+      {
+        title: "Hormone therapy",
+        items: [
+          { label: "Intramuscular technique", href: "/intramuscular-injection-technique" },
+          { label: "Glute vs. thigh sites", href: "/im-injection-sites" },
+          { label: "Needle gauge guide", href: "/needle-gauge-guide" },
+        ],
+      },
+      {
+        title: "Peptide therapy",
+        items: [
+          { label: "Reconstitution math", href: "/reconstitution-calculator" },
+          { label: "Bacteriostatic water", href: "/bacteriostatic-water" },
+          { label: "Cloudy solutions", href: "/cloudy-peptide-solutions" },
+        ],
+      },
+    ],
+    featured: {
+      eyebrow: "Trending",
+      title: "How to read an insulin syringe — with a visual",
+      href: "/peptide-calculator",
+      dek: "U-100 syringe ticks decoded, with a worked example you can print.",
+    },
+  },
+  {
+    label: "Procedures",
+    megaMenu: [
+      {
+        title: "Technique",
+        items: [
+          { label: "Subcutaneous injection", href: "/subcutaneous-injection-technique" },
+          { label: "Intramuscular injection", href: "/intramuscular-injection-technique" },
+          { label: "Pinching skin correctly", href: "/skin-pinching-technique" },
+        ],
+      },
+      {
+        title: "Preparation",
+        items: [
+          { label: "Reconstitution step-by-step", href: "/reconstitution-step-by-step" },
+          { label: "Drawing up a dose", href: "/drawing-up-injection-dose" },
+          { label: "Sterile field basics", href: "/sterile-injection-prep" },
+        ],
+      },
+      {
+        title: "After the injection",
+        items: [
+          { label: "Bruising & bleeding", href: "/injection-bruising" },
+          { label: "Lipohypertrophy", href: "/lipohypertrophy" },
+          { label: "Sharps disposal", href: "/sharps-disposal" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Drugs",
+    megaMenu: [
+      {
+        title: "GLP-1 family",
+        items: [
+          { label: "Semaglutide", href: "/semaglutide-injection-guide" },
+          { label: "Tirzepatide", href: "/tirzepatide-injection-guide" },
+          { label: "Liraglutide", href: "/liraglutide-injection-guide" },
+        ],
+      },
+      {
+        title: "Peptides",
+        items: [
+          { label: "BPC-157", href: "/bpc-157" },
+          { label: "TB-500", href: "/tb-500" },
+          { label: "Ipamorelin", href: "/ipamorelin" },
+        ],
+      },
+      {
+        title: "Hormones",
+        items: [
+          { label: "Testosterone", href: "/testosterone-injection-guide" },
+          { label: "HCG", href: "/hcg-injection-guide" },
+          { label: "Estradiol", href: "/estradiol-injection-guide" },
+        ],
+      },
+    ],
+  },
+  { href: "/guides/troubleshooting", label: "Health News" },
+  {
+    label: "Tools",
+    megaMenu: [
+      {
+        title: "Calculators",
+        items: [
+          { label: "Peptide Calculator", href: "/peptide-calculator" },
+          { label: "Reconstitution Calculator", href: "/reconstitution-calculator" },
+          { label: "Syringe Converter", href: "/syringe-converter" },
+          { label: "Dose Schedule Builder", href: "/dose-schedule-builder" },
+        ],
+      },
+      {
+        title: "Reference",
+        items: [
+          { label: "Methodology v1.2", href: "/methodology" },
+          { label: "Editorial standards", href: "/editorial-standards" },
+          { label: "Pipeline", href: "/pipeline" },
+        ],
+      },
+    ],
+  },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMega, setActiveMega] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const openMega = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMega(label);
+  };
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setActiveMega(null), 120);
+  };
+
+  const activeItem = activeMega ? NAV.find((n) => isMega(n) && n.label === activeMega) : null;
 
   return (
-    <header className="bg-paper sticky top-0 z-40 border-b border-ink/20">
-      <div className="mx-auto max-w-6xl px-6 h-14 md:h-16 flex items-center justify-between gap-6">
-        {/* Wordmark */}
-        <Link href="/" className="flex items-center gap-2 group" aria-label="InjectCompass — atlas home">
-          <CrosshairMark />
-          <span className="atlas-wordmark text-[15px] md:text-base text-ink-deep tracking-[0.06em] group-hover:text-surgical transition-colors">
-            INJECTCOMPASS
+    <header className="sticky top-0 z-40 bg-white border-b border-rule">
+      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
+        <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="InjectCompass — home">
+          <CompassMark />
+          <span className="font-semibold text-[18px] tracking-tight text-ink group-hover:text-teal-600 transition-colors">
+            injectcompass
           </span>
         </Link>
 
-        {/* Nav */}
-        <nav className="hidden md:flex items-center gap-7" aria-label="Primary">
-          {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="atlas-mini text-ink-deep hover:text-surgical transition-colors tracking-[0.18em]"
-            >
-              {n.label}
-            </Link>
-          ))}
+        <nav
+          className="hidden lg:flex items-center gap-1 ml-4 flex-1"
+          aria-label="Primary"
+          onMouseLeave={scheduleClose}
+        >
+          {NAV.map((item) => {
+            if (isMega(item)) {
+              const isOpen = activeMega === item.label;
+              return (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => openMega(item.label)}
+                  onFocus={() => openMega(item.label)}
+                >
+                  <button
+                    type="button"
+                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors ${
+                      isOpen ? "text-teal-700 bg-teal-50" : "text-ink hover:text-teal-700"
+                    }`}
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
+                  >
+                    {item.label}
+                  </button>
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-teal-700 transition-colors rounded-md"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
-        {/* Right rail — search icon + locale */}
-        <div className="flex items-center gap-3">
+        <form
+          role="search"
+          action="/"
+          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-surface-alt border border-rule focus-within:border-teal-500 focus-within:bg-white transition-colors"
+        >
+          <SearchIcon className="w-4 h-4 text-ink-muted shrink-0" />
+          <input
+            type="search"
+            name="q"
+            placeholder="Search injection guides…"
+            className="ml-2 bg-transparent w-full text-[14px] text-ink placeholder:text-ink-soft outline-none"
+            aria-label="Search the site"
+          />
+        </form>
+
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
-            aria-label="Search the atlas"
-            className="hidden md:inline-flex items-center justify-center w-8 h-8 text-ink-deep hover:text-surgical transition-colors"
+            className="hidden md:inline-flex items-center gap-1.5 px-2.5 h-9 text-[13px] font-medium text-ink-muted hover:text-ink rounded-md transition-colors"
+            aria-label="Change language"
           >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
-              <circle cx="7" cy="7" r="5" />
-              <line x1="11" y1="11" x2="14.5" y2="14.5" />
-            </svg>
+            <GlobeIcon className="w-4 h-4" />
+            <span>EN</span>
           </button>
+          <Link
+            href="/newsletter"
+            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-teal-500 text-white text-[14px] font-semibold hover:bg-teal-600 transition-colors"
+          >
+            Newsletter
+          </Link>
 
+          <button
+            type="button"
+            aria-label="Search"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
+          >
+            <SearchIcon className="w-5 h-5" />
+          </button>
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="md:hidden inline-flex items-center justify-center w-9 h-9 text-ink-deep -mr-1"
             aria-label="Open menu"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
               <line x1="3" y1="7" x2="21" y2="7" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="17" x2="21" y2="17" />
@@ -73,52 +273,144 @@ export function Header() {
         </div>
       </div>
 
+      {activeItem && isMega(activeItem) && (
+        <div
+          className="absolute left-0 right-0 bg-white border-b border-rule shadow-card"
+          onMouseEnter={() => openMega(activeItem.label)}
+          onMouseLeave={scheduleClose}
+        >
+          <MegaMenu columns={activeItem.megaMenu} featured={activeItem.featured} />
+        </div>
+      )}
+
       {mobileOpen && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-0 z-50 bg-paper md:hidden overflow-auto"
+          className="fixed inset-0 z-50 bg-white overflow-auto lg:hidden"
         >
-          <div className="flex items-center justify-between px-6 h-14 border-b border-ink/20">
-            <span className="atlas-wordmark text-[15px] text-ink-deep">INJECTCOMPASS</span>
+          <div className="flex items-center justify-between px-6 h-16 border-b border-rule">
+            <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+              <CompassMark />
+              <span className="font-semibold text-[18px] text-ink">injectcompass</span>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
-              className="inline-flex items-center justify-center w-9 h-9 -mr-1 text-ink-deep"
+              className="inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
           </div>
-          <nav className="px-6 py-8 flex flex-col gap-4">
-            {NAV.map((n) => (
-              <Link
-                key={n.href}
-                href={n.href}
-                onClick={() => setMobileOpen(false)}
-                className="atlas-display text-xl text-ink-deep py-2 border-b border-ink/10"
-              >
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="p-6">
+            <form role="search" action="/" className="flex items-center w-full h-12 px-4 rounded-pill bg-surface-alt border border-rule mb-6">
+              <SearchIcon className="w-5 h-5 text-ink-muted shrink-0" />
+              <input
+                type="search"
+                name="q"
+                placeholder="Search injection guides…"
+                className="ml-3 bg-transparent w-full text-[15px] outline-none"
+                aria-label="Search the site"
+              />
+            </form>
+            <nav className="flex flex-col">
+              {NAV.map((item) => {
+                if (isMega(item)) {
+                  return (
+                    <details key={item.label} className="border-b border-rule">
+                      <summary className="cursor-pointer flex items-center justify-between py-4 text-[18px] font-semibold text-ink list-none">
+                        {item.label}
+                        <ChevronDown />
+                      </summary>
+                      <div className="pb-4 pl-2">
+                        {item.megaMenu.map((col) => (
+                          <div key={col.title} className="mb-3">
+                            <div className="eyebrow eyebrow-muted mb-2">{col.title}</div>
+                            <ul className="space-y-2">
+                              {col.items.map((sub) => (
+                                <li key={sub.href}>
+                                  <Link
+                                    href={sub.href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className="text-[15px] text-ink hover:text-teal-700"
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-4 text-[18px] font-semibold text-ink border-b border-rule"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <Link
+              href="/newsletter"
+              onClick={() => setMobileOpen(false)}
+              className="mt-8 inline-flex w-full items-center justify-center h-12 px-4 rounded-pill bg-teal-500 text-white text-[15px] font-semibold"
+            >
+              Sign up for the newsletter
+            </Link>
+          </div>
         </div>
       )}
     </header>
   );
 }
 
-function CrosshairMark() {
+function CompassMark() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1B3A6E" strokeWidth="1.1" aria-hidden>
-      <circle cx="10" cy="10" r="8" />
-      <line x1="10" y1="2" x2="10" y2="18" />
-      <line x1="2" y1="10" x2="18" y2="10" />
-      <circle cx="10" cy="10" r="2" fill="#C8463C" stroke="none" />
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <circle cx="14" cy="14" r="12" stroke="#0E8A7A" strokeWidth="1.6" />
+      <path d="M14 5 L17 14 L14 23 L11 14 Z" fill="#0E8A7A" />
+      <circle cx="14" cy="14" r="2.4" fill="#fff" />
+      <circle cx="14" cy="14" r="1.2" fill="#0A6F61" />
+    </svg>
+  );
+}
+
+function SearchIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className={className}>
+      <circle cx="9" cy="9" r="6" />
+      <line x1="13.5" y1="13.5" x2="17.5" y2="17.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function GlobeIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className={className}>
+      <circle cx="10" cy="10" r="7.5" />
+      <path d="M2.5 10h15" />
+      <path d="M10 2.5c2.5 2.7 2.5 12.3 0 15" />
+      <path d="M10 2.5c-2.5 2.7-2.5 12.3 0 15" />
+    </svg>
+  );
+}
+
+function ChevronDown() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <polyline points="3,6 8,11 13,6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
