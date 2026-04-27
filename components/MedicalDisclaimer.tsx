@@ -5,7 +5,7 @@
  * This file keeps the historical import paths working (layout.tsx + templates).
  */
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export { MedicalDisclaimerStrip } from "./editorial/MedicalDisclaimerStrip";
 export { MedicalDisclaimerFooterStrip as MedicalDisclaimerFooter } from "./editorial/MedicalDisclaimerStrip";
