@@ -155,7 +155,10 @@
     "disclaimer_heading": "Medicinsk friskrivning",
     "disclaimer_body": "InjectCompass publicerar patientinformation. Inget här ersätter receptet från din kliniker, bipacksedeln till ditt läkemedel eller bedömningen av yrkesutövaren som känner ditt fall. Stämmer ett symtom inte med vad du läser ska du betrakta texten som inaktuell och ringa din förskrivare.",
     "from_the_network": "Från nätverket",
-    "copyright": "© {year} InjectCompass. Endast patientinformation. Inte medicinsk rådgivning."
+    "copyright": "© {year} InjectCompass. Endast patientinformation. Inte medicinsk rådgivning.",
+    "cookie_preferences": "Kakinställningar",
+    "cookies_link": "Kakpolicy",
+    "impressum_link": "Utgivare"
   },
   "locale_switcher": {
     "label": "Språk",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Samtycke till kakor",
+    "heading": "Vi använder kakor",
+    "body": "Vi använder strikt nödvändiga kakor för att webbplatsen ska fungera. Analys- eller marknadsföringskakor används endast efter ditt samtycke. Du kan ändra ditt val när som helst.",
+    "read_more": "Läs kakpolicyn",
+    "accept_all": "Acceptera alla",
+    "reject_all": "Avvisa alla",
+    "customize": "Anpassa",
+    "customize_heading": "Kakinställningar",
+    "customize_body": "Välj de kategorier du vill tillåta.",
+    "necessary_label": "Nödvändiga",
+    "necessary_desc": "Krävs för att webbplatsen ska fungera. Alltid aktiva.",
+    "analytics_label": "Analys",
+    "analytics_desc": "Aggregerad, pseudonymiserad statistik.",
+    "marketing_label": "Marknadsföring",
+    "marketing_desc": "Mätning av annonsprestanda. Avstängt som standard.",
+    "save_choices": "Spara val"
+  },
+  "educationalBanner": {
+    "aria_label": "Pedagogiskt meddelande",
+    "eyebrow": "Endast utbildande — utgör inte medicinsk rådgivning.",
+    "body": "Innehållet på InjectCompass är utbildande. Rådfråga alltid en legitimerad förskrivare innan du påbörjar, ändrar eller avslutar en injektionsbehandling."
+  },
+  "wadaBanner": {
+    "eyebrow": "WADA-information.",
+    "body": "Vissa diskuterade substanser finns på WADA:s dopinglista. Idrottare som omfattas av antidopingtester bör kontakta sitt förbund."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Tillsynsmyndigheter"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Utgivare"
   }
 }

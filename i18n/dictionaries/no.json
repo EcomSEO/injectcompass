@@ -155,7 +155,10 @@
     "disclaimer_heading": "Medisinsk forbehold",
     "disclaimer_body": "InjectCompass publiserer pasientinformasjon. Ingenting her erstatter resepten klinikeren din skrev, pakningsvedlegget til medisinen din eller vurderingen til helsepersonellet som kjenner saken din. Hvis et symptom ikke stemmer med teksten, regn den som utdatert og ring forskriveren din.",
     "from_the_network": "Fra nettverket",
-    "copyright": "© {year} InjectCompass. Kun pasientinformasjon. Ikke medisinsk råd."
+    "copyright": "© {year} InjectCompass. Kun pasientinformasjon. Ikke medisinsk råd.",
+    "cookie_preferences": "Innstillinger for informasjonskapsler",
+    "cookies_link": "Erklæring om informasjonskapsler",
+    "impressum_link": "Kolofon"
   },
   "locale_switcher": {
     "label": "Språk",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Samtykke til informasjonskapsler",
+    "heading": "Vi bruker informasjonskapsler",
+    "body": "Vi bruker strengt nødvendige informasjonskapsler for å drifte nettstedet. Analyse- og markedsføringskapsler aktiveres kun etter ditt samtykke. Du kan endre valget når som helst.",
+    "read_more": "Les erklæringen om informasjonskapsler",
+    "accept_all": "Godta alle",
+    "reject_all": "Avvis alle",
+    "customize": "Tilpass",
+    "customize_heading": "Innstillinger for informasjonskapsler",
+    "customize_body": "Velg kategoriene du vil tillate.",
+    "necessary_label": "Nødvendige",
+    "necessary_desc": "Nødvendige for at nettstedet skal fungere. Alltid aktive.",
+    "analytics_label": "Analyse",
+    "analytics_desc": "Aggregert, pseudonymisert statistikk.",
+    "marketing_label": "Markedsføring",
+    "marketing_desc": "Måling av annonseeffektivitet. Av som standard.",
+    "save_choices": "Lagre valg"
+  },
+  "educationalBanner": {
+    "aria_label": "Informasjon",
+    "eyebrow": "Kun til opplæring — utgjør ikke medisinsk rådgivning.",
+    "body": "Innholdet på InjectCompass er opplærende. Rådfør deg alltid med en autorisert forskrivende lege før du starter, endrer eller avslutter en injeksjonsbehandling."
+  },
+  "wadaBanner": {
+    "eyebrow": "WADA-merknad.",
+    "body": "Enkelte omtalte stoffer står på WADAs forbudsliste. Utøvere som er underlagt antidoping-tester bør kontakte sitt særforbund."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Tilsynsmyndigheter"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Kolofon"
   }
 }

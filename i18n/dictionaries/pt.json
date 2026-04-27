@@ -155,7 +155,10 @@
     "disclaimer_heading": "Aviso médico",
     "disclaimer_body": "O InjectCompass publica conteúdos de informação ao doente. Nada aqui substitui a receita do seu clínico, o folheto informativo do seu medicamento ou o juízo do profissional que conhece o seu caso. Se um sintoma não bater com o texto, considere-o desatualizado e ligue ao seu prescritor.",
     "from_the_network": "Da nossa rede",
-    "copyright": "© {year} InjectCompass. Apenas informação ao doente. Não é aconselhamento médico."
+    "copyright": "© {year} InjectCompass. Apenas informação ao doente. Não é aconselhamento médico.",
+    "cookie_preferences": "Preferências de cookies",
+    "cookies_link": "Política de cookies",
+    "impressum_link": "Ficha técnica"
   },
   "locale_switcher": {
     "label": "Idioma",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Consentimento de cookies",
+    "heading": "Utilizamos cookies",
+    "body": "Utilizamos cookies estritamente necessários ao funcionamento do site. Os cookies analíticos ou de marketing apenas são ativados após o seu consentimento. Pode alterar a sua escolha a qualquer momento.",
+    "read_more": "Ler a política de cookies",
+    "accept_all": "Aceitar tudo",
+    "reject_all": "Rejeitar tudo",
+    "customize": "Personalizar",
+    "customize_heading": "Preferências de cookies",
+    "customize_body": "Escolha as categorias que pretende autorizar.",
+    "necessary_label": "Necessários",
+    "necessary_desc": "Indispensáveis ao funcionamento do site. Sempre ativos.",
+    "analytics_label": "Análise",
+    "analytics_desc": "Estatísticas agregadas e pseudonimizadas.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Medição da eficácia publicitária. Desativados por defeito.",
+    "save_choices": "Guardar escolhas"
+  },
+  "educationalBanner": {
+    "aria_label": "Aviso educativo",
+    "eyebrow": "Apenas educativo — não substitui aconselhamento médico.",
+    "body": "Os conteúdos da InjectCompass são educativos. Consulte sempre um profissional de saúde habilitado a prescrever antes de iniciar, alterar ou suspender uma terapêutica injetável."
+  },
+  "wadaBanner": {
+    "eyebrow": "Aviso AMA.",
+    "body": "Alguns compostos referidos constam da Lista de Proibições da AMA. Os atletas sujeitos a controlo antidopagem devem consultar a sua federação."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Autoridades reguladoras"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Ficha técnica"
   }
 }

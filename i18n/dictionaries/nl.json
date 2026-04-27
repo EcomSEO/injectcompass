@@ -155,7 +155,10 @@
     "disclaimer_heading": "Medische disclaimer",
     "disclaimer_body": "InjectCompass publiceert patiëntinformatie. Niets hier vervangt het recept van uw clinicus, de bijsluiter van uw geneesmiddel of het oordeel van de zorgverlener die uw situatie kent. Komt een symptoom niet overeen met wat u hier leest, beschouw de tekst dan als verouderd en bel uw voorschrijvende arts.",
     "from_the_network": "Uit ons netwerk",
-    "copyright": "© {year} InjectCompass. Uitsluitend patiëntinformatie. Geen medisch advies."
+    "copyright": "© {year} InjectCompass. Uitsluitend patiëntinformatie. Geen medisch advies.",
+    "cookie_preferences": "Cookievoorkeuren",
+    "cookies_link": "Cookiebeleid",
+    "impressum_link": "Colofon"
   },
   "locale_switcher": {
     "label": "Taal",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Cookie-toestemming",
+    "heading": "We gebruiken cookies",
+    "body": "We gebruiken strikt noodzakelijke cookies voor het functioneren van de website. Analytische of marketingcookies worden uitsluitend met uw toestemming geplaatst. U kunt uw keuze op ieder moment wijzigen.",
+    "read_more": "Cookiebeleid lezen",
+    "accept_all": "Alles accepteren",
+    "reject_all": "Alles weigeren",
+    "customize": "Aanpassen",
+    "customize_heading": "Cookievoorkeuren",
+    "customize_body": "Kies de categorieën die u wilt toestaan.",
+    "necessary_label": "Noodzakelijk",
+    "necessary_desc": "Onmisbaar voor de werking van de site. Altijd actief.",
+    "analytics_label": "Analytisch",
+    "analytics_desc": "Geaggregeerde, gepseudonimiseerde meting.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Conversiemeting voor advertenties. Standaard uit.",
+    "save_choices": "Keuzes opslaan"
+  },
+  "educationalBanner": {
+    "aria_label": "Educatieve melding",
+    "eyebrow": "Alleen educatief — geen medisch advies.",
+    "body": "InjectCompass biedt educatieve content. Raadpleeg altijd een bevoegde voorschrijver voordat u een injecteerbare behandeling start, wijzigt of stopt."
+  },
+  "wadaBanner": {
+    "eyebrow": "WADA-melding.",
+    "body": "Sommige besproken stoffen staan op de WADA-verbodslijst. Sporters die onder dopingcontrole vallen, dienen hun sportbond te raadplegen."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Toezichthouders"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Colofon"
   }
 }

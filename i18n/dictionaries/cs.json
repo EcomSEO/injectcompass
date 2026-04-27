@@ -155,7 +155,10 @@
     "disclaimer_heading": "Lékařské upozornění",
     "disclaimer_body": "InjectCompass publikuje obsah pro edukaci pacienta. Nic zde nenahrazuje předpis vašeho klinika, příbalovou informaci léku ani úsudek odborníka, který zná váš případ. Pokud příznak neodpovídá textu, považujte ho za zastaralý a zavolejte tomu, kdo lék předepsal.",
     "from_the_network": "Z naší sítě",
-    "copyright": "© {year} InjectCompass. Pouze edukace pacienta. Nejde o lékařskou radu."
+    "copyright": "© {year} InjectCompass. Pouze edukace pacienta. Nejde o lékařskou radu.",
+    "cookie_preferences": "Nastavení cookies",
+    "cookies_link": "Zásady cookies",
+    "impressum_link": "Tiráž"
   },
   "locale_switcher": {
     "label": "Jazyk",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Souhlas s cookies",
+    "heading": "Používáme cookies",
+    "body": "Používáme pouze nezbytné cookies. Analytické a marketingové cookies jsou aktivovány pouze s Vaším souhlasem. Volbu můžete kdykoli změnit.",
+    "read_more": "Zásady používání cookies",
+    "accept_all": "Přijmout vše",
+    "reject_all": "Odmítnout vše",
+    "customize": "Přizpůsobit",
+    "customize_heading": "Nastavení cookies",
+    "customize_body": "Vyberte kategorie, které chcete povolit.",
+    "necessary_label": "Nezbytné",
+    "necessary_desc": "Nutné pro fungování webu. Vždy aktivní.",
+    "analytics_label": "Analytické",
+    "analytics_desc": "Agregovaná pseudonymizovaná statistika.",
+    "marketing_label": "Marketingové",
+    "marketing_desc": "Měření výkonu reklamy. Ve výchozím stavu vypnuto.",
+    "save_choices": "Uložit volbu"
+  },
+  "educationalBanner": {
+    "aria_label": "Vzdělávací upozornění",
+    "eyebrow": "Pouze vzdělávací obsah — nejedná se o lékařské doporučení.",
+    "body": "Obsah InjectCompass je vzdělávací povahy. Před zahájením, změnou nebo ukončením injekční terapie vždy konzultujte oprávněného předepisujícího lékaře."
+  },
+  "wadaBanner": {
+    "eyebrow": "Upozornění WADA.",
+    "body": "Některé zmíněné látky jsou na seznamu zakázaných látek WADA. Sportovci podléhající antidopingovým kontrolám by se měli obrátit na svůj svaz."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Dozorové orgány"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Tiráž"
   }
 }

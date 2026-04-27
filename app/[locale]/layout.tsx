@@ -5,7 +5,7 @@ import { getMessages, setRequestLocale, getTranslations } from "next-intl/server
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CookieBanner } from "@/components/CookieBanner";
+import { CookieConsent } from "@/components/CookieConsent";
 import { MedicalDisclaimerFooter } from "@/components/MedicalDisclaimer";
 import { OrganizationJsonLd } from "@/components/schema/OrganizationJsonLd";
 import { SITE } from "@/lib/content/site";
@@ -126,7 +126,7 @@ export default async function LocaleLayout({
           <div id="main">{children}</div>
           <MedicalDisclaimerFooter />
           <Footer />
-          <CookieBanner />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

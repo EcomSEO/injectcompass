@@ -1,8 +1,11 @@
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { hubs } from "@/lib/content/hubs";
 import { SITE } from "@/lib/content/site";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { CookiePreferencesLink } from "./CookiePreferencesLink";
+import { RegulatoryAuthoritiesStrip } from "./RegulatoryAuthoritiesStrip";
+import type { Locale } from "@/i18n/routing";
 
 const tools = [
   { slug: "peptide-calculator", name: "Peptide Calculator" },
@@ -28,6 +31,7 @@ const sisterSites = [
 export async function Footer() {
   const t = await getTranslations("footer");
   const tMeta = await getTranslations("siteMeta");
+  const locale = (await getLocale()) as Locale;
   return (
     <footer className="mt-24 bg-surface-alt border-t border-rule">
       <div className="mx-auto max-w-container px-6 pt-14 pb-8">
@@ -115,6 +119,9 @@ export async function Footer() {
           </div>
         </div>
 
+        {/* Regulatory authorities strip (Tier 1 F) */}
+        <RegulatoryAuthoritiesStrip />
+
         {/* Imprint strip */}
         <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[12px] text-ink-muted">
           <div>{t("copyright", { year: new Date().getFullYear() })}</div>
@@ -122,8 +129,13 @@ export async function Footer() {
             <li><Link href="/editorial-standards" className="hover:text-teal-700">{t("editorial_standards")}</Link></li>
             <li><Link href="/privacy" className="hover:text-teal-700">{t("privacy")}</Link></li>
             <li><Link href="/terms" className="hover:text-teal-700">{t("terms")}</Link></li>
+            <li><Link href="/cookies" className="hover:text-teal-700">{t("cookies_link")}</Link></li>
             <li><Link href="/affiliate-disclosure" className="hover:text-teal-700">{t("affiliate_disclosure")}</Link></li>
             <li><Link href="/medical-disclaimer" className="hover:text-teal-700">{t("medical_disclaimer")}</Link></li>
+            {locale === "de" && (
+              <li><Link href="/impressum" className="hover:text-teal-700">{t("impressum_link")}</Link></li>
+            )}
+            <li><CookiePreferencesLink /></li>
           </ul>
         </div>
       </div>

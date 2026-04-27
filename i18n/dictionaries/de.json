@@ -155,7 +155,10 @@
     "disclaimer_heading": "Medizinischer Hinweis",
     "disclaimer_body": "InjectCompass veröffentlicht Inhalte zur Patientenaufklärung. Nichts hier ersetzt die Verordnung Ihrer Ärztin, die Gebrauchsinformation Ihres Medikaments oder die Einschätzung der Fachperson, die Ihren Fall kennt. Wenn ein Symptom nicht zu dem passt, was Sie hier lesen, gilt der Text als veraltet, rufen Sie Ihre verschreibende Ärztin an.",
     "from_the_network": "Aus dem Netzwerk",
-    "copyright": "© {year} InjectCompass. Nur zur Patientenaufklärung. Keine medizinische Beratung."
+    "copyright": "© {year} InjectCompass. Nur zur Patientenaufklärung. Keine medizinische Beratung.",
+    "cookie_preferences": "Cookie-Einstellungen",
+    "cookies_link": "Cookie-Richtlinie",
+    "impressum_link": "Impressum"
   },
   "locale_switcher": {
     "label": "Sprache",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Cookie-Einwilligung",
+    "heading": "Wir verwenden Cookies",
+    "body": "Wir setzen ausschließlich technisch notwendige Cookies. Analyse- oder Marketing-Cookies werden erst nach Ihrer Einwilligung gesetzt. Sie können Ihre Auswahl jederzeit anpassen.",
+    "read_more": "Cookie-Richtlinie lesen",
+    "accept_all": "Alle akzeptieren",
+    "reject_all": "Alle ablehnen",
+    "customize": "Anpassen",
+    "customize_heading": "Cookie-Einstellungen",
+    "customize_body": "Wählen Sie die Kategorien, denen Sie zustimmen möchten.",
+    "necessary_label": "Notwendig",
+    "necessary_desc": "Für den Betrieb der Website erforderlich. Immer aktiv.",
+    "analytics_label": "Analyse",
+    "analytics_desc": "Pseudonyme, aggregierte Reichweitenmessung.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Erfolgsmessung für Werbung. Standardmäßig deaktiviert.",
+    "save_choices": "Auswahl speichern"
+  },
+  "educationalBanner": {
+    "aria_label": "Hinweis zur Patientenaufklärung",
+    "eyebrow": "Nur zur Patientenaufklärung — keine medizinische Beratung.",
+    "body": "Die Inhalte von InjectCompass dienen der Patientenaufklärung. Konsultieren Sie stets eine verschreibungsberechtigte Ärztin oder einen Arzt, bevor Sie eine Injektionstherapie beginnen, ändern oder beenden."
+  },
+  "wadaBanner": {
+    "eyebrow": "WADA-Hinweis.",
+    "body": "Einige der besprochenen Substanzen stehen auf der WADA-Verbotsliste. Sportler:innen mit Anti-Doping-Verpflichtungen sollten sich an ihren Sportverband wenden."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Zuständige Behörden"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Impressum"
   }
 }

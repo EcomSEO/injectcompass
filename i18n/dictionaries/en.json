@@ -155,7 +155,10 @@
     "disclaimer_heading": "Medical disclaimer",
     "disclaimer_body": "InjectCompass publishes patient-education content. Nothing here is a substitute for the prescription your clinician wrote, the Instructions for Use that came with your medication, or the judgment of the healthcare professional who knows your case. If a symptom does not match what you read here, treat what you read as out of date and call your prescriber.",
     "from_the_network": "From the network",
-    "copyright": "© {year} InjectCompass. Patient-education only. Not medical advice."
+    "copyright": "© {year} InjectCompass. Patient-education only. Not medical advice.",
+    "cookie_preferences": "Cookie preferences",
+    "cookies_link": "Cookie policy",
+    "impressum_link": "Impressum"
   },
   "locale_switcher": {
     "label": "Language",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Cookie consent",
+    "heading": "We use cookies",
+    "body": "We use strictly necessary cookies to operate the site. Optional analytics or marketing cookies are only used after you consent. You can change your choice any time.",
+    "read_more": "Read the cookie policy",
+    "accept_all": "Accept all",
+    "reject_all": "Reject all",
+    "customize": "Customize",
+    "customize_heading": "Cookie preferences",
+    "customize_body": "Choose which categories of cookies you want to allow.",
+    "necessary_label": "Necessary",
+    "necessary_desc": "Required for the site to function. Always on.",
+    "analytics_label": "Analytics",
+    "analytics_desc": "Aggregated, pseudonymous traffic measurement.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Conversion measurement for advertising. Off by default.",
+    "save_choices": "Save choices"
+  },
+  "educationalBanner": {
+    "aria_label": "Educational notice",
+    "eyebrow": "Educational only — not medical advice.",
+    "body": "InjectCompass content is educational. Always consult a licensed prescriber before starting, stopping, or adjusting any injectable medication."
+  },
+  "wadaBanner": {
+    "eyebrow": "WADA notice.",
+    "body": "Some compounds discussed are on the WADA Prohibited List. Athletes subject to anti-doping testing should consult their sport's regulatory body."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Regulatory authorities"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Impressum"
   }
 }

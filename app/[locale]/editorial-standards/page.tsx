@@ -115,6 +115,29 @@ export default function EditorialStandardsPage() {
         <li>We don&apos;t tell readers to start or stop any medication</li>
       </ul>
 
+      <h2>Country-specific compliance</h2>
+      <p>
+        InjectCompass operates across 11 EU/EEA markets plus an English
+        edition. Each market has its own privacy, cookie, advertising, and
+        labelling rules. We maintain dedicated, locale-native pages for each
+        of these obligations:
+      </p>
+      <ul>
+        <li><a href="/cookies">Cookie policy</a> &mdash; native-language cookie inventory and consent terms</li>
+        <li><a href="/privacy">Privacy policy</a> &mdash; localised per market with the country&rsquo;s data-protection authority</li>
+        <li><a href="/affiliate-disclosure">Affiliate disclosure</a> &mdash; country-mandated label (Werbung, Publicité, Pubblicità, Reklama, Annons, etc.)</li>
+        <li>German market only: <a href="/impressum">Impressum</a> per &sect; 5 TMG</li>
+      </ul>
+      {/* audit-claims:allow — this paragraph documents the audit script. */}
+      <p>
+        Health claims are filtered against the EFSA register. Forbidden claim
+        patterns (treats / cures / prevents disease, plus native equivalents
+        in each of our 11 EU/EEA locales) are blocked at pre-commit via{" "}
+        <code>scripts/audit-claims.mjs</code>. Sweden-restricted compounds
+        (compounded semaglutide, Melanotan I/II, BPC-157, TB-500) are not
+        served on the Swedish edition.
+      </p>
+
       <p className="text-sm text-charcoal/60">Last updated: April 2026.</p>
     </TrustPageTemplate>
   );

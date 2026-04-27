@@ -16,6 +16,8 @@ import {
 } from "./InjectionSiteMap";
 import { NewsletterInline } from "./NewsletterInline";
 import { TranslationPendingBanner } from "./TranslationPendingBanner";
+import { EducationalBanner } from "./EducationalBanner";
+import { WadaBanner } from "./WadaBanner";
 import { SourcesAccordion, type Source } from "./SourcesAccordion";
 import { RelatedArticles } from "./RelatedArticles";
 import { ArticleCardData } from "./ArticleCard";
@@ -184,6 +186,8 @@ export async function ArticleTemplate({ post }: { post: Post }) {
             {/* Body content remains in English in phase one, show banner
                 on non-English locales so readers know what they are seeing. */}
             <TranslationPendingBanner />
+            <EducationalBanner />
+            {(post.hub === "performance" || post.hub === "recovery") && <WadaBanner />}
             {/* Mobile in-article TOC accordion */}
             <details className="lg:hidden mb-8 rounded-md border border-rule bg-surface-alt p-4">
               <summary className="flex items-center justify-between cursor-pointer text-[14px] font-semibold text-ink list-none">

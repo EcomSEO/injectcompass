@@ -155,7 +155,10 @@
     "disclaimer_heading": "Avertisment medical",
     "disclaimer_body": "InjectCompass publică conținut de informare pentru pacienți. Nimic aici nu înlocuiește rețeta scrisă de clinicianul tău, prospectul medicamentului tău sau judecata profesionistului care îți cunoaște cazul. Dacă un simptom nu se potrivește cu textul, consideră-l depășit și sună la prescriptor.",
     "from_the_network": "Din rețeaua noastră",
-    "copyright": "© {year} InjectCompass. Doar informare pentru pacienți. Nu este sfat medical."
+    "copyright": "© {year} InjectCompass. Doar informare pentru pacienți. Nu este sfat medical.",
+    "cookie_preferences": "Preferințe cookie",
+    "cookies_link": "Politica cookie",
+    "impressum_link": "Date editor"
   },
   "locale_switcher": {
     "label": "Limbă",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Consimțământ cookie",
+    "heading": "Folosim cookie-uri",
+    "body": "Folosim cookie-uri strict necesare pentru funcționarea site-ului. Cookie-urile de analiză sau marketing sunt activate doar cu consimțământul dvs. Vă puteți modifica alegerea oricând.",
+    "read_more": "Citește politica cookie",
+    "accept_all": "Acceptă tot",
+    "reject_all": "Respinge tot",
+    "customize": "Personalizează",
+    "customize_heading": "Preferințe cookie",
+    "customize_body": "Alegeți categoriile pe care doriți să le permiteți.",
+    "necessary_label": "Necesare",
+    "necessary_desc": "Indispensabile pentru funcționarea site-ului. Active permanent.",
+    "analytics_label": "Analiză",
+    "analytics_desc": "Statistici agregate și pseudonimizate.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Măsurarea performanței publicitare. Dezactivate implicit.",
+    "save_choices": "Salvează alegerile"
+  },
+  "educationalBanner": {
+    "aria_label": "Mențiune educațională",
+    "eyebrow": "Conținut exclusiv educațional — nu reprezintă sfat medical.",
+    "body": "Conținutul InjectCompass este de natură educațională. Consultați întotdeauna un medic prescriptor înainte de a începe, modifica sau întrerupe o terapie injectabilă."
+  },
+  "wadaBanner": {
+    "eyebrow": "Aviz WADA.",
+    "body": "Unele substanțe discutate figurează pe Lista interzisă WADA. Sportivii supuși controalelor antidoping trebuie să se adreseze federației lor."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Autorități de reglementare"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Date editor"
   }
 }

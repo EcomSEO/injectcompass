@@ -155,7 +155,10 @@
     "disclaimer_heading": "Zastrzeżenie medyczne",
     "disclaimer_body": "InjectCompass publikuje treści edukacyjne dla pacjenta. Nic tutaj nie zastępuje recepty wystawionej przez Twojego klinicystę, ulotki dołączonej do leku ani osądu specjalisty znającego Twój przypadek. Jeżeli objaw nie pasuje do treści, traktuj ją jako nieaktualną i zadzwoń do swojego lekarza.",
     "from_the_network": "Z naszej sieci",
-    "copyright": "© {year} InjectCompass. Wyłącznie informacja dla pacjenta. Nie jest poradą lekarską."
+    "copyright": "© {year} InjectCompass. Wyłącznie informacja dla pacjenta. Nie jest poradą lekarską.",
+    "cookie_preferences": "Preferencje cookies",
+    "cookies_link": "Polityka cookies",
+    "impressum_link": "Nota prawna"
   },
   "locale_switcher": {
     "label": "Język",
@@ -191,5 +194,43 @@
     "csFull": "Čeština",
     "no": "NO",
     "noFull": "Norsk"
+  },
+  "cookieConsent": {
+    "aria_label": "Zgoda na cookies",
+    "heading": "Używamy plików cookies",
+    "body": "Stosujemy wyłącznie pliki cookies niezbędne do działania serwisu. Pliki analityczne i marketingowe są aktywowane wyłącznie po wyrażeniu zgody. Wybór można zmienić w dowolnej chwili.",
+    "read_more": "Polityka cookies",
+    "accept_all": "Akceptuję wszystkie",
+    "reject_all": "Odrzuć wszystkie",
+    "customize": "Dostosuj",
+    "customize_heading": "Preferencje cookies",
+    "customize_body": "Wybierz kategorie, na które wyrażasz zgodę.",
+    "necessary_label": "Niezbędne",
+    "necessary_desc": "Niezbędne do działania witryny. Zawsze aktywne.",
+    "analytics_label": "Analityczne",
+    "analytics_desc": "Zagregowane statystyki pseudonimowe.",
+    "marketing_label": "Marketingowe",
+    "marketing_desc": "Pomiar skuteczności reklam. Domyślnie wyłączone.",
+    "save_choices": "Zapisz wybór"
+  },
+  "educationalBanner": {
+    "aria_label": "Informacja edukacyjna",
+    "eyebrow": "Treści wyłącznie edukacyjne — nie stanowią porady medycznej.",
+    "body": "Treści serwisu InjectCompass mają charakter edukacyjny. Przed rozpoczęciem, zmianą lub zakończeniem terapii iniekcyjnej zawsze skonsultuj się z lekarzem uprawnionym do wystawiania recept."
+  },
+  "wadaBanner": {
+    "eyebrow": "Komunikat WADA.",
+    "body": "Niektóre omawiane substancje znajdują się na Liście Substancji i Metod Zabronionych WADA. Sportowcy podlegający kontroli antydopingowej powinni skonsultować się ze swoim związkiem sportowym."
+  },
+  "regulatoryAuthorities": {
+    "heading": "Organy nadzoru"
+  },
+  "swedenRestricted": {
+    "title": "Innehåll inte tillgängligt",
+    "body": "Innehåll om denna substans är inte tillgängligt på svenska enligt svensk lagstiftning. För mer information, kontakta Läkemedelsverket."
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "linkLabel": "Nota prawna"
   }
 }
