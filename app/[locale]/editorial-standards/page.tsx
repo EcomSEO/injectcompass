@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function EditorialStandardsPage() {
   return (
-    <TrustPageTemplate title="Editorial Standards">
+    <TrustPageTemplate title="Editorial standards">
       <p>
         InjectCompass publishes educational content about GLP-1 medications. The
         reader trust we need to earn is different from other health-adjacent
@@ -50,17 +50,17 @@ export default function EditorialStandardsPage() {
       <h2>Use of generic and brand names</h2>
       <p>
         We always use the generic name alongside the brand name, especially in
-        the first mention of a post. &ldquo;Semaglutide (Ozempic, Wegovy)&rdquo; and
-        &ldquo;tirzepatide (Mounjaro, Zepbound)&rdquo;, always both. This is for accuracy
+        the first mention of a post. &quot;Semaglutide (Ozempic, Wegovy)&quot; and
+        &quot;tirzepatide (Mounjaro, Zepbound)&quot;, always both. This is for accuracy
         and for accessibility when readers are comparing what their doctor
         prescribed against what we&apos;ve written.
       </p>
 
       <h2>No telehealth recommendations</h2>
       <p>
-        We describe the telehealth landscape neutrally when relevant. We do
-        not recommend specific telehealth providers. We will never link a
-        reader to a telehealth clinic for commercial purposes.
+        We describe telehealth options neutrally when relevant. We do not
+        recommend specific telehealth providers. We will never link a reader
+        to a telehealth clinic for commercial purposes.
       </p>
 
       <h2>Corrections</h2>
@@ -110,7 +110,7 @@ export default function EditorialStandardsPage() {
       <ul>
         <li>We don&apos;t accept payment for editorial placement</li>
         <li>We don&apos;t publish content written by drug manufacturers</li>
-        <li>We don&apos;t use words like &ldquo;miracle,&rdquo; &ldquo;secret,&rdquo; or &ldquo;shocking&rdquo;</li>
+        <li>We don&apos;t use words like &quot;miracle,&quot; &quot;secret,&quot; or &quot;shocking&quot;</li>
         <li>We don&apos;t write fake urgency, fake scarcity, or fake reviews</li>
         <li>We don&apos;t tell readers to start or stop any medication</li>
       </ul>
@@ -124,7 +124,7 @@ export default function EditorialStandardsPage() {
       </p>
       <ul>
         <li><a href="/cookies">Cookie policy</a> &mdash; native-language cookie inventory and consent terms</li>
-        <li><a href="/privacy">Privacy policy</a> &mdash; localised per market with the country&rsquo;s data-protection authority</li>
+        <li><a href="/privacy">Privacy policy</a> &mdash; localised per market with the country&apos;s data-protection authority</li>
         <li><a href="/affiliate-disclosure">Affiliate disclosure</a> &mdash; country-mandated label (Werbung, Publicité, Pubblicità, Reklama, Annons, etc.)</li>
         <li>German market only: <a href="/impressum">Impressum</a> per &sect; 5 TMG</li>
       </ul>

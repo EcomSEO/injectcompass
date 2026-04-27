@@ -37,7 +37,7 @@ export default function AboutPage() {
         <li><strong>We cite.</strong> Every claim on this site links to the FDA prescribing information, a peer-reviewed trial, or a manufacturer document you can check yourself.</li>
         <li><strong>We translate.</strong> Trial data and adverse event tables get rewritten into plain English without losing the numbers.</li>
         <li><strong>We update.</strong> GLP-1 research is moving fast. We revise posts as new trials publish, and we timestamp every revision.</li>
-        <li><strong>We&apos;re specific.</strong> &ldquo;0.25mg in week 1, escalating to 0.5mg in week 5&rdquo;, not &ldquo;your doctor will gradually increase your dose.&rdquo;</li>
+        <li><strong>We&apos;re specific.</strong> &quot;0.25mg in week 1, escalating to 0.5mg in week 5&quot;, not &quot;your doctor will gradually increase your dose.&quot;</li>
       </ul>
 
       <h2>What we don&apos;t do</h2>
@@ -47,7 +47,7 @@ export default function AboutPage() {
         <li>We don&apos;t accept payment from drug manufacturers.</li>
         <li>We don&apos;t accept payment from telehealth clinics for editorial coverage.</li>
         <li>We don&apos;t publish before/afters or weight-loss numbers.</li>
-        <li>We don&apos;t use the word &ldquo;miracle.&rdquo;</li>
+        <li>We don&apos;t use the word &quot;miracle.&quot;</li>
       </ul>
 
       <h2>How to get in touch</h2>
