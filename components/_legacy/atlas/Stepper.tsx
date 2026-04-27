@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * Stepper — sticky left-rail Previous · Current · Next chapter component.
+ * Stepper, sticky left-rail Previous · Current · Next chapter component.
  * Lives in the atlas chapter shell.
  */
 

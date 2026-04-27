@@ -3,7 +3,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 
 /**
- * TechniqueCard — InjectCompass signature component.
+ * TechniqueCard. InjectCompass signature component.
  * A numbered-step card with an illustration slot, gauge/length/site
  * callouts, and a "common mistakes" section. Blue accent bar at the left
  * mimics a clinical reference slip.
@@ -68,7 +68,7 @@ export function TechniqueCard({
       ref={ref}
       className="my-10 relative bg-paper border border-clinical/25 rounded-sm overflow-hidden"
     >
-      {/* Solid blue accent bar at left — the "clinical" signature. */}
+      {/* Solid blue accent bar at left, the "clinical" signature. */}
       <span aria-hidden className="absolute top-0 left-0 w-1.5 h-full bg-clinical" />
 
       {/* Reference-slip header strip */}
@@ -82,7 +82,7 @@ export function TechniqueCard({
           {title}
         </h3>
 
-        {/* Spec strip — gauge / length / site / angle. Monospace, tabular. */}
+        {/* Spec strip, gauge / length / site / angle. Monospace, tabular. */}
         {specs && specs.length > 0 && (
           <dl className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-4 border-y border-clinical/15 py-4">
             {specs.map((s) => (
@@ -95,7 +95,7 @@ export function TechniqueCard({
         )}
 
         <div className="mt-6 grid md:grid-cols-[1fr_auto] gap-8">
-          {/* Numbered steps — each staggers in as the card scrolls into view. */}
+          {/* Numbered steps, each staggers in as the card scrolls into view. */}
           <ol className="space-y-6">
             {steps.map((step, i) => (
               <li
@@ -140,7 +140,7 @@ export function TechniqueCard({
             <ul className="space-y-2 text-[15px] text-charcoal/85 leading-relaxed">
               {commonMistakes.map((m, i) => (
                 <li key={i} className="flex gap-3">
-                  <span aria-hidden className="text-amber shrink-0 pt-[2px]">—</span>
+                  <span aria-hidden className="text-amber shrink-0 pt-[2px]">,</span>
                   <span>{m}</span>
                 </li>
               ))}

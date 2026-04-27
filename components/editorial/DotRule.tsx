@@ -1,5 +1,5 @@
 /**
- * Clinical-reference rules. ClinicalRule is the signature divider — a solid
+ * Clinical-reference rules. ClinicalRule is the signature divider, a solid
  * blue bar at the left, thin line trailing off. Evokes the header stroke of a
  * patient-information leaflet.
  */

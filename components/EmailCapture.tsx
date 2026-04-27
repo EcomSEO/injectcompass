@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 
 export function EmailCapture({
-  headline = "Your First Injection — a one-page cheat sheet.",
+  headline = "Your First Injection, a one-page cheat sheet.",
   subhead = "A printable, step-numbered PDF covering supplies, technique, site rotation, and the three questions to ask your prescriber. Free.",
   variant = "inline",
   buttonLabel = "Send me the cheat sheet",
@@ -38,7 +38,7 @@ export function EmailCapture({
         <p className="mt-3 text-charcoal/80 leading-relaxed">{subhead}</p>
         {status === "ok" ? (
           <p className="mt-6 text-clinical-deep font-serif italic">
-            Thank you — check your inbox for the one-page cheat sheet.
+            Thank you, check your inbox for the one-page cheat sheet.
           </p>
         ) : (
           <form

@@ -1,5 +1,5 @@
 /**
- * WarningCallout — bordered red callout for safety warnings. Single accent
+ * WarningCallout, bordered red callout for safety warnings. Single accent
  * (surgical red) + thin warning icon. Used inline in chapter prose.
  */
 

@@ -13,20 +13,20 @@ export default function ContactPage() {
     <TrustPageTemplate title="Contact">
       <h2>General</h2>
       <p>
-        <strong>hello@injectcompass.com</strong> — feedback, questions,
+        <strong>hello@injectcompass.com</strong>, feedback, questions,
         product tips, everything else.
       </p>
 
       <h2>Corrections</h2>
       <p>
-        <strong>corrections@injectcompass.com</strong> — spotted something
+        <strong>corrections@injectcompass.com</strong>, spotted something
         wrong? We want to know. We respond within 5 business days and publish
         corrections publicly when warranted.
       </p>
 
       <h2>Privacy</h2>
       <p>
-        <strong>privacy@injectcompass.com</strong> — questions about data,
+        <strong>privacy@injectcompass.com</strong>, questions about data,
         deletion requests, anything GDPR or CCPA-related.
       </p>
 

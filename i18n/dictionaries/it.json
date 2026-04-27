@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — home",
+    "logo_aria": "InjectCompass, home",
     "search_aria": "Cerca in InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Vai al contenuto",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlante · Edizione 01 · Primavera 2026",
-    "subtitle": "Un atlante di orientamento per l'iniezione di peptidi — sedi, tecnica, rotazione e cento piccoli inconvenienti che si risolvono.",
+    "subtitle": "Un atlante di orientamento per l'iniezione di peptidi, sedi, tecnica, rotazione e cento piccoli inconvenienti che si risolvono.",
     "meta": "Solo informazione al paziente · nessun link commerciale · verificato sul foglietto illustrativo",
     "partI": "Fondamenti",
     "partII": "Sedi",
@@ -48,7 +48,7 @@
     "partIV": "Risoluzione problemi",
     "eyebrow": "Guida all'iniezione basata sull'evidenza",
     "h1": "Iniezioni fatte bene, senza incertezze.",
-    "dek": "Guide passo-passo, calcoli di ricostituzione e mappe di rotazione delle sedi — scritte da un'infermiera, controllate da un medico e supportate da letteratura infermieristica che potete verificare voi stessi.",
+    "dek": "Guide passo-passo, calcoli di ricostituzione e mappe di rotazione delle sedi, scritte da un'infermiera, controllate da un medico e supportate da letteratura infermieristica che potete verificare voi stessi.",
     "trending_label": "In tendenza"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Indice",
-    "indexHeading": "L'atlante — indice",
+    "indexHeading": "L'atlante, indice",
     "indexSubhead": "Ordinato come un clinico insegnerebbe la materia. I numeri di pagina restano stabili tra edizioni.",
     "openIndex": "Apri l'indice",
     "howWeReview": "Come revisioniamo",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Sedi di iniezione",
-    "injection_sites_dek": "Sedi sottocutanee e intramuscolari — anatomia, repere e cosa palpare.",
+    "injection_sites_dek": "Sedi sottocutanee e intramuscolari, anatomia, repere e cosa palpare.",
     "technique": "Tecnica",
     "technique_dek": "Prelievo, plica cutanea, angolo di inserimento e i piccoli movimenti che rendono l'iniezione indolore.",
     "rotation": "Schemi di rotazione",

@@ -36,8 +36,8 @@ export default function MedicalDisclaimerPage() {
 
       <h2>Always talk to your healthcare provider</h2>
       <p>
-        Before starting, stopping, or changing any medication — including a
-        GLP-1 — consult your physician, endocrinologist, or prescribing nurse
+        Before starting, stopping, or changing any medication, including a
+        GLP-1, consult your physician, endocrinologist, or prescribing nurse
         practitioner. They have your medical history, your lab results, and
         the clinical context we don&apos;t have.
       </p>
@@ -47,14 +47,14 @@ export default function MedicalDisclaimerPage() {
         this website (or any website) to make acute medical decisions.
       </p>
 
-      <h2>Red flags — call your doctor</h2>
+      <h2>Red flags, call your doctor</h2>
       <p>Reach out to your healthcare provider right away if you experience:</p>
       <ul>
         <li>Severe or persistent abdominal pain</li>
         <li>Yellowing of the skin or eyes</li>
         <li>Vision changes</li>
         <li>A rapid heartbeat that doesn&apos;t subside</li>
-        <li>Signs of an allergic reaction — swelling of the face, lips, or throat; trouble breathing</li>
+        <li>Signs of an allergic reaction, swelling of the face, lips, or throat; trouble breathing</li>
         <li>Persistent vomiting or severe dehydration</li>
         <li>Symptoms suggesting pancreatitis, gallbladder problems, or thyroid issues</li>
       </ul>

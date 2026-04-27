@@ -1,5 +1,5 @@
 /**
- * Methodology block — InjectCompass wedge:
+ * Methodology block. InjectCompass wedge:
  *   "The technique we verified / The sources we triangulated /
  *    The failure modes we tested / What we're still verifying"
  *
@@ -22,7 +22,7 @@ const defaultItems: Item[] = [
   {
     label: "The failure modes we tested",
     detail:
-      "We document known-wrong outcomes for the common mistakes — partial dose delivery, injection-site bruising, pen misuse, reconstitution error — and describe what the published literature says to do when they happen. The red-box call-outs are drawn from these failure modes.",
+      "We document known-wrong outcomes for the common mistakes, partial dose delivery, injection-site bruising, pen misuse, reconstitution error, and describe what the published literature says to do when they happen. The red-box call-outs are drawn from these failure modes.",
   },
   {
     label: "What we're still verifying",

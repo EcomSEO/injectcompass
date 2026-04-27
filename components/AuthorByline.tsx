@@ -1,5 +1,5 @@
 /**
- * AuthorByline — avatar + author name + credentials + reviewer + date.
+ * AuthorByline, avatar + author name + credentials + reviewer + date.
  * Stacks cleanly on mobile.
  *
  * If `avatarUrl` is provided, the round avatar shows the real headshot;

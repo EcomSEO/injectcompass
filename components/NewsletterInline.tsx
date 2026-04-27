@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 
 /**
  * Mid-article newsletter inline CTA. teal-50 bg, headline, email input + button.
- * No vendor wired — just shape (form posts to /newsletter).
+ * No vendor wired, just shape (form posts to /newsletter).
  */
 export async function NewsletterInline({
   headline,

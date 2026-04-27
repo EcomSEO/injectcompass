@@ -18,7 +18,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("hero");
   const tHome = await getTranslations("home");
-  // Featured pillar — preferred manual feature, otherwise first published post.
+  // Featured pillar, preferred manual feature, otherwise first published post.
   const featuredPost =
     posts.find((p) => p.featured) ?? posts.find((p) => p.status === "published") ?? posts[0];
 
@@ -48,7 +48,7 @@ export default async function HomePage({
     };
   };
 
-  // Top trending — first three non-featured posts
+  // Top trending, first three non-featured posts
   const trending = posts
     .filter((p) => p.slug !== featuredPost.slug)
     .slice(0, 3)
@@ -73,7 +73,7 @@ export default async function HomePage({
       imageUrl: articleImage(p.slug, p.hub),
     }));
 
-  // Carousel — duplicate / cycle the post pool so the row feels populated
+  // Carousel, duplicate / cycle the post pool so the row feels populated
   const carouselCards: ArticleCardData[] = (() => {
     const pool = posts.slice(0, 6).map((p) => ({
       slug: p.slug,

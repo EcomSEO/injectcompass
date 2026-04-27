@@ -11,7 +11,7 @@ export { MedicalDisclaimerStrip } from "./editorial/MedicalDisclaimerStrip";
 export { MedicalDisclaimerFooterStrip as MedicalDisclaimerFooter } from "./editorial/MedicalDisclaimerStrip";
 
 /**
- * PostReviewStamp — used on drug-specific posts (medicalDisclaimer: "required").
+ * PostReviewStamp, used on drug-specific posts (medicalDisclaimer: "required").
  * The clinical-blue review-note format that opens technique and reconstitution posts.
  */
 export function PostReviewStamp({ reviewedOn }: { reviewedOn: string }) {

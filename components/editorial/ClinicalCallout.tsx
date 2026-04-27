@@ -3,15 +3,15 @@
 import { useEffect, useRef, type ReactNode } from "react";
 
 /**
- * ClinicalCallout — InjectCompass safety-callout system.
+ * ClinicalCallout. InjectCompass safety-callout system.
  *
- *   variant="stop"  — red. Stop-and-call-your-prescriber. Specific symptoms.
- *   variant="tip"   — moss/sage. "A nurse-educator note." Helpful context.
- *   variant="check" — stone. "When in doubt, check." Measured caution.
- *   variant="caution" — amber. Pause-and-check. A documented edge case.
+ *   variant="stop" , red. Stop-and-call-your-prescriber. Specific symptoms.
+ *   variant="tip"  , moss/sage. "A nurse-educator note." Helpful context.
+ *   variant="check", stone. "When in doubt, check." Measured caution.
+ *   variant="caution", amber. Pause-and-check. A documented edge case.
  *
  * The "stop" variant is additionally wired to flash its border once, at 0.6s,
- * the first time it enters the viewport. Subsequent scrolls do nothing — the
+ * the first time it enters the viewport. Subsequent scrolls do nothing, the
  * reader has already seen it. Respects prefers-reduced-motion (CSS neutralises
  * the animation).
  */

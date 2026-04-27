@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Editorial Standards",
   description:
-    "Our public-facing editorial policies — sourcing, corrections, medical framing, AI tooling, conflicts of interest.",
+    "Our public-facing editorial policies, sourcing, corrections, medical framing, AI tooling, conflicts of interest.",
   path: "/editorial-standards",
 });
 
@@ -41,7 +41,7 @@ export default function EditorialStandardsPage() {
         <li>A regulatory or government document (FDA, EMA, CDC, NIH)</li>
       </ul>
       <p>
-        For any significant health claim, we prefer two independent sources —
+        For any significant health claim, we prefer two independent sources,
         one primary study plus one regulatory or manufacturer reference. When
         evidence is genuinely mixed, we say so in the text. We don&apos;t pretend to
         have certainty we don&apos;t have.
@@ -51,7 +51,7 @@ export default function EditorialStandardsPage() {
       <p>
         We always use the generic name alongside the brand name, especially in
         the first mention of a post. &ldquo;Semaglutide (Ozempic, Wegovy)&rdquo; and
-        &ldquo;tirzepatide (Mounjaro, Zepbound)&rdquo; — always both. This is for accuracy
+        &ldquo;tirzepatide (Mounjaro, Zepbound)&rdquo;, always both. This is for accuracy
         and for accessibility when readers are comparing what their doctor
         prescribed against what we&apos;ve written.
       </p>
@@ -70,7 +70,7 @@ export default function EditorialStandardsPage() {
       <ol>
         <li>Correct the text</li>
         <li>Add a dated correction note at the bottom of the post</li>
-        <li>Don&apos;t silently edit — the history stays visible</li>
+        <li>Don&apos;t silently edit, the history stays visible</li>
       </ol>
       <p>
         Email corrections to hello@injectcompass.com. We respond within 5 business
@@ -82,14 +82,14 @@ export default function EditorialStandardsPage() {
         InjectCompass does not accept payment from drug manufacturers. InjectCompass does
         not accept payment from telehealth clinics in exchange for editorial
         coverage. When we link to a supplement brand (protein powder,
-        electrolytes, fiber) we may earn an affiliate commission — and we
+        electrolytes, fiber) we may earn an affiliate commission, and we
         disclose it on every page where it applies, above the product list, in
         plain English.
       </p>
 
       <h2>AI and our editorial process</h2>
       <p>
-        We use AI tools in parts of our workflow — literature synthesis, draft
+        We use AI tools in parts of our workflow, literature synthesis, draft
         generation, grammar checks, formatting. Every post on this site is
         reviewed, fact-checked, and edited by a human before publication. No
         post is published that hasn&apos;t been through that review.
@@ -102,7 +102,7 @@ export default function EditorialStandardsPage() {
       <h2>Images and privacy</h2>
       <p>
         We do not publish before/after photos, weight-loss numbers, or
-        body-focused imagery. These are platform compliance landmines — and
+        body-focused imagery. These are platform compliance landmines, and
         they invite the wrong reader.
       </p>
 

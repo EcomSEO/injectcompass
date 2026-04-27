@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — hjem",
+    "logo_aria": "InjectCompass, hjem",
     "search_aria": "Søk i InjectCompass",
     "newsletter_cta": "Nyhetsbrev",
     "skip_to_content": "Gå til innhold",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Utgave 01 · Vår 2026",
-    "subtitle": "Et veiviseratlas for peptidinjeksjon — steder, teknikk, rotasjon og de hundre små tingene som kan gå skeis.",
+    "subtitle": "Et veiviseratlas for peptidinjeksjon, steder, teknikk, rotasjon og de hundre små tingene som kan gå skeis.",
     "meta": "Kun pasientinformasjon · ingen leverandørlenker · gjennomgått mot pakningsvedlegget",
     "partI": "Grunnlag",
     "partII": "Steder",
     "partIII": "Teknikk",
     "partIV": "Feilsøking",
     "eyebrow": "Kunnskapsbasert injeksjonsveiledning",
-    "h1": "Sett sprøyten riktig — uten å gjette.",
-    "dek": "Trinnvise teknikkguider, oppløsningsregning og rotasjonsplaner — skrevet av en sykepleier, gjennomgått av en lege og forankret i sykepleielitteratur du kan slå opp selv.",
+    "h1": "Sett sprøyten riktig, uten å gjette.",
+    "dek": "Trinnvise teknikkguider, oppløsningsregning og rotasjonsplaner, skrevet av en sykepleier, gjennomgått av en lege og forankret i sykepleielitteratur du kan slå opp selv.",
     "trending_label": "Mest lest"
   },
   "home": {
@@ -59,7 +59,7 @@
     "medically_reviewed_pill": "Medisinsk vurdert",
     "library_eyebrow": "Bibliotek",
     "library_heading": "Begynn med det grunnleggende.",
-    "library_dek": "Åtte grunnleggende guider — fra å trekke opp en dose til å rotere steder uten arr.",
+    "library_dek": "Åtte grunnleggende guider, fra å trekke opp en dose til å rotere steder uten arr.",
     "most_read_eyebrow": "Mest lest",
     "most_read_heading": "Det leserne åpner denne uken.",
     "by_topic_eyebrow": "Etter tema",
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Innhold",
-    "indexHeading": "Atlaset — register",
+    "indexHeading": "Atlaset, register",
     "indexSubhead": "Listet i den rekkefølgen en kliniker ville lært bort stoffet. Sidetallene er stabile mellom utgaver.",
     "openIndex": "Åpne registeret",
     "howWeReview": "Slik vurderer vi",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Injeksjonssteder",
-    "injection_sites_dek": "Subkutane og intramuskulære steder — anatomi, holdepunkter og hva du skal kjenne etter.",
+    "injection_sites_dek": "Subkutane og intramuskulære steder, anatomi, holdepunkter og hva du skal kjenne etter.",
     "technique": "Teknikk",
     "technique_dek": "Opptrekking, hudfold, innstikkvinkel og de små bevegelsene som gjør injeksjonen smertefri.",
     "rotation": "Rotasjonsmønstre",

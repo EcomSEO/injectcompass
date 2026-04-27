@@ -42,7 +42,7 @@ export function Hero({
     <section className="border-b border-rule">
       <div className="mx-auto max-w-container px-6 pt-12 pb-14 md:pt-16 md:pb-20">
         <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
-          {/* Left — headline */}
+          {/* Left, headline */}
           <div className="md:col-span-7">
             <div className="eyebrow mb-4">{eyebrow}</div>
             <h1 className="text-[40px] md:text-[56px] leading-[1.05] font-bold tracking-tight text-ink max-w-[16ch]">
@@ -78,7 +78,7 @@ export function Hero({
             </div>
           </div>
 
-          {/* Right — featured */}
+          {/* Right, featured */}
           <div className="md:col-span-5">
             <Link
               href={`/${featured.slug}`}

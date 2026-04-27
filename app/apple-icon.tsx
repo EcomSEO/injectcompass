@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /**
- * Apple touch icon — 180x180.
+ * Apple touch icon, 180x180.
  * Crosshair mark + serif "IC" in clinical-blue on warm paper.
  * Clinical reference look; evokes a chart stamp, not a tech logo.
  */
@@ -31,7 +31,7 @@ export default function AppleIcon() {
           padding: 24,
         }}
       >
-        {/* Hairline inner frame — clinical reference card feel */}
+        {/* Hairline inner frame, clinical reference card feel */}
         <div
           style={{
             position: "absolute",
@@ -106,7 +106,7 @@ export default function AppleIcon() {
           IC
         </div>
 
-        {/* Clinical caps footer — COMPASS */}
+        {/* Clinical caps footer. COMPASS */}
         <div
           style={{
             marginTop: 8,

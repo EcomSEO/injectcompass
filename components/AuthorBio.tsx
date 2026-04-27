@@ -14,7 +14,7 @@ export function AuthorBio() {
         masthead; until then, readers should verify all guidance with their own
         prescriber and the manufacturer package insert that came with their
         medication. If you spot an error, write to corrections@injectcompass.com
-        — we want to know.
+       , we want to know.
       </p>
     </section>
   );

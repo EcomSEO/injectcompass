@@ -1,7 +1,7 @@
 import { defineRouting } from "next-intl/routing";
 
 /**
- * Locale routing for injectcompass.com — twelve locales.
+ * Locale routing for injectcompass.com, twelve locales.
  *
  * English is the default and renders at the root path; other locales are
  * served from a /<code>/ prefix. Slugs stay in English in phase one.

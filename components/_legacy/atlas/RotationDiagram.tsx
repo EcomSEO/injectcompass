@@ -1,11 +1,11 @@
 /**
- * RotationDiagram — small isometric SVG showing injection-site rotation.
+ * RotationDiagram, small isometric SVG showing injection-site rotation.
  * Domain-unique to InjectCompass. Used both inline in chapter prose and as
  * a "section marker" on the atlas home.
  *
  * Two variants:
- *  - "abdomen" — abdomen quadrants with rotation arrows
- *  - "thigh" — thigh zones, lateral and anterior
+ *  - "abdomen", abdomen quadrants with rotation arrows
+ *  - "thigh", thigh zones, lateral and anterior
  */
 
 type Props = {
@@ -29,8 +29,8 @@ export function RotationDiagram({
         <span>{figure}</span>
         <span>
           {variant === "abdomen"
-            ? "Abdomen — quadrant rotation"
-            : "Thigh — lateral / anterior zones"}
+            ? "Abdomen, quadrant rotation"
+            : "Thigh, lateral / anterior zones"}
         </span>
       </div>
       <div className="atlas-grid-fine p-4 md:p-6 flex justify-center">
@@ -55,14 +55,14 @@ function AbdomenSvg() {
       strokeWidth="1.1"
       aria-label="Abdomen rotation diagram showing four quadrants and a recommended weekly rotation order"
     >
-      {/* Torso outline — stylised abdomen frontal view */}
+      {/* Torso outline, stylised abdomen frontal view */}
       <path
         d="M180,30 C 110,30 80,80 80,150 C 80,220 110,250 180,250 C 250,250 280,220 280,150 C 280,80 250,30 180,30 Z"
         opacity="0.55"
       />
       {/* Navel */}
       <circle cx="180" cy="140" r="4" fill="currentColor" opacity="0.7" />
-      {/* Cross — splits abdomen into quadrants */}
+      {/* Cross, splits abdomen into quadrants */}
       <line x1="180" y1="50" x2="180" y2="240" strokeDasharray="3,3" opacity="0.45" />
       <line x1="90" y1="140" x2="270" y2="140" strokeDasharray="3,3" opacity="0.45" />
 
@@ -78,7 +78,7 @@ function AbdomenSvg() {
       <QuadLabel x={125} y={205} n="3" label="LWR · LEFT" />
       <QuadLabel x={235} y={205} n="4" label="LWR · RIGHT" />
 
-      {/* Rotation arrows — clockwise */}
+      {/* Rotation arrows, clockwise */}
       <Arrow from={[155, 95]} to={[205, 95]} />
       <Arrow from={[235, 115]} to={[235, 185]} />
       <Arrow from={[205, 205]} to={[155, 205]} />
@@ -101,7 +101,7 @@ function ThighSvg() {
       <path d="M70,30 C 50,90 50,200 70,260 L 130,260 C 150,200 150,90 130,30 Z" opacity="0.55" />
       <path d="M230,30 C 210,90 210,200 230,260 L 290,260 C 310,200 310,90 290,30 Z" opacity="0.55" />
 
-      {/* Safe zones — middle third only */}
+      {/* Safe zones, middle third only */}
       <rect x="80" y="100" width="40" height="100" strokeDasharray="2,3" />
       <rect x="240" y="100" width="40" height="100" strokeDasharray="2,3" />
 
@@ -112,7 +112,7 @@ function ThighSvg() {
         ANTERIOR
       </text>
 
-      {/* Markers — typical injection sites */}
+      {/* Markers, typical injection sites */}
       {[120, 145, 170].map((y, i) => (
         <g key={`l-${y}`}>
           <circle cx="100" cy={y} r="3" fill="currentColor" opacity="0.85" />

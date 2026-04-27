@@ -11,7 +11,7 @@ import { type Locale } from "@/i18n/routing";
 export const metadata: Metadata = pageMetadata({
   title: "Medical Advisory Panel",
   description:
-    "The licensed clinicians who medically review InjectCompass content — endocrinology, family medicine, and clinical pharmacy.",
+    "The licensed clinicians who medically review InjectCompass content, endocrinology, family medicine, and clinical pharmacy.",
   path: "/reviewers",
 });
 

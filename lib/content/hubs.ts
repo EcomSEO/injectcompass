@@ -18,14 +18,14 @@ export const hubs: Hub[] = [
     slug: "injection-technique",
     name: "Injection Technique",
     shortName: "Technique",
-    oneLiner: "Step-numbered procedures with printable cheat sheets — for every pen and every technique.",
+    oneLiner: "Step-numbered procedures with printable cheat sheets, for every pen and every technique.",
     thesis: "Every technique post has a step-numbered procedure, a printable PDF, and HowTo schema. This hub ranks for the entire 'how to inject' universe.",
   },
   {
     slug: "reconstitution",
     name: "Reconstitution",
     shortName: "Reconstitution",
-    oneLiner: "Bacteriostatic water, mixing math, cloudy-solution troubleshooting — with the calculator embedded.",
+    oneLiner: "Bacteriostatic water, mixing math, cloudy-solution troubleshooting, with the calculator embedded.",
     thesis: "Reconstitution math + troubleshooting for specific compounds, within the research-context framing for non-FDA-approved peptides.",
   },
   {
@@ -39,7 +39,7 @@ export const hubs: Hub[] = [
     slug: "troubleshooting",
     name: "Troubleshooting",
     shortName: "Troubleshooting",
-    oneLiner: "Bruising, bleeding, lipohypertrophy, missed doses, pen malfunctions — with decision trees.",
+    oneLiner: "Bruising, bleeding, lipohypertrophy, missed doses, pen malfunctions, with decision trees.",
     thesis: "The 'why is this happening' hub. Every post has a decision tree and a red-box safety callout with specific red-flag symptoms.",
   },
 ];

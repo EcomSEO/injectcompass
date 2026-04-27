@@ -3,7 +3,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Methodology v1.2 — changelog",
+  title: "Methodology v1.2, changelog",
   description:
     "What changed between v1.0 and v1.2 of the InjectCompass methodology.",
   path: "/methodology/v1-2",

@@ -3,10 +3,10 @@
 import { useEffect, useRef, type ReactNode, type ElementType } from "react";
 
 /**
- * ScrollReveal — wraps children in an element that gains `.in-view` when it
+ * ScrollReveal, wraps children in an element that gains `.in-view` when it
  * intersects the viewport. Uses IntersectionObserver; fails safe (children
  * stay visible) when the API isn't available or when prefers-reduced-motion
- * is set — the CSS layer already neutralises the reveal transforms in that
+ * is set, the CSS layer already neutralises the reveal transforms in that
  * case, so we simply leave `.in-view` off.
  *
  * Usage:
@@ -74,7 +74,7 @@ export function ScrollReveal({
 }
 
 /**
- * AnimatedHairline — convenience wrapper for the animated clinical-blue
+ * AnimatedHairline, convenience wrapper for the animated clinical-blue
  * thin rule used throughout the site. Draws from left to right on enter.
  */
 export function AnimatedHairline({ className = "" }: { className?: string }) {

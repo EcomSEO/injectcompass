@@ -7,7 +7,7 @@ import { type Locale } from "@/i18n/routing";
 export const metadata: Metadata = pageMetadata({
   title: "Corrections Policy",
   description:
-    "How InjectCompass handles factual errors — reporting, investigation, dated correction notes, and the public corrections log.",
+    "How InjectCompass handles factual errors, reporting, investigation, dated correction notes, and the public corrections log.",
   path: "/corrections-policy",
 });
 
@@ -25,7 +25,7 @@ export default async function CorrectionsPolicyPage({
         InjectCompass publishes practical, cited educational content about
         injection technique, reconstitution math, and home self-administration
         of prescribed injectable medications. The factual claims on this site
-        are checked twice — once by the staff editor who writes the post, and
+        are checked twice, once by the staff editor who writes the post, and
         once by a member of our medical advisory panel before publication.
         Neither of those passes is infallible. When we are wrong, we correct
         the record in public.
@@ -36,7 +36,7 @@ export default async function CorrectionsPolicyPage({
         Email{" "}
         <a href="mailto:corrections@injectcompass.com">corrections@injectcompass.com</a>{" "}
         with the URL of the page, the specific sentence or table you believe is
-        incorrect, and — when possible — a citation we can check (an FDA label,
+        incorrect, and, when possible, a citation we can check (an FDA label,
         a peer-reviewed paper, a USP monograph, a manufacturer document). We
         read every corrections email and we acknowledge receipt within five
         business days.
@@ -51,7 +51,7 @@ export default async function CorrectionsPolicyPage({
         <li>
           If the disputed claim depends on a clinical or pharmaceutical
           interpretation, the relevant member of the medical advisory panel
-          reviews — Dr. Rivera for endocrine and prescribing-information
+          reviews. Dr. Rivera for endocrine and prescribing-information
           questions, Dr. Chen for technique and administration questions, Dr.
           Okafor for reconstitution math and pharmacy-compounding questions.
         </li>
@@ -75,7 +75,7 @@ export default async function CorrectionsPolicyPage({
       <h2>Severity tiers</h2>
       <ul>
         <li>
-          <strong>Tier 1 — safety-relevant.</strong> An error that could
+          <strong>Tier 1, safety-relevant.</strong> An error that could
           influence a reader&apos;s self-administration in a way that could harm
           them: a wrong dose, a wrong angle, a missed contraindication. We
           publish a correction within twenty-four hours of confirmation, and
@@ -83,12 +83,12 @@ export default async function CorrectionsPolicyPage({
           has been live for thirty days.
         </li>
         <li>
-          <strong>Tier 2 — factual but not safety-relevant.</strong> A wrong
+          <strong>Tier 2, factual but not safety-relevant.</strong> A wrong
           date, a misstated trial detail, an incorrectly attributed quotation.
           We publish a correction within five business days of confirmation.
         </li>
         <li>
-          <strong>Tier 3 — typo, formatting, broken link.</strong> Fixed in
+          <strong>Tier 3, typo, formatting, broken link.</strong> Fixed in
           the regular maintenance pass. No correction note is required for
           this tier; the change shows in the post&apos;s revision history but not
           in the public log.

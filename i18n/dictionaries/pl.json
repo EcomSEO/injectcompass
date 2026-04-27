@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — strona główna",
+    "logo_aria": "InjectCompass, strona główna",
     "search_aria": "Szukaj w InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Przejdź do treści",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Wydanie 01 · Wiosna 2026",
-    "subtitle": "Atlas-przewodnik po iniekcji peptydów — miejsca, technika, rotacja i sto drobiazgów, które potrafią się posypać.",
+    "subtitle": "Atlas-przewodnik po iniekcji peptydów, miejsca, technika, rotacja i sto drobiazgów, które potrafią się posypać.",
     "meta": "Wyłącznie informacja dla pacjenta · brak linków komercyjnych · zweryfikowane z ulotką producenta",
     "partI": "Podstawy",
     "partII": "Miejsca",
     "partIII": "Technika",
     "partIV": "Rozwiązywanie problemów",
     "eyebrow": "Wskazówki iniekcyjne oparte na dowodach",
-    "h1": "Zastrzyki — pewnie i bez zgadywania.",
-    "dek": "Krok po kroku, z numerami: technika, obliczenia rekonstytucji i mapy rotacji miejsc — pisane przez pielęgniarkę, sprawdzone przez lekarza i poparte literaturą pielęgniarską, którą można zweryfikować samemu.",
+    "h1": "Zastrzyki, pewnie i bez zgadywania.",
+    "dek": "Krok po kroku, z numerami: technika, obliczenia rekonstytucji i mapy rotacji miejsc, pisane przez pielęgniarkę, sprawdzone przez lekarza i poparte literaturą pielęgniarską, którą można zweryfikować samemu.",
     "trending_label": "Na czasie"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Spis treści",
-    "indexHeading": "Atlas — indeks",
+    "indexHeading": "Atlas, indeks",
     "indexSubhead": "W kolejności, w jakiej klinicysta nauczałby tej tematyki. Numery stron są stabilne między wydaniami.",
     "openIndex": "Otwórz indeks",
     "howWeReview": "Jak recenzujemy",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Miejsca iniekcji",
-    "injection_sites_dek": "Miejsca podskórne i domięśniowe — anatomia, punkty orientacyjne i czego szukać dotykiem.",
+    "injection_sites_dek": "Miejsca podskórne i domięśniowe, anatomia, punkty orientacyjne i czego szukać dotykiem.",
     "technique": "Technika",
     "technique_dek": "Pobieranie, fałd skórny, kąt wkłucia i drobne ruchy, dzięki którym iniekcja jest bezbolesna.",
     "rotation": "Schematy rotacji",

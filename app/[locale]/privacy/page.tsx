@@ -33,7 +33,7 @@ export default function PrivacyPage() {
         location, or any data that directly identifies you.
       </p>
       <p>
-        <strong>Cookies:</strong> We use a small number of cookies — one for
+        <strong>Cookies:</strong> We use a small number of cookies, one for
         session continuity, one for analytics, and (where applicable) one to
         remember your cookie consent choice. We do not use third-party
         advertising cookies.
@@ -51,11 +51,11 @@ export default function PrivacyPage() {
       <h2>3. Third parties</h2>
       <p>We use the following third-party services:</p>
       <ul>
-        <li><strong>Vercel</strong> — hosting and delivery</li>
-        <li><strong>Neon</strong> — analytics database (anonymized traffic data only)</li>
-        <li><strong>Beehiiv</strong> — newsletter delivery</li>
-        <li><strong>Supabase</strong> — asset storage (images, PDFs)</li>
-        <li><strong>Google Search Console</strong> / <strong>Bing Webmaster Tools</strong> — SEO performance data (no personal information collected via these)</li>
+        <li><strong>Vercel</strong>, hosting and delivery</li>
+        <li><strong>Neon</strong>, analytics database (anonymized traffic data only)</li>
+        <li><strong>Beehiiv</strong>, newsletter delivery</li>
+        <li><strong>Supabase</strong>, asset storage (images, PDFs)</li>
+        <li><strong>Google Search Console</strong> / <strong>Bing Webmaster Tools</strong>. SEO performance data (no personal information collected via these)</li>
       </ul>
       <p>Each of these operates under its own privacy policy.</p>
 
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
       <p>
         We protect your information with standard industry safeguards,
         including encryption in transit (HTTPS) and access controls on our
-        databases. No system is perfectly secure — if a breach occurs, we will
+        databases. No system is perfectly secure, if a breach occurs, we will
         notify affected users consistent with applicable law.
       </p>
 

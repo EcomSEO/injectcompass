@@ -47,7 +47,7 @@ export function calculatePeptideDose(
 
   if (concentrationMgPerMl > 50) {
     warnings.push(
-      "Concentration exceeds 50 mg/mL — unusual. Verify inputs.",
+      "Concentration exceeds 50 mg/mL, unusual. Verify inputs.",
     );
   }
 
@@ -109,7 +109,7 @@ function round(n: number, places: number): number {
   return Math.round(n * factor) / factor;
 }
 
-// Reconstitution calculator — inverse: given concentration target, compute bac water volume
+// Reconstitution calculator, inverse: given concentration target, compute bac water volume
 export type ReconstitutionInputs = {
   peptideAmountMg: number;
   targetConcentrationMgPerMl: number;
@@ -139,12 +139,12 @@ export function calculateReconstitution(
 
   if (bacWaterMl > 10) {
     warnings.push(
-      `${round(bacWaterMl, 2)} mL is a large volume for a single vial — verify your target concentration.`,
+      `${round(bacWaterMl, 2)} mL is a large volume for a single vial, verify your target concentration.`,
     );
   }
   if (bacWaterMl < 0.5) {
     warnings.push(
-      `${round(bacWaterMl, 2)} mL is very low — reconstitution may be difficult at this volume.`,
+      `${round(bacWaterMl, 2)} mL is very low, reconstitution may be difficult at this volume.`,
     );
   }
 

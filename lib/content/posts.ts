@@ -23,7 +23,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "peptide-calculator",
-    title: "The Peptide Calculator — with Visual Syringe",
+    title: "The Peptide Calculator, with Visual Syringe",
     h1: "The Peptide Calculator",
     description:
       "Calculate peptide dose in insulin-syringe units, with a visual U-100 syringe highlighting the exact tick mark. For educational and research purposes only. Not intended for human use. Not medical advice.",
@@ -117,37 +117,37 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Wilding JPH et al., 2021 — Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP-1), NEJM",
+        label: "Wilding JPH et al., 2021. Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP-1), NEJM",
         url: "https://pubmed.ncbi.nlm.nih.gov/33567185/",
       },
       {
-        label: "Jastreboff AM et al., 2022 — Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1), NEJM",
+        label: "Jastreboff AM et al., 2022. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1), NEJM",
         url: "https://pubmed.ncbi.nlm.nih.gov/35658024/",
       },
       {
-        label: "Sikiric P et al. — Stable gastric pentadecapeptide BPC 157 (review of preclinical literature)",
+        label: "Sikiric P et al.. Stable gastric pentadecapeptide BPC 157 (review of preclinical literature)",
         url: "https://pubmed.ncbi.nlm.nih.gov/24139076/",
       },
       {
-        label: "Teichman SL et al., 2006 — Prolonged stimulation of growth hormone by CJC-1295, JCEM",
+        label: "Teichman SL et al., 2006. Prolonged stimulation of growth hormone by CJC-1295, JCEM",
         url: "https://pubmed.ncbi.nlm.nih.gov/16352683/",
       },
       {
-        label: "United States Pharmacopeia — Bacteriostatic Water for Injection monograph (reference)",
+        label: "United States Pharmacopeia. Bacteriostatic Water for Injection monograph (reference)",
         url: "https://www.usp.org/",
       },
       {
-        label: "FDA — Compounding and the FDA: Questions and Answers (regulatory status of peptides)",
+        label: "FDA. Compounding and the FDA: Questions and Answers (regulatory status of peptides)",
         url: "https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers",
       },
     ],
   },
   {
     slug: "subcutaneous-injection",
-    title: "Subcutaneous Injection — The Complete Guide",
+    title: "Subcutaneous Injection. The Complete Guide",
     h1: "Subcutaneous injection",
     description:
-      "A step-numbered procedure for self-administered subcutaneous injection of prescribed medications — citing published nursing-education literature. For educational and patient-education purposes only. Not medical advice.",
+      "A step-numbered procedure for self-administered subcutaneous injection of prescribed medications, citing published nursing-education literature. For educational and patient-education purposes only. Not medical advice.",
     hub: "injection-technique",
     postType: "pillar",
     publishedAt: "2026-04-21",
@@ -160,7 +160,7 @@ export const posts: Post[] = [
         rank: 1,
         name: "Hand hygiene and supply preparation",
         summary:
-          "CDC hand-hygiene guidance is applied before any parenteral procedure. Supplies — single-use syringe, alcohol prep pad, sharps container, and the prescribed medication — are laid out before the vial or pen is opened.",
+          "CDC hand-hygiene guidance is applied before any parenteral procedure. Supplies, single-use syringe, alcohol prep pad, sharps container, and the prescribed medication, are laid out before the vial or pen is opened.",
       },
       {
         rank: 2,
@@ -231,30 +231,30 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Frid AH et al., 2016 — New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
+        label: "Frid AH et al., 2016. New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
         url: "https://pubmed.ncbi.nlm.nih.gov/27594187/",
       },
       {
-        label: "CDC — Injection Safety: Safe Injection Practices",
+        label: "CDC. Injection Safety: Safe Injection Practices",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
       {
-        label: "Wilding JPH et al., 2021 — Semaglutide STEP-1, NEJM (injection administration protocol)",
+        label: "Wilding JPH et al., 2021. Semaglutide STEP-1, NEJM (injection administration protocol)",
         url: "https://pubmed.ncbi.nlm.nih.gov/33567185/",
       },
       {
-        label: "Ozempic (semaglutide) Prescribing Information — Novo Nordisk",
+        label: "Ozempic (semaglutide) Prescribing Information. Novo Nordisk",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
-        label: "Mounjaro (tirzepatide) Prescribing Information — Eli Lilly",
+        label: "Mounjaro (tirzepatide) Prescribing Information. Eli Lilly",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf",
       },
     ],
   },
   {
     slug: "how-to-use-ozempic-pen",
-    title: "How to Use an Ozempic Pen — 8 Steps with Visuals",
+    title: "How to Use an Ozempic Pen, 8 Steps with Visuals",
     h1: "How to use an Ozempic pen",
     description:
       "Step-numbered Ozempic (semaglutide) pen administration procedure as described in the current Novo Nordisk prescribing information. For educational and patient-education purposes only. Not medical advice.",
@@ -347,30 +347,30 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Ozempic (semaglutide) Prescribing Information — Novo Nordisk (FDA label)",
+        label: "Ozempic (semaglutide) Prescribing Information. Novo Nordisk (FDA label)",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
-        label: "Wilding JPH et al., 2021 — STEP-1 Semaglutide Trial, NEJM",
+        label: "Wilding JPH et al., 2021. STEP-1 Semaglutide Trial, NEJM",
         url: "https://pubmed.ncbi.nlm.nih.gov/33567185/",
       },
       {
-        label: "Frid AH et al., 2016 — New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
+        label: "Frid AH et al., 2016. New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
         url: "https://pubmed.ncbi.nlm.nih.gov/27594187/",
       },
       {
-        label: "FDA Drug Safety — Compounded Semaglutide Warning (patient safety communication)",
+        label: "FDA Drug Safety. Compounded Semaglutide Warning (patient safety communication)",
         url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss",
       },
       {
-        label: "CDC — Safe Injection Practices",
+        label: "CDC. Safe Injection Practices",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
     ],
   },
   {
     slug: "how-to-reconstitute-peptides",
-    title: "How to Reconstitute Peptides — the Complete Guide",
+    title: "How to Reconstitute Peptides, the Complete Guide",
     h1: "How to reconstitute peptides",
     description:
       "The reconstitution procedure as published in pharmacy and nursing-education literature. Research-context framing. For educational and research purposes only. Not intended for human use. Not medical advice.",
@@ -451,23 +451,23 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "USP General Chapter <797> — Pharmaceutical Compounding – Sterile Preparations",
+        label: "USP General Chapter <797>. Pharmaceutical Compounding – Sterile Preparations",
         url: "https://www.usp.org/compounding/general-chapter-797",
       },
       {
-        label: "USP — Bacteriostatic Water for Injection monograph",
+        label: "USP. Bacteriostatic Water for Injection monograph",
         url: "https://www.usp.org/",
       },
       {
-        label: "Sikiric P et al. — BPC-157 preclinical review (reconstitution referenced in methods)",
+        label: "Sikiric P et al.. BPC-157 preclinical review (reconstitution referenced in methods)",
         url: "https://pubmed.ncbi.nlm.nih.gov/24139076/",
       },
       {
-        label: "Teichman SL et al., 2006 — CJC-1295 clinical pharmacology (methods describe reconstitution)",
+        label: "Teichman SL et al., 2006. CJC-1295 clinical pharmacology (methods describe reconstitution)",
         url: "https://pubmed.ncbi.nlm.nih.gov/16352683/",
       },
       {
-        label: "FDA — Compounding: Bulk Drug Substances Used in Compounding (503A review)",
+        label: "FDA. Compounding: Bulk Drug Substances Used in Compounding (503A review)",
         url: "https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-used-compounding-under-section-503a-fdc-act",
       },
     ],
@@ -477,7 +477,7 @@ export const posts: Post[] = [
     title: "Bacteriostatic Water vs Sterile Water",
     h1: "Bacteriostatic water vs sterile water",
     description:
-      "The USP monograph differences between bacteriostatic water for injection and sterile water for injection — preservative, intended use, and beyond-use dating. Reference content. Not medical advice.",
+      "The USP monograph differences between bacteriostatic water for injection and sterile water for injection, preservative, intended use, and beyond-use dating. Reference content. Not medical advice.",
     hub: "reconstitution",
     postType: "cluster",
     publishedAt: "2026-04-21",
@@ -501,7 +501,7 @@ export const posts: Post[] = [
         rank: 3,
         name: "Bacteriostatic sodium chloride, USP",
         summary:
-          "A further variation — sterile saline with 0.9% benzyl alcohol as preservative. Included in some compounding references as an alternative diluent where tonicity matters.",
+          "A further variation, sterile saline with 0.9% benzyl alcohol as preservative. Included in some compounding references as an alternative diluent where tonicity matters.",
       },
       {
         rank: 4,
@@ -511,7 +511,7 @@ export const posts: Post[] = [
       },
     ],
     ourPick: {
-      name: "USP Monographs — Water and Sodium Chloride Parenteral Preparations",
+      name: "USP Monographs. Water and Sodium Chloride Parenteral Preparations",
       tier: "Primary reference",
       reason:
         "The USP monographs are the primary reference for composition, labelling, and intended use of parenteral diluents. Pharmaceutical compounding references and FDA-cleared manufacturer labelling cite the monographs directly.",
@@ -544,30 +544,30 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "USP — Bacteriostatic Water for Injection monograph",
+        label: "USP. Bacteriostatic Water for Injection monograph",
         url: "https://www.usp.org/",
       },
       {
-        label: "USP — Sterile Water for Injection monograph",
+        label: "USP. Sterile Water for Injection monograph",
         url: "https://www.usp.org/",
       },
       {
-        label: "FDA — Bacteriostatic Water for Injection labelling (Hospira / Pfizer)",
+        label: "FDA. Bacteriostatic Water for Injection labelling (Hospira / Pfizer)",
         url: "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm",
       },
       {
-        label: "USP General Chapter <797> — Pharmaceutical Compounding – Sterile Preparations",
+        label: "USP General Chapter <797>. Pharmaceutical Compounding – Sterile Preparations",
         url: "https://www.usp.org/compounding/general-chapter-797",
       },
       {
-        label: "FDA — Human Drug Compounding (regulatory overview)",
+        label: "FDA. Human Drug Compounding (regulatory overview)",
         url: "https://www.fda.gov/drugs/human-drug-compounding",
       },
     ],
   },
   {
     slug: "needle-sizes-for-peptide-injection",
-    title: "Needle Sizes for Peptide Injection — 29G vs 30G vs 31G",
+    title: "Needle Sizes for Peptide Injection, 29G vs 30G vs 31G",
     h1: "Needle sizes for peptide injection",
     description:
       "Gauge and length conventions for subcutaneous injection as described in the published technique literature. Comparison of ancillary insulin-syringe products. Not medical advice.",
@@ -649,23 +649,23 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Frid AH et al., 2016 — New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
+        label: "Frid AH et al., 2016. New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
         url: "https://pubmed.ncbi.nlm.nih.gov/27594187/",
       },
       {
-        label: "CDC — Safe Injection Practices",
+        label: "CDC. Safe Injection Practices",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
       {
-        label: "ISO 7864 — Sterile hypodermic needles for single use (reference standard)",
+        label: "ISO 7864. Sterile hypodermic needles for single use (reference standard)",
         url: "https://www.iso.org/standard/45087.html",
       },
       {
-        label: "BD Technical Literature — Insulin Syringes product specifications",
+        label: "BD Technical Literature. Insulin Syringes product specifications",
         url: "https://www.bd.com/en-us/products/diabetes-care/insulin-syringes",
       },
       {
-        label: "Ozempic (semaglutide) Prescribing Information — paired pen-needle specifications",
+        label: "Ozempic (semaglutide) Prescribing Information, paired pen-needle specifications",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
     ],
@@ -675,7 +675,7 @@ export const posts: Post[] = [
     title: "Best Sharps Containers for Home Use",
     h1: "Best sharps containers for home use",
     description:
-      "Reference comparison of FDA-cleared sharps containers for home use — capacity, locking lid, wall-mount option, and mail-back disposal availability. Ancillary-product reference. Not medical advice.",
+      "Reference comparison of FDA-cleared sharps containers for home use, capacity, locking lid, wall-mount option, and mail-back disposal availability. Ancillary-product reference. Not medical advice.",
     hub: "supplies-and-storage",
     postType: "comparison",
     publishedAt: "2026-04-21",
@@ -716,7 +716,7 @@ export const posts: Post[] = [
         name: "Sharps Compliance TakeAway Recovery System",
         tier: "Mail-back reference",
         summary:
-          "A consumer mail-back disposal programme — container plus prepaid return label — compliant with the FDA and US Postal Service Publication 52 guidelines for regulated medical waste.",
+          "A consumer mail-back disposal programme, container plus prepaid return label, compliant with the FDA and US Postal Service Publication 52 guidelines for regulated medical waste.",
       },
       {
         rank: 6,
@@ -754,19 +754,19 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "FDA — Safe Sharps Disposal Outside of Health Care Settings",
+        label: "FDA. Safe Sharps Disposal Outside of Health Care Settings",
         url: "https://www.fda.gov/medical-devices/consumer-products/safely-using-sharps-needles-and-syringes-home-work-and-travel",
       },
       {
-        label: "EPA — Medical Waste Management",
+        label: "EPA. Medical Waste Management",
         url: "https://www.epa.gov/rcra/medical-waste",
       },
       {
-        label: "US Postal Service Publication 52 — Hazardous, Restricted, and Perishable Mail",
+        label: "US Postal Service Publication 52. Hazardous, Restricted, and Perishable Mail",
         url: "https://pe.usps.com/pubs",
       },
       {
-        label: "CDC — Safe Injection Practices (sharps handling)",
+        label: "CDC. Safe Injection Practices (sharps handling)",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
     ],
@@ -776,7 +776,7 @@ export const posts: Post[] = [
     title: "Peptide Storage Temperature Guide",
     h1: "Peptide storage temperature guide",
     description:
-      "Temperature and stability references for injectable compounds — refrigerated, room-temperature, and travel conditions — as described in manufacturer package inserts and published stability literature. Reference content. Not medical advice.",
+      "Temperature and stability references for injectable compounds, refrigerated, room-temperature, and travel conditions, as described in manufacturer package inserts and published stability literature. Reference content. Not medical advice.",
     hub: "supplies-and-storage",
     postType: "pillar",
     publishedAt: "2026-04-21",
@@ -848,30 +848,30 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Ozempic (semaglutide) Prescribing Information — storage section (Novo Nordisk)",
+        label: "Ozempic (semaglutide) Prescribing Information, storage section (Novo Nordisk)",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
-        label: "Mounjaro (tirzepatide) Prescribing Information — storage section (Eli Lilly)",
+        label: "Mounjaro (tirzepatide) Prescribing Information, storage section (Eli Lilly)",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf",
       },
       {
-        label: "USP General Chapter <659> — Packaging and Storage Requirements",
+        label: "USP General Chapter <659>. Packaging and Storage Requirements",
         url: "https://www.usp.org/",
       },
       {
-        label: "TSA — What Can I Bring? Medications",
+        label: "TSA. What Can I Bring? Medications",
         url: "https://www.tsa.gov/travel/security-screening/whatcanibring/items/medications",
       },
       {
-        label: "FDA — Storing Your Medicines (general guidance)",
+        label: "FDA. Storing Your Medicines (general guidance)",
         url: "https://www.fda.gov/drugs/special-features/storing-your-medicines",
       },
     ],
   },
   {
     slug: "injection-site-bruising",
-    title: "Injection Site Bruising — Prevention and Care",
+    title: "Injection Site Bruising. Prevention and Care",
     h1: "Injection site bruising",
     description:
       "The published literature on post-injection bruising: normal versus abnormal findings, prevention per technique-literature convention, and red-flag criteria for prescriber contact. Patient-education reference. Not medical advice.",
@@ -971,38 +971,38 @@ export const posts: Post[] = [
       },
       {
         q: "Is lipohypertrophy related to bruising?",
-        a: "Lipohypertrophy is a separate phenomenon — thickening or nodularity of subcutaneous tissue at repeatedly used sites. It is described in Frid et al. 2016 and FIT recommendations as associated with non-rotation of injection sites rather than with bruising per se.",
+        a: "Lipohypertrophy is a separate phenomenon, thickening or nodularity of subcutaneous tissue at repeatedly used sites. It is described in Frid et al. 2016 and FIT recommendations as associated with non-rotation of injection sites rather than with bruising per se.",
       },
     ],
     sources: [
       {
-        label: "Frid AH et al., 2016 — New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
+        label: "Frid AH et al., 2016. New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
         url: "https://pubmed.ncbi.nlm.nih.gov/27594187/",
       },
       {
-        label: "CDC — Safe Injection Practices",
+        label: "CDC. Safe Injection Practices",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
       {
-        label: "Stevens DL et al., 2014 — IDSA Practice Guidelines for Skin and Soft Tissue Infections",
+        label: "Stevens DL et al., 2014. IDSA Practice Guidelines for Skin and Soft Tissue Infections",
         url: "https://pubmed.ncbi.nlm.nih.gov/24947530/",
       },
       {
-        label: "Ozempic (semaglutide) Prescribing Information — injection-site reaction section",
+        label: "Ozempic (semaglutide) Prescribing Information, injection-site reaction section",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
-        label: "Forum for Injection Technique (FIT) — Injection Recommendations",
+        label: "Forum for Injection Technique (FIT). Injection Recommendations",
         url: "https://www.fit4diabetes.com/",
       },
     ],
   },
   {
     slug: "rotating-injection-sites",
-    title: "Rotating Injection Sites — The 3-Zone Protocol",
+    title: "Rotating Injection Sites. The 3-Zone Protocol",
     h1: "Rotating injection sites",
     description:
-      "The three-zone site-rotation protocol described in Frid et al. 2016 and FIT injection recommendations — rationale, mapping, and lipohypertrophy prevention. Patient-education reference. Not medical advice.",
+      "The three-zone site-rotation protocol described in Frid et al. 2016 and FIT injection recommendations, rationale, mapping, and lipohypertrophy prevention. Patient-education reference. Not medical advice.",
     hub: "injection-technique",
     postType: "cluster",
     publishedAt: "2026-04-21",
@@ -1013,19 +1013,19 @@ export const posts: Post[] = [
     items: [
       {
         rank: 1,
-        name: "Zone 1 — Abdomen",
+        name: "Zone 1. Abdomen",
         summary:
           "The abdominal zone, excluding a two-inch radius around the umbilicus, is described in Frid et al. 2016 as the primary site for subcutaneous administration. Absorption rates are most consistent at this site per the published pharmacokinetic literature for insulin and GLP-1 analogues.",
       },
       {
         rank: 2,
-        name: "Zone 2 — Anterolateral thigh",
+        name: "Zone 2. Anterolateral thigh",
         summary:
           "The anterior and lateral thigh is the secondary site described in FIT recommendations. The same literature notes a slightly slower absorption rate than the abdominal site for insulin preparations.",
       },
       {
         rank: 3,
-        name: "Zone 3 — Posterior upper arm",
+        name: "Zone 3. Posterior upper arm",
         summary:
           "The posterior upper arm is the third described site. Self-administration is described as more technically demanding at this site; assisted administration is referenced in the nursing-education literature.",
       },
@@ -1065,7 +1065,7 @@ export const posts: Post[] = [
       },
       {
         q: "How is lipohypertrophy detected?",
-        a: "Frid et al. 2016 describes palpation of injection sites as the standard detection method — firm, thickened, or nodular areas distinct from surrounding tissue. Visual inspection alone is described as insufficient.",
+        a: "Frid et al. 2016 describes palpation of injection sites as the standard detection method, firm, thickened, or nodular areas distinct from surrounding tissue. Visual inspection alone is described as insufficient.",
       },
       {
         q: "What does the guidance describe if lipohypertrophy is identified?",
@@ -1074,23 +1074,23 @@ export const posts: Post[] = [
     ],
     sources: [
       {
-        label: "Frid AH et al., 2016 — New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
+        label: "Frid AH et al., 2016. New Insulin Delivery Recommendations, Mayo Clinic Proceedings",
         url: "https://pubmed.ncbi.nlm.nih.gov/27594187/",
       },
       {
-        label: "Forum for Injection Technique (FIT) — Injection Recommendations",
+        label: "Forum for Injection Technique (FIT). Injection Recommendations",
         url: "https://www.fit4diabetes.com/",
       },
       {
-        label: "Blanco M et al., 2013 — Prevalence and risk factors of lipohypertrophy in insulin-injecting patients, Diabetes & Metabolism",
+        label: "Blanco M et al., 2013. Prevalence and risk factors of lipohypertrophy in insulin-injecting patients, Diabetes & Metabolism",
         url: "https://pubmed.ncbi.nlm.nih.gov/23643352/",
       },
       {
-        label: "Ozempic (semaglutide) Prescribing Information — injection site guidance",
+        label: "Ozempic (semaglutide) Prescribing Information, injection site guidance",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
-        label: "CDC — Safe Injection Practices",
+        label: "CDC. Safe Injection Practices",
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
     ],

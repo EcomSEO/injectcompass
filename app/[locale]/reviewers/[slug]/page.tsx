@@ -26,8 +26,8 @@ export async function generateMetadata({
   const r = getReviewer(slug);
   if (!r) return {};
   return pageMetadata({
-    title: `${r.name}, ${r.credentials} — Medical Reviewer`,
-    description: `${r.name} — ${r.jobTitle}, ${r.medicalSpecialty}. Licensed in ${r.licenseStates.join(", ")}.`,
+    title: `${r.name}, ${r.credentials}. Medical Reviewer`,
+    description: `${r.name}, ${r.jobTitle}, ${r.medicalSpecialty}. Licensed in ${r.licenseStates.join(", ")}.`,
     path: `/reviewers/${r.slug}`,
   });
 }
@@ -123,7 +123,7 @@ export default async function ReviewerBioPage({
         <h2>Articles reviewed by {r.name.split(" ").pop()}</h2>
         {reviewedArticles.length === 0 ? (
           <p className="text-[14px] text-charcoal/60">
-            Per-article reviewer attributions are being backfilled — they
+            Per-article reviewer attributions are being backfilled, they
             will appear here once the full editorial pipeline has tagged each
             <code> medicalDisclaimer: required</code> post with its assigned
             reviewer. In the interim, the reviewer assigned to a given post

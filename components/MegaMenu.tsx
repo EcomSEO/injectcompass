@@ -13,7 +13,7 @@ type Featured = {
 };
 
 /**
- * MegaMenu — Healthline-style three-column category list with an
+ * MegaMenu. Healthline-style three-column category list with an
  * optional 4th column featuring a single hero article tile.
  */
 export function MegaMenu({

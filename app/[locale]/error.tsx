@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { ClinicalRule } from "@/components/editorial/DotRule";
 
 /**
- * Runtime error boundary. Clinical-reference voice — reassuring, never
+ * Runtime error boundary. Clinical-reference voice, reassuring, never
  * alarmist. The Header + Footer are applied by the root layout; this
  * component renders <main> only.
  */

@@ -181,7 +181,7 @@ export async function ArticleTemplate({ post }: { post: Post }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           {/* Article column */}
           <article className="lg:col-span-8 article-prose">
-            {/* Body content remains in English in phase one — show banner
+            {/* Body content remains in English in phase one, show banner
                 on non-English locales so readers know what they are seeing. */}
             <TranslationPendingBanner />
             {/* Mobile in-article TOC accordion */}
@@ -203,7 +203,7 @@ export async function ArticleTemplate({ post }: { post: Post }) {
                 {post.description} This article walks through the technique
                 that nursing-education literature, manufacturer Instructions
                 for Use, and peer-reviewed injection-safety guidance agree on.
-                It is patient-education only — it is not a substitute for the
+                It is patient-education only, it is not a substitute for the
                 clinician who prescribed your medication or the IFU that came
                 in the box.
               </p>
@@ -245,13 +245,13 @@ export async function ArticleTemplate({ post }: { post: Post }) {
               </li>
               <li>
                 <strong>Inspect the medication.</strong> Read the label. Check
-                expiry. Look at the solution — it should match what the IFU
+                expiry. Look at the solution, it should match what the IFU
                 describes (clear vs. cloudy is product-specific).
               </li>
               <li>
                 <strong>Choose a site and clean it.</strong> Pick a site you
                 have not used in the last week. Wipe with an alcohol swab in
-                a circular motion. Let the alcohol dry — this matters for
+                a circular motion. Let the alcohol dry, this matters for
                 sting, not just sterility.
               </li>
               <li>
@@ -270,7 +270,7 @@ export async function ArticleTemplate({ post }: { post: Post }) {
               <li>
                 <strong>Withdraw and dispose.</strong> Pull the needle out at
                 the same angle you went in. Drop the syringe directly into a
-                sharps container — never recap.
+                sharps container, never recap.
               </li>
             </ol>
 
@@ -365,24 +365,24 @@ function inferRegions(post: Post): InjectionRegion[] {
 const DEFAULT_SOURCES: Source[] = [
   {
     label:
-      "Memorial Sloan Kettering Cancer Center — How to give yourself a subcutaneous injection using a prefilled syringe",
+      "Memorial Sloan Kettering Cancer Center. How to give yourself a subcutaneous injection using a prefilled syringe",
     url: "https://www.mskcc.org/cancer-care/patient-education/how-give-yourself-subcutaneous-injection-using-prefilled-syringe",
     publisher: "MSKCC patient education",
   },
   {
     label:
-      "MedlinePlus — Subcutaneous (SQ) injections (.gov patient instructions)",
+      "MedlinePlus. Subcutaneous (SQ) injections (.gov patient instructions)",
     url: "https://medlineplus.gov/ency/patientinstructions/000430.htm",
     publisher: "MedlinePlus / NIH",
   },
   {
-    label: "Johns Hopkins Arthritis Center — How to give a subcutaneous injection",
+    label: "Johns Hopkins Arthritis Center. How to give a subcutaneous injection",
     url: "https://www.hopkinsarthritis.org/patient-corner/how-to-give-a-subcutaneous-injection/",
     publisher: "Johns Hopkins",
   },
   {
     label:
-      "Centers for Disease Control and Prevention — Subcutaneous injection sites and technique (video)",
+      "Centers for Disease Control and Prevention. Subcutaneous injection sites and technique (video)",
     url: "https://www.youtube.com/watch?v=ylhdvNZBWN0",
     publisher: "CDC",
   },

@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from "next-intl/server";
 
 /**
- * TranslationPendingBanner — shown above article body content on
+ * TranslationPendingBanner, shown above article body content on
  * non-English locales when only the chrome has been translated.
  * Body copy renders in English below.
  *

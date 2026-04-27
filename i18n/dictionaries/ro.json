@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — pagina principală",
+    "logo_aria": "InjectCompass, pagina principală",
     "search_aria": "Caută în InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Sari la conținut",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlas · Ediția 01 · Primăvara 2026",
-    "subtitle": "Un atlas-ghid pentru injectarea peptidelor — locuri, tehnică, rotație și cele o sută de mici neplăceri ale rutinei.",
+    "subtitle": "Un atlas-ghid pentru injectarea peptidelor, locuri, tehnică, rotație și cele o sută de mici neplăceri ale rutinei.",
     "meta": "Doar informare pentru pacienți · fără linkuri comerciale · verificat după prospect",
     "partI": "Bazele",
     "partII": "Locuri",
@@ -48,7 +48,7 @@
     "partIV": "Depanare",
     "eyebrow": "Ghid de injectare bazat pe dovezi",
     "h1": "Injecții făcute bine, fără bâjbâieli.",
-    "dek": "Ghiduri tehnice cu pași numerotați, calcule de reconstituire și hărți de rotație a locurilor — scrise de o asistentă medicală, validate de un medic și citate din literatura de îngrijire pe care o poți verifica singur.",
+    "dek": "Ghiduri tehnice cu pași numerotați, calcule de reconstituire și hărți de rotație a locurilor, scrise de o asistentă medicală, validate de un medic și citate din literatura de îngrijire pe care o poți verifica singur.",
     "trending_label": "În tendințe"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Cuprins",
-    "indexHeading": "Atlasul — index",
+    "indexHeading": "Atlasul, index",
     "indexSubhead": "Ordonat în felul în care un clinician ar preda materia. Numerele paginilor rămân stabile între ediții.",
     "openIndex": "Deschide indexul",
     "howWeReview": "Cum recenzăm",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Locuri de injectare",
-    "injection_sites_dek": "Locuri subcutanate și intramusculare — anatomie, repere și ce să palpezi.",
+    "injection_sites_dek": "Locuri subcutanate și intramusculare, anatomie, repere și ce să palpezi.",
     "technique": "Tehnică",
     "technique_dek": "Aspirarea dozei, plica cutanată, unghiul de inserție și gesturile mici care fac injecția nedureroasă.",
     "rotation": "Scheme de rotație",

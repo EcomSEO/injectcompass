@@ -57,7 +57,7 @@ const NAV: NavItem[] = [
     ],
     featured: {
       eyebrow: "Trending",
-      title: "How to read an insulin syringe — with a visual",
+      title: "How to read an insulin syringe, with a visual",
       href: "/peptide-calculator",
       dek: "U-100 syringe ticks decoded, with a worked example you can print.",
     },

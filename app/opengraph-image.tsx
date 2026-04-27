@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /**
- * OpenGraph image — 1200x630.
+ * OpenGraph image, 1200x630.
  * Clinical-reference card, not a tech banner:
  *   - Warm paper background (#F5F1E8), not dark
  *   - Mono dateline caps at top: "COMPASS · REFERENCE NO. 01 · INJECTCOMPASS.COM"
@@ -14,7 +14,7 @@ import { ImageResponse } from "next/og";
  */
 
 export const runtime = "edge";
-export const alt = "InjectCompass — Injections, done right.";
+export const alt = "InjectCompass. Injections, done right.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -41,7 +41,7 @@ export default async function OpengraphImage() {
             "Georgia, 'Times New Roman', serif",
         }}
       >
-        {/* Outer hairline frame — clinical reference card */}
+        {/* Outer hairline frame, clinical reference card */}
         <div
           style={{
             position: "absolute",

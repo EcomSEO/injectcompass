@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * InjectCompass wordmark — clinical-reference, monospace-adjacent.
+ * InjectCompass wordmark, clinical-reference, monospace-adjacent.
  * "Inject" in clinical blue, "Compass" in charcoal, with a small crosshair mark.
  * Evokes a hospital chart stamp rather than a tech logo.
  */
@@ -58,7 +58,7 @@ export function Wordmark({
 
   if (!asLink) return inner;
   return (
-    <Link href="/" aria-label="InjectCompass — home" className="inline-block">
+    <Link href="/" aria-label="InjectCompass, home" className="inline-block">
       {inner}
     </Link>
   );

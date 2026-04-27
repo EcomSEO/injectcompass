@@ -19,7 +19,7 @@ export function PullQuote({
         {children}
       </blockquote>
       {attribution && (
-        <figcaption className="mt-3 caps-label">— {attribution}</figcaption>
+        <figcaption className="mt-3 caps-label">, {attribution}</figcaption>
       )}
     </figure>
   );

@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — domů",
+    "logo_aria": "InjectCompass, domů",
     "search_aria": "Hledat v InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Přejít na obsah",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Vydání 01 · Jaro 2026",
-    "subtitle": "Atlasový průvodce pro injekční podání peptidů — místa, technika, rotace a sto drobností, které se mohou pokazit.",
+    "subtitle": "Atlasový průvodce pro injekční podání peptidů, místa, technika, rotace a sto drobností, které se mohou pokazit.",
     "meta": "Pouze edukace pacienta · žádné odkazy na prodejce · ověřeno proti příbalovému letáku",
     "partI": "Základy",
     "partII": "Místa",
     "partIII": "Technika",
     "partIV": "Řešení potíží",
     "eyebrow": "Injekční navigace založená na důkazech",
-    "h1": "Injekce, jak mají být — bez tipování.",
-    "dek": "Krok za krokem: techniky, výpočty rekonstituce a mapy rotace míst — psané sestrou, kontrolované lékařem a podložené ošetřovatelskou literaturou, kterou si můžete sami ověřit.",
+    "h1": "Injekce, jak mají být, bez tipování.",
+    "dek": "Krok za krokem: techniky, výpočty rekonstituce a mapy rotace míst, psané sestrou, kontrolované lékařem a podložené ošetřovatelskou literaturou, kterou si můžete sami ověřit.",
     "trending_label": "Právě se čte"
   },
   "home": {
@@ -59,7 +59,7 @@
     "medically_reviewed_pill": "Lékařsky ověřeno",
     "library_eyebrow": "Knihovna",
     "library_heading": "Začněte základy.",
-    "library_dek": "Osm základních průvodců — od natažení dávky po rotaci míst bez jizev.",
+    "library_dek": "Osm základních průvodců, od natažení dávky po rotaci míst bez jizev.",
     "most_read_eyebrow": "Nejčtenější",
     "most_read_heading": "Co tento týden lidé čtou.",
     "by_topic_eyebrow": "Podle tématu",
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Obsah",
-    "indexHeading": "Atlas — rejstřík",
+    "indexHeading": "Atlas, rejstřík",
     "indexSubhead": "V pořadí, ve kterém by látku učil klinický pracovník. Čísla stránek zůstávají mezi vydáními stabilní.",
     "openIndex": "Otevřít rejstřík",
     "howWeReview": "Jak recenzujeme",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Místa vpichu",
-    "injection_sites_dek": "Subkutánní a intramuskulární místa — anatomie, orientační body a co hledat pohmatem.",
+    "injection_sites_dek": "Subkutánní a intramuskulární místa, anatomie, orientační body a co hledat pohmatem.",
     "technique": "Technika",
     "technique_dek": "Natažení, kožní řasa, úhel vpichu a malé pohyby, díky nimž je injekce bezbolestná.",
     "rotation": "Schémata rotace",

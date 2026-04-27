@@ -1,5 +1,5 @@
 /**
- * TechniqueChecklist — numbered procedural list with surgical-red numbered
+ * TechniqueChecklist, numbered procedural list with surgical-red numbered
  * chips per step and checkbox-style markers. Used inside chapter prose for
  * step-numbered procedures.
  */

@@ -16,7 +16,7 @@ const LOCALE_BCP47: Record<string, string> = {
 };
 
 /**
- * Last-reviewed line — small text-secondary under article meta.
+ * Last-reviewed line, small text-secondary under article meta.
  * Healthline's "Last medically reviewed on April 26, 2026" pattern,
  * localized so each locale gets its native date format.
  */

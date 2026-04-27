@@ -14,7 +14,7 @@ import { ReviewStamp } from "@/components/ReviewStamp";
 export const metadata: Metadata = pageMetadata({
   title: "Peptide Calculator with Visual Syringe",
   description:
-    "Calculate peptide dose in insulin-syringe units from mg-in-vial + bacteriostatic water + target dose. Math is unit-tested. Educational reference only — verify with your prescriber.",
+    "Calculate peptide dose in insulin-syringe units from mg-in-vial + bacteriostatic water + target dose. Math is unit-tested. Educational reference only, verify with your prescriber.",
   path: "/peptide-calculator",
 });
 
@@ -71,7 +71,7 @@ export default function PeptideCalculatorPage() {
           visual syringe highlights the exact tick mark.
         </p>
 
-        <ClinicalCallout variant="check" title="Educational reference — not medical advice">
+        <ClinicalCallout variant="check" title="Educational reference, not medical advice">
           This is patient-education material for individuals who have been
           prescribed injectable medications. It is not a substitute for your
           prescriber's instructions or the manufacturer package insert. Many
@@ -181,7 +181,7 @@ export default function PeptideCalculatorPage() {
                 href="/how-to-reconstitute-peptides"
                 className="text-clinical underline"
               >
-                How to reconstitute peptides — the complete procedure
+                How to reconstitute peptides, the complete procedure
               </Link>
             </li>
             <li>
@@ -197,7 +197,7 @@ export default function PeptideCalculatorPage() {
                 href="/subcutaneous-injection"
                 className="text-clinical underline"
               >
-                Subcutaneous injection — the complete guide
+                Subcutaneous injection, the complete guide
               </Link>
             </li>
             <li>
@@ -205,7 +205,7 @@ export default function PeptideCalculatorPage() {
                 href="/needle-sizes-for-peptide-injection"
                 className="text-clinical underline"
               >
-                Needle sizes for peptide injection — 29G vs 30G vs 31G
+                Needle sizes for peptide injection, 29G vs 30G vs 31G
               </Link>
             </li>
           </ul>

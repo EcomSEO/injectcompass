@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — accueil",
+    "logo_aria": "InjectCompass, accueil",
     "search_aria": "Rechercher dans InjectCompass",
     "newsletter_cta": "Lettre",
     "skip_to_content": "Aller au contenu",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlas · Édition 01 · Printemps 2026",
-    "subtitle": "Un atlas-guide pour l'injection de peptides — sites, technique, rotation, et la résolution des cent petits soucis du quotidien.",
+    "subtitle": "Un atlas-guide pour l'injection de peptides, sites, technique, rotation, et la résolution des cent petits soucis du quotidien.",
     "meta": "Information patient uniquement · aucun lien commercial · vérifié sur la notice du fabricant",
     "partI": "Fondamentaux",
     "partII": "Sites",
@@ -48,7 +48,7 @@
     "partIV": "Dépannage",
     "eyebrow": "Conseils d'injection fondés sur les preuves",
     "h1": "Bien injecter, sans tâtonner.",
-    "dek": "Guides techniques en étapes numérotées, calculs de reconstitution et plans de rotation des sites — rédigés par une infirmière, validés par un médecin et appuyés sur la littérature de soins infirmiers que vous pouvez vérifier vous-même.",
+    "dek": "Guides techniques en étapes numérotées, calculs de reconstitution et plans de rotation des sites, rédigés par une infirmière, validés par un médecin et appuyés sur la littérature de soins infirmiers que vous pouvez vérifier vous-même.",
     "trending_label": "Tendance"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Table des matières",
-    "indexHeading": "L'atlas — index",
+    "indexHeading": "L'atlas, index",
     "indexSubhead": "Listé dans l'ordre où un clinicien enseignerait la matière. Les numéros de page restent stables d'une édition à l'autre.",
     "openIndex": "Ouvrir l'index",
     "howWeReview": "Notre relecture",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Sites d'injection",
-    "injection_sites_dek": "Sites sous-cutanés et intramusculaires — anatomie, repères et ce qu'il faut palper.",
+    "injection_sites_dek": "Sites sous-cutanés et intramusculaires, anatomie, repères et ce qu'il faut palper.",
     "technique": "Technique",
     "technique_dek": "Tirage de la dose, pli cutané, angle d'entrée et les petits gestes qui rendent l'injection indolore.",
     "rotation": "Schémas de rotation",

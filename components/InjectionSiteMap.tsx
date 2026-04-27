@@ -1,5 +1,5 @@
 /**
- * InjectionSiteMap — InjectCompass differentiator.
+ * InjectionSiteMap. InjectCompass differentiator.
  *
  * Clean SVG line-illustration of a human body (front + back), with injection
  * sites highlighted as teal dots that pulse 1.5s. Pass which regions to
@@ -125,7 +125,7 @@ function BodyFigure({
       role="img"
       aria-label={view === "front" ? "Human body, front view" : "Human body, back view"}
     >
-      {/* Body silhouette — clean stylised line */}
+      {/* Body silhouette, clean stylised line */}
       <g fill="none" stroke={stroke} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         {/* Head */}
         <circle cx="55" cy="20" r="11" />
@@ -195,7 +195,7 @@ function BodyFigure({
       })}
 
       <title>
-        {view === "front" ? "Front view" : "Back view"} — {uid}
+        {view === "front" ? "Front view" : "Back view"}, {uid}
       </title>
     </svg>
   );

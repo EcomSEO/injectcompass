@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { BreadcrumbNav } from "@/components/BreadcrumbNav";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Methodology — how an InjectCompass article gets written",
+  title: "Methodology, how an InjectCompass article gets written",
   description:
     "How InjectCompass articles are sourced, reviewed, versioned, and retired. The current edition is v1.2.",
   path: "/methodology",
@@ -71,7 +71,7 @@ export default function MethodologyPage() {
 
             <h2>3. Drafting</h2>
             <p>
-              An article is drafted in the InjectCompass voice — patient-handout
+              An article is drafted in the InjectCompass voice, patient-handout
               precision, numbered procedures, no first-person experience
               framing, no claims about subjective effects. Numbers are
               treated as code: any change to a dosage figure or a needle-gauge
@@ -89,7 +89,7 @@ export default function MethodologyPage() {
             <h2>5. Versioning</h2>
             <p>
               Manufacturer instructions are reissued. Labels are updated.
-              When that happens, we version the article — the previous
+              When that happens, we version the article, the previous
               version is archived rather than deleted, and the new version
               carries a small note describing what changed and why.
             </p>
@@ -112,7 +112,7 @@ export default function MethodologyPage() {
                   New insulin delivery recommendations. Mayo Clinic
                   Proceedings.
                 </em>{" "}
-                — needle-length and rotation guidance.
+               , needle-length and rotation guidance.
               </li>
               <li>
                 WHO (2010).{" "}
@@ -122,7 +122,7 @@ export default function MethodologyPage() {
               </li>
               <li>CDC injection-safety guidance (current edition).</li>
               <li>
-                USP &lt;797&gt; Pharmaceutical Compounding — Sterile
+                USP &lt;797&gt; Pharmaceutical Compounding. Sterile
                 Preparations.
               </li>
             </ol>

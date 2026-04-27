@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — início",
+    "logo_aria": "InjectCompass, início",
     "search_aria": "Pesquisar no InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Saltar para o conteúdo",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlas · Edição 01 · Primavera 2026",
-    "subtitle": "Um atlas-guia para a injeção de péptidos — locais, técnica, rotação e os cem pequenos contratempos do dia-a-dia.",
+    "subtitle": "Um atlas-guia para a injeção de péptidos, locais, técnica, rotação e os cem pequenos contratempos do dia-a-dia.",
     "meta": "Apenas informação ao doente · sem ligações comerciais · validado contra o folheto informativo",
     "partI": "Fundamentos",
     "partII": "Locais",
@@ -48,7 +48,7 @@
     "partIV": "Resolução",
     "eyebrow": "Orientação injetável baseada em evidências",
     "h1": "Injeções bem feitas, sem hesitações.",
-    "dek": "Guias técnicos passo a passo, contas de reconstituição e mapas de rotação de locais — escritos por uma enfermeira, validados por um médico e citados a literatura de enfermagem que pode confirmar você mesmo.",
+    "dek": "Guias técnicos passo a passo, contas de reconstituição e mapas de rotação de locais, escritos por uma enfermeira, validados por um médico e citados a literatura de enfermagem que pode confirmar você mesmo.",
     "trending_label": "Em destaque"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Índice",
-    "indexHeading": "O atlas — índice",
+    "indexHeading": "O atlas, índice",
     "indexSubhead": "Listado pela ordem em que um clínico ensinaria a matéria. Os números de página mantêm-se entre edições.",
     "openIndex": "Abrir o índice",
     "howWeReview": "Como revemos",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Locais de injeção",
-    "injection_sites_dek": "Locais subcutâneos e intramusculares — anatomia, referências e o que palpar.",
+    "injection_sites_dek": "Locais subcutâneos e intramusculares, anatomia, referências e o que palpar.",
     "technique": "Técnica",
     "technique_dek": "Aspirar a dose, prega cutânea, ângulo de inserção e os pequenos gestos que tornam a injeção indolor.",
     "rotation": "Padrões de rotação",

@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — Startseite",
+    "logo_aria": "InjectCompass. Startseite",
     "search_aria": "InjectCompass durchsuchen",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Zum Inhalt springen",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Ausgabe 01 · Frühjahr 2026",
-    "subtitle": "Ein Wegweiser-Atlas zur Peptid-Injektion — Stellen, Technik, Rotation und die hundert kleinen Dinge, die schiefgehen können.",
+    "subtitle": "Ein Wegweiser-Atlas zur Peptid-Injektion. Stellen, Technik, Rotation und die hundert kleinen Dinge, die schiefgehen können.",
     "meta": "Nur Patientenaufklärung · keine Anbieterlinks · gegen die Fachinformation geprüft",
     "partI": "Grundlagen",
     "partII": "Stellen",
     "partIII": "Technik",
     "partIV": "Fehlerbehebung",
     "eyebrow": "Evidenzbasierte Injektionsanleitung",
-    "h1": "Spritzen, sicher gesetzt — ohne Rätselraten.",
-    "dek": "Schritt-für-Schritt-Technikleitfäden, Rekonstitutionsrechnungen und Stellenrotationspläne — geschrieben von einer Fachpflegekraft, ärztlich geprüft und mit Verweisen auf Pflege-Fachliteratur, die Sie selbst nachschlagen können.",
+    "h1": "Spritzen, sicher gesetzt, ohne Rätselraten.",
+    "dek": "Schritt-für-Schritt-Technikleitfäden, Rekonstitutionsrechnungen und Stellenrotationspläne, geschrieben von einer Fachpflegekraft, ärztlich geprüft und mit Verweisen auf Pflege-Fachliteratur, die Sie selbst nachschlagen können.",
     "trending_label": "Aktuell gelesen"
   },
   "home": {
@@ -59,7 +59,7 @@
     "medically_reviewed_pill": "Medizinisch geprüft",
     "library_eyebrow": "Bibliothek",
     "library_heading": "Beginnen Sie mit den Grundlagen.",
-    "library_dek": "Acht Basisleitfäden — vom Aufziehen einer Dosis bis zur narbenfreien Stellenrotation.",
+    "library_dek": "Acht Basisleitfäden, vom Aufziehen einer Dosis bis zur narbenfreien Stellenrotation.",
     "most_read_eyebrow": "Meistgelesen",
     "most_read_heading": "Was diese Woche gelesen wird.",
     "by_topic_eyebrow": "Nach Thema",
@@ -71,12 +71,12 @@
     "how_we_work_cta": "Methodik v1.2 lesen",
     "stop_eyebrow": "Stopp · Sprechen Sie mit Ihrer Ärztin",
     "stop_heading": "Wann diese Seite die falsche Quelle ist.",
-    "stop_body": "Nichts auf InjectCompass ersetzt die Verordnung Ihrer Ärztin, die Gebrauchsinformation Ihres Medikaments oder die Einschätzung der Fachperson, die Ihren Fall kennt. Wenn ein Symptom nicht zu dem passt, was Sie hier lesen, gilt der Text als veraltet — rufen Sie Ihre verschreibende Ärztin an.",
+    "stop_body": "Nichts auf InjectCompass ersetzt die Verordnung Ihrer Ärztin, die Gebrauchsinformation Ihres Medikaments oder die Einschätzung der Fachperson, die Ihren Fall kennt. Wenn ein Symptom nicht zu dem passt, was Sie hier lesen, gilt der Text als veraltet, rufen Sie Ihre verschreibende Ärztin an.",
     "stop_cta": "Vollständigen Hinweis lesen"
   },
   "atlas": {
     "tableOfContents": "Inhaltsverzeichnis",
-    "indexHeading": "Der Atlas — Verzeichnis",
+    "indexHeading": "Der Atlas. Verzeichnis",
     "indexSubhead": "In der Reihenfolge geordnet, in der eine Fachperson das Material vermitteln würde. Die Seitenzahlen bleiben über alle Ausgaben stabil.",
     "openIndex": "Verzeichnis öffnen",
     "howWeReview": "So prüfen wir",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Injektionsstellen",
-    "injection_sites_dek": "Subkutane und intramuskuläre Stellen — Anatomie, Landmarken und worauf zu achten ist.",
+    "injection_sites_dek": "Subkutane und intramuskuläre Stellen. Anatomie, Landmarken und worauf zu achten ist.",
     "technique": "Technik",
     "technique_dek": "Aufziehen, Hautfalte, Einstichwinkel und die kleinen Bewegungsmuster, die Injektionen schmerzfrei machen.",
     "rotation": "Rotationsmuster",
@@ -153,7 +153,7 @@
     "affiliate_disclosure": "Partner-Hinweis",
     "medical_disclaimer": "Medizinischer Hinweis",
     "disclaimer_heading": "Medizinischer Hinweis",
-    "disclaimer_body": "InjectCompass veröffentlicht Inhalte zur Patientenaufklärung. Nichts hier ersetzt die Verordnung Ihrer Ärztin, die Gebrauchsinformation Ihres Medikaments oder die Einschätzung der Fachperson, die Ihren Fall kennt. Wenn ein Symptom nicht zu dem passt, was Sie hier lesen, gilt der Text als veraltet — rufen Sie Ihre verschreibende Ärztin an.",
+    "disclaimer_body": "InjectCompass veröffentlicht Inhalte zur Patientenaufklärung. Nichts hier ersetzt die Verordnung Ihrer Ärztin, die Gebrauchsinformation Ihres Medikaments oder die Einschätzung der Fachperson, die Ihren Fall kennt. Wenn ein Symptom nicht zu dem passt, was Sie hier lesen, gilt der Text als veraltet, rufen Sie Ihre verschreibende Ärztin an.",
     "from_the_network": "Aus dem Netzwerk",
     "copyright": "© {year} InjectCompass. Nur zur Patientenaufklärung. Keine medizinische Beratung."
   },

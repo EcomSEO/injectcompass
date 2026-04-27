@@ -8,7 +8,7 @@ function currentMonth() {
 }
 
 /**
- * The dateline — clinical-reference masthead strip.
+ * The dateline, clinical-reference masthead strip.
  * Reads like "COMPASS · REFERENCE NO. 01 · APRIL 2026 · INJECTCOMPASS.COM".
  */
 export function Dateline({ className = "" }: { className?: string }) {

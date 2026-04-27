@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — home",
+    "logo_aria": "InjectCompass, home",
     "search_aria": "Search InjectCompass",
     "newsletter_cta": "Newsletter",
     "skip_to_content": "Skip to content",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Edition 01 · Spring 2026",
-    "subtitle": "A wayfinding atlas for peptide injection — sites, technique, rotation, and the troubleshooting of a hundred small things that go wrong.",
+    "subtitle": "A wayfinding atlas for peptide injection, sites, technique, rotation, and the troubleshooting of a hundred small things that go wrong.",
     "meta": "Patient-education only · No vendor links · Reviewed against the package insert",
     "partI": "Fundamentals",
     "partII": "Sites",
     "partIII": "Technique",
     "partIV": "Troubleshooting",
     "eyebrow": "Evidence-based injection guidance",
-    "h1": "Injections, done right — without the guesswork.",
-    "dek": "Step-numbered technique guides, reconstitution math, and site-rotation maps — written by an RN, reviewed by an MD, and cited to nursing-education literature you can verify yourself.",
+    "h1": "Injections, done right, without the guesswork.",
+    "dek": "Step-numbered technique guides, reconstitution math, and site-rotation maps, written by an RN, reviewed by an MD, and cited to nursing-education literature you can verify yourself.",
     "trending_label": "Trending now"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Table of contents",
-    "indexHeading": "The atlas — index",
+    "indexHeading": "The atlas, index",
     "indexSubhead": "Listed in the order a clinician would teach the material. Page numbers are stable across editions.",
     "openIndex": "Open the index",
     "howWeReview": "How we review",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Injection sites",
-    "injection_sites_dek": "Subcutaneous and intramuscular sites — anatomy, landmarks, and what to feel for.",
+    "injection_sites_dek": "Subcutaneous and intramuscular sites, anatomy, landmarks, and what to feel for.",
     "technique": "Technique",
     "technique_dek": "Drawing up, pinching, angle of entry, and the small motor patterns that make injections painless.",
     "rotation": "Rotation patterns",

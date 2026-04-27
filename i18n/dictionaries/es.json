@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — inicio",
+    "logo_aria": "InjectCompass, inicio",
     "search_aria": "Buscar en InjectCompass",
     "newsletter_cta": "Boletín",
     "skip_to_content": "Saltar al contenido",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlas · Edición 01 · Primavera 2026",
-    "subtitle": "Un atlas-guía para la inyección de péptidos — sedes, técnica, rotación y los cien pequeños inconvenientes que se resuelven.",
+    "subtitle": "Un atlas-guía para la inyección de péptidos, sedes, técnica, rotación y los cien pequeños inconvenientes que se resuelven.",
     "meta": "Solo información al paciente · sin enlaces comerciales · revisado contra el prospecto",
     "partI": "Fundamentos",
     "partII": "Sedes",
@@ -48,7 +48,7 @@
     "partIV": "Resolución",
     "eyebrow": "Guía de inyección basada en la evidencia",
     "h1": "Inyectarse bien, sin titubeos.",
-    "dek": "Guías técnicas paso a paso, cálculos de reconstitución y planes de rotación de sedes — escritos por una enfermera, validados por un médico y citados a literatura de enfermería que puedes verificar tú mismo.",
+    "dek": "Guías técnicas paso a paso, cálculos de reconstitución y planes de rotación de sedes, escritos por una enfermera, validados por un médico y citados a literatura de enfermería que puedes verificar tú mismo.",
     "trending_label": "En tendencia"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Índice",
-    "indexHeading": "El atlas — índice",
+    "indexHeading": "El atlas, índice",
     "indexSubhead": "Ordenado como un clínico enseñaría la materia. Los números de página se mantienen estables entre ediciones.",
     "openIndex": "Abrir el índice",
     "howWeReview": "Cómo revisamos",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Sedes de inyección",
-    "injection_sites_dek": "Sedes subcutáneas e intramusculares — anatomía, referencias y qué palpar.",
+    "injection_sites_dek": "Sedes subcutáneas e intramusculares, anatomía, referencias y qué palpar.",
     "technique": "Técnica",
     "technique_dek": "Carga, pellizco cutáneo, ángulo de entrada y los pequeños gestos que hacen la inyección indolora.",
     "rotation": "Patrones de rotación",

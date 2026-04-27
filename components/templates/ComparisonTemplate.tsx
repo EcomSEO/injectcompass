@@ -170,7 +170,7 @@ export function ComparisonTemplate({ post }: { post: Post }) {
 
         <ClinicalRule className="mt-10" />
 
-        {/* Reference pick — hero callout with blue accent bar */}
+        {/* Reference pick, hero callout with blue accent bar */}
         {post.ourPick && (
           <section id="our-pick" className="mt-10">
             <div className="relative overflow-hidden bg-paper border border-clinical/30 rounded-sm p-7 md:p-10">
@@ -254,7 +254,7 @@ export function ComparisonTemplate({ post }: { post: Post }) {
             <div className="bg-stone/[0.04] border border-stone/20 rounded-sm p-7 md:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-1.5 w-1.5 rounded-full bg-stone" />
-                <Eyebrow tone="stone">What we'd skip — and why</Eyebrow>
+                <Eyebrow tone="stone">What we'd skip, and why</Eyebrow>
               </div>
               <div className="space-y-5">
                 {skips.map((p) => (

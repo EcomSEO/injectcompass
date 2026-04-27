@@ -1,5 +1,5 @@
 /**
- * Editorial reviewer roster — the small clinician panel that signs off on
+ * Editorial reviewer roster, the small clinician panel that signs off on
  * every post that is `medicalDisclaimer: "required"`.
  *
  * Each entry maps to a real headshot under /public/images/reviewers and is
@@ -32,8 +32,8 @@ export const reviewers: Reviewer[] = [
     jobTitle: "Internal Medicine Physician",
     medicalSpecialty: "Endocrinology",
     licenseStates: ["California", "Nevada"],
-    affiliation: "Independent practice — InjectCompass medical advisory panel",
-    alumniOf: ["University of California, San Francisco — School of Medicine"],
+    affiliation: "Independent practice. InjectCompass medical advisory panel",
+    alumniOf: ["University of California, San Francisco. School of Medicine"],
     knowsAbout: [
       "GLP-1 receptor agonists",
       "Subcutaneous injection technique",
@@ -41,7 +41,7 @@ export const reviewers: Reviewer[] = [
       "Lifestyle and metabolic medicine",
     ],
     bio:
-      "Dr. Maria Rivera is a board-certified internal-medicine physician with a clinical focus on endocrine and metabolic care. Over fifteen years of bedside practice she has supervised the initiation of injectable therapies — insulin, GLP-1 receptor agonists, and dual GIP/GLP-1 agonists — for thousands of patients in primary-care and weight-management clinics. Her interest in patient-education clarity grew out of repeatedly seeing the same questions about pen technique, dose-stepping schedules, and what to do when a dose is missed; the answers she gives in clinic form the clinical sanity check on every InjectCompass post tagged `medicalDisclaimer: required`. She reviews drafts for safety framing, dose accuracy against current FDA labels, and the absence of any language that could be read as personalized medical advice. Dr. Rivera trained at UCSF and completed her residency in internal medicine at the same institution. She holds active medical licenses in California and Nevada and reports no financial relationships with pharmaceutical manufacturers, telehealth clinics, or compounding pharmacies.",
+      "Dr. Maria Rivera is a board-certified internal-medicine physician with a clinical focus on endocrine and metabolic care. Over fifteen years of bedside practice she has supervised the initiation of injectable therapies, insulin, GLP-1 receptor agonists, and dual GIP/GLP-1 agonists, for thousands of patients in primary-care and weight-management clinics. Her interest in patient-education clarity grew out of repeatedly seeing the same questions about pen technique, dose-stepping schedules, and what to do when a dose is missed; the answers she gives in clinic form the clinical sanity check on every InjectCompass post tagged `medicalDisclaimer: required`. She reviews drafts for safety framing, dose accuracy against current FDA labels, and the absence of any language that could be read as personalized medical advice. Dr. Rivera trained at UCSF and completed her residency in internal medicine at the same institution. She holds active medical licenses in California and Nevada and reports no financial relationships with pharmaceutical manufacturers, telehealth clinics, or compounding pharmacies.",
     image: reviewerImage("dr-rivera"),
   },
   {
@@ -51,7 +51,7 @@ export const reviewers: Reviewer[] = [
     jobTitle: "Family Medicine Physician",
     medicalSpecialty: "Family Medicine",
     licenseStates: ["New York", "New Jersey"],
-    affiliation: "Independent practice — InjectCompass medical advisory panel",
+    affiliation: "Independent practice. InjectCompass medical advisory panel",
     alumniOf: ["Columbia University Vagelos College of Physicians and Surgeons"],
     knowsAbout: [
       "Subcutaneous and intramuscular injection technique",
@@ -60,7 +60,7 @@ export const reviewers: Reviewer[] = [
       "Patient self-administration coaching",
     ],
     bio:
-      "Dr. David Chen is a board-certified family-medicine physician whose practice spans pediatric vaccination clinics, adult primary care, and supervised home-injection coaching for patients on long-acting hormone therapy. The bulk of the technique content on InjectCompass — site rotation, pinch versus stretch, plunger dwell, what a normal injection-site reaction actually looks like — passes across his desk before publication. He brings two decades of clinic-floor experience teaching first-time injectors and a meticulous eye for the small details that determine whether a dose actually lands subcutaneously. Dr. Chen completed medical school at Columbia and family-medicine residency at Mount Sinai. He maintains active medical licenses in New York and New Jersey, and discloses no industry relationships with pharmaceutical manufacturers, device makers, or telehealth operators.",
+      "Dr. David Chen is a board-certified family-medicine physician whose practice spans pediatric vaccination clinics, adult primary care, and supervised home-injection coaching for patients on long-acting hormone therapy. The bulk of the technique content on InjectCompass, site rotation, pinch versus stretch, plunger dwell, what a normal injection-site reaction actually looks like, passes across his desk before publication. He brings two decades of clinic-floor experience teaching first-time injectors and a meticulous eye for the small details that determine whether a dose actually lands subcutaneously. Dr. Chen completed medical school at Columbia and family-medicine residency at Mount Sinai. He maintains active medical licenses in New York and New Jersey, and discloses no industry relationships with pharmaceutical manufacturers, device makers, or telehealth operators.",
     image: reviewerImage("dr-chen"),
   },
   {
@@ -70,8 +70,8 @@ export const reviewers: Reviewer[] = [
     jobTitle: "Clinical Pharmacist",
     medicalSpecialty: "Clinical Pharmacy",
     licenseStates: ["Texas", "Illinois"],
-    affiliation: "Independent practice — InjectCompass medical advisory panel",
-    alumniOf: ["University of Texas at Austin — College of Pharmacy"],
+    affiliation: "Independent practice. InjectCompass medical advisory panel",
+    alumniOf: ["University of Texas at Austin. College of Pharmacy"],
     knowsAbout: [
       "Compounded sterile preparations (USP <797>)",
       "Bacteriostatic vs. sterile water for injection",

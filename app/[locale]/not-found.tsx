@@ -4,10 +4,10 @@ import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { ClinicalRule } from "@/components/editorial/DotRule";
 
 /**
- * 404 — clinical-reference "not found" page.
+ * 404, clinical-reference "not found" page.
  * Voice: nurse-educator. Reassuring, step-numbered, never alarmist.
  * Header (with MedicalDisclaimerStrip above masthead) + Footer are applied by
- * the root layout — this component only renders <main>.
+ * the root layout, this component only renders <main>.
  */
 export default function NotFound() {
   return (

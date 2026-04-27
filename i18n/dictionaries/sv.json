@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — startsida",
+    "logo_aria": "InjectCompass, startsida",
     "search_aria": "Sök i InjectCompass",
     "newsletter_cta": "Nyhetsbrev",
     "skip_to_content": "Hoppa till innehåll",
@@ -40,15 +40,15 @@
   },
   "hero": {
     "edition": "Atlas · Utgåva 01 · Vår 2026",
-    "subtitle": "En vägvisar-atlas för peptidinjektion — ställen, teknik, rotation och de hundra små sakerna som kan strula.",
+    "subtitle": "En vägvisar-atlas för peptidinjektion, ställen, teknik, rotation och de hundra små sakerna som kan strula.",
     "meta": "Endast patientinformation · inga leverantörslänkar · granskat mot bipacksedeln",
     "partI": "Grunder",
     "partII": "Ställen",
     "partIII": "Teknik",
     "partIV": "Felsökning",
     "eyebrow": "Evidensbaserad injektionshjälp",
-    "h1": "Injektioner som blir rätt — utan gissningar.",
-    "dek": "Stegvisa teknikguider, beredningsmatematik och rotationsplaner — skrivet av en sjuksköterska, granskat av en läkare och belagt mot vårdvetenskaplig litteratur som du själv kan slå upp.",
+    "h1": "Injektioner som blir rätt, utan gissningar.",
+    "dek": "Stegvisa teknikguider, beredningsmatematik och rotationsplaner, skrivet av en sjuksköterska, granskat av en läkare och belagt mot vårdvetenskaplig litteratur som du själv kan slå upp.",
     "trending_label": "Just nu populärt"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Innehåll",
-    "indexHeading": "Atlasen — index",
+    "indexHeading": "Atlasen, index",
     "indexSubhead": "Ordnat som en kliniker skulle lära ut materialet. Sidnumren är stabila mellan utgåvor.",
     "openIndex": "Öppna index",
     "howWeReview": "Vår granskning",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Injektionsställen",
-    "injection_sites_dek": "Subkutana och intramuskulära ställen — anatomi, hållpunkter och vad du ska känna efter.",
+    "injection_sites_dek": "Subkutana och intramuskulära ställen, anatomi, hållpunkter och vad du ska känna efter.",
     "technique": "Teknik",
     "technique_dek": "Att dra upp, hudveck, instickvinkel och de små rörelserna som gör injektionen smärtfri.",
     "rotation": "Rotationsmönster",

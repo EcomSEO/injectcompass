@@ -11,7 +11,7 @@ import { type Locale } from "@/i18n/routing";
 export const metadata: Metadata = pageMetadata({
   title: "Editorial Team",
   description:
-    "The InjectCompass editorial team — staff editors who write, fact-check, and maintain the technique, reconstitution, and patient-safety content on this site.",
+    "The InjectCompass editorial team, staff editors who write, fact-check, and maintain the technique, reconstitution, and patient-safety content on this site.",
   path: "/authors",
 });
 

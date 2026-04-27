@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * MedicalDisclaimerStrip — full-width strip, always rendered above the
+ * MedicalDisclaimerStrip, full-width strip, always rendered above the
  * masthead. Clinical sites lead with the disclaimer, not bury it. This is
  * deliberate and non-negotiable per CLAUDE.md.
  */
@@ -28,7 +28,7 @@ export function MedicalDisclaimerStrip() {
 }
 
 /**
- * Compact footer variant — still visible, less dominant. Rendered site-wide
+ * Compact footer variant, still visible, less dominant. Rendered site-wide
  * below the <main>, above the <Footer>.
  */
 export function MedicalDisclaimerFooterStrip() {

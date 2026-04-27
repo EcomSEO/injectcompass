@@ -2,11 +2,11 @@ export const SITE = {
   name: "InjectCompass",
   url: "https://injectcompass.com",
   tagline: "Injections, done right.",
-  // Editorial framing — clinical reference, like a patient-information leaflet
+  // Editorial framing, clinical reference, like a patient-information leaflet
   volume: "Vol. 01",
   issue: "Reference No. 01",
   /** Canonical published-issue month label (used in datelines).
-   *  Hardcoded so SSR and client output match — never derive from `new Date()`. */
+   *  Hardcoded so SSR and client output match, never derive from `new Date()`. */
   issueMonth: "April 2026",
   editionLabel: "The Launch Edition",
   taglineLong:

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * ReadingProgressBar — a thin clinical-blue line at the top of the masthead
+ * ReadingProgressBar, a thin clinical-blue line at the top of the masthead
  * that fills as the reader scrolls the document. Mirrors a clinical-chart
  * completion bar. Respects prefers-reduced-motion (the CSS layer neutralises
  * the transition; the fill still updates, just without easing).

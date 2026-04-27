@@ -109,7 +109,7 @@ export function PeptideCalculator() {
           className="mt-6 p-4 border-l-4 border-amber bg-amber/5"
         >
           <p className="font-serif text-sm text-clinical font-semibold mb-2">
-            Before you inject — notes on this calculation:
+            Before you inject, notes on this calculation:
           </p>
           <ul className="text-sm text-charcoal/90 list-disc pl-5 space-y-1">
             {result.warnings.map((w, i) => (

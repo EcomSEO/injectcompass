@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Outline — sticky right-rail "On this page" outline that highlights the
+ * Outline, sticky right-rail "On this page" outline that highlights the
  * section currently in view as the reader scrolls.
  */
 

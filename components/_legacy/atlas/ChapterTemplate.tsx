@@ -13,7 +13,7 @@ import { BreadcrumbJsonLd } from "../schema/BreadcrumbJsonLd";
 import { FaqJsonLd } from "../schema/FaqJsonLd";
 
 /**
- * ChapterTemplate — Atlas chapter shell.
+ * ChapterTemplate. Atlas chapter shell.
  * Top: small-caps part label + huge chapter number
  * Sticky left rail: Stepper (prev/current/next)
  * Sticky right rail: Outline of in-page sections
@@ -31,7 +31,7 @@ const PART_OF_HUB: Record<string, { roman: string; label: string }> = {
 
 export function ChapterTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
-  const partInfo = PART_OF_HUB[post.hub] ?? { roman: "—", label: hub?.name ?? "Atlas" };
+  const partInfo = PART_OF_HUB[post.hub] ?? { roman: ",", label: hub?.name ?? "Atlas" };
 
   // Find prev/next in the same hub for the stepper
   const hubPosts = posts
@@ -81,7 +81,7 @@ export function ChapterTemplate({ post }: { post: Post }) {
       <BreadcrumbJsonLd crumbs={crumbs} />
       {post.faq && <FaqJsonLd faq={post.faq} />}
 
-      {/* Chapter masthead — atlas-grid with huge numeral */}
+      {/* Chapter masthead, atlas-grid with huge numeral */}
       <section className="border-b border-ink/15 atlas-grid relative">
         <div className="mx-auto max-w-6xl px-6 pt-12 md:pt-16 pb-10 md:pb-14">
           <nav className="atlas-mini text-slate flex flex-wrap gap-x-2 gap-y-1 mb-6" aria-label="Breadcrumb">
@@ -141,7 +141,7 @@ export function ChapterTemplate({ post }: { post: Post }) {
       {/* Three-column body */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-10 md:py-14 grid lg:grid-cols-12 gap-8">
-          {/* Left rail — stepper */}
+          {/* Left rail, stepper */}
           <aside className="hidden lg:block lg:col-span-3">
             <Stepper
               prev={prev ? { num: `${chapterNum.split(".")[0]}.${String(myIdx).padStart(2, "0")}`, title: prev.title, href: `/${prev.slug}` } : undefined}
@@ -235,7 +235,7 @@ export function ChapterTemplate({ post }: { post: Post }) {
             )}
           </article>
 
-          {/* Right rail — outline */}
+          {/* Right rail, outline */}
           <aside className="hidden lg:block lg:col-span-3">
             <Outline items={outlineItems} title="On this page" />
           </aside>

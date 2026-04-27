@@ -4,7 +4,7 @@ import { canonical } from "@/lib/seo";
 export type Crumb = { label: string; href?: string };
 
 /**
- * Healthline-grade breadcrumb. Inline BreadcrumbList JSON-LD as well —
+ * Healthline-grade breadcrumb. Inline BreadcrumbList JSON-LD as well,
  * lets a single component handle both rendering and SEO emission.
  */
 export function BreadcrumbNav({ crumbs }: { crumbs: Crumb[] }) {

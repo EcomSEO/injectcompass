@@ -72,7 +72,7 @@ export function ClusterTemplate({ post }: { post: Post }) {
 
         <KeyTakeaway variant="key-takeaway" title="The short answer">
           The direct-answer paragraph sits here for readers who need the answer
-          now. The rest of the page earns that answer — with numbered steps,
+          now. The rest of the page earns that answer, with numbered steps,
           published sources, and the edge cases that matter.
         </KeyTakeaway>
 

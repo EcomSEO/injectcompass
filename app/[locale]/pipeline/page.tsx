@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pipeline — chapters in research",
+  title: "Pipeline, chapters in research",
   description:
     "What we are working on next. The chapters currently in research, in draft, and queued for review.",
   path: "/pipeline",
@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
 const PIPELINE = [
   {
     status: "in-research",
-    title: "Lipohypertrophy — recognition, prevention, and what it actually feels like under the skin",
+    title: "Lipohypertrophy, recognition, prevention, and what it actually feels like under the skin",
     questions: [
       "What is the published prevalence in patients on long-term subcutaneous therapy?",
       "Which rotation patterns measurably reduce incidence?",
@@ -21,7 +21,7 @@ const PIPELINE = [
   },
   {
     status: "in-research",
-    title: "Reconstitution of multi-vial compounds — math, sterility, and storage windows",
+    title: "Reconstitution of multi-vial compounds, math, sterility, and storage windows",
     questions: [
       "How does benzyl alcohol concentration affect the storage window once a vial is breached?",
       "What does the published literature say about pooling vials of the same compound?",
@@ -30,7 +30,7 @@ const PIPELINE = [
   },
   {
     status: "in-research",
-    title: "Travel — TSA rules, refrigeration logistics, and the practical edge cases",
+    title: "Travel. TSA rules, refrigeration logistics, and the practical edge cases",
     questions: [
       "What is the current TSA guidance on injectable medications and ice packs?",
       "How long can a refrigerated pen sit at room temperature before potency is in question?",
@@ -39,7 +39,7 @@ const PIPELINE = [
   },
   {
     status: "in-draft",
-    title: "Sharps disposal — what counts as compliant in each US state",
+    title: "Sharps disposal, what counts as compliant in each US state",
     questions: [
       "Which states accept curbside disposal in approved containers?",
       "Where do mail-back programs make sense for at-home injectors?",
@@ -48,19 +48,19 @@ const PIPELINE = [
   },
   {
     status: "queued",
-    title: "Pen-injector failures — when the pen clicks but no medication delivers",
+    title: "Pen-injector failures, when the pen clicks but no medication delivers",
   },
   {
     status: "queued",
-    title: "Subcutaneous vs intramuscular — when each is indicated, and the consequence of getting it wrong",
+    title: "Subcutaneous vs intramuscular, when each is indicated, and the consequence of getting it wrong",
   },
   {
     status: "queued",
-    title: "Cold-chain failure — what to do when a refrigerator fails overnight with a pen inside",
+    title: "Cold-chain failure, what to do when a refrigerator fails overnight with a pen inside",
   },
   {
     status: "queued",
-    title: "Pediatric administration — the gauge, length, and angle differences for under-18 injectors",
+    title: "Pediatric administration, the gauge, length, and angle differences for under-18 injectors",
   },
 ];
 

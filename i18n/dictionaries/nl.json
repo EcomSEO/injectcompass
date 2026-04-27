@@ -16,7 +16,7 @@
   },
   "header": {
     "wordmark": "INJECTCOMPASS",
-    "logo_aria": "InjectCompass — home",
+    "logo_aria": "InjectCompass, home",
     "search_aria": "Zoeken in InjectCompass",
     "newsletter_cta": "Nieuwsbrief",
     "skip_to_content": "Naar de inhoud",
@@ -40,7 +40,7 @@
   },
   "hero": {
     "edition": "Atlas · Editie 01 · Voorjaar 2026",
-    "subtitle": "Een wegwijs-atlas voor peptide-injectie — plekken, techniek, rotatie en de honderd kleine dingen die fout kunnen gaan.",
+    "subtitle": "Een wegwijs-atlas voor peptide-injectie, plekken, techniek, rotatie en de honderd kleine dingen die fout kunnen gaan.",
     "meta": "Uitsluitend patiëntinformatie · geen leverancierslinks · gecontroleerd tegen de bijsluiter",
     "partI": "Basis",
     "partII": "Plekken",
@@ -48,7 +48,7 @@
     "partIV": "Probleemoplossing",
     "eyebrow": "Evidence-based injectiebegeleiding",
     "h1": "Goed prikken, zonder twijfel.",
-    "dek": "Stapsgewijze techniekgidsen, reconstitutie-rekenwerk en rotatieplannen — geschreven door een verpleegkundige, gecontroleerd door een arts en gestaafd op verpleegkundige vakliteratuur die u zelf kunt verifiëren.",
+    "dek": "Stapsgewijze techniekgidsen, reconstitutie-rekenwerk en rotatieplannen, geschreven door een verpleegkundige, gecontroleerd door een arts en gestaafd op verpleegkundige vakliteratuur die u zelf kunt verifiëren.",
     "trending_label": "Nu populair"
   },
   "home": {
@@ -76,7 +76,7 @@
   },
   "atlas": {
     "tableOfContents": "Inhoudsopgave",
-    "indexHeading": "De atlas — index",
+    "indexHeading": "De atlas, index",
     "indexSubhead": "Geordend zoals een clinicus de stof zou onderwijzen. Paginanummers blijven stabiel over edities heen.",
     "openIndex": "Index openen",
     "howWeReview": "Onze beoordeling",
@@ -85,7 +85,7 @@
   },
   "categories": {
     "injection_sites": "Injectieplekken",
-    "injection_sites_dek": "Subcutane en intramusculaire plekken — anatomie, herkenningspunten en wat u moet voelen.",
+    "injection_sites_dek": "Subcutane en intramusculaire plekken, anatomie, herkenningspunten en wat u moet voelen.",
     "technique": "Techniek",
     "technique_dek": "Optrekken, huidplooi, prikhoek en de kleine bewegingen die prikken pijnloos maken.",
     "rotation": "Rotatieschema's",

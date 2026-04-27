@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * ArticleThumb — renders a real editorial photograph when `imageUrl` is
+ * ArticleThumb, renders a real editorial photograph when `imageUrl` is
  * provided, otherwise falls back to a deterministic teal gradient with a
  * subtle anatomical-line motif so cards don't look broken.
  *

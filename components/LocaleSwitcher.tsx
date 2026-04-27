@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 
 /**
- * LocaleSwitcher — language picker.
+ * LocaleSwitcher, language picker.
  *
  * Twelve locales is too many for an inline toggle, so this is a styled
  * native <select>: compact, ships zero JS for the menu itself, and gets
@@ -66,7 +66,7 @@ export function LocaleSwitcher({
       >
         {locales.map((l) => (
           <option key={l} value={l} lang={l} className="text-ink bg-white">
-            {t(shortKey(l))} — {t(fullKey(l))}
+            {t(shortKey(l))}, {t(fullKey(l))}
           </option>
         ))}
       </select>

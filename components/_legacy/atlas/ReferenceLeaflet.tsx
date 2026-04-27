@@ -1,5 +1,5 @@
 /**
- * ReferenceLeaflet — folded technical-leaflet sidebar block for footnotes
+ * ReferenceLeaflet, folded technical-leaflet sidebar block for footnotes
  * and citations. Numbered references in dense small text on warm-paper
  * ground with a folded corner.
  */

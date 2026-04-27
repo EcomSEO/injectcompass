@@ -129,7 +129,7 @@ export function PillarTemplate({ post }: { post: Post }) {
         <KeyTakeaway variant="key-takeaway" title="What this reference covers">
           What the published nursing-education literature, peer-reviewed
           injection-technique research, and manufacturer package inserts
-          describe — translated into step-numbered procedure and plain
+          describe, translated into step-numbered procedure and plain
           English. Every claim is cited below.
         </KeyTakeaway>
 

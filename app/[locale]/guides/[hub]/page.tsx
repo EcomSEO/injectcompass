@@ -117,7 +117,7 @@ export default async function HubPage({
           </div>
         </section>
 
-        {/* Start here — pillar */}
+        {/* Start here, pillar */}
         {pillar && (
           <section className="border-b border-clinical/15">
             <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">

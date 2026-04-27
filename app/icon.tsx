@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /**
- * Favicon — 32x32.
+ * Favicon, 32x32.
  * Clinical-blue serif "I" on warm paper with a small crosshair mark.
  * Hex values pulled directly from tailwind.config.ts.
  */
@@ -9,7 +9,7 @@ import { ImageResponse } from "next/og";
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
-// Brand hex — do not abstract, keep literal so the runtime edge renderer
+// Brand hex, do not abstract, keep literal so the runtime edge renderer
 // doesn't need to resolve any module imports.
 const CLINICAL = "#2E5A88";
 const CLINICAL_DEEP = "#1F3F60";

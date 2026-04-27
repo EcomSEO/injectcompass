@@ -104,7 +104,7 @@ export function SourcesAccordion({
                   })()}
                   {s.label}
                   {s.publisher && (
-                    <span className="text-ink-muted"> — {s.publisher}</span>
+                    <span className="text-ink-muted">, {s.publisher}</span>
                   )}
                 </span>
                 <span aria-hidden className="text-ink-muted text-[18px] mt-0.5">

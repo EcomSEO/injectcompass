@@ -1,5 +1,5 @@
 /**
- * AtlasHero — paper-white ground with faint blueprint grid, big condensed
+ * AtlasHero, paper-white ground with faint blueprint grid, big condensed
  * INJECTCOMPASS wordmark, ink subhead. NO search bar. NO gradient. NO chips.
  * The page opens like the cover of a technical reference book.
  */
@@ -14,12 +14,12 @@ type Props = {
 export function AtlasHero({
   edition = "Atlas · Edition 01 · Spring 2026",
   wordmark = "INJECTCOMPASS",
-  subtitle = "A wayfinding atlas for peptide injection — sites, technique, rotation, and the troubleshooting of a hundred small things that go wrong.",
+  subtitle = "A wayfinding atlas for peptide injection, sites, technique, rotation, and the troubleshooting of a hundred small things that go wrong.",
   meta = "Patient-education only · No vendor links · Reviewed against the package insert",
 }: Props) {
   return (
     <section className="relative border-b border-ink/15 atlas-grid bg-paper overflow-hidden">
-      {/* Corner registration marks — tiny crosshair fiducials at the four corners. */}
+      {/* Corner registration marks, tiny crosshair fiducials at the four corners. */}
       <CornerMark className="absolute top-3 left-3" />
       <CornerMark className="absolute top-3 right-3" />
       <CornerMark className="absolute bottom-3 left-3" />
@@ -46,7 +46,7 @@ export function AtlasHero({
 
         <div className="reveal-masthead-3 mt-8 atlas-mini">{meta}</div>
 
-        {/* Index strip — quick anchors to the four parts. */}
+        {/* Index strip, quick anchors to the four parts. */}
         <div className="reveal-masthead-4 mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 max-w-3xl">
           {[
             { num: "I", label: "Fundamentals" },

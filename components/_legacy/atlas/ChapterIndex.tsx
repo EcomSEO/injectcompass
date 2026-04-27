@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * ChapterIndex — table of contents styled as a transit/atlas index.
+ * ChapterIndex, table of contents styled as a transit/atlas index.
  * Numbered chapters with title-left, dot-leader, page-number-right.
  * Grouped into PARTS.
  */
@@ -23,7 +23,7 @@ export type ChapterPart = {
 
 export function ChapterIndex({
   parts,
-  heading = "The Atlas — Index",
+  heading = "The Atlas. Index",
   subhead = "Four parts, listed by chapter.",
   partLabel = "PART",
 }: {

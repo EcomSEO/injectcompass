@@ -34,7 +34,7 @@ export async function Footer() {
         {/* Brand row */}
         <div className="grid md:grid-cols-12 gap-8 pb-10 border-b border-rule">
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2" aria-label="InjectCompass — home">
+            <Link href="/" className="inline-flex items-center gap-2" aria-label="InjectCompass, home">
               <CompassMark />
               <span className="font-semibold text-[20px] tracking-tight text-ink">injectcompass</span>
             </Link>

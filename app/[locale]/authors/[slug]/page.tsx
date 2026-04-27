@@ -27,7 +27,7 @@ export async function generateMetadata({
   if (!author) return {};
   return pageMetadata({
     title: `${author.name}, ${author.credentials}`,
-    description: `${author.name} — ${author.jobTitle} at InjectCompass. ${author.bio.split(". ")[0]}.`,
+    description: `${author.name}, ${author.jobTitle} at InjectCompass. ${author.bio.split(". ")[0]}.`,
     path: `/authors/${author.slug}`,
   });
 }
@@ -112,7 +112,7 @@ export default async function AuthorBioPage({
         <h2>Articles by {author.name.split(" ")[0]}</h2>
         {articles.length === 0 ? (
           <p className="text-[14px] text-charcoal/60">
-            Post-level author tagging is rolling out in stages — individual
+            Post-level author tagging is rolling out in stages, individual
             article attributions will appear here as the editorial pipeline
             backfills the metadata. In the interim, see the full library
             grouped by topic on the <Link href="/">home page</Link>.
