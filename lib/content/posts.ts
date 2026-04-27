@@ -18,6 +18,10 @@ export type Post = {
   sources?: Array<{ label: string; url: string }>;
   featured?: boolean;
   medicalDisclaimer?: "required" | "light";
+  /** Slug into the DRUGS manifest (lib/content/drug-images.ts).
+   *  When set, ArticleTemplate renders a license-compliant DrugImage
+   *  in the right rail. Leave undefined for generic technique posts. */
+  primaryDrug?: string;
 };
 
 export const posts: Post[] = [
@@ -265,6 +269,7 @@ export const posts: Post[] = [
     readingTime: 10,
     status: "published",
     medicalDisclaimer: "required",
+    primaryDrug: "ozempic",
     items: [
       {
         rank: 1,

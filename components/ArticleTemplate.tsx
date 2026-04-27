@@ -21,6 +21,7 @@ import { WadaBanner } from "./WadaBanner";
 import { SourcesAccordion, type Source } from "./SourcesAccordion";
 import { RelatedArticles } from "./RelatedArticles";
 import { ArticleCardData } from "./ArticleCard";
+import { DrugImage } from "./DrugImage";
 import { ArticleJsonLd } from "./schema/ArticleJsonLd";
 import { MedicalWebPageJsonLd } from "./schema/MedicalWebPageJsonLd";
 import { FaqJsonLd } from "./schema/FaqJsonLd";
@@ -188,6 +189,16 @@ export async function ArticleTemplate({ post }: { post: Post }) {
             <TranslationPendingBanner />
             <EducationalBanner />
             {(post.hub === "performance" || post.hub === "recovery") && <WadaBanner />}
+            {/* Mobile-only drug figure (right rail is hidden on mobile, so render inline) */}
+            {post.primaryDrug && (
+              <div className="lg:hidden">
+                <DrugImage
+                  drugSlug={post.primaryDrug}
+                  size="md"
+                  showCaption={true}
+                />
+              </div>
+            )}
             {/* Mobile in-article TOC accordion */}
             <details className="lg:hidden mb-8 rounded-md border border-rule bg-surface-alt p-4">
               <summary className="flex items-center justify-between cursor-pointer text-[14px] font-semibold text-ink list-none">
@@ -299,6 +310,13 @@ export async function ArticleTemplate({ post }: { post: Post }) {
           {/* Right rail */}
           <aside className="hidden lg:block lg:col-span-4">
             <div className="sticky top-24 space-y-6">
+              {post.primaryDrug && (
+                <DrugImage
+                  drugSlug={post.primaryDrug}
+                  size="md"
+                  showCaption={true}
+                />
+              )}
               {regions.length > 0 && (
                 <InjectionSiteMap regions={regions} />
               )}
