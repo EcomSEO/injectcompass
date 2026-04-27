@@ -33,7 +33,10 @@ export function MedicalDisclaimerStrip() {
  */
 export function MedicalDisclaimerFooterStrip() {
   return (
-    <div className="bg-clinical-tint border-y border-clinical/25">
+    <aside
+      aria-label="Medical disclaimer"
+      className="bg-clinical-tint border-y border-clinical/25"
+    >
       <div className="mx-auto max-w-6xl px-6 py-4 text-[13px] text-charcoal/85 leading-relaxed">
         <strong className="text-clinical-deep">Not medical advice.</strong>{" "}
         Information on InjectCompass is for educational and patient-education
@@ -48,6 +51,6 @@ export function MedicalDisclaimerFooterStrip() {
         </Link>
         .
       </div>
-    </div>
+    </aside>
   );
 }

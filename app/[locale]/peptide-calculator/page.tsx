@@ -3,6 +3,8 @@ import Link from "next/link";
 import { PeptideCalculator } from "@/components/PeptideCalculator";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BreadcrumbJsonLd } from "@/components/schema/BreadcrumbJsonLd";
+import { ArticleJsonLd } from "@/components/schema/ArticleJsonLd";
+import { MedicalWebPageJsonLd } from "@/components/schema/MedicalWebPageJsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { Eyebrow } from "@/components/editorial/Eyebrow";
 import { ClinicalRule } from "@/components/editorial/DotRule";
@@ -26,6 +28,25 @@ export default function PeptideCalculatorPage() {
   return (
     <>
       <BreadcrumbJsonLd crumbs={crumbs} />
+      <ArticleJsonLd
+        path="/peptide-calculator"
+        headline="Peptide Calculator with Visual Syringe"
+        description="Calculate peptide dose in insulin-syringe units from mg-in-vial + bacteriostatic water + target dose. Math is unit-tested. Educational reference only."
+        datePublished="2026-04-21"
+        dateModified="2026-04-21"
+        authorName="Jordan Pratt"
+        authorJobTitle="PharmD, Senior Editor"
+        reviewerName="Dr. Maya Okafor"
+        reviewerJobTitle="MD, Internal Medicine"
+      />
+      <MedicalWebPageJsonLd
+        path="/peptide-calculator"
+        headline="Peptide Calculator with Visual Syringe"
+        description="Calculate peptide dose in insulin-syringe units from mg-in-vial + bacteriostatic water + target dose."
+        lastReviewed="2026-04-21"
+        reviewerName="Dr. Maya Okafor"
+        reviewerCredentials="MD, Internal Medicine"
+      />
       <main className="mx-auto max-w-4xl px-6 py-10 md:py-14">
         <Breadcrumbs crumbs={crumbs} />
 

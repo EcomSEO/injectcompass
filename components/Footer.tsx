@@ -44,7 +44,7 @@ export async function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="eyebrow mb-3">{t("conditions_heading")}</h4>
+            <h3 className="eyebrow mb-3">{t("conditions_heading")}</h3>
             <ul className="space-y-2 text-[14px]">
               {hubs.map((hub) => (
                 <li key={hub.slug}>
@@ -57,7 +57,7 @@ export async function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="eyebrow mb-3">{t("tools_heading")}</h4>
+            <h3 className="eyebrow mb-3">{t("tools_heading")}</h3>
             <ul className="space-y-2 text-[14px]">
               {tools.map((t) => (
                 <li key={t.slug}>
@@ -70,7 +70,7 @@ export async function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="eyebrow mb-3">{t("company_heading")}</h4>
+            <h3 className="eyebrow mb-3">{t("company_heading")}</h3>
             <ul className="space-y-2 text-[14px]">
               <li><Link href="/about" className="text-ink hover:text-teal-700">{t("about")}</Link></li>
               <li><Link href="/editorial-standards" className="text-ink hover:text-teal-700">{t("editorial_standards")}</Link></li>
@@ -88,13 +88,13 @@ export async function Footer() {
         <div className="py-8 border-b border-rule">
           <div className="grid md:grid-cols-12 gap-6">
             <div className="md:col-span-7">
-              <h4 className="eyebrow eyebrow-danger mb-2">{t("disclaimer_heading")}</h4>
+              <h3 className="eyebrow eyebrow-danger mb-2">{t("disclaimer_heading")}</h3>
               <p className="text-[13px] text-ink-muted leading-relaxed">
                 {t("disclaimer_body")}
               </p>
             </div>
             <div className="md:col-span-5">
-              <h4 className="eyebrow mb-2">{t("from_the_network")}</h4>
+              <h3 className="eyebrow mb-2">{t("from_the_network")}</h3>
               <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13px]">
                 {sisterSites.map((s) => (
                   <li key={s.name}>
