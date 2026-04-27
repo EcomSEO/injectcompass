@@ -1,8 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { MegaMenu, type MegaMenuColumn } from "./MegaMenu";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 /**
  * Healthline-grade publisher header.
@@ -147,6 +149,32 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const tCommon = useTranslations("common");
+  const tNav = useTranslations("header.nav");
+  const tHeader = useTranslations("header");
+
+  // Compose the rendered nav by overlaying translated top-level labels onto
+  // the base NAV array. Sub-item labels stay English (slugs are English in
+  // phase one). The TranslationPendingBanner pattern handles body content.
+  const localizedNav: NavItem[] = NAV.map((item) => {
+    const labelKey = item.label.toLowerCase().replace(/\s+/g, "_") as
+      | "conditions"
+      | "procedures"
+      | "drugs"
+      | "health_news"
+      | "tools";
+    const translated = (() => {
+      try {
+        return tNav(labelKey);
+      } catch {
+        return item.label;
+      }
+    })();
+    if (isMega(item)) {
+      return { ...item, label: translated };
+    }
+    return { ...item, label: translated };
+  });
 
   useEffect(() => {
     if (mobileOpen) {
@@ -168,12 +196,14 @@ export function Header() {
     closeTimer.current = setTimeout(() => setActiveMega(null), 120);
   };
 
-  const activeItem = activeMega ? NAV.find((n) => isMega(n) && n.label === activeMega) : null;
+  const activeItem = activeMega
+    ? localizedNav.find((n) => isMega(n) && n.label === activeMega)
+    : null;
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-rule">
       <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
-        <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="InjectCompass — home">
+        <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label={tHeader("logo_aria")}>
           <CompassMark />
           <span className="font-semibold text-[18px] tracking-tight text-ink group-hover:text-teal-600 transition-colors">
             injectcompass
@@ -185,7 +215,7 @@ export function Header() {
           aria-label="Primary"
           onMouseLeave={scheduleClose}
         >
-          {NAV.map((item) => {
+          {localizedNav.map((item) => {
             if (isMega(item)) {
               const isOpen = activeMega === item.label;
               return (
@@ -229,31 +259,26 @@ export function Header() {
           <input
             type="search"
             name="q"
-            placeholder="Search injection guides…"
+            placeholder={tCommon("search_placeholder")}
             className="ml-2 bg-transparent w-full text-[14px] text-ink placeholder:text-ink-soft outline-none"
-            aria-label="Search the site"
+            aria-label={tHeader("search_aria")}
           />
         </form>
 
         <div className="flex items-center gap-2 shrink-0">
-          <button
-            type="button"
-            className="hidden md:inline-flex items-center gap-1.5 px-2.5 h-9 text-[13px] font-medium text-ink-muted hover:text-ink rounded-md transition-colors"
-            aria-label="Change language"
-          >
-            <GlobeIcon className="w-4 h-4" />
-            <span>EN</span>
-          </button>
+          <div className="hidden md:inline-flex">
+            <LocaleSwitcher />
+          </div>
           <Link
             href="/newsletter"
             className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-teal-500 text-white text-[14px] font-semibold hover:bg-teal-600 transition-colors"
           >
-            Newsletter
+            {tHeader("newsletter_cta")}
           </Link>
 
           <button
             type="button"
-            aria-label="Search"
+            aria-label={tCommon("search")}
             className="md:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
           >
             <SearchIcon className="w-5 h-5" />
@@ -261,7 +286,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            aria-label="Open menu"
+            aria-label={tHeader("open_menu")}
             className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -298,7 +323,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(false)}
-              aria-label="Close menu"
+              aria-label={tHeader("close_menu")}
               className="inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -313,13 +338,13 @@ export function Header() {
               <input
                 type="search"
                 name="q"
-                placeholder="Search injection guides…"
+                placeholder={tCommon("search_placeholder")}
                 className="ml-3 bg-transparent w-full text-[15px] outline-none"
-                aria-label="Search the site"
+                aria-label={tHeader("search_aria")}
               />
             </form>
             <nav className="flex flex-col">
-              {NAV.map((item) => {
+              {localizedNav.map((item) => {
                 if (isMega(item)) {
                   return (
                     <details key={item.label} className="border-b border-rule">
@@ -367,8 +392,11 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-8 inline-flex w-full items-center justify-center h-12 px-4 rounded-pill bg-teal-500 text-white text-[15px] font-semibold"
             >
-              Sign up for the newsletter
+              {tHeader("newsletter_cta")}
             </Link>
+            <div className="mt-6 flex justify-center">
+              <LocaleSwitcher onNavigate={() => setMobileOpen(false)} />
+            </div>
           </div>
         </div>
       )}

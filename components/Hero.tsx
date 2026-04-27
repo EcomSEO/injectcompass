@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArticleThumb } from "./ArticleThumb";
 import type { ArticleCardData } from "./ArticleCard";
 
@@ -19,12 +19,24 @@ export function Hero({
   dek,
   featured,
   trending,
+  trendingLabel = "Trending now",
+  ctaPrimary = "Browse the library",
+  ctaSecondary = "Open the dose calculator",
+  reviewedNote = "Reviewed by clinicians",
+  citedNote = "Cited to nursing-education literature & package inserts",
+  medicallyReviewedPill = "Medically reviewed",
 }: {
   eyebrow?: string;
   headline: string;
   dek: string;
   featured: ArticleCardData & { authorCredentials?: string };
   trending: Trending[];
+  trendingLabel?: string;
+  ctaPrimary?: string;
+  ctaSecondary?: string;
+  reviewedNote?: string;
+  citedNote?: string;
+  medicallyReviewedPill?: string;
 }) {
   return (
     <section className="border-b border-rule">
@@ -44,13 +56,13 @@ export function Hero({
                 href="#categories"
                 className="inline-flex items-center h-12 px-6 rounded-pill bg-teal-500 text-white text-[15px] font-semibold hover:bg-teal-600 transition-colors"
               >
-                Browse the library
+                {ctaPrimary}
               </Link>
               <Link
                 href="/peptide-calculator"
                 className="inline-flex items-center h-12 px-6 rounded-pill border border-rule-strong text-ink text-[15px] font-semibold hover:border-teal-500 hover:text-teal-700 transition-colors"
               >
-                Open the dose calculator
+                {ctaSecondary}
               </Link>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-4 text-[13px] text-ink-muted">
@@ -59,10 +71,10 @@ export function Hero({
                   <path d="M8 1.5 2.5 3.5v4c0 3 2.3 5.7 5.5 7 3.2-1.3 5.5-4 5.5-7v-4L8 1.5Z" />
                   <path d="m5.5 8 2 2 3.5-4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                Reviewed by clinicians
+                {reviewedNote}
               </span>
               <span aria-hidden>·</span>
-              <span>Cited to nursing-education literature &amp; package inserts</span>
+              <span>{citedNote}</span>
             </div>
           </div>
 
@@ -82,7 +94,7 @@ export function Hero({
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                     <path d="m4 8 3 3 5-6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  Medically reviewed
+                  {medicallyReviewedPill}
                 </div>
               </div>
               <div className="p-6">
@@ -113,7 +125,7 @@ export function Hero({
         {trending.length > 0 && (
           <div className="mt-12 pt-6 border-t border-rule">
             <div className="flex items-center gap-3 mb-4">
-              <span className="eyebrow">Trending now</span>
+              <span className="eyebrow">{trendingLabel}</span>
               <span className="h-px flex-1 bg-rule" />
             </div>
             <ul className="grid md:grid-cols-3 gap-x-8 gap-y-4">

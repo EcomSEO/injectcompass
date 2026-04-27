@@ -1,52 +1,195 @@
 {
+  "siteMeta": {
+    "tagline": "Injekce, dělané správně.",
+    "description": "Praktická injekční technika, výpočty rekonstituce, kalkulačky a průvodci materiálem pro pacienty s předepsanou injekční medikací. Pouze edukace pacienta."
+  },
+  "common": {
+    "newsletter": "Newsletter",
+    "subscribe": "Odebírat",
+    "search": "Hledat",
+    "search_placeholder": "Hledat techniky, místa, léky…",
+    "menu": "Menu",
+    "close": "Zavřít",
+    "share": "Sdílet",
+    "copy_link": "Zkopírovat odkaz",
+    "skip_to_content": "Přejít na obsah"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — domů",
+    "search_aria": "Hledat v InjectCompass",
+    "newsletter_cta": "Newsletter",
+    "skip_to_content": "Přejít na obsah",
+    "open_menu": "Otevřít menu",
+    "close_menu": "Zavřít menu",
     "navAtlas": "Atlas",
     "navTechnique": "Technika",
     "navSites": "Místa",
-    "navTroubleshooting": "Řešení",
+    "navTroubleshooting": "Řešení potíží",
     "navMethodology": "Metodika",
-    "navPipeline": "Dílna",
-    "search": "Prohledat atlas"
+    "navPipeline": "Připravujeme",
+    "search": "Hledat v atlasu",
+    "nav": {
+      "conditions": "Indikace",
+      "procedures": "Postupy",
+      "drugs": "Léky",
+      "health_news": "Zdravotní zprávy",
+      "tools": "Nástroje",
+      "newsletter": "Newsletter"
+    }
   },
   "hero": {
     "edition": "Atlas · Vydání 01 · Jaro 2026",
-    "subtitle": "Orientační atlas pro injekci peptidů — místa, technika, rotace a sto drobností, které se mohou pokazit.",
-    "meta": "Pouze informace pro pacienta · Žádné odkazy na prodejce · Ověřeno proti příbalové informaci",
+    "subtitle": "Atlasový průvodce pro injekční podání peptidů — místa, technika, rotace a sto drobností, které se mohou pokazit.",
+    "meta": "Pouze edukace pacienta · žádné odkazy na prodejce · ověřeno proti příbalovému letáku",
     "partI": "Základy",
     "partII": "Místa",
     "partIII": "Technika",
-    "partIV": "Řešení"
+    "partIV": "Řešení potíží",
+    "eyebrow": "Injekční navigace založená na důkazech",
+    "h1": "Injekce, jak mají být — bez tipování.",
+    "dek": "Krok za krokem: techniky, výpočty rekonstituce a mapy rotace míst — psané sestrou, kontrolované lékařem a podložené ošetřovatelskou literaturou, kterou si můžete sami ověřit.",
+    "trending_label": "Právě se čte"
+  },
+  "home": {
+    "cta_browse_library": "Procházet knihovnu",
+    "cta_open_calculator": "Otevřít kalkulačku dávky",
+    "reviewed_by_clinicians": "Ověřeno klinickými pracovníky",
+    "cited_to_literature": "Citováno z ošetřovatelské literatury a příbalů",
+    "medically_reviewed_pill": "Lékařsky ověřeno",
+    "library_eyebrow": "Knihovna",
+    "library_heading": "Začněte základy.",
+    "library_dek": "Osm základních průvodců — od natažení dávky po rotaci míst bez jizev.",
+    "most_read_eyebrow": "Nejčtenější",
+    "most_read_heading": "Co tento týden lidé čtou.",
+    "by_topic_eyebrow": "Podle tématu",
+    "by_topic_heading": "Hledejte podle toho, co právě děláte.",
+    "open_hub": "Otevřít",
+    "how_we_work_eyebrow": "Jak pracujeme",
+    "how_we_work_heading": "Dva nezávislé zdroje, než se zveřejní jediná věta.",
+    "how_we_work_body": "Každý průvodce na InjectCompass vychází z příbalových informací výrobce, doporučení CDC a WHO k bezpečnosti injekcí a z ošetřovatelské literatury. Dva nezávislé zdroje se musí shodnout, než se objeví tvrzení, a kvalifikovaný recenzent článek po redakční kontrole podepíše.",
+    "how_we_work_cta": "Přečíst metodiku v1.2",
+    "stop_eyebrow": "Stop · zavolejte předepisujícímu lékaři",
+    "stop_heading": "Kdy je tento web špatným zdrojem.",
+    "stop_body": "Nic na InjectCompass nenahrazuje předpis vašeho lékaře, příbalovou informaci k vašemu léku ani úsudek odborníka, který zná váš případ. Pokud příznak neodpovídá tomu, co tu čtete, považujte text za zastaralý a zavolejte tomu, kdo lék předepsal.",
+    "stop_cta": "Přečíst plné upozornění"
   },
   "atlas": {
     "tableOfContents": "Obsah",
     "indexHeading": "Atlas — rejstřík",
-    "indexSubhead": "Seřazeno tak, jak by látku učila zdravotní sestra. Čísla stránek zůstávají stabilní mezi vydáními.",
+    "indexSubhead": "V pořadí, ve kterém by látku učil klinický pracovník. Čísla stránek zůstávají mezi vydáními stabilní.",
     "openIndex": "Otevřít rejstřík",
-    "howWeReview": "Jak ověřujeme",
-    "atlasNotShelf": "Atlas, ne polička s články.",
-    "atlasNotShelfBody": "Každý záznam na webu je číslovaná kapitola, zařazená do jedné ze čtyř částí. Můžete jej číst od desek k deskám nebo otevřít rejstřík a přeskočit rovnou na stránku, kterou potřebujete."
+    "howWeReview": "Jak recenzujeme",
+    "atlasNotShelf": "Atlas, ne regál článků.",
+    "atlasNotShelfBody": "Každý záznam tohoto webu je očíslovaná kapitola zařazená do jedné ze čtyř částí. Čtěte od začátku do konce, nebo otevřete rejstřík a skočte na potřebnou stránku."
+  },
+  "categories": {
+    "injection_sites": "Místa vpichu",
+    "injection_sites_dek": "Subkutánní a intramuskulární místa — anatomie, orientační body a co hledat pohmatem.",
+    "technique": "Technika",
+    "technique_dek": "Natažení, kožní řasa, úhel vpichu a malé pohyby, díky nimž je injekce bezbolestná.",
+    "rotation": "Schémata rotace",
+    "rotation_dek": "Mřížky, kalendáře a logika rotace, která brání lipohypertrofii a jizvám.",
+    "troubleshooting": "Řešení potíží",
+    "troubleshooting_dek": "Modřiny, úniky, zakalené roztoky a desítky dalších drobností, které se v běžném dni pokazí.",
+    "drugs_compounds": "Léky & látky",
+    "drugs_compounds_dek": "Generické a obchodní názvy, shrnutí příbalu a bezpečnostní poznámky, které příbalový leták neuvádí.",
+    "tools": "Nástroje",
+    "tools_dek": "Výpočty rekonstituce, převodníky stříkaček a tisknutelný plán dávek."
+  },
+  "trust": {
+    "medically_reviewed_by": "Lékařsky ověřeno: ",
+    "last_reviewed_on": "Poslední lékařská kontrola: ",
+    "evidence_based": "Založeno na důkazech",
+    "independent_review": "Nezávislá recenze · žádné sponzorství dodavatelů · žádné dohody s telemedicínou",
+    "reading_time": "{n} min čtení"
+  },
+  "article": {
+    "on_this_page": "Na této stránce",
+    "injection_sites_in_this_article": "Místa vpichu probíraná v tomto článku",
+    "sources_heading": "Zdroje",
+    "related_articles_heading": "Související články",
+    "translation_pending_title": "Text článku zatím není přeložen",
+    "translation_pending_body": "Rámec stránky je ve vašem jazyce; text článku níže zůstává v angličtině, dokud nedokončíme překlad."
+  },
+  "newsletter_inline": {
+    "title": "Dostávejte injekční navigaci založenou na důkazech",
+    "description": "Jednou týdně. Žádní prodejci, žádné upselly.",
+    "email_placeholder": "Váš e-mail",
+    "subscribe_button": "Odebírat",
+    "privacy_note": "Odhlásit se můžete kdykoli."
   },
   "methodology": {
     "label": "Metodika · Vydání v1.2",
     "title": "Jak vzniká kapitola.",
-    "body": "Pracujeme z příbalových informací výrobce, aktuálních doporučení CDC a WHO k bezpečnosti injekcí a z literatury pro vzdělávání zdravotních sester. Dva nezávislé zdroje se musí shodnout, než kapitola vyjde.",
+    "body": "Pracujeme s příbalovými informacemi výrobce, doporučeními CDC a WHO k bezpečnosti injekcí a s ošetřovatelskou literaturou. Dva nezávislé zdroje se musí shodnout, než kapitolu zveřejníme.",
     "cta": "Přečíst metodiku v1.2"
   },
   "pipeline": {
-    "label": "Dílna · 8 ve výzkumu",
+    "label": "Připravujeme · 8 v rešerši",
     "title": "Kapitoly, na kterých pracujeme.",
-    "body": "Dílna je veřejná. Každá zkoumaná kapitola je uvedena s pracovním názvem, otázkami, na které se snaží odpovědět, a se zdroji dosud přečtenými.",
-    "cta": "Otevřít dílnu"
+    "body": "Náš pipeline je veřejný. Každá rozpracovaná kapitola má pracovní název, otázky, na které se snaží odpovědět, a zdroje, které jsme prošli.",
+    "cta": "Otevřít pipeline"
   },
   "stop": {
-    "title": "Stop · obraťte se na předepisujícího",
-    "body": "Nic na InjectCompass nenahrazuje příbalovou informaci vašeho léku ani radu osoby, která vám lék předepsala."
+    "title": "Stop · vyhledejte předepisujícího lékaře",
+    "body": "Nic na InjectCompass nenahradí pokyny dodané k vašemu léku ani radu klinika, který lék předepsal."
   },
   "footer": {
-    "edition": "Atlas Vydání 01",
-    "lastReviewed": "Naposledy ověřeno",
-    "notMedicalAdvice": "Není to lékařská rada",
-    "patientEducationOnly": "Pouze pro vzdělávací účely a informaci pacienta. Neodkazujeme na prodejce výzkumných peptidů a nepřijímáme platby od farmaceutických výrobců ani telemedicínských klinik."
+    "edition": "Vydání Atlas 01",
+    "lastReviewed": "Poslední kontrola",
+    "notMedicalAdvice": "Nejde o lékařskou radu",
+    "patientEducationOnly": "Pouze edukace pacienta. Neodkazujeme na prodejce výzkumných peptidů. Nepřijímáme platby od farmaceutických firem ani telemedicínských klinik.",
+    "conditions_heading": "Indikace",
+    "tools_heading": "Nástroje",
+    "company_heading": "Společnost",
+    "about": "O nás",
+    "editorial_standards": "Redakční standardy",
+    "methodology": "Metodika",
+    "contact": "Kontakt & opravy",
+    "newsletter": "Newsletter",
+    "privacy": "Soukromí",
+    "terms": "Podmínky",
+    "affiliate_disclosure": "Affiliate prohlášení",
+    "medical_disclaimer": "Lékařské upozornění",
+    "disclaimer_heading": "Lékařské upozornění",
+    "disclaimer_body": "InjectCompass publikuje obsah pro edukaci pacienta. Nic zde nenahrazuje předpis vašeho klinika, příbalovou informaci léku ani úsudek odborníka, který zná váš případ. Pokud příznak neodpovídá textu, považujte ho za zastaralý a zavolejte tomu, kdo lék předepsal.",
+    "from_the_network": "Z naší sítě",
+    "copyright": "© {year} InjectCompass. Pouze edukace pacienta. Nejde o lékařskou radu."
+  },
+  "locale_switcher": {
+    "label": "Jazyk",
+    "current": "Aktuální jazyk"
+  },
+  "breadcrumbs": {
+    "home": "Domů",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Jazyk",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

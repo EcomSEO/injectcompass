@@ -1,52 +1,195 @@
 {
+  "siteMeta": {
+    "tagline": "Injeksjoner gjort riktig.",
+    "description": "Praktisk injeksjonsteknikk, oppløsningsmatematikk, kalkulatorer og utstyrsguider for personer som er forskrevet injiserbar medisin. Kun pasientinformasjon."
+  },
+  "common": {
+    "newsletter": "Nyhetsbrev",
+    "subscribe": "Abonner",
+    "search": "Søk",
+    "search_placeholder": "Søk teknikker, steder, legemidler…",
+    "menu": "Meny",
+    "close": "Lukk",
+    "share": "Del",
+    "copy_link": "Kopier lenke",
+    "skip_to_content": "Gå til innhold"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — hjem",
+    "search_aria": "Søk i InjectCompass",
+    "newsletter_cta": "Nyhetsbrev",
+    "skip_to_content": "Gå til innhold",
+    "open_menu": "Åpne menyen",
+    "close_menu": "Lukk menyen",
     "navAtlas": "Atlas",
     "navTechnique": "Teknikk",
     "navSites": "Steder",
     "navTroubleshooting": "Feilsøking",
     "navMethodology": "Metodikk",
-    "navPipeline": "Verksted",
-    "search": "Søk i atlaset"
+    "navPipeline": "Under arbeid",
+    "search": "Søk i atlaset",
+    "nav": {
+      "conditions": "Indikasjoner",
+      "procedures": "Prosedyrer",
+      "drugs": "Legemidler",
+      "health_news": "Helsenyheter",
+      "tools": "Verktøy",
+      "newsletter": "Nyhetsbrev"
+    }
   },
   "hero": {
-    "edition": "Atlas · Utgave 01 · Våren 2026",
-    "subtitle": "Et veivisende atlas for peptidinjeksjon — steder, teknikk, rotasjon og de hundre små tingene som kan gå galt.",
-    "meta": "Pasientinformasjon · Ingen selgerlenker · Kryssjekket mot pakningsvedlegget",
-    "partI": "Grunnleggende",
+    "edition": "Atlas · Utgave 01 · Vår 2026",
+    "subtitle": "Et veiviseratlas for peptidinjeksjon — steder, teknikk, rotasjon og de hundre små tingene som kan gå skeis.",
+    "meta": "Kun pasientinformasjon · ingen leverandørlenker · gjennomgått mot pakningsvedlegget",
+    "partI": "Grunnlag",
     "partII": "Steder",
     "partIII": "Teknikk",
-    "partIV": "Feilsøking"
+    "partIV": "Feilsøking",
+    "eyebrow": "Kunnskapsbasert injeksjonsveiledning",
+    "h1": "Sett sprøyten riktig — uten å gjette.",
+    "dek": "Trinnvise teknikkguider, oppløsningsregning og rotasjonsplaner — skrevet av en sykepleier, gjennomgått av en lege og forankret i sykepleielitteratur du kan slå opp selv.",
+    "trending_label": "Mest lest"
+  },
+  "home": {
+    "cta_browse_library": "Bla i biblioteket",
+    "cta_open_calculator": "Åpne dosekalkulatoren",
+    "reviewed_by_clinicians": "Vurdert av klinikere",
+    "cited_to_literature": "Kildene er sykepleielitteratur og pakningsvedlegg",
+    "medically_reviewed_pill": "Medisinsk vurdert",
+    "library_eyebrow": "Bibliotek",
+    "library_heading": "Begynn med det grunnleggende.",
+    "library_dek": "Åtte grunnleggende guider — fra å trekke opp en dose til å rotere steder uten arr.",
+    "most_read_eyebrow": "Mest lest",
+    "most_read_heading": "Det leserne åpner denne uken.",
+    "by_topic_eyebrow": "Etter tema",
+    "by_topic_heading": "Søk etter det du holder på med.",
+    "open_hub": "Åpne",
+    "how_we_work_eyebrow": "Slik jobber vi",
+    "how_we_work_heading": "To uavhengige kilder før en setning publiseres.",
+    "how_we_work_body": "Hver guide på InjectCompass bygger på produsentenes pakningsvedlegg, relevante anbefalinger fra CDC og WHO om injeksjonssikkerhet, og sykepleielitteraturen. To uavhengige kilder må være enige før en påstand publiseres, og en kvalifisert fagfellevurderer signerer artikkelen etter den redaksjonelle gjennomgangen.",
+    "how_we_work_cta": "Les metodikk v1.2",
+    "stop_eyebrow": "Stopp · ring forskriveren",
+    "stop_heading": "Når dette nettstedet er feil kilde.",
+    "stop_body": "Ingenting på InjectCompass erstatter resepten klinikeren din skrev, pakningsvedlegget til medisinen din eller vurderingen til helsepersonellet som kjenner saken din. Hvis et symptom ikke stemmer med det du leser her, bør du regne teksten som utdatert og ringe forskriveren din.",
+    "stop_cta": "Les hele forbeholdet"
   },
   "atlas": {
     "tableOfContents": "Innhold",
     "indexHeading": "Atlaset — register",
-    "indexSubhead": "Ordnet slik en sykepleier ville ha lært bort stoffet. Sidetallene står stabile mellom utgaver.",
+    "indexSubhead": "Listet i den rekkefølgen en kliniker ville lært bort stoffet. Sidetallene er stabile mellom utgaver.",
     "openIndex": "Åpne registeret",
-    "howWeReview": "Slik etterprøver vi",
+    "howWeReview": "Slik vurderer vi",
     "atlasNotShelf": "Et atlas, ikke en artikkelhylle.",
-    "atlasNotShelfBody": "Hver oppføring på siden er et nummerert kapittel, plassert i én av de fire delene. Les fra perm til perm eller åpne registeret og hopp rett til siden du trenger."
+    "atlasNotShelfBody": "Hver oppføring på sidet er et nummerert kapittel, gruppert i én av fire deler. Les fra perm til perm, eller åpne registeret og hopp til siden du trenger."
+  },
+  "categories": {
+    "injection_sites": "Injeksjonssteder",
+    "injection_sites_dek": "Subkutane og intramuskulære steder — anatomi, holdepunkter og hva du skal kjenne etter.",
+    "technique": "Teknikk",
+    "technique_dek": "Opptrekking, hudfold, innstikkvinkel og de små bevegelsene som gjør injeksjonen smertefri.",
+    "rotation": "Rotasjonsmønstre",
+    "rotation_dek": "Rutenett, kalendere og rotasjonslogikk som forebygger lipohypertrofi og arrvev.",
+    "troubleshooting": "Feilsøking",
+    "troubleshooting_dek": "Blåmerker, lekkasje, uklare oppløsninger og det dusinet andre småting som går skeis i hverdagen.",
+    "drugs_compounds": "Legemidler & stoffer",
+    "drugs_compounds_dek": "Generiske og merkenavn, oppsummering av pakningsvedlegget og sikkerhetsmerknader vedlegget hopper over.",
+    "tools": "Verktøy",
+    "tools_dek": "Oppløsningsregning, sprøytekonverter og en utskrivbar doseringsplan."
+  },
+  "trust": {
+    "medically_reviewed_by": "Medisinsk vurdert av",
+    "last_reviewed_on": "Sist medisinsk vurdert",
+    "evidence_based": "Kunnskapsbasert",
+    "independent_review": "Uavhengig fagfellevurdering · ingen leverandørstøtte · ingen telemedisin-avtaler",
+    "reading_time": "{n} min lesetid"
+  },
+  "article": {
+    "on_this_page": "På denne siden",
+    "injection_sites_in_this_article": "Injeksjonssteder omtalt i denne artikkelen",
+    "sources_heading": "Kilder",
+    "related_articles_heading": "Relaterte artikler",
+    "translation_pending_title": "Brødteksten er ennå ikke oversatt",
+    "translation_pending_body": "Sidens rammeverk er på språket ditt; brødteksten under blir stående på engelsk til oversettelsen er ferdig."
+  },
+  "newsletter_inline": {
+    "title": "Få kunnskapsbasert injeksjonsveiledning",
+    "description": "Én gang i uken. Ingen leverandører, ingen mersalg.",
+    "email_placeholder": "E-postadressen din",
+    "subscribe_button": "Abonner",
+    "privacy_note": "Si opp når du vil."
   },
   "methodology": {
     "label": "Metodikk · Utgave v1.2",
     "title": "Slik blir et kapittel til.",
-    "body": "Vi arbeider ut fra produsentens bruksanvisning, gjeldende anbefalinger fra CDC og WHO om injeksjonssikkerhet og sykepleielitteraturen. To uavhengige kilder må være enige før et kapittel publiseres.",
+    "body": "Vi bygger på produsentenes pakningsvedlegg, anbefalinger fra CDC og WHO om injeksjonssikkerhet og sykepleielitteraturen. To uavhengige kilder må være enige før et kapittel publiseres.",
     "cta": "Les metodikk v1.2"
   },
   "pipeline": {
-    "label": "Verksted · 8 under arbeid",
-    "title": "Kapitlene vi jobber med nå.",
-    "body": "Verkstedet er åpent. Hvert kapittel under arbeid er ført opp med arbeidstittel, spørsmålene det prøver å svare på og kildene vi hittil har lest.",
-    "cta": "Åpne verkstedet"
+    "label": "Under arbeid · 8 i undersøkelse",
+    "title": "Kapitlene vi jobber med.",
+    "body": "Pipelinen vår er åpen. Hvert kapittel under arbeid står med arbeidstittel, spørsmålene det forsøker å svare på, og kildene vi har lest så langt.",
+    "cta": "Åpne pipelinen"
   },
   "stop": {
-    "title": "Stopp · kontakt forskriveren",
-    "body": "Ingenting på InjectCompass erstatter pakningsvedlegget som følger legemiddelet ditt eller råd fra personen som har skrevet det ut."
+    "title": "Stopp · oppsøk forskriveren",
+    "body": "Ingenting på InjectCompass erstatter instruksjonene som fulgte med medisinen din eller rådet fra klinikeren som forskrev den."
   },
   "footer": {
-    "edition": "Atlas Utgave 01",
-    "lastReviewed": "Sist etterprøvd",
+    "edition": "Atlas-utgave 01",
+    "lastReviewed": "Sist gjennomgått",
     "notMedicalAdvice": "Ikke medisinsk råd",
-    "patientEducationOnly": "Kun for opplæring og pasientinformasjon. Vi lenker ikke til selgere av forskningspeptider og tar ikke imot betaling fra legemiddelprodusenter eller telemedisinklinikker."
+    "patientEducationOnly": "Kun pasientinformasjon. Vi lenker ikke til leverandører av forskningspeptider. Vi tar ikke imot betaling fra legemiddelfirmaer eller telemedisinklinikker.",
+    "conditions_heading": "Indikasjoner",
+    "tools_heading": "Verktøy",
+    "company_heading": "Selskap",
+    "about": "Om oss",
+    "editorial_standards": "Redaksjonelle standarder",
+    "methodology": "Metodikk",
+    "contact": "Kontakt & rettelser",
+    "newsletter": "Nyhetsbrev",
+    "privacy": "Personvern",
+    "terms": "Vilkår",
+    "affiliate_disclosure": "Affiliate-info",
+    "medical_disclaimer": "Medisinsk forbehold",
+    "disclaimer_heading": "Medisinsk forbehold",
+    "disclaimer_body": "InjectCompass publiserer pasientinformasjon. Ingenting her erstatter resepten klinikeren din skrev, pakningsvedlegget til medisinen din eller vurderingen til helsepersonellet som kjenner saken din. Hvis et symptom ikke stemmer med teksten, regn den som utdatert og ring forskriveren din.",
+    "from_the_network": "Fra nettverket",
+    "copyright": "© {year} InjectCompass. Kun pasientinformasjon. Ikke medisinsk råd."
+  },
+  "locale_switcher": {
+    "label": "Språk",
+    "current": "Gjeldende språk"
+  },
+  "breadcrumbs": {
+    "home": "Hjem",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Språk",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

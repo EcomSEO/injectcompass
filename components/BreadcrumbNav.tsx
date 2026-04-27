@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { canonical } from "@/lib/seo";
 
 export type Crumb = { label: string; href?: string };

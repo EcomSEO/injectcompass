@@ -1,23 +1,41 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
 /**
  * Healthline signature trust badge.
  * Pill: teal-50 bg, teal-700 text, check icon, links the reviewer name.
+ *
+ * Optional `imageUrl` slot for a real reviewer avatar; falls back to the
+ * shield icon if not provided. Reviewer initials are shown when there is
+ * no avatar but the caller passes `showInitials`.
  */
-export function MedicallyReviewedBadge({
+export async function MedicallyReviewedBadge({
   reviewerName,
   credentials,
   reviewerHref = "/editorial-standards",
+  imageUrl,
 }: {
   reviewerName: string;
   credentials: string;
   reviewerHref?: string;
+  imageUrl?: string;
 }) {
+  const t = await getTranslations("trust");
   return (
     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-pill bg-reviewed-bg text-reviewed-text text-[13px] font-medium">
-      <CheckShield className="w-4 h-4 shrink-0" />
+      {imageUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={imageUrl}
+          alt=""
+          aria-hidden
+          className="w-5 h-5 rounded-full object-cover shrink-0"
+        />
+      ) : (
+        <CheckShield className="w-4 h-4 shrink-0" />
+      )}
       <span>
-        Medically reviewed by{" "}
+        {t("medically_reviewed_by")}{" "}
         <Link
           href={reviewerHref}
           className="underline decoration-teal-600/30 hover:decoration-teal-700 underline-offset-2"

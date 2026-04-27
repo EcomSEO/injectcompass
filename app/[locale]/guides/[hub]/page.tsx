@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { locales, type Locale } from "@/i18n/routing";
 import { getHub, hubs } from "@/lib/content/hubs";
 import { postsByHub } from "@/lib/content/posts";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -20,13 +22,19 @@ const typeLabel: Record<string, string> = {
 };
 
 export function generateStaticParams() {
-  return hubs.map((h) => ({ hub: h.slug }));
+  const result: { locale: Locale; hub: string }[] = [];
+  for (const locale of locales) {
+    for (const h of hubs) {
+      result.push({ locale, hub: h.slug });
+    }
+  }
+  return result;
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ hub: string }>;
+  params: Promise<{ locale: Locale; hub: string }>;
 }): Promise<Metadata> {
   const { hub: hubSlug } = await params;
   const hub = getHub(hubSlug);
@@ -41,9 +49,10 @@ export async function generateMetadata({
 export default async function HubPage({
   params,
 }: {
-  params: Promise<{ hub: string }>;
+  params: Promise<{ locale: Locale; hub: string }>;
 }) {
-  const { hub: hubSlug } = await params;
+  const { locale, hub: hubSlug } = await params;
+  setRequestLocale(locale);
   const hub = getHub(hubSlug);
   if (!hub) notFound();
 

@@ -14,6 +14,7 @@ import {
   type InjectionRegion,
 } from "./InjectionSiteMap";
 import { NewsletterInline } from "./NewsletterInline";
+import { TranslationPendingBanner } from "./TranslationPendingBanner";
 import { SourcesAccordion, type Source } from "./SourcesAccordion";
 import { RelatedArticles } from "./RelatedArticles";
 import { ArticleCardData } from "./ArticleCard";
@@ -41,7 +42,7 @@ const AUTHOR = {
  *
  * Heuristically infers which injection regions to highlight from post content.
  */
-export function ArticleTemplate({ post }: { post: Post }) {
+export async function ArticleTemplate({ post }: { post: Post }) {
   const hub = getHub(post.hub);
   const regions = inferRegions(post);
 
@@ -165,6 +166,9 @@ export function ArticleTemplate({ post }: { post: Post }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           {/* Article column */}
           <article className="lg:col-span-8 article-prose">
+            {/* Body content remains in English in phase one — show banner
+                on non-English locales so readers know what they are seeing. */}
+            <TranslationPendingBanner />
             {/* Mobile in-article TOC accordion */}
             <details className="lg:hidden mb-8 rounded-md border border-rule bg-surface-alt p-4">
               <summary className="flex items-center justify-between cursor-pointer text-[14px] font-semibold text-ink list-none">

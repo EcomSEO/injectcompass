@@ -1,52 +1,195 @@
 {
+  "siteMeta": {
+    "tagline": "Injecties, goed gedaan.",
+    "description": "Praktische injectietechniek, reconstitutie-rekenwerk, calculators en materiaalgidsen voor mensen met voorgeschreven injectiemedicatie. Uitsluitend patiëntinformatie."
+  },
+  "common": {
+    "newsletter": "Nieuwsbrief",
+    "subscribe": "Abonneren",
+    "search": "Zoeken",
+    "search_placeholder": "Zoek technieken, plekken, middelen…",
+    "menu": "Menu",
+    "close": "Sluiten",
+    "share": "Delen",
+    "copy_link": "Link kopiëren",
+    "skip_to_content": "Naar de inhoud"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — home",
+    "search_aria": "Zoeken in InjectCompass",
+    "newsletter_cta": "Nieuwsbrief",
+    "skip_to_content": "Naar de inhoud",
+    "open_menu": "Menu openen",
+    "close_menu": "Menu sluiten",
     "navAtlas": "Atlas",
     "navTechnique": "Techniek",
     "navSites": "Plekken",
-    "navTroubleshooting": "Problemen",
-    "navMethodology": "Methodiek",
-    "navPipeline": "Werkplaats",
-    "search": "Atlas doorzoeken"
+    "navTroubleshooting": "Probleemoplossing",
+    "navMethodology": "Methode",
+    "navPipeline": "In voorbereiding",
+    "search": "Zoeken in de atlas",
+    "nav": {
+      "conditions": "Indicaties",
+      "procedures": "Procedures",
+      "drugs": "Geneesmiddelen",
+      "health_news": "Gezondheidsnieuws",
+      "tools": "Hulpmiddelen",
+      "newsletter": "Nieuwsbrief"
+    }
   },
   "hero": {
     "edition": "Atlas · Editie 01 · Voorjaar 2026",
-    "subtitle": "Een wegwijsatlas voor peptide-injectie — plekken, techniek, rotatie en de honderd kleine dingen die mis kunnen gaan.",
-    "meta": "Patiëntinformatie · Geen aanbiederlinks · Getoetst aan de bijsluiter",
-    "partI": "Grondslagen",
+    "subtitle": "Een wegwijs-atlas voor peptide-injectie — plekken, techniek, rotatie en de honderd kleine dingen die fout kunnen gaan.",
+    "meta": "Uitsluitend patiëntinformatie · geen leverancierslinks · gecontroleerd tegen de bijsluiter",
+    "partI": "Basis",
     "partII": "Plekken",
     "partIII": "Techniek",
-    "partIV": "Problemen"
+    "partIV": "Probleemoplossing",
+    "eyebrow": "Evidence-based injectiebegeleiding",
+    "h1": "Goed prikken, zonder twijfel.",
+    "dek": "Stapsgewijze techniekgidsen, reconstitutie-rekenwerk en rotatieplannen — geschreven door een verpleegkundige, gecontroleerd door een arts en gestaafd op verpleegkundige vakliteratuur die u zelf kunt verifiëren.",
+    "trending_label": "Nu populair"
+  },
+  "home": {
+    "cta_browse_library": "Door de bibliotheek bladeren",
+    "cta_open_calculator": "Doseerrekenmachine openen",
+    "reviewed_by_clinicians": "Beoordeeld door clinici",
+    "cited_to_literature": "Gestaafd op verpleegkundige literatuur en bijsluiters",
+    "medically_reviewed_pill": "Medisch beoordeeld",
+    "library_eyebrow": "Bibliotheek",
+    "library_heading": "Begin bij de basis.",
+    "library_dek": "Acht basisgidsen, van het optrekken van een dosis tot rotatie zonder littekens.",
+    "most_read_eyebrow": "Meest gelezen",
+    "most_read_heading": "Wat lezers deze week openen.",
+    "by_topic_eyebrow": "Per onderwerp",
+    "by_topic_heading": "Zoek op wat u nu doet.",
+    "open_hub": "Openen",
+    "how_we_work_eyebrow": "Hoe wij werken",
+    "how_we_work_heading": "Twee onafhankelijke bronnen voordat een zin online gaat.",
+    "how_we_work_body": "Elke gids op InjectCompass komt voort uit de bijsluiter van de fabrikant, de relevante richtlijnen van CDC en WHO over injectieveiligheid en de verpleegkundige vakliteratuur. Twee onafhankelijke bronnen moeten overeenstemmen voordat een uitspraak verschijnt, en een gecertificeerde reviewer tekent het artikel af na de redactionele controle.",
+    "how_we_work_cta": "Lees methode v1.2",
+    "stop_eyebrow": "Stop · bel uw arts",
+    "stop_heading": "Wanneer deze site niet de juiste bron is.",
+    "stop_body": "Niets op InjectCompass vervangt het recept van uw clinicus, de bijsluiter van uw geneesmiddel of het oordeel van de zorgverlener die uw situatie kent. Komt een symptoom niet overeen met wat u hier leest, beschouw de tekst dan als verouderd en bel uw voorschrijvende arts.",
+    "stop_cta": "Lees de volledige verklaring"
   },
   "atlas": {
     "tableOfContents": "Inhoudsopgave",
     "indexHeading": "De atlas — index",
-    "indexSubhead": "Geordend zoals een verpleegkundige de stof zou onderwijzen. Paginanummers blijven stabiel tussen edities.",
+    "indexSubhead": "Geordend zoals een clinicus de stof zou onderwijzen. Paginanummers blijven stabiel over edities heen.",
     "openIndex": "Index openen",
-    "howWeReview": "Hoe wij toetsen",
-    "atlasNotShelf": "Een atlas, geen artikelenrek.",
-    "atlasNotShelfBody": "Elke ingang van de site is een genummerd hoofdstuk, ondergebracht in een van de vier delen. Lees het van kaft tot kaft of sla via de index direct de pagina op die je nodig hebt."
+    "howWeReview": "Onze beoordeling",
+    "atlasNotShelf": "Een atlas, geen artikelplank.",
+    "atlasNotShelfBody": "Elk item op deze site is een genummerd hoofdstuk, ingedeeld in een van de vier delen. Lees het van kaft tot kaft, of open de index en spring naar de pagina die u nodig hebt."
+  },
+  "categories": {
+    "injection_sites": "Injectieplekken",
+    "injection_sites_dek": "Subcutane en intramusculaire plekken — anatomie, herkenningspunten en wat u moet voelen.",
+    "technique": "Techniek",
+    "technique_dek": "Optrekken, huidplooi, prikhoek en de kleine bewegingen die prikken pijnloos maken.",
+    "rotation": "Rotatieschema's",
+    "rotation_dek": "Rasters, kalenders en de rotatielogica die lipohypertrofie en littekenweefsel voorkomt.",
+    "troubleshooting": "Probleemoplossing",
+    "troubleshooting_dek": "Blauwe plekken, lekkage, troebele oplossingen en het tiental andere zaken die in de praktijk fout gaan.",
+    "drugs_compounds": "Geneesmiddelen & stoffen",
+    "drugs_compounds_dek": "Generieke en merknamen, samenvattingen van de bijsluiter en de veiligheidsnotities die in de bijsluiter ontbreken.",
+    "tools": "Hulpmiddelen",
+    "tools_dek": "Reconstitutie-rekenwerk, spuitomzetters en een afdrukbaar doseerschema."
+  },
+  "trust": {
+    "medically_reviewed_by": "Medisch beoordeeld door",
+    "last_reviewed_on": "Laatst medisch beoordeeld op",
+    "evidence_based": "Evidence-based",
+    "independent_review": "Onafhankelijke peer review · geen leverancierssponsoring · geen telezorg-deals",
+    "reading_time": "{n} min leestijd"
+  },
+  "article": {
+    "on_this_page": "Op deze pagina",
+    "injection_sites_in_this_article": "In dit artikel besproken injectieplekken",
+    "sources_heading": "Bronnen",
+    "related_articles_heading": "Verwante artikelen",
+    "translation_pending_title": "Artikeltekst nog niet vertaald",
+    "translation_pending_body": "De omkadering van deze pagina staat in uw taal; de artikeltekst hieronder blijft in het Engels totdat de vertaling klaar is."
+  },
+  "newsletter_inline": {
+    "title": "Ontvang evidence-based injectiebegeleiding",
+    "description": "Eens per week. Geen leveranciers, geen verkoop.",
+    "email_placeholder": "Uw e-mailadres",
+    "subscribe_button": "Abonneren",
+    "privacy_note": "Op elk moment opzegbaar."
   },
   "methodology": {
-    "label": "Methodiek · Editie v1.2",
-    "title": "Hoe een hoofdstuk geschreven wordt.",
-    "body": "We werken vanuit de gebruiksaanwijzing van de fabrikant, de actuele richtlijnen van CDC en WHO over injectieveiligheid en de verpleegkundige scholingsliteratuur. Twee onafhankelijke bronnen moeten het eens zijn voordat een hoofdstuk verschijnt.",
-    "cta": "Methodiek v1.2 lezen"
+    "label": "Methode · Editie v1.2",
+    "title": "Hoe een hoofdstuk tot stand komt.",
+    "body": "Wij werken vanuit de bijsluiters van de fabrikant, de richtlijnen van CDC en WHO over injectieveiligheid en de verpleegkundige vakliteratuur. Twee onafhankelijke bronnen moeten overeenstemmen voordat een hoofdstuk wordt gepubliceerd.",
+    "cta": "Lees methode v1.2"
   },
   "pipeline": {
-    "label": "Werkplaats · 8 in onderzoek",
+    "label": "In voorbereiding · 8 in onderzoek",
     "title": "De hoofdstukken waar we aan werken.",
-    "body": "De werkplaats is openbaar. Elk hoofdstuk in onderzoek staat vermeld met werktitel, de vragen die het probeert te beantwoorden en de tot nu toe gelezen bronnen.",
-    "cta": "Werkplaats openen"
+    "body": "Onze pipeline is openbaar. Elk hoofdstuk in onderzoek staat erbij met werktitel, de vragen die het probeert te beantwoorden en de tot dusver gelezen bronnen.",
+    "cta": "Pipeline openen"
   },
   "stop": {
-    "title": "Stop · raadpleeg de voorschrijver",
-    "body": "Niets op InjectCompass vervangt de bijsluiter die bij je medicijn zit of het advies van de persoon die het heeft voorgeschreven."
+    "title": "Stop · raadpleeg uw arts",
+    "body": "Niets op InjectCompass vervangt de instructies bij uw geneesmiddel of het advies van de clinicus die het heeft voorgeschreven."
   },
   "footer": {
-    "edition": "Atlas Editie 01",
-    "lastReviewed": "Laatst getoetst",
+    "edition": "Atlas-editie 01",
+    "lastReviewed": "Laatst beoordeeld",
     "notMedicalAdvice": "Geen medisch advies",
-    "patientEducationOnly": "Uitsluitend voor educatieve en patiëntinformatieve doeleinden. We linken niet naar verkopers van onderzoekspeptiden en accepteren geen betalingen van fabrikanten of telezorgklinieken."
+    "patientEducationOnly": "Uitsluitend patiëntinformatie. Wij linken niet naar onderzoeks-peptide-leveranciers. Wij accepteren geen geld van farmaceutische bedrijven of telezorg-klinieken.",
+    "conditions_heading": "Indicaties",
+    "tools_heading": "Hulpmiddelen",
+    "company_heading": "Bedrijf",
+    "about": "Over ons",
+    "editorial_standards": "Redactionele standaarden",
+    "methodology": "Methode",
+    "contact": "Contact & correcties",
+    "newsletter": "Nieuwsbrief",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "affiliate_disclosure": "Affiliate-toelichting",
+    "medical_disclaimer": "Medische disclaimer",
+    "disclaimer_heading": "Medische disclaimer",
+    "disclaimer_body": "InjectCompass publiceert patiëntinformatie. Niets hier vervangt het recept van uw clinicus, de bijsluiter van uw geneesmiddel of het oordeel van de zorgverlener die uw situatie kent. Komt een symptoom niet overeen met wat u hier leest, beschouw de tekst dan als verouderd en bel uw voorschrijvende arts.",
+    "from_the_network": "Uit ons netwerk",
+    "copyright": "© {year} InjectCompass. Uitsluitend patiëntinformatie. Geen medisch advies."
+  },
+  "locale_switcher": {
+    "label": "Taal",
+    "current": "Huidige taal"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Taal",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

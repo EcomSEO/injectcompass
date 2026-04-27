@@ -1,52 +1,195 @@
 {
+  "siteMeta": {
+    "tagline": "Zastrzyki, zrobione dobrze.",
+    "description": "Praktyczna technika iniekcji, obliczenia rekonstytucji, kalkulatory i przewodniki materiałowe dla osób przyjmujących leki w iniekcji. Wyłącznie informacja dla pacjenta."
+  },
+  "common": {
+    "newsletter": "Newsletter",
+    "subscribe": "Zapisz się",
+    "search": "Szukaj",
+    "search_placeholder": "Szukaj technik, miejsc, leków…",
+    "menu": "Menu",
+    "close": "Zamknij",
+    "share": "Udostępnij",
+    "copy_link": "Skopiuj link",
+    "skip_to_content": "Przejdź do treści"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — strona główna",
+    "search_aria": "Szukaj w InjectCompass",
+    "newsletter_cta": "Newsletter",
+    "skip_to_content": "Przejdź do treści",
+    "open_menu": "Otwórz menu",
+    "close_menu": "Zamknij menu",
     "navAtlas": "Atlas",
     "navTechnique": "Technika",
     "navSites": "Miejsca",
-    "navTroubleshooting": "Rozwiązywanie",
-    "navMethodology": "Metodyka",
-    "navPipeline": "Pracownia",
-    "search": "Przeszukaj atlas"
+    "navTroubleshooting": "Rozwiązywanie problemów",
+    "navMethodology": "Metodologia",
+    "navPipeline": "W przygotowaniu",
+    "search": "Szukaj w atlasie",
+    "nav": {
+      "conditions": "Wskazania",
+      "procedures": "Procedury",
+      "drugs": "Leki",
+      "health_news": "Aktualności",
+      "tools": "Narzędzia",
+      "newsletter": "Newsletter"
+    }
   },
   "hero": {
     "edition": "Atlas · Wydanie 01 · Wiosna 2026",
-    "subtitle": "Atlas drogowskazowy dla iniekcji peptydów — miejsca, technika, rotacja i sto drobiazgów, które mogą pójść nie tak.",
-    "meta": "Edukacja pacjenta · Bez linków sprzedawców · Skonfrontowane z ulotką producenta",
+    "subtitle": "Atlas-przewodnik po iniekcji peptydów — miejsca, technika, rotacja i sto drobiazgów, które potrafią się posypać.",
+    "meta": "Wyłącznie informacja dla pacjenta · brak linków komercyjnych · zweryfikowane z ulotką producenta",
     "partI": "Podstawy",
     "partII": "Miejsca",
     "partIII": "Technika",
-    "partIV": "Rozwiązywanie"
+    "partIV": "Rozwiązywanie problemów",
+    "eyebrow": "Wskazówki iniekcyjne oparte na dowodach",
+    "h1": "Zastrzyki — pewnie i bez zgadywania.",
+    "dek": "Krok po kroku, z numerami: technika, obliczenia rekonstytucji i mapy rotacji miejsc — pisane przez pielęgniarkę, sprawdzone przez lekarza i poparte literaturą pielęgniarską, którą można zweryfikować samemu.",
+    "trending_label": "Na czasie"
+  },
+  "home": {
+    "cta_browse_library": "Przeglądaj bibliotekę",
+    "cta_open_calculator": "Otwórz kalkulator dawki",
+    "reviewed_by_clinicians": "Sprawdzone przez klinicystów",
+    "cited_to_literature": "Z odwołaniem do literatury pielęgniarskiej i ulotek",
+    "medically_reviewed_pill": "Sprawdzone medycznie",
+    "library_eyebrow": "Biblioteka",
+    "library_heading": "Zacznij od podstaw.",
+    "library_dek": "Osiem podstawowych przewodników: od pobrania dawki po rotację miejsc bez blizn.",
+    "most_read_eyebrow": "Najczęściej czytane",
+    "most_read_heading": "Co w tym tygodniu czyta nasza społeczność.",
+    "by_topic_eyebrow": "Według tematu",
+    "by_topic_heading": "Szukaj według tego, co właśnie robisz.",
+    "open_hub": "Otwórz",
+    "how_we_work_eyebrow": "Jak pracujemy",
+    "how_we_work_heading": "Dwa niezależne źródła zanim pojawi się jedno zdanie.",
+    "how_we_work_body": "Każdy przewodnik w InjectCompass powstaje na bazie ulotek producentów, zaleceń CDC i WHO dotyczących bezpieczeństwa iniekcji oraz literatury pielęgniarskiej. Dwa niezależne źródła muszą się zgadzać, zanim opublikujemy zdanie, a recenzent z uprawnieniami podpisuje artykuł po zakończeniu kontroli redakcyjnej.",
+    "how_we_work_cta": "Przeczytaj metodologię v1.2",
+    "stop_eyebrow": "Stop · skontaktuj się z lekarzem",
+    "stop_heading": "Kiedy ta strona jest złym źródłem.",
+    "stop_body": "Nic w InjectCompass nie zastępuje recepty wystawionej przez Twojego klinicystę, ulotki dołączonej do leku ani osądu specjalisty, który zna Twoją sytuację. Jeśli objaw nie pasuje do tego, co tu czytasz, traktuj tekst jako nieaktualny i zadzwoń do swojego lekarza.",
+    "stop_cta": "Przeczytaj pełną informację"
   },
   "atlas": {
     "tableOfContents": "Spis treści",
     "indexHeading": "Atlas — indeks",
-    "indexSubhead": "Ułożony tak, jak pielęgniarka uczyłaby tej materii. Numery stron są stabilne między wydaniami.",
+    "indexSubhead": "W kolejności, w jakiej klinicysta nauczałby tej tematyki. Numery stron są stabilne między wydaniami.",
     "openIndex": "Otwórz indeks",
-    "howWeReview": "Jak weryfikujemy",
-    "atlasNotShelf": "Atlas, nie półka z artykułami.",
-    "atlasNotShelfBody": "Każdy wpis w serwisie to numerowany rozdział, przypisany do jednej z czterech części. Możesz czytać od deski do deski albo otworzyć indeks i przeskoczyć od razu do potrzebnej strony."
+    "howWeReview": "Jak recenzujemy",
+    "atlasNotShelf": "Atlas, a nie półka z artykułami.",
+    "atlasNotShelfBody": "Każdy wpis tej strony to ponumerowany rozdział, przypisany do jednej z czterech części. Przeczytaj go od deski do deski lub otwórz indeks i przejdź do potrzebnej strony."
+  },
+  "categories": {
+    "injection_sites": "Miejsca iniekcji",
+    "injection_sites_dek": "Miejsca podskórne i domięśniowe — anatomia, punkty orientacyjne i czego szukać dotykiem.",
+    "technique": "Technika",
+    "technique_dek": "Pobieranie, fałd skórny, kąt wkłucia i drobne ruchy, dzięki którym iniekcja jest bezbolesna.",
+    "rotation": "Schematy rotacji",
+    "rotation_dek": "Siatki, kalendarze i logika rotacji, która zapobiega lipohipertrofii i bliznom.",
+    "troubleshooting": "Rozwiązywanie problemów",
+    "troubleshooting_dek": "Siniaki, wycieki, mętne roztwory i kilkanaście innych spraw, które potrafią pójść nie tak.",
+    "drugs_compounds": "Leki & substancje",
+    "drugs_compounds_dek": "Nazwy międzynarodowe i handlowe, streszczenia ulotki oraz uwagi bezpieczeństwa, których ulotka nie podaje.",
+    "tools": "Narzędzia",
+    "tools_dek": "Obliczenia rekonstytucji, konwertery strzykawek i drukowalny harmonogram dawkowania."
+  },
+  "trust": {
+    "medically_reviewed_by": "Sprawdzone medycznie przez",
+    "last_reviewed_on": "Ostatnia kontrola medyczna:",
+    "evidence_based": "Oparte na dowodach",
+    "independent_review": "Niezależna recenzja · brak sponsoringu od dostawców · brak umów z telemedycyną",
+    "reading_time": "{n} min czytania"
+  },
+  "article": {
+    "on_this_page": "Na tej stronie",
+    "injection_sites_in_this_article": "Miejsca iniekcji omówione w tym artykule",
+    "sources_heading": "Źródła",
+    "related_articles_heading": "Powiązane artykuły",
+    "translation_pending_title": "Treść artykułu jeszcze nie przetłumaczona",
+    "translation_pending_body": "Elementy tej strony są w Twoim języku; treść artykułu poniżej pozostaje po angielsku do czasu ukończenia tłumaczenia."
+  },
+  "newsletter_inline": {
+    "title": "Otrzymuj wskazówki iniekcyjne oparte na dowodach",
+    "description": "Raz w tygodniu. Bez sprzedawców, bez nachalnych ofert.",
+    "email_placeholder": "Twój e-mail",
+    "subscribe_button": "Zapisz się",
+    "privacy_note": "Możesz w każdej chwili zrezygnować."
   },
   "methodology": {
-    "label": "Metodyka · Wydanie v1.2",
+    "label": "Metodologia · Wydanie v1.2",
     "title": "Jak powstaje rozdział.",
-    "body": "Pracujemy na podstawie ulotki producenta, aktualnych wytycznych CDC i WHO dotyczących bezpieczeństwa iniekcji oraz literatury z zakresu edukacji pielęgniarskiej. Dwa niezależne źródła muszą się zgadzać, zanim rozdział zostanie opublikowany.",
-    "cta": "Przeczytaj metodykę v1.2"
+    "body": "Pracujemy w oparciu o ulotki producentów, zalecenia CDC i WHO dotyczące bezpieczeństwa iniekcji oraz literaturę pielęgniarską. Dwa niezależne źródła muszą się zgadzać, zanim opublikujemy rozdział.",
+    "cta": "Przeczytaj metodologię v1.2"
   },
   "pipeline": {
-    "label": "Pracownia · 8 w badaniu",
+    "label": "W przygotowaniu · 8 w badaniach",
     "title": "Rozdziały, nad którymi pracujemy.",
-    "body": "Pracownia jest jawna. Każdy badany rozdział jest wymieniony z tytułem roboczym, pytaniami, na które ma odpowiedzieć, oraz dotychczas przeczytanymi źródłami.",
-    "cta": "Otwórz pracownię"
+    "body": "Nasz pipeline jest jawny. Każdy rozdział w przygotowaniu pojawia się tu z tytułem roboczym, pytaniami, na które stara się odpowiedzieć, i przeczytanymi dotąd źródłami.",
+    "cta": "Otwórz pipeline"
   },
   "stop": {
-    "title": "Stop · skontaktuj się z osobą przepisującą lek",
-    "body": "Nic w InjectCompass nie zastępuje instrukcji dołączonej do leku ani porady osoby, która go przepisała."
+    "title": "Stop · skontaktuj się z lekarzem",
+    "body": "Nic w InjectCompass nie zastępuje instrukcji dołączonych do Twojego leku ani porady klinicysty, który go przepisał."
   },
   "footer": {
-    "edition": "Atlas Wydanie 01",
-    "lastReviewed": "Ostatnia weryfikacja",
-    "notMedicalAdvice": "To nie jest porada lekarska",
-    "patientEducationOnly": "Wyłącznie w celach edukacyjnych i informacji dla pacjenta. Nie linkujemy do sprzedawców peptydów badawczych i nie przyjmujemy płatności od producentów leków ani klinik telemedycznych."
+    "edition": "Wydanie atlasu 01",
+    "lastReviewed": "Ostatnia kontrola",
+    "notMedicalAdvice": "Nie jest poradą lekarską",
+    "patientEducationOnly": "Wyłącznie informacja dla pacjenta. Nie linkujemy do dostawców peptydów badawczych. Nie przyjmujemy płatności od firm farmaceutycznych ani klinik telemedycznych.",
+    "conditions_heading": "Wskazania",
+    "tools_heading": "Narzędzia",
+    "company_heading": "Firma",
+    "about": "O nas",
+    "editorial_standards": "Standardy redakcyjne",
+    "methodology": "Metodologia",
+    "contact": "Kontakt & korekty",
+    "newsletter": "Newsletter",
+    "privacy": "Prywatność",
+    "terms": "Regulamin",
+    "affiliate_disclosure": "Informacja partnerska",
+    "medical_disclaimer": "Zastrzeżenie medyczne",
+    "disclaimer_heading": "Zastrzeżenie medyczne",
+    "disclaimer_body": "InjectCompass publikuje treści edukacyjne dla pacjenta. Nic tutaj nie zastępuje recepty wystawionej przez Twojego klinicystę, ulotki dołączonej do leku ani osądu specjalisty znającego Twój przypadek. Jeżeli objaw nie pasuje do treści, traktuj ją jako nieaktualną i zadzwoń do swojego lekarza.",
+    "from_the_network": "Z naszej sieci",
+    "copyright": "© {year} InjectCompass. Wyłącznie informacja dla pacjenta. Nie jest poradą lekarską."
+  },
+  "locale_switcher": {
+    "label": "Język",
+    "current": "Bieżący język"
+  },
+  "breadcrumbs": {
+    "home": "Strona główna",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Język",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

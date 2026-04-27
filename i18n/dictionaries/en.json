@@ -1,13 +1,42 @@
 {
+  "siteMeta": {
+    "tagline": "Injections, done right.",
+    "description": "Practical injection technique, reconstitution math, calculators, and supply guides for people prescribed injectable medications. Patient-education only."
+  },
+  "common": {
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "search": "Search",
+    "search_placeholder": "Search techniques, sites, drugs…",
+    "menu": "Menu",
+    "close": "Close",
+    "share": "Share",
+    "copy_link": "Copy link",
+    "skip_to_content": "Skip to content"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — home",
+    "search_aria": "Search InjectCompass",
+    "newsletter_cta": "Newsletter",
+    "skip_to_content": "Skip to content",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
     "navAtlas": "Atlas",
     "navTechnique": "Technique",
     "navSites": "Sites",
     "navTroubleshooting": "Troubleshooting",
     "navMethodology": "Methodology",
     "navPipeline": "Pipeline",
-    "search": "Search the atlas"
+    "search": "Search the atlas",
+    "nav": {
+      "conditions": "Conditions",
+      "procedures": "Procedures",
+      "drugs": "Drugs",
+      "health_news": "Health News",
+      "tools": "Tools",
+      "newsletter": "Newsletter"
+    }
   },
   "hero": {
     "edition": "Atlas · Edition 01 · Spring 2026",
@@ -16,7 +45,34 @@
     "partI": "Fundamentals",
     "partII": "Sites",
     "partIII": "Technique",
-    "partIV": "Troubleshooting"
+    "partIV": "Troubleshooting",
+    "eyebrow": "Evidence-based injection guidance",
+    "h1": "Injections, done right — without the guesswork.",
+    "dek": "Step-numbered technique guides, reconstitution math, and site-rotation maps — written by an RN, reviewed by an MD, and cited to nursing-education literature you can verify yourself.",
+    "trending_label": "Trending now"
+  },
+  "home": {
+    "cta_browse_library": "Browse the library",
+    "cta_open_calculator": "Open the dose calculator",
+    "reviewed_by_clinicians": "Reviewed by clinicians",
+    "cited_to_literature": "Cited to nursing-education literature & package inserts",
+    "medically_reviewed_pill": "Medically reviewed",
+    "library_eyebrow": "Library",
+    "library_heading": "Start with the basics.",
+    "library_dek": "Eight foundational guides, from drawing up a dose to rotating sites without scarring.",
+    "most_read_eyebrow": "Most read",
+    "most_read_heading": "What people are reading this week.",
+    "by_topic_eyebrow": "By topic",
+    "by_topic_heading": "Browse by what you are doing.",
+    "open_hub": "Open",
+    "how_we_work_eyebrow": "How we work",
+    "how_we_work_heading": "Two independent sources before a sentence ships.",
+    "how_we_work_body": "Every guide on InjectCompass is written from manufacturer Instructions for Use, CDC and WHO injection-safety guidance, and the nursing-education literature. Two independent sources must agree before a claim ships, and a credentialed reviewer signs the article once editorial review is complete.",
+    "how_we_work_cta": "Read methodology v1.2",
+    "stop_eyebrow": "Stop & call your prescriber",
+    "stop_heading": "When this site is the wrong source.",
+    "stop_body": "Nothing on InjectCompass is a substitute for the prescription your clinician wrote, the IFU that came with your medication, or the judgment of the healthcare professional who knows your case. If a symptom does not match what you read here, treat what you read as out of date and call your prescriber.",
+    "stop_cta": "Read the full disclaimer"
   },
   "atlas": {
     "tableOfContents": "Table of contents",
@@ -26,6 +82,42 @@
     "howWeReview": "How we review",
     "atlasNotShelf": "An atlas, not an article shelf.",
     "atlasNotShelfBody": "Each entry in this site is a numbered chapter, grouped into one of four parts. You can read it cover to cover, or open the index and jump to the page you need."
+  },
+  "categories": {
+    "injection_sites": "Injection sites",
+    "injection_sites_dek": "Subcutaneous and intramuscular sites — anatomy, landmarks, and what to feel for.",
+    "technique": "Technique",
+    "technique_dek": "Drawing up, pinching, angle of entry, and the small motor patterns that make injections painless.",
+    "rotation": "Rotation patterns",
+    "rotation_dek": "Grids, calendars, and the rotation logic that prevents lipohypertrophy and scar tissue.",
+    "troubleshooting": "Troubleshooting",
+    "troubleshooting_dek": "Bruising, leakage, cloudy solutions, and the dozen other things that go wrong on real days.",
+    "drugs_compounds": "Drugs & compounds",
+    "drugs_compounds_dek": "Generic and brand names, package-insert summaries, and the safety notes the leaflet leaves out.",
+    "tools": "Tools",
+    "tools_dek": "Reconstitution math, syringe converters, and a printable dose-schedule builder."
+  },
+  "trust": {
+    "medically_reviewed_by": "Medically reviewed by",
+    "last_reviewed_on": "Last medically reviewed on",
+    "evidence_based": "Evidence-based",
+    "independent_review": "Independent peer review · No vendor sponsorship · No telehealth deals",
+    "reading_time": "{n} min read"
+  },
+  "article": {
+    "on_this_page": "On this page",
+    "injection_sites_in_this_article": "Injection sites discussed in this article",
+    "sources_heading": "Sources",
+    "related_articles_heading": "Related articles",
+    "translation_pending_title": "Article body not yet translated",
+    "translation_pending_body": "The chrome of this page is in your language; the article body below remains in English while we complete the translation."
+  },
+  "newsletter_inline": {
+    "title": "Get evidence-based injection guidance",
+    "description": "Once a week. No vendors, no upsells.",
+    "email_placeholder": "Your email",
+    "subscribe_button": "Subscribe",
+    "privacy_note": "Unsubscribe anytime."
   },
   "methodology": {
     "label": "Methodology · Edition v1.2",
@@ -47,6 +139,57 @@
     "edition": "Atlas Edition 01",
     "lastReviewed": "Last reviewed",
     "notMedicalAdvice": "Not medical advice",
-    "patientEducationOnly": "Educational and patient-education purposes only. We do not link to research-peptide vendors. We do not accept payment from drug manufacturers or telehealth clinics."
+    "patientEducationOnly": "Educational and patient-education purposes only. We do not link to research-peptide vendors. We do not accept payment from drug manufacturers or telehealth clinics.",
+    "conditions_heading": "Conditions",
+    "tools_heading": "Tools",
+    "company_heading": "Company",
+    "about": "About",
+    "editorial_standards": "Editorial standards",
+    "methodology": "Methodology",
+    "contact": "Contact & corrections",
+    "newsletter": "Newsletter",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "affiliate_disclosure": "Affiliate disclosure",
+    "medical_disclaimer": "Medical disclaimer",
+    "disclaimer_heading": "Medical disclaimer",
+    "disclaimer_body": "InjectCompass publishes patient-education content. Nothing here is a substitute for the prescription your clinician wrote, the Instructions for Use that came with your medication, or the judgment of the healthcare professional who knows your case. If a symptom does not match what you read here, treat what you read as out of date and call your prescriber.",
+    "from_the_network": "From the network",
+    "copyright": "© {year} InjectCompass. Patient-education only. Not medical advice."
+  },
+  "locale_switcher": {
+    "label": "Language",
+    "current": "Current language"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

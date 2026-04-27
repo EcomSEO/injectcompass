@@ -1,52 +1,195 @@
 {
+  "siteMeta": {
+    "tagline": "Injecții făcute corect.",
+    "description": "Tehnică practică de injectare, calcule de reconstituire, calculatoare și ghiduri de materiale pentru cei aflați sub tratament injectabil prescris. Doar informare pentru pacienți."
+  },
+  "common": {
+    "newsletter": "Newsletter",
+    "subscribe": "Abonează-te",
+    "search": "Caută",
+    "search_placeholder": "Caută tehnici, locuri, medicamente…",
+    "menu": "Meniu",
+    "close": "Închide",
+    "share": "Distribuie",
+    "copy_link": "Copiază linkul",
+    "skip_to_content": "Sari la conținut"
+  },
   "header": {
     "wordmark": "INJECTCOMPASS",
+    "logo_aria": "InjectCompass — pagina principală",
+    "search_aria": "Caută în InjectCompass",
+    "newsletter_cta": "Newsletter",
+    "skip_to_content": "Sari la conținut",
+    "open_menu": "Deschide meniul",
+    "close_menu": "Închide meniul",
     "navAtlas": "Atlas",
     "navTechnique": "Tehnică",
     "navSites": "Locuri",
-    "navTroubleshooting": "Probleme",
+    "navTroubleshooting": "Depanare",
     "navMethodology": "Metodologie",
-    "navPipeline": "Atelier",
-    "search": "Caută în atlas"
+    "navPipeline": "În pregătire",
+    "search": "Caută în atlas",
+    "nav": {
+      "conditions": "Indicații",
+      "procedures": "Proceduri",
+      "drugs": "Medicamente",
+      "health_news": "Știri medicale",
+      "tools": "Instrumente",
+      "newsletter": "Newsletter"
+    }
   },
   "hero": {
     "edition": "Atlas · Ediția 01 · Primăvara 2026",
-    "subtitle": "Un atlas de orientare pentru injecția cu peptide — locuri, tehnică, rotație și o sută de mici lucruri care pot merge prost.",
-    "meta": "Informare pentru pacient · Fără linkuri către vânzători · Verificat după prospectul producătorului",
-    "partI": "Fundamente",
+    "subtitle": "Un atlas-ghid pentru injectarea peptidelor — locuri, tehnică, rotație și cele o sută de mici neplăceri ale rutinei.",
+    "meta": "Doar informare pentru pacienți · fără linkuri comerciale · verificat după prospect",
+    "partI": "Bazele",
     "partII": "Locuri",
     "partIII": "Tehnică",
-    "partIV": "Probleme"
+    "partIV": "Depanare",
+    "eyebrow": "Ghid de injectare bazat pe dovezi",
+    "h1": "Injecții făcute bine, fără bâjbâieli.",
+    "dek": "Ghiduri tehnice cu pași numerotați, calcule de reconstituire și hărți de rotație a locurilor — scrise de o asistentă medicală, validate de un medic și citate din literatura de îngrijire pe care o poți verifica singur.",
+    "trending_label": "În tendințe"
+  },
+  "home": {
+    "cta_browse_library": "Răsfoiește biblioteca",
+    "cta_open_calculator": "Deschide calculatorul de doză",
+    "reviewed_by_clinicians": "Verificat de clinicieni",
+    "cited_to_literature": "Citat din literatura de îngrijire și prospecte",
+    "medically_reviewed_pill": "Verificat medical",
+    "library_eyebrow": "Bibliotecă",
+    "library_heading": "Începe cu bazele.",
+    "library_dek": "Opt ghiduri fundamentale, de la tragerea unei doze la rotația locurilor fără cicatrici.",
+    "most_read_eyebrow": "Cele mai citite",
+    "most_read_heading": "Ce citesc cititorii săptămâna aceasta.",
+    "by_topic_eyebrow": "După subiect",
+    "by_topic_heading": "Caută după ceea ce faci acum.",
+    "open_hub": "Deschide",
+    "how_we_work_eyebrow": "Cum lucrăm",
+    "how_we_work_heading": "Două surse independente înainte ca o frază să fie publicată.",
+    "how_we_work_body": "Fiecare ghid de pe InjectCompass pornește de la prospectele producătorilor, recomandările CDC și OMS pentru siguranța injecțiilor și literatura de îngrijire. Două surse independente trebuie să concorde înainte ca o afirmație să apară, iar un revizor acreditat semnează articolul după verificarea redacțională.",
+    "how_we_work_cta": "Citește metodologia v1.2",
+    "stop_eyebrow": "Stop · sună medicul",
+    "stop_heading": "Când acest site este sursa greșită.",
+    "stop_body": "Nimic de pe InjectCompass nu înlocuiește rețeta scrisă de clinicianul tău, prospectul medicamentului tău sau judecata profesionistului care îți cunoaște cazul. Dacă un simptom nu se potrivește cu ce citești aici, consideră textul depășit și sună la cel care ți-a prescris.",
+    "stop_cta": "Citește avertismentul integral"
   },
   "atlas": {
     "tableOfContents": "Cuprins",
     "indexHeading": "Atlasul — index",
-    "indexSubhead": "Ordonat așa cum o asistentă ar preda materia. Numerele de pagină rămân stabile între ediții.",
+    "indexSubhead": "Ordonat în felul în care un clinician ar preda materia. Numerele paginilor rămân stabile între ediții.",
     "openIndex": "Deschide indexul",
-    "howWeReview": "Cum verificăm",
+    "howWeReview": "Cum recenzăm",
     "atlasNotShelf": "Un atlas, nu un raft de articole.",
-    "atlasNotShelfBody": "Fiecare intrare din site este un capitol numerotat, încadrat într-una din cele patru părți. Poți citi din scoarță în scoarță sau deschide indexul și sări direct la pagina de care ai nevoie."
+    "atlasNotShelfBody": "Fiecare intrare a sitului este un capitol numerotat, grupat într-una din cele patru părți. Citește-l de la cap la coadă sau deschide indexul și sari la pagina dorită."
+  },
+  "categories": {
+    "injection_sites": "Locuri de injectare",
+    "injection_sites_dek": "Locuri subcutanate și intramusculare — anatomie, repere și ce să palpezi.",
+    "technique": "Tehnică",
+    "technique_dek": "Aspirarea dozei, plica cutanată, unghiul de inserție și gesturile mici care fac injecția nedureroasă.",
+    "rotation": "Scheme de rotație",
+    "rotation_dek": "Grile, calendare și logica rotației care previne lipohipertrofia și țesutul cicatricial.",
+    "troubleshooting": "Depanare",
+    "troubleshooting_dek": "Vânătăi, scurgeri, soluții tulburi și zecile de alte probleme cotidiene.",
+    "drugs_compounds": "Medicamente & substanțe",
+    "drugs_compounds_dek": "Denumiri comune și comerciale, rezumate ale prospectului și notele de siguranță pe care prospectul le omite.",
+    "tools": "Instrumente",
+    "tools_dek": "Calcule de reconstituire, convertoare de seringi și un plan de doze imprimabil."
+  },
+  "trust": {
+    "medically_reviewed_by": "Verificat medical de către",
+    "last_reviewed_on": "Ultima verificare medicală pe",
+    "evidence_based": "Bazat pe dovezi",
+    "independent_review": "Recenzie independentă · fără sponsorizare de la furnizori · fără înțelegeri cu telemedicina",
+    "reading_time": "{n} min de citit"
+  },
+  "article": {
+    "on_this_page": "Pe această pagină",
+    "injection_sites_in_this_article": "Locurile de injectare discutate în acest articol",
+    "sources_heading": "Surse",
+    "related_articles_heading": "Articole conexe",
+    "translation_pending_title": "Textul articolului încă nu este tradus",
+    "translation_pending_body": "Cadrul paginii este în limba ta; textul articolului de mai jos rămâne în engleză până terminăm traducerea."
+  },
+  "newsletter_inline": {
+    "title": "Primește ghidaj injectabil bazat pe dovezi",
+    "description": "O dată pe săptămână. Fără furnizori, fără vânzări.",
+    "email_placeholder": "E-mailul tău",
+    "subscribe_button": "Abonează-te",
+    "privacy_note": "Te poți dezabona oricând."
   },
   "methodology": {
     "label": "Metodologie · Ediția v1.2",
-    "title": "Cum se scrie un capitol.",
-    "body": "Lucrăm pornind de la Instrucțiunile de utilizare ale producătorului, de la recomandările actuale ale CDC și OMS privind siguranța injecției și de la literatura de formare a asistenților medicali. Două surse independente trebuie să coincidă înainte ca un capitol să fie publicat.",
+    "title": "Cum se naște un capitol.",
+    "body": "Lucrăm pe baza prospectelor producătorilor, a recomandărilor CDC și OMS pentru siguranța injecțiilor și a literaturii de îngrijire. Două surse independente trebuie să concorde înainte ca un capitol să fie publicat.",
     "cta": "Citește metodologia v1.2"
   },
   "pipeline": {
-    "label": "Atelier · 8 în cercetare",
+    "label": "În pregătire · 8 în cercetare",
     "title": "Capitolele la care lucrăm.",
-    "body": "Atelierul este public. Fiecare capitol în cercetare este listat cu titlul de lucru, întrebările la care încearcă să răspundă și sursele citite până acum.",
-    "cta": "Deschide atelierul"
+    "body": "Pipeline-ul este public. Fiecare capitol în cercetare apare cu titlul de lucru, întrebările la care încearcă să răspundă și sursele citite până acum.",
+    "cta": "Deschide pipeline-ul"
   },
   "stop": {
-    "title": "Stop · contactează cine prescrie",
-    "body": "Nimic din InjectCompass nu înlocuiește prospectul medicamentului tău sau sfatul persoanei care ți l-a prescris."
+    "title": "Stop · contactează prescriptorul",
+    "body": "Nimic de pe InjectCompass nu înlocuiește instrucțiunile medicamentului tău sau sfatul clinicianului care l-a prescris."
   },
   "footer": {
-    "edition": "Atlas Ediția 01",
-    "lastReviewed": "Ultima verificare",
+    "edition": "Ediția Atlas 01",
+    "lastReviewed": "Ultima recenzie",
     "notMedicalAdvice": "Nu este sfat medical",
-    "patientEducationOnly": "Doar în scop educativ și de informare a pacientului. Nu trimitem către vânzători de peptide de cercetare și nu acceptăm plăți de la producători farmaceutici sau clinici de telemedicină."
+    "patientEducationOnly": "Doar informare pentru pacienți. Nu trimitem către furnizori de peptide de cercetare. Nu acceptăm plăți de la companii farmaceutice sau clinici de telemedicină.",
+    "conditions_heading": "Indicații",
+    "tools_heading": "Instrumente",
+    "company_heading": "Companie",
+    "about": "Despre",
+    "editorial_standards": "Standarde editoriale",
+    "methodology": "Metodologie",
+    "contact": "Contact & corecturi",
+    "newsletter": "Newsletter",
+    "privacy": "Confidențialitate",
+    "terms": "Termeni",
+    "affiliate_disclosure": "Dezvăluire afiliați",
+    "medical_disclaimer": "Avertisment medical",
+    "disclaimer_heading": "Avertisment medical",
+    "disclaimer_body": "InjectCompass publică conținut de informare pentru pacienți. Nimic aici nu înlocuiește rețeta scrisă de clinicianul tău, prospectul medicamentului tău sau judecata profesionistului care îți cunoaște cazul. Dacă un simptom nu se potrivește cu textul, consideră-l depășit și sună la prescriptor.",
+    "from_the_network": "Din rețeaua noastră",
+    "copyright": "© {year} InjectCompass. Doar informare pentru pacienți. Nu este sfat medical."
+  },
+  "locale_switcher": {
+    "label": "Limbă",
+    "current": "Limba curentă"
+  },
+  "breadcrumbs": {
+    "home": "Acasă",
+    "separator_aria": "›"
+  },
+  "localeSwitcher": {
+    "label": "Limbă",
+    "en": "EN",
+    "enFull": "English",
+    "de": "DE",
+    "deFull": "Deutsch",
+    "fr": "FR",
+    "frFull": "Français",
+    "it": "IT",
+    "itFull": "Italiano",
+    "es": "ES",
+    "esFull": "Español",
+    "nl": "NL",
+    "nlFull": "Nederlands",
+    "pl": "PL",
+    "plFull": "Polski",
+    "sv": "SV",
+    "svFull": "Svenska",
+    "pt": "PT",
+    "ptFull": "Português",
+    "ro": "RO",
+    "roFull": "Română",
+    "cs": "CS",
+    "csFull": "Čeština",
+    "no": "NO",
+    "noFull": "Norsk"
   }
 }

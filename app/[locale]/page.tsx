@@ -4,9 +4,19 @@ import { FeaturedArticleCarousel } from "@/components/FeaturedArticleCarousel";
 import { posts } from "@/lib/content/posts";
 import { hubs, getHub } from "@/lib/content/hubs";
 import type { ArticleCardData } from "@/components/ArticleCard";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Locale } from "@/i18n/routing";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("hero");
+  const tHome = await getTranslations("home");
   // Featured pillar — preferred manual feature, otherwise first published post.
   const featuredPost =
     posts.find((p) => p.featured) ?? posts.find((p) => p.status === "published") ?? posts[0];
@@ -77,24 +87,30 @@ export default function HomePage() {
   return (
     <main>
       <Hero
-        eyebrow="Evidence-based injection guidance"
-        headline="Injections, done right — without the guesswork."
-        dek="Step-numbered technique guides, reconstitution math, and site-rotation maps — written by an RN, reviewed by an MD, and cited to nursing-education literature you can verify yourself."
+        eyebrow={t("eyebrow")}
+        headline={t("h1")}
+        dek={t("dek")}
         featured={featured}
         trending={trending}
+        trendingLabel={t("trending_label")}
+        ctaPrimary={tHome("cta_browse_library")}
+        ctaSecondary={tHome("cta_open_calculator")}
+        reviewedNote={tHome("reviewed_by_clinicians")}
+        citedNote={tHome("cited_to_literature")}
+        medicallyReviewedPill={tHome("medically_reviewed_pill")}
       />
 
       <CategoryTileGrid
         id="categories"
-        eyebrow="Library"
-        heading="Start with the basics."
-        description="Eight foundational guides, from drawing up a dose to rotating sites without scarring."
+        eyebrow={tHome("library_eyebrow")}
+        heading={tHome("library_heading")}
+        description={tHome("library_dek")}
         articles={tileCards}
       />
 
       <FeaturedArticleCarousel
-        eyebrow="Most read"
-        heading="What people are reading this week."
+        eyebrow={tHome("most_read_eyebrow")}
+        heading={tHome("most_read_heading")}
         articles={carouselCards}
       />
 
@@ -102,9 +118,9 @@ export default function HomePage() {
       <section className="border-b border-rule bg-surface-alt">
         <div className="mx-auto max-w-container px-6 py-16">
           <div className="max-w-2xl mb-10">
-            <div className="eyebrow mb-2">By topic</div>
+            <div className="eyebrow mb-2">{tHome("by_topic_eyebrow")}</div>
             <h2 className="text-[28px] md:text-[32px] font-bold text-ink leading-tight">
-              Browse by what you are doing.
+              {tHome("by_topic_heading")}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -122,7 +138,7 @@ export default function HomePage() {
                   {hub.oneLiner}
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-[13px] font-semibold text-teal-700">
-                  Open <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+                  {tHome("open_hub")} <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
                 </span>
               </Link>
             ))}
@@ -134,41 +150,33 @@ export default function HomePage() {
       <section className="border-b border-rule">
         <div className="mx-auto max-w-container px-6 py-16 grid md:grid-cols-2 gap-10">
           <div>
-            <div className="eyebrow mb-3">How we work</div>
+            <div className="eyebrow mb-3">{tHome("how_we_work_eyebrow")}</div>
             <h2 className="text-[28px] font-bold text-ink leading-tight">
-              Two independent sources before a sentence ships.
+              {tHome("how_we_work_heading")}
             </h2>
             <p className="mt-4 text-[16px] text-ink-muted leading-relaxed">
-              Every guide on InjectCompass is written from manufacturer
-              Instructions for Use, CDC and WHO injection-safety guidance,
-              and the nursing-education literature. Two independent sources
-              must agree before a claim ships, and a credentialed reviewer
-              signs the article once editorial review is complete.
+              {tHome("how_we_work_body")}
             </p>
             <Link
               href="/methodology"
               className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-teal-700 hover:text-teal-600"
             >
-              Read methodology v1.2 <span aria-hidden>→</span>
+              {tHome("how_we_work_cta")} <span aria-hidden>→</span>
             </Link>
           </div>
           <div>
-            <div className="eyebrow eyebrow-danger mb-3">Stop &amp; call your prescriber</div>
+            <div className="eyebrow eyebrow-danger mb-3">{tHome("stop_eyebrow")}</div>
             <h2 className="text-[24px] font-bold text-ink leading-tight">
-              When this site is the wrong source.
+              {tHome("stop_heading")}
             </h2>
             <p className="mt-4 text-[16px] text-ink-muted leading-relaxed">
-              Nothing on InjectCompass is a substitute for the prescription
-              your clinician wrote, the IFU that came with your medication,
-              or the judgment of the healthcare professional who knows your
-              case. If a symptom does not match what you read here, treat
-              what you read as out of date and call your prescriber.
+              {tHome("stop_body")}
             </p>
             <Link
               href="/medical-disclaimer"
               className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-teal-700 hover:text-teal-600"
             >
-              Read the full disclaimer <span aria-hidden>→</span>
+              {tHome("stop_cta")} <span aria-hidden>→</span>
             </Link>
           </div>
         </div>
