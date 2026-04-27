@@ -15,11 +15,12 @@ export { MedicalDisclaimerFooterStrip as MedicalDisclaimerFooter } from "./edito
  * The clinical-blue review-note format that opens technique and reconstitution posts.
  */
 export function PostReviewStamp({ reviewedOn }: { reviewedOn: string }) {
-  const formatted = new Date(reviewedOn).toLocaleDateString("en-US", {
+  const formatted = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  });
+    timeZone: "UTC",
+  }).format(new Date(reviewedOn));
   return (
     <aside
       role="note"

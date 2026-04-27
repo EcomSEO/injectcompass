@@ -6,6 +6,29 @@ export type Source = {
   label: string;
   url?: string;
   publisher?: string;
+  /** Optional explicit source-type tag. Inferred from URL host if absent. */
+  type?: "fda" | "peer-reviewed" | "guideline" | "review" | "regulatory";
+};
+
+/** Infer a source-type tag from URL host so existing data lights up the pills
+ *  without any per-entry edits. */
+function inferType(s: Source): NonNullable<Source["type"]> | null {
+  if (s.type) return s.type;
+  if (!s.url) return null;
+  const u = s.url.toLowerCase();
+  if (/(\.fda\.gov|accessdata\.fda|drugsatfda)/.test(u)) return "fda";
+  if (/(pubmed|ncbi\.nlm|nejm|jama|thelancet|bmj\.com|jamanetwork)/.test(u)) return "peer-reviewed";
+  if (/(cdc\.gov|nih\.gov|who\.int|epa\.gov|ema\.europa)/.test(u)) return "regulatory";
+  if (/(guideline|idsa|aao|aha|ada|usp\.org)/.test(u)) return "guideline";
+  return "review";
+}
+
+const TYPE_STYLES: Record<NonNullable<Source["type"]>, { label: string; cls: string }> = {
+  fda: { label: "FDA", cls: "bg-blue-50 text-blue-700 border-blue-200" },
+  "peer-reviewed": { label: "Peer-reviewed", cls: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+  guideline: { label: "Clinical guideline", cls: "bg-purple-50 text-purple-700 border-purple-200" },
+  regulatory: { label: "Regulatory", cls: "bg-blue-50 text-blue-700 border-blue-200" },
+  review: { label: "Review", cls: "bg-stone-100 text-stone-700 border-stone-200" },
 };
 
 /**
@@ -67,6 +90,18 @@ export function SourcesAccordion({
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="text-[14px] text-ink leading-snug">
+                  {(() => {
+                    const t = inferType(s);
+                    if (!t) return null;
+                    const style = TYPE_STYLES[t];
+                    return (
+                      <span
+                        className={`mr-2 inline-block px-1.5 py-0.5 rounded text-[10.5px] font-semibold uppercase tracking-wide border align-middle ${style.cls}`}
+                      >
+                        {style.label}
+                      </span>
+                    );
+                  })()}
                   {s.label}
                   {s.publisher && (
                     <span className="text-ink-muted"> — {s.publisher}</span>

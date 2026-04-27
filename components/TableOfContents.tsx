@@ -57,7 +57,7 @@ export function TableOfContents({
           setActiveId(visible[0].target.id);
         }
       },
-      { rootMargin: "-96px 0px -60% 0px", threshold: [0, 1] },
+      { rootMargin: "-20% 0px -70% 0px", threshold: [0, 1] },
     );
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
@@ -77,7 +77,7 @@ export function TableOfContents({
                 href={`#${item.id}`}
                 className={`block py-1.5 transition-colors border-l-2 ${
                   isActive
-                    ? "border-teal-500 text-teal-700 font-semibold"
+                    ? "border-teal-500 text-teal-700 font-semibold bg-teal-50"
                     : "border-rule text-ink-muted hover:text-ink hover:border-rule-strong"
                 } ${item.level === 3 ? "pl-6 text-[13px]" : "pl-3"}`}
               >

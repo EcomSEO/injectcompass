@@ -7,11 +7,12 @@ export function ReviewStamp({
   readingTime: number;
   author?: string;
 }) {
-  const formatted = new Date(updatedAt).toLocaleDateString("en-US", {
+  const formatted = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  });
+    timeZone: "UTC",
+  }).format(new Date(updatedAt));
   return (
     <p className="text-[12.5px] text-stone flex flex-wrap items-center gap-2">
       <span className="caps-label text-stone">By</span>

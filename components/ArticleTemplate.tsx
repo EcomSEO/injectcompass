@@ -4,6 +4,7 @@ import { posts } from "@/lib/content/posts";
 import { getHub } from "@/lib/content/hubs";
 import { postBodies } from "@/lib/content/post-bodies";
 import { ArticleThumb } from "./ArticleThumb";
+import { articleImage, reviewerImageByName, authorImageByName } from "@/lib/content/images";
 import { BreadcrumbNav } from "./BreadcrumbNav";
 import { AuthorByline } from "./AuthorByline";
 import { MedicallyReviewedBadge } from "./MedicallyReviewedBadge";
@@ -20,6 +21,8 @@ import { RelatedArticles } from "./RelatedArticles";
 import { ArticleCardData } from "./ArticleCard";
 import { ArticleJsonLd } from "./schema/ArticleJsonLd";
 import { MedicalWebPageJsonLd } from "./schema/MedicalWebPageJsonLd";
+import { FaqJsonLd } from "./schema/FaqJsonLd";
+import { BreadcrumbJsonLd } from "./schema/BreadcrumbJsonLd";
 
 const REVIEWER = {
   name: "Dr. Maya Okafor",
@@ -108,6 +111,8 @@ export async function ArticleTemplate({ post }: { post: Post }) {
         reviewerCredentials={REVIEWER.jobTitle}
         about={hub?.name}
       />
+      <BreadcrumbJsonLd crumbs={crumbs} />
+      {post.faq && post.faq.length > 0 && <FaqJsonLd faq={post.faq} />}
 
       {/* Breadcrumb */}
       <div className="border-b border-rule">
@@ -129,7 +134,15 @@ export async function ArticleTemplate({ post }: { post: Post }) {
 
           {/* Hero image */}
           <div className="mt-8 aspect-[5/2] w-full rounded-md overflow-hidden">
-            <ArticleThumb seed={post.slug} variant="hero" className="w-full h-full" />
+            <ArticleThumb
+              seed={post.slug}
+              variant="hero"
+              imageUrl={articleImage(post.slug, post.hub)}
+              alt={post.h1 || post.title}
+              priority
+              sizes="(min-width: 1024px) 1200px, 100vw"
+              className="w-full h-full"
+            />
           </div>
 
           {/* Author + meta strip */}
@@ -141,12 +154,14 @@ export async function ArticleTemplate({ post }: { post: Post }) {
                 reviewedBy={REVIEWER.name}
                 reviewerCredentials={REVIEWER.jobTitle}
                 date={post.updatedAt}
+                avatarUrl={authorImageByName(AUTHOR.name)}
               />
             </div>
             <div className="md:col-span-6 flex flex-wrap items-center gap-3 md:justify-end">
               <MedicallyReviewedBadge
                 reviewerName={REVIEWER.name}
                 credentials={REVIEWER.jobTitle}
+                imageUrl={reviewerImageByName(REVIEWER.name) ?? undefined}
               />
               <span className="text-[13px] text-ink-muted">
                 {post.readingTime} min read

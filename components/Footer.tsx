@@ -12,10 +12,12 @@ const tools = [
 ];
 
 const sisterSites = [
-  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
   { name: "PepTips", href: "https://peptips.com" },
+  { name: "PepVise", href: "https://pepvise.com" },
   { name: "LarderLab", href: "https://larderlab.com" },
+  { name: "ThatCleanChef", href: "https://thatcleanchef.com" },
   { name: "CircadianStack", href: "https://circadianstack.com" },
+  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
 ];
 
 /**
@@ -73,6 +75,9 @@ export async function Footer() {
               <li><Link href="/about" className="text-ink hover:text-teal-700">{t("about")}</Link></li>
               <li><Link href="/editorial-standards" className="text-ink hover:text-teal-700">{t("editorial_standards")}</Link></li>
               <li><Link href="/methodology" className="text-ink hover:text-teal-700">{t("methodology")}</Link></li>
+              <li><Link href="/authors" className="text-ink hover:text-teal-700">Editorial team</Link></li>
+              <li><Link href="/reviewers" className="text-ink hover:text-teal-700">Medical reviewers</Link></li>
+              <li><Link href="/corrections-policy" className="text-ink hover:text-teal-700">Corrections</Link></li>
               <li><Link href="/contact" className="text-ink hover:text-teal-700">{t("contact")}</Link></li>
               <li><Link href="/newsletter" className="text-ink hover:text-teal-700">{t("newsletter")}</Link></li>
             </ul>

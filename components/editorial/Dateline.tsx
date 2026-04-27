@@ -1,8 +1,10 @@
 import { SITE } from "@/lib/content/site";
 
 function currentMonth() {
-  const d = new Date();
-  return d.toLocaleString("en-US", { month: "long", year: "numeric" });
+  // SITE.issueMonth is the canonical published-issue month; using `new Date()`
+  // here would give different output on SSR vs client (and across deploy
+  // boundaries), causing React #418/#423 hydration warnings.
+  return SITE.issueMonth ?? "April 2026";
 }
 
 /**

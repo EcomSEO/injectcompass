@@ -3,6 +3,7 @@ import { CategoryTileGrid } from "@/components/CategoryTileGrid";
 import { FeaturedArticleCarousel } from "@/components/FeaturedArticleCarousel";
 import { posts } from "@/lib/content/posts";
 import { hubs, getHub } from "@/lib/content/hubs";
+import { articleImage, HERO_IMAGE } from "@/lib/content/images";
 import type { ArticleCardData } from "@/components/ArticleCard";
 import { Link } from "@/i18n/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -30,6 +31,7 @@ export default async function HomePage({
     authorCredentials: "RN, BSN",
     readingTime: featuredPost.readingTime,
     reviewed: true,
+    imageUrl: articleImage(featuredPost.slug, featuredPost.hub) ?? HERO_IMAGE,
   };
 
   const cardOf = (slug: string): ArticleCardData | null => {
@@ -68,6 +70,7 @@ export default async function HomePage({
       author: "Sara Lin",
       readingTime: p.readingTime,
       reviewed: p.medicalDisclaimer === "required",
+      imageUrl: articleImage(p.slug, p.hub),
     }));
 
   // Carousel — duplicate / cycle the post pool so the row feels populated
@@ -80,6 +83,7 @@ export default async function HomePage({
       author: "Sara Lin",
       readingTime: p.readingTime,
       reviewed: true,
+      imageUrl: articleImage(p.slug, p.hub),
     }));
     return pool;
   })();

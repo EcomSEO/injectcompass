@@ -1,6 +1,13 @@
 /**
  * AuthorByline — avatar + author name + credentials + reviewer + date.
  * Stacks cleanly on mobile.
+ *
+ * If `avatarUrl` is provided, the round avatar shows the real headshot;
+ * otherwise it falls back to a teal-pill with author initials.
+ *
+ * Date formatting is locked to en-US in UTC so the SSR markup matches
+ * what the client renders on hydration (avoids React #418 hydration
+ * warnings driven by browser-locale or timezone variance).
  */
 export function AuthorByline({
   authorName,
@@ -10,6 +17,7 @@ export function AuthorByline({
   reviewerCredentials,
   date,
   initials,
+  avatarUrl,
 }: {
   authorName: string;
   authorCredentials?: string;
@@ -18,12 +26,14 @@ export function AuthorByline({
   reviewerCredentials?: string;
   date: string;
   initials?: string;
+  avatarUrl?: string | null;
 }) {
-  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
-  });
+    timeZone: "UTC",
+  }).format(new Date(date));
   const computedInitials =
     initials ??
     authorName
@@ -35,12 +45,24 @@ export function AuthorByline({
 
   return (
     <div className="flex items-start gap-3">
-      <div
-        aria-hidden
-        className="w-10 h-10 rounded-pill bg-teal-50 text-teal-700 flex items-center justify-center text-[13px] font-semibold shrink-0"
-      >
-        {computedInitials}
-      </div>
+      {avatarUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={avatarUrl}
+          alt=""
+          aria-hidden
+          className="w-10 h-10 rounded-pill object-cover shrink-0 border border-rule"
+          width={40}
+          height={40}
+        />
+      ) : (
+        <div
+          aria-hidden
+          className="w-10 h-10 rounded-pill bg-teal-50 text-teal-700 flex items-center justify-center text-[13px] font-semibold shrink-0"
+        >
+          {computedInitials}
+        </div>
+      )}
       <div className="text-[14px] leading-relaxed">
         <div className="text-ink">
           By{" "}

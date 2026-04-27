@@ -25,11 +25,12 @@ export async function LastReviewedLine({ date }: { date: string }) {
   const t = await getTranslations("trust");
   const d = new Date(date);
   const bcp47 = LOCALE_BCP47[locale] ?? "en-US";
-  const formatted = d.toLocaleDateString(bcp47, {
+  const formatted = new Intl.DateTimeFormat(bcp47, {
     month: "long",
     day: "numeric",
     year: "numeric",
-  });
+    timeZone: "UTC",
+  }).format(d);
   return (
     <div className="text-[13px] text-ink-muted">
       {t("last_reviewed_on")} <time dateTime={date}>{formatted}</time>

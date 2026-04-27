@@ -1,18 +1,51 @@
+import Image from "next/image";
+
 /**
- * ArticleThumb — gradient placeholder used when we don't have a real photo.
- * Renders a deterministic teal gradient with a subtle anatomical-line motif
- * so cards don't look broken before art is added.
+ * ArticleThumb — renders a real editorial photograph when `imageUrl` is
+ * provided, otherwise falls back to a deterministic teal gradient with a
+ * subtle anatomical-line motif so cards don't look broken.
+ *
+ * The image fill mode + 16:10 / 5:3 wrapper aspect-ratio is owned by the
+ * parent so this component is pure layout-friendly.
  */
 export function ArticleThumb({
   seed = "",
   className = "",
   variant = "card",
+  imageUrl,
+  alt = "",
+  priority = false,
+  sizes,
 }: {
   seed?: string;
   className?: string;
   variant?: "card" | "hero";
+  imageUrl?: string | null;
+  alt?: string;
+  priority?: boolean;
+  sizes?: string;
 }) {
-  // Deterministic hue rotation based on slug seed.
+  if (imageUrl) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={imageUrl}
+          alt={alt}
+          fill
+          sizes={
+            sizes ??
+            (variant === "hero"
+              ? "(min-width: 768px) 600px, 100vw"
+              : "(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw")
+          }
+          priority={priority}
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
+  // Fallback: deterministic teal gradient with anatomical motif.
   const hash = Array.from(seed).reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const angle = (hash % 8) * 12;
   const blob = (hash % 4) + 1;
@@ -34,7 +67,6 @@ export function ArticleThumb({
           backgroundImage: `radial-gradient(circle at ${20 + blob * 10}% ${30 + blob * 6}%, rgba(255,255,255,0.7) 0%, transparent 45%), radial-gradient(circle at ${80 - blob * 8}% ${70 - blob * 5}%, rgba(0,0,0,0.3) 0%, transparent 40%)`,
         }}
       />
-      {/* Faint anatomical sweep */}
       <svg
         className="absolute inset-0 w-full h-full opacity-20"
         viewBox="0 0 200 125"

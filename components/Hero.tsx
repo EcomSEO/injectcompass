@@ -88,6 +88,10 @@ export function Hero({
                 <ArticleThumb
                   seed={featured.slug}
                   variant="hero"
+                  imageUrl={featured.imageUrl}
+                  alt={featured.title}
+                  priority
+                  sizes="(min-width: 768px) 600px, 100vw"
                   className="w-full h-full transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                 />
                 <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-pill bg-white/95 text-reviewed-text text-[12px] font-semibold">

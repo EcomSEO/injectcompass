@@ -227,7 +227,7 @@ export function Header() {
                 >
                   <button
                     type="button"
-                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors ${
+                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 ${
                       isOpen ? "text-teal-700 bg-teal-50" : "text-ink hover:text-teal-700"
                     }`}
                     aria-haspopup="true"
@@ -242,7 +242,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-teal-700 transition-colors rounded-md"
+                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-teal-700 transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
               >
                 {item.label}
               </Link>

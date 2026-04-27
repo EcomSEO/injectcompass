@@ -67,8 +67,19 @@ export async function generateMetadata({
       alternateLocale: locales
         .filter((l) => l !== locale)
         .map((l) => OG_LOCALE[l]),
+      images: [
+        {
+          url: "/images/og-default.jpg",
+          width: 1600,
+          height: 900,
+          alt: SITE.name,
+        },
+      ],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/images/og-default.jpg"],
+    },
     robots: robotsMeta(),
   };
 }

@@ -10,6 +10,7 @@ export type ArticleCardData = {
   author?: string;
   readingTime?: number;
   reviewed?: boolean;
+  imageUrl?: string | null;
 };
 
 /**
@@ -34,6 +35,8 @@ export function ArticleCard({
       <div className="relative aspect-[16/10] overflow-hidden bg-surface-alt">
         <ArticleThumb
           seed={data.slug}
+          imageUrl={data.imageUrl}
+          alt={data.title}
           className="w-full h-full transition-transform duration-300 ease-out group-hover:scale-[1.03]"
         />
         {data.reviewed && (

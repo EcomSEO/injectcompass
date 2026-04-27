@@ -124,10 +124,11 @@ export function ComparisonTemplate({ post }: { post: Post }) {
                 <div className="flex justify-between">
                   <dt className="text-stone">Last updated</dt>
                   <dd className="text-clinical-deep num">
-                    {new Date(post.updatedAt).toLocaleDateString("en-US", {
+                    {new Intl.DateTimeFormat("en-US", {
                       month: "short",
                       year: "numeric",
-                    })}
+                      timeZone: "UTC",
+                    }).format(new Date(post.updatedAt))}
                   </dd>
                 </div>
               </dl>

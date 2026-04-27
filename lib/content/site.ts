@@ -5,6 +5,9 @@ export const SITE = {
   // Editorial framing — clinical reference, like a patient-information leaflet
   volume: "Vol. 01",
   issue: "Reference No. 01",
+  /** Canonical published-issue month label (used in datelines).
+   *  Hardcoded so SSR and client output match — never derive from `new Date()`. */
+  issueMonth: "April 2026",
   editionLabel: "The Launch Edition",
   taglineLong:
     "The patient-education handout you always wished was this clear. Step-numbered. Cited. No drama.",
