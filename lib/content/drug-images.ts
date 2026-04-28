@@ -306,6 +306,115 @@ export const DRUGS: Record<string, DrugImage> = {
     width: 512,
     height: 448,
   },
+
+  // Phase 3 expansion — additional Wikimedia Commons sourced product photos
+  // and structure SVGs. Adlyxin/lixisenatide deferred: no free-licensed
+  // structure on Commons or Wikipedia infobox at fetch time.
+  byetta: {
+    slug: "byetta",
+    brandName: "Byetta",
+    genericName: "exenatide",
+    manufacturer: "AstraZeneca",
+    imagePath: "/images/drugs/byetta.jpg",
+    source: "wikimedia",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Byetta_10_mcg.jpg",
+    license: "PUBLIC-DOMAIN",
+    attribution: "MPDY",
+    altText:
+      "Byetta 10 mcg exenatide pre-filled subcutaneous-injection pen (AstraZeneca), photographed for editorial reference.",
+    caption: "Byetta 10 mcg prefilled pen (exenatide), AstraZeneca.",
+    width: 1833,
+    height: 1446,
+  },
+  bydureon: {
+    slug: "bydureon",
+    brandName: "Bydureon",
+    genericName: "exenatide ER",
+    manufacturer: "AstraZeneca",
+    // Editorial deferral: no free-licensed Bydureon product photo on Commons.
+    // Exenatide amino-acid sequence (public domain) used as compound reference.
+    imagePath: "/images/drugs/structures/bydureon.svg",
+    source: "structure-svg",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Exenatide_sequence.svg",
+    license: "PUBLIC-DOMAIN",
+    attribution: "Fvasconcellos",
+    altText:
+      "Amino-acid sequence diagram of exenatide, the active ingredient in Bydureon and Byetta (AstraZeneca).",
+    caption:
+      "Exenatide amino-acid sequence (active ingredient in Bydureon ER).",
+    width: 512,
+    height: 272,
+  },
+  "mots-c": {
+    slug: "mots-c",
+    brandName: "MOTS-c",
+    genericName: "MOTS-c (mitochondrial-derived peptide)",
+    manufacturer: "Research peptide (not FDA-approved for human use)",
+    imagePath: "/images/drugs/structures/mots-c.png",
+    source: "structure-svg",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:MOTS-c_structure.png",
+    license: "PUBLIC-DOMAIN",
+    attribution: "Meodipt",
+    altText:
+      "Chemical structure diagram of MOTS-c, a 16-amino-acid mitochondrial-derived peptide; research compound, not FDA-approved.",
+    caption: "MOTS-c chemical structure (research peptide).",
+    width: 2406,
+    height: 1934,
+  },
+  "aod-9604": {
+    slug: "aod-9604",
+    brandName: "AOD-9604",
+    genericName: "AOD-9604 (modified hGH 176-191 fragment)",
+    manufacturer: "Research peptide (not FDA-approved for human use)",
+    imagePath: "/images/drugs/structures/aod-9604.svg",
+    source: "structure-svg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:AOD_9604.svg",
+    license: "PUBLIC-DOMAIN",
+    attribution: "User:Innerstream",
+    altText:
+      "Chemical structure diagram of AOD-9604, a modified human-growth-hormone 176-191 fragment; research compound, not FDA-approved.",
+    caption: "AOD-9604 chemical structure (research peptide).",
+    width: 2270,
+    height: 1240,
+  },
+  tesamorelin: {
+    slug: "tesamorelin",
+    brandName: "Egrifta",
+    genericName: "tesamorelin",
+    manufacturer: "Theratechnologies",
+    // Editorial deferral: no free-licensed Egrifta product photo on Commons.
+    // Tesamorelin chemical structure (public domain) used as compound reference.
+    imagePath: "/images/drugs/structures/tesamorelin.svg",
+    source: "structure-svg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Tesamorelin.svg",
+    license: "PUBLIC-DOMAIN",
+    attribution: "Vaccinationist",
+    altText:
+      "Chemical structure diagram of tesamorelin, a GHRH analogue; the active ingredient in Egrifta (Theratechnologies).",
+    caption:
+      "Tesamorelin chemical structure (active ingredient in Egrifta).",
+    width: 512,
+    height: 246,
+  },
+  "melanotan-i": {
+    slug: "melanotan-i",
+    brandName: "Melanotan I",
+    genericName: "afamelanotide (Nle4-D-Phe7-α-MSH)",
+    manufacturer: "Research peptide (not FDA-approved for human use)",
+    imagePath: "/images/drugs/structures/melanotan-i.svg",
+    source: "structure-svg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Afamelanotide.svg",
+    license: "PUBLIC-DOMAIN",
+    attribution: "Anagkai",
+    altText:
+      "Chemical structure diagram of Melanotan I (afamelanotide), a synthetic α-MSH analogue; research compound, not FDA-approved.",
+    caption:
+      "Melanotan I (afamelanotide) chemical structure (research peptide).",
+    width: 1825,
+    height: 520,
+  },
 };
 
 /** Lookup helper — returns null if slug not in manifest */
