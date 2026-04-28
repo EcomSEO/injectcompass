@@ -6,7 +6,11 @@ import { ArticleTemplate } from "@/components/ArticleTemplate";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
 import { pageMetadata } from "@/lib/seo";
 import { locales, type Locale } from "@/i18n/routing";
-import { isSwedenBlocked } from "@/lib/compliance/sweden-restrictions";
+import {
+  isSwedenBlocked,
+  isRestrictedInSweden,
+  SE_RESTRICTED_COMPOUNDS,
+} from "@/lib/compliance/sweden-restrictions";
 
 const RESERVED = new Set([
   "about",
@@ -37,6 +41,13 @@ export function generateStaticParams() {
     for (const p of posts) {
       result.push({ locale, slug: p.slug });
     }
+    // Sweden compliance: prerender restricted-compound stub slugs at
+    // `/sv/{slug}` so they return HTTP 200 + noindex (instead of 404).
+    if (locale === "sv") {
+      for (const slug of SE_RESTRICTED_COMPOUNDS) {
+        result.push({ locale, slug });
+      }
+    }
   }
   return result;
 }
@@ -48,10 +59,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   if (RESERVED.has(slug)) return {};
+
+  // Sweden-restricted compound stub (slug not in posts; only valid on sv).
+  if (locale === "sv" && isRestrictedInSweden(slug)) {
+    return {
+      title: "Innehållet är inte tillgängligt i Sverige",
+      description:
+        "Den här artikeln behandlar ett ämne som är reglerat i Sverige enligt Läkemedelsverkets riktlinjer.",
+      robots: { index: false, follow: false },
+    };
+  }
+
   const post = getPost(slug);
   if (!post) return {};
 
-  // Sweden-blocked posts: noindex stub
+  // Sweden-blocked posts that DO exist as posts: serve noindex stub.
   if (locale === "sv" && isSwedenBlocked(post)) {
     return {
       title: "Innehåll inte tillgängligt",
@@ -75,6 +97,32 @@ export default async function PostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   if (RESERVED.has(slug)) notFound();
+
+  // Sweden-restricted compound stub: render compliance page even though
+  // the slug has no corresponding `posts` entry. The route returns 200
+  // with `robots: noindex,nofollow` from generateMetadata above.
+  if (locale === "sv" && isRestrictedInSweden(slug)) {
+    const t = await getTranslations("swedenRestricted");
+    return (
+      <TrustPageTemplate title="Innehållet är inte tillgängligt i Sverige">
+        <p>
+          Den här artikeln behandlar ett ämne som är reglerat i Sverige enligt
+          Läkemedelsverkets riktlinjer för apoteksberedning och förskrivning.
+          För information om vad som gäller i Sverige, se{" "}
+          <a
+            href="https://www.lakemedelsverket.se"
+            target="_blank"
+            rel="noopener"
+          >
+            Läkemedelsverket
+          </a>
+          .
+        </p>
+        <p className="text-sm text-charcoal/60">{t("body")}</p>
+      </TrustPageTemplate>
+    );
+  }
+
   const post = getPost(slug);
   if (!post) notFound();
 

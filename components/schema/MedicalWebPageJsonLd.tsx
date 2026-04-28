@@ -13,6 +13,7 @@ export function MedicalWebPageJsonLd({
   lastReviewed,
   reviewerName,
   reviewerCredentials,
+  reviewerSlug,
   about,
 }: {
   path: string;
@@ -21,9 +22,21 @@ export function MedicalWebPageJsonLd({
   lastReviewed: string;
   reviewerName?: string;
   reviewerCredentials?: string;
+  /** Slug of the reviewer bio page (`/reviewers/{slug}`). When provided,
+   *  emits `reviewedBy` as an `@id` reference to the canonical Person node. */
+  reviewerSlug?: string;
   about?: string;
 }) {
   const url = canonical(path);
+  const reviewedBy = reviewerSlug
+    ? { "@id": `${SITE.url}/reviewers/${reviewerSlug}#person` }
+    : reviewerName
+      ? {
+          "@type": "Person",
+          name: reviewerName,
+          jobTitle: reviewerCredentials,
+        }
+      : undefined;
   return (
     <JsonLd
       data={{
@@ -38,13 +51,7 @@ export function MedicalWebPageJsonLd({
           { "@type": "MedicalAudience", audienceType: "Patient" },
           { "@type": "MedicalAudience", audienceType: "Caregiver" },
         ],
-        reviewedBy: reviewerName
-          ? {
-              "@type": "Person",
-              name: reviewerName,
-              jobTitle: reviewerCredentials,
-            }
-          : undefined,
+        reviewedBy,
         publisher: {
           "@type": "Organization",
           name: SITE.name,

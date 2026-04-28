@@ -26,15 +26,18 @@ import { ArticleJsonLd } from "./schema/ArticleJsonLd";
 import { MedicalWebPageJsonLd } from "./schema/MedicalWebPageJsonLd";
 import { FaqJsonLd } from "./schema/FaqJsonLd";
 import { BreadcrumbJsonLd } from "./schema/BreadcrumbJsonLd";
+import { HowToJsonLd, type HowToStep } from "./schema/HowToJsonLd";
 
 const REVIEWER = {
   name: "Dr. Maya Okafor",
   jobTitle: "MD, Internal Medicine",
+  slug: "dr-okafor",
 };
 
 const AUTHOR = {
   name: "Sara Lin",
   jobTitle: "RN, BSN",
+  slug: "sara-lin",
 };
 
 /**
@@ -92,6 +95,22 @@ export async function ArticleTemplate({ post }: { post: Post }) {
 
   const body = postBodies[post.slug];
 
+  // HowTo emission for procedure posts. We treat a post as a procedure
+  // when its slug begins with `how-to-`, its hub is injection-technique
+  // (Hub-2 in the topical map), or the post explicitly opts in via
+  // `postType: "cluster"` paired with an items[] step list. We never
+  // emit HowTo without at least one ordered step, and step images are
+  // omitted — the in-page <SyringeSvg> / <InjectionSiteMap> illustrations
+  // already cover the schematic-image requirement and we never want to
+  // imply needle-in-skin photography.
+  const isProcedure =
+    post.slug.startsWith("how-to-") ||
+    post.hub === "injection-technique" ||
+    post.hub === "reconstitution";
+  const howToSteps: HowToStep[] = isProcedure && post.items && post.items.length > 0
+    ? post.items.map((it) => ({ name: it.name, text: it.summary }))
+    : [];
+
   return (
     <main className="bg-white" data-toc-root>
       <ArticleJsonLd
@@ -102,8 +121,10 @@ export async function ArticleTemplate({ post }: { post: Post }) {
         dateModified={post.updatedAt}
         authorName={AUTHOR.name}
         authorJobTitle={AUTHOR.jobTitle}
+        authorSlug={AUTHOR.slug}
         reviewerName={REVIEWER.name}
         reviewerJobTitle={REVIEWER.jobTitle}
+        reviewerSlug={REVIEWER.slug}
       />
       <MedicalWebPageJsonLd
         path={`/${post.slug}`}
@@ -112,10 +133,19 @@ export async function ArticleTemplate({ post }: { post: Post }) {
         lastReviewed={post.updatedAt}
         reviewerName={REVIEWER.name}
         reviewerCredentials={REVIEWER.jobTitle}
+        reviewerSlug={REVIEWER.slug}
         about={hub?.name}
       />
       <BreadcrumbJsonLd crumbs={crumbs} />
       {post.faq && post.faq.length > 0 && <FaqJsonLd faq={post.faq} />}
+      {howToSteps.length > 0 && (
+        <HowToJsonLd
+          path={`/${post.slug}`}
+          name={post.h1 || post.title}
+          description={post.description}
+          steps={howToSteps}
+        />
+      )}
 
       {/* Breadcrumb */}
       <div className="border-b border-rule">

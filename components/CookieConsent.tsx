@@ -106,7 +106,7 @@ export function CookieConsent() {
   return (
     <div
       role="dialog"
-      aria-modal="false"
+      aria-modal="true"
       aria-live="polite"
       aria-label={t("aria_label")}
       className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-paper-soft shadow-2xl"
@@ -146,7 +146,7 @@ export function CookieConsent() {
             <p className="mt-2 text-sm text-charcoal/85">{t("customize_body")}</p>
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-start gap-3">
-                <input type="checkbox" checked readOnly aria-label={t("necessary_label")} className="mt-1 accent-clinical-deep" />
+                <input type="checkbox" checked disabled readOnly aria-label={t("necessary_label")} className="mt-1 accent-clinical-deep" />
                 <span>
                   <strong className="text-clinical-deep">{t("necessary_label")}</strong>
                   <span className="block text-charcoal/75">{t("necessary_desc")}</span>

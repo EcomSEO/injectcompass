@@ -8,7 +8,10 @@ import type { Locale } from "@/i18n/routing";
 export type Authority = { name: string; url: string };
 
 export const AUTHORITIES_BY_LOCALE: Record<Locale, Authority[]> = {
-  en: [{ name: "Health authorities: contact your national medicines agency", url: "https://www.ema.europa.eu/" }],
+  en: [
+    { name: "EMA (medicines)", url: "https://www.ema.europa.eu" },
+    { name: "EDPB (data protection)", url: "https://edpb.europa.eu" },
+  ],
   de: [
     { name: "BfArM (medicines)", url: "https://www.bfarm.de" },
     { name: "BfDI (data protection)", url: "https://www.bfdi.bund.de" },

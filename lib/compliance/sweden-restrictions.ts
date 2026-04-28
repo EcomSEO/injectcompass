@@ -18,6 +18,32 @@ export const SWEDEN_BLOCKED_COMPOUNDS = [
 export type SwedenBlockedCompound = (typeof SWEDEN_BLOCKED_COMPOUNDS)[number];
 
 /**
+ * Restricted-compound slugs that must prerender as Swedish stub pages
+ * (HTTP 200 + noindex meta) under `/sv/{slug}`. These slugs do not exist
+ * as real `posts` entries — the route is reserved exclusively for the
+ * compliance stub when the visitor is on the Swedish locale. On any
+ * other locale these slugs return the standard 404.
+ */
+export const SE_RESTRICTED_COMPOUNDS = [
+  "compounded-semaglutide",
+  "melanotan-i",
+  "melanotan-ii",
+  "bpc-157",
+  "tb-500",
+] as const;
+
+export type SeRestrictedCompound = (typeof SE_RESTRICTED_COMPOUNDS)[number];
+
+/**
+ * Returns true when the given slug is the canonical name of a compound
+ * that is regulated under Läkemedelsverket guidance and must be served
+ * as the Swedish stub page on the `sv` locale.
+ */
+export function isRestrictedInSweden(slug: string): boolean {
+  return (SE_RESTRICTED_COMPOUNDS as readonly string[]).includes(slug);
+}
+
+/**
  * Compound search-terms (lowercase) that, if present in a post slug
  * or title, indicate the article should be blocked in Sweden.
  */
