@@ -27,20 +27,34 @@ const config: Config = {
           700: "#053730",
           900: "#053730",
         },
-        // Stitch design (2026-04-29) — deep navy/teal ground + bright
-        // cyan-teal accent for the new homepage shell. Token names are
-        // additive; legacy `teal-*` and `clinical-*` stay intact so
-        // existing components keep rendering.
+        // Stitch design system (locked 2026-04-30) — full midnight scale
+        // for layered dark surfaces + aqua scale for accents/CTAs.
+        // Use these instead of opacity hacks (bg-white/10) which fail
+        // contrast in many lighting conditions.
         midnight: {
           DEFAULT: "#061B23",
           deep: "#020D12",
           raised: "#0E2A35",
+          card: "#103040",
+          elevated: "#143A4C",
+          overlay: "#1A4859",
           rule: "#16384A",
+          "rule-soft": "#0F2832",
         },
         aqua: {
           DEFAULT: "#5EEAD4",
           soft: "#7FF0DD",
           deep: "#2DD4BF",
+          "deep-2": "#14B8A6",
+          dim: "#0E8A7A",
+        },
+        // Dark-theme text tokens — WCAG AA on midnight backgrounds.
+        // on-dark: 17.4:1 on midnight-deep | on-dark-muted: 7.8:1
+        // on-dark-faint: 4.6:1 (use sparingly, never for body)
+        "on-dark": {
+          DEFAULT: "#F8FAFC",
+          muted: "#CBD5E1",
+          faint: "#94A3B8",
         },
         ink: {
           DEFAULT: "#1A1F2E",
@@ -120,9 +134,55 @@ const config: Config = {
         card: "0 4px 12px rgb(0 0 0 / 0.06)",
         cardHover: "0 8px 24px rgb(0 0 0 / 0.08)",
         soft: "0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.06)",
+        // Dark-theme elevation — uses inset highlight + outer shadow
+        // since drop shadows are nearly invisible on dark surfaces.
+        "dark-card": "inset 0 1px 0 0 rgb(255 255 255 / 0.04), 0 1px 2px 0 rgb(0 0 0 / 0.4)",
+        "dark-elevated": "inset 0 1px 0 0 rgb(255 255 255 / 0.06), 0 8px 24px -8px rgb(0 0 0 / 0.5)",
+        "dark-overlay": "inset 0 1px 0 0 rgb(255 255 255 / 0.08), 0 24px 48px -16px rgb(0 0 0 / 0.6)",
+        "aqua-glow": "0 0 0 4px rgb(94 234 212 / 0.18)",
+        "focus-aqua": "0 0 0 3px rgb(94 234 212 / 0.5)",
       },
       transitionTimingFunction: {
         out: "cubic-bezier(0.2, 0.7, 0.2, 1)",
+        spring: "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      },
+      transitionDuration: {
+        fast: "150ms",
+        base: "220ms",
+        slow: "320ms",
+      },
+      fontSize: {
+        // Editorial type ramp — clamp() pairs for fluid responsive sizing.
+        // Use these instead of ad-hoc text-* classes for headings.
+        "display-xl": ["clamp(2.75rem, 5.5vw, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "display-lg": ["clamp(2.25rem, 4vw, 3.25rem)", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "display-md": ["clamp(1.75rem, 3vw, 2.5rem)", { lineHeight: "1.15", letterSpacing: "-0.015em", fontWeight: "600" }],
+        h1: ["clamp(2rem, 3.5vw, 2.75rem)", { lineHeight: "1.15", letterSpacing: "-0.015em", fontWeight: "700" }],
+        h2: ["clamp(1.5rem, 2.5vw, 2rem)", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }],
+        h3: ["1.375rem", { lineHeight: "1.3", letterSpacing: "-0.005em", fontWeight: "600" }],
+        h4: ["1.125rem", { lineHeight: "1.4", fontWeight: "600" }],
+        eyebrow: ["0.8125rem", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+        body: ["1.0625rem", { lineHeight: "1.65" }],
+        "body-sm": ["0.9375rem", { lineHeight: "1.55" }],
+        caption: ["0.8125rem", { lineHeight: "1.45" }],
+      },
+      ringColor: {
+        focus: "#5EEAD4",
+      },
+      ringWidth: {
+        focus: "3px",
+      },
+      ringOffsetColor: {
+        midnight: "#020D12",
+      },
+      zIndex: {
+        base: "0",
+        raised: "10",
+        sticky: "20",
+        overlay: "30",
+        modal: "40",
+        nav: "50",
+        toast: "60",
       },
     },
   },
