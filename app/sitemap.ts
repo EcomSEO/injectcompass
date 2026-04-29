@@ -38,6 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
     { path: "/contact", priority: 0.3, changeFrequency: "yearly" },
     { path: "/newsletter", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/courses", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/courses/injection-technique-masterclass", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/courses/reconstitution-math", priority: 0.6, changeFrequency: "monthly" },
     ...hubs.map((h) => ({
       path: `/guides/${h.slug}`,
       priority: 0.8,
