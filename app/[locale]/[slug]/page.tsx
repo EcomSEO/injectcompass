@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getPost, posts } from "@/lib/content/posts";
-import { ArticleTemplate } from "@/components/ArticleTemplate";
+import { ArticleTemplateStitch as ArticleTemplate } from "@/components/ArticleTemplateStitch";
 import { TrustPageTemplate } from "@/components/templates/TrustPageTemplate";
 import { pageMetadata } from "@/lib/seo";
 import { locales, type Locale } from "@/i18n/routing";

@@ -26,101 +26,83 @@ function isMega(item: NavItem): item is MegaNav {
   return (item as MegaNav).megaMenu !== undefined;
 }
 
+// Per the 2026-04-29 audit + topic-boundary lock: every nav item must
+// resolve to a real published post or hub page. The previous nav
+// advertised 20+ phantom routes (BPC-157, TB-500, Liraglutide,
+// Testosterone, etc.) that returned 404. Research peptides + GLP-1
+// patient-ed live on pepvise + peptips per the topic-boundary lock —
+// injectcompass nav links only to its own routes.
 const NAV: NavItem[] = [
   {
-    label: "Conditions",
+    label: "Injection Technique",
     megaMenu: [
       {
-        title: "Diabetes & GLP-1",
+        title: "Subcutaneous",
         items: [
-          { label: "Subcutaneous injection sites", href: "/subcutaneous-injection-sites" },
-          { label: "Site rotation", href: "/injection-site-rotation" },
-          { label: "Reading insulin syringes", href: "/reading-insulin-syringes" },
+          { label: "Subcutaneous injection — full guide", href: "/subcutaneous-injection" },
+          { label: "Rotating injection sites", href: "/rotating-injection-sites" },
+          { label: "Injection-site bruising", href: "/injection-site-bruising" },
         ],
       },
       {
-        title: "Hormone therapy",
+        title: "Pen administration",
         items: [
-          { label: "Intramuscular technique", href: "/intramuscular-injection-technique" },
-          { label: "Glute vs. thigh sites", href: "/im-injection-sites" },
-          { label: "Needle gauge guide", href: "/needle-gauge-guide" },
+          { label: "How to use the Ozempic pen", href: "/how-to-use-ozempic-pen" },
+          { label: "Needle sizes for peptide injection", href: "/needle-sizes-for-peptide-injection" },
         ],
       },
       {
-        title: "Peptide therapy",
+        title: "All technique guides",
         items: [
-          { label: "Reconstitution math", href: "/reconstitution-calculator" },
-          { label: "Bacteriostatic water", href: "/bacteriostatic-water" },
-          { label: "Cloudy solutions", href: "/cloudy-peptide-solutions" },
+          { label: "Browse all Injection Technique →", href: "/guides/injection-technique" },
         ],
       },
     ],
     featured: {
-      eyebrow: "Trending",
-      title: "How to read an insulin syringe, with a visual",
-      href: "/peptide-calculator",
-      dek: "U-100 syringe ticks decoded, with a worked example you can print.",
+      eyebrow: "Most read",
+      title: "Subcutaneous injection — the complete guide",
+      href: "/subcutaneous-injection",
+      dek: "Step-numbered procedure with the published-literature citations every patient should see.",
     },
   },
   {
-    label: "Procedures",
+    label: "Reconstitution",
     megaMenu: [
       {
-        title: "Technique",
+        title: "Procedures",
         items: [
-          { label: "Subcutaneous injection", href: "/subcutaneous-injection-technique" },
-          { label: "Intramuscular injection", href: "/intramuscular-injection-technique" },
-          { label: "Pinching skin correctly", href: "/skin-pinching-technique" },
+          { label: "How to reconstitute peptides", href: "/how-to-reconstitute-peptides" },
+          { label: "Bacteriostatic vs sterile water", href: "/bacteriostatic-water-vs-sterile-water" },
         ],
       },
       {
-        title: "Preparation",
+        title: "Reference",
         items: [
-          { label: "Reconstitution step-by-step", href: "/reconstitution-step-by-step" },
-          { label: "Drawing up a dose", href: "/drawing-up-injection-dose" },
-          { label: "Sterile field basics", href: "/sterile-injection-prep" },
-        ],
-      },
-      {
-        title: "After the injection",
-        items: [
-          { label: "Bruising & bleeding", href: "/injection-bruising" },
-          { label: "Lipohypertrophy", href: "/lipohypertrophy" },
-          { label: "Sharps disposal", href: "/sharps-disposal" },
+          { label: "Browse all Reconstitution →", href: "/guides/reconstitution" },
         ],
       },
     ],
   },
   {
-    label: "Drugs",
+    label: "Supplies & Storage",
     megaMenu: [
       {
-        title: "GLP-1 family",
+        title: "Supplies",
         items: [
-          { label: "Semaglutide", href: "/semaglutide-injection-guide" },
-          { label: "Tirzepatide", href: "/tirzepatide-injection-guide" },
-          { label: "Liraglutide", href: "/liraglutide-injection-guide" },
+          { label: "Best sharps containers", href: "/best-sharps-containers" },
+          { label: "Needle sizes for peptide injection", href: "/needle-sizes-for-peptide-injection" },
         ],
       },
       {
-        title: "Peptides",
+        title: "Storage",
         items: [
-          { label: "BPC-157", href: "/bpc-157" },
-          { label: "TB-500", href: "/tb-500" },
-          { label: "Ipamorelin", href: "/ipamorelin" },
-        ],
-      },
-      {
-        title: "Hormones",
-        items: [
-          { label: "Testosterone", href: "/testosterone-injection-guide" },
-          { label: "HCG", href: "/hcg-injection-guide" },
-          { label: "Estradiol", href: "/estradiol-injection-guide" },
+          { label: "Peptide storage temperature guide", href: "/peptide-storage-temperature-guide" },
+          { label: "Browse all Supplies & Storage →", href: "/guides/supplies-and-storage" },
         ],
       },
     ],
   },
-  { href: "/guides/troubleshooting", label: "Health News" },
+  { href: "/guides/troubleshooting", label: "Troubleshooting" },
   {
     label: "Tools",
     megaMenu: [
@@ -128,9 +110,14 @@ const NAV: NavItem[] = [
         title: "Calculators",
         items: [
           { label: "Peptide Calculator", href: "/peptide-calculator" },
-          { label: "Reconstitution Calculator", href: "/reconstitution-calculator" },
-          { label: "Syringe Converter", href: "/syringe-converter" },
-          { label: "Dose Schedule Builder", href: "/dose-schedule-builder" },
+          { label: "Browse all Calculators & Tools →", href: "/guides/calculators-and-tools" },
+        ],
+      },
+      {
+        title: "Education",
+        items: [
+          { label: "Injection Technique Masterclass — $49", href: "/courses/injection-technique-masterclass" },
+          { label: "Reconstitution Math course — $39", href: "/courses/reconstitution-math" },
         ],
       },
       {

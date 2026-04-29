@@ -35,7 +35,11 @@
       "drugs": "Léky",
       "health_news": "Zdravotní zprávy",
       "tools": "Nástroje",
-      "newsletter": "Newsletter"
+      "newsletter": "Newsletter",
+      "injection_technique": "Technika injekce",
+      "reconstitution": "Rekonstituce",
+      "supplies_&_storage": "Příslušenství a skladování",
+      "troubleshooting": "Odstraňování problémů"
     }
   },
   "hero": {

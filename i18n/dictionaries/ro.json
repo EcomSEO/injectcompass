@@ -35,7 +35,11 @@
       "drugs": "Medicamente",
       "health_news": "Știri medicale",
       "tools": "Instrumente",
-      "newsletter": "Newsletter"
+      "newsletter": "Newsletter",
+      "injection_technique": "Tehnica injecției",
+      "reconstitution": "Reconstituire",
+      "supplies_&_storage": "Accesorii și depozitare",
+      "troubleshooting": "Depanare"
     }
   },
   "hero": {

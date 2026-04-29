@@ -35,7 +35,11 @@
       "drugs": "Farmaci",
       "health_news": "News salute",
       "tools": "Strumenti",
-      "newsletter": "Newsletter"
+      "newsletter": "Newsletter",
+      "injection_technique": "Tecnica di iniezione",
+      "reconstitution": "Ricostituzione",
+      "supplies_&_storage": "Forniture & Conservazione",
+      "troubleshooting": "Risoluzione dei problemi"
     }
   },
   "hero": {

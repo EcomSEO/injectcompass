@@ -35,7 +35,11 @@
       "drugs": "Geneesmiddelen",
       "health_news": "Gezondheidsnieuws",
       "tools": "Hulpmiddelen",
-      "newsletter": "Nieuwsbrief"
+      "newsletter": "Nieuwsbrief",
+      "injection_technique": "Injectietechniek",
+      "reconstitution": "Reconstitutie",
+      "supplies_&_storage": "Benodigdheden & Opslag",
+      "troubleshooting": "Probleemoplossing"
     }
   },
   "hero": {

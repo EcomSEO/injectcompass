@@ -35,7 +35,11 @@
       "drugs": "Legemidler",
       "health_news": "Helsenyheter",
       "tools": "Verktøy",
-      "newsletter": "Nyhetsbrev"
+      "newsletter": "Nyhetsbrev",
+      "injection_technique": "Injeksjonsteknikk",
+      "reconstitution": "Rekonstitusjon",
+      "supplies_&_storage": "Utstyr og lagring",
+      "troubleshooting": "Feilsøking"
     }
   },
   "hero": {
