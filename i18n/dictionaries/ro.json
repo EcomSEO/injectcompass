@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Doar informare pentru pacienți. Nu este sfat medical.",
     "cookie_preferences": "Preferințe cookie",
     "cookies_link": "Politica cookie",
-    "impressum_link": "Date editor"
+    "impressum_link": "Date editor",
+    "newsletter_footer_blurb": "Newsletter — săptămânal. Proceduri noi, actualizări tehnice, eliminarea acelor. Fără reclame.",
+    "newsletter_footer_cta": "Abonează-te →"
   },
   "locale_switcher": {
     "label": "Limbă",

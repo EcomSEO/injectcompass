@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Endast patientinformation. Inte medicinsk rådgivning.",
     "cookie_preferences": "Kakinställningar",
     "cookies_link": "Kakpolicy",
-    "impressum_link": "Utgivare"
+    "impressum_link": "Utgivare",
+    "newsletter_footer_blurb": "Nyhetsbrev — varje vecka. Nya procedurer, tekniska uppdateringar, kanylhantering. Inga annonser.",
+    "newsletter_footer_cta": "Prenumerera →"
   },
   "locale_switcher": {
     "label": "Språk",

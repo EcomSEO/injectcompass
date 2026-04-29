@@ -22,6 +22,25 @@ export type Post = {
    *  When set, ArticleTemplate renders a license-compliant DrugImage
    *  in the right rail. Leave undefined for generic technique posts. */
   primaryDrug?: string;
+  /** HowTo-emittable structured procedure. When present, takes precedence
+   *  over `items[]` in the HowToJsonLd schema component. Aligned with
+   *  schema-library.md §11. Step images are schematic-only (never
+   *  needle-in-skin photography). */
+  steps?: Array<{ name: string; text: string; image?: string }>;
+  /** Pre-injection supplies — emitted as HowToSupply[]. */
+  supplies?: string[];
+  /** Tools (durable equipment) — emitted as HowToTool[]. */
+  tools?: string[];
+  /** Total time in minutes — converted to ISO-8601 duration for HowTo. */
+  totalTimeMinutes?: number;
+  /** Pre-injection checklist (rendered before the procedure). Plain bullets. */
+  preChecklist?: string[];
+  /** After-injection care bullets. */
+  aftercare?: string[];
+  /** Common-mistake / corrective-behaviour pairs. */
+  commonMistakes?: Array<{ mistake: string; correction: string }>;
+  /** Red-flag symptoms — when to call a clinician. Emits a red callout. */
+  redFlags?: string[];
 };
 
 export const posts: Post[] = [

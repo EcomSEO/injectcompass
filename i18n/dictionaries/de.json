@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Nur zur Patientenaufklärung. Keine medizinische Beratung.",
     "cookie_preferences": "Cookie-Einstellungen",
     "cookies_link": "Cookie-Richtlinie",
-    "impressum_link": "Impressum"
+    "impressum_link": "Impressum",
+    "newsletter_footer_blurb": "Newsletter — jede Woche. Neue Verfahrensanleitungen, Technik-Updates, Tipps zur Kanülenentsorgung. Keine Werbung.",
+    "newsletter_footer_cta": "Abonnieren →"
   },
   "locale_switcher": {
     "label": "Sprache",

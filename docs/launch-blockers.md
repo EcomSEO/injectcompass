@@ -1,9 +1,21 @@
 # Launch blockers — InjectCompass.com
 
-The 5 operator-decided items that must be cleared before public launch. Phases 1-8 of the finishing pass complete without these. Phases 9-10 are gated on items 4-5.
+The operator-decided items that must be cleared before public launch. Phases 1–8 of the finishing pass complete without these. Phases 9–10 are gated on items 4–5.
 
-**Last updated:** 28 April 2026
+**Last updated:** 29 April 2026 (post 2026-04-29 audit-fix sweep + monetization scaffolding).
 **Owner:** operator (human decision-maker)
+
+## 2026-04-29 audit-fix status (Claude side)
+
+| Audit blocker | Status |
+|---|---|
+| Sister-site footer ("FROM THE NETWORK") drop | ✅ shipped — replaced with newsletter CTA in 12 locales |
+| Self-host fonts via `next/font` | ✅ shipped — Inter + Merriweather + IBM Plex Mono via `next/font/google`, no `fonts.gstatic.com` runtime calls |
+| Cross-site author reuse (Sara Lin on injectcompass + peptips) | ✅ resolved — Sara kept on injectcompass per technique-credential fit; peptips assigns new author. Documented in `docs/cross-site-author-audit.md` |
+| Affiliate registry scaffolded | ✅ `lib/affiliate/registry.ts` — 13 SKUs across sharps containers, syringe boxes, travel cool-bags, needle-disposal services, CGM. ZERO peptide vendors. ZERO telehealth |
+| Methodology versioning helper | ✅ `lib/content/methodology-version.ts` |
+| OrganizationJsonLd `sameAs` cross-site leak | ✅ verified clean |
+| Operator placeholders in impressum / terms | ❌ **operator-side blocker, see below** |
 
 ---
 

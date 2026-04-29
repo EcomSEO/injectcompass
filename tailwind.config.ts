@@ -77,10 +77,10 @@ const config: Config = {
         terracotta: "#9C2F26",
       },
       fontFamily: {
-        sans: ['"Inter"', "Inter", "system-ui", "sans-serif"],
-        condensed: ['"Inter"', "system-ui", "sans-serif"],
-        serif: ['"Merriweather"', "Georgia", "serif"],
-        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+        sans: ["var(--font-inter)", '"Inter"', "system-ui", "sans-serif"],
+        condensed: ["var(--font-inter)", '"Inter"', "system-ui", "sans-serif"],
+        serif: ["var(--font-merriweather)", '"Merriweather"', "Georgia", "serif"],
+        mono: ["var(--font-ibm-mono)", '"IBM Plex Mono"', "ui-monospace", "monospace"],
       },
       maxWidth: {
         prose: "720px",

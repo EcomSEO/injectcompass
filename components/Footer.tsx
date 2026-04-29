@@ -14,15 +14,6 @@ const tools = [
   { slug: "dose-schedule-builder", name: "Dose Schedule Builder" },
 ];
 
-const sisterSites = [
-  { name: "PepTips", href: "https://peptips.com" },
-  { name: "PepVise", href: "https://pepvise.com" },
-  { name: "LarderLab", href: "https://larderlab.com" },
-  { name: "ThatCleanChef", href: "https://thatcleanchef.com" },
-  { name: "CircadianStack", href: "https://circadianstack.com" },
-  { name: "PlasticFreeLab", href: "https://plasticfreelab.com" },
-];
-
 /**
  * Healthline-grade publisher footer.
  * 4 column link grid, medical disclaimer block, sister-site links,
@@ -98,20 +89,16 @@ export async function Footer() {
               </p>
             </div>
             <div className="md:col-span-5">
-              <h3 className="eyebrow mb-2">{t("from_the_network")}</h3>
-              <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13px]">
-                {sisterSites.map((s) => (
-                  <li key={s.name}>
-                    <a
-                      href={s.href}
-                      rel="noopener"
-                      className="text-ink-muted hover:text-teal-700 transition-colors"
-                    >
-                      {s.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="eyebrow mb-2">{t("newsletter")}</h3>
+              <p className="text-[13px] text-ink-muted leading-relaxed">
+                {t("newsletter_footer_blurb")}{" "}
+                <Link
+                  href="/newsletter"
+                  className="text-teal-700 hover:text-ink underline decoration-teal-700/40 hover:decoration-ink underline-offset-4"
+                >
+                  {t("newsletter_footer_cta")}
+                </Link>
+              </p>
               <div className="mt-4">
                 <LocaleSwitcher variant="footer" />
               </div>

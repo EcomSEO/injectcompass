@@ -2,7 +2,35 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
+import { Inter, Merriweather, IBM_Plex_Mono } from "next/font/google";
 import "../globals.css";
+
+/**
+ * Per the 2026-04-29 audit-fix sweep: fonts self-hosted via
+ * next/font/google so the runtime no longer issues requests to
+ * fonts.googleapis.com / fonts.gstatic.com. GDPR posture (no reader IPs
+ * to Google) + LCP improvement.
+ */
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["700"],
+  display: "swap",
+  variable: "--font-merriweather",
+});
+
+const ibmMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-ibm-mono",
+});
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -100,19 +128,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${merriweather.variable} ${ibmMono.variable}`}
+    >
       <body className="bg-surface text-ink antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <a

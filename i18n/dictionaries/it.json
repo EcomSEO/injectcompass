@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Solo informazione al paziente. Non è un parere medico.",
     "cookie_preferences": "Preferenze cookie",
     "cookies_link": "Cookie policy",
-    "impressum_link": "Note legali"
+    "impressum_link": "Note legali",
+    "newsletter_footer_blurb": "Newsletter — ogni settimana. Nuove procedure, aggiornamenti tecnici, smaltimento degli aghi. Nessuna pubblicità.",
+    "newsletter_footer_cta": "Iscriviti →"
   },
   "locale_switcher": {
     "label": "Lingua",

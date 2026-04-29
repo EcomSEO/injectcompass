@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Patient-education only. Not medical advice.",
     "cookie_preferences": "Cookie preferences",
     "cookies_link": "Cookie policy",
-    "impressum_link": "Impressum"
+    "impressum_link": "Impressum",
+    "newsletter_footer_blurb": "Newsletter — every week. New procedure walkthroughs, technique updates, sharps-disposal tips. No vendor pitches.",
+    "newsletter_footer_cta": "Subscribe →"
   },
   "locale_switcher": {
     "label": "Language",
