@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Solo información al paciente. No es consejo médico.",
     "cookie_preferences": "Preferencias de cookies",
     "cookies_link": "Política de cookies",
-    "impressum_link": "Aviso legal"
+    "impressum_link": "Aviso legal",
+    "newsletter_footer_blurb": "Boletín — cada semana. Nuevos procedimientos, actualizaciones técnicas, eliminación de agujas. Sin publicidad.",
+    "newsletter_footer_cta": "Suscribirse →"
   },
   "locale_switcher": {
     "label": "Idioma",

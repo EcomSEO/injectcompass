@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Wyłącznie informacja dla pacjenta. Nie jest poradą lekarską.",
     "cookie_preferences": "Preferencje cookies",
     "cookies_link": "Polityka cookies",
-    "impressum_link": "Nota prawna"
+    "impressum_link": "Nota prawna",
+    "newsletter_footer_blurb": "Newsletter — co tydzień. Nowe procedury, aktualizacje techniczne, utylizacja igieł. Bez reklam.",
+    "newsletter_footer_cta": "Zapisz się →"
   },
   "locale_switcher": {
     "label": "Język",

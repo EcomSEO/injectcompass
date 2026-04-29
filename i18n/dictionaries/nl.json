@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Uitsluitend patiëntinformatie. Geen medisch advies.",
     "cookie_preferences": "Cookievoorkeuren",
     "cookies_link": "Cookiebeleid",
-    "impressum_link": "Colofon"
+    "impressum_link": "Colofon",
+    "newsletter_footer_blurb": "Nieuwsbrief — wekelijks. Nieuwe procedure-uitleg, technische updates, naaldverwijdering. Geen advertenties.",
+    "newsletter_footer_cta": "Abonneren →"
   },
   "locale_switcher": {
     "label": "Taal",

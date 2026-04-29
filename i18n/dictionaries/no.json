@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Kun pasientinformasjon. Ikke medisinsk råd.",
     "cookie_preferences": "Innstillinger for informasjonskapsler",
     "cookies_link": "Erklæring om informasjonskapsler",
-    "impressum_link": "Kolofon"
+    "impressum_link": "Kolofon",
+    "newsletter_footer_blurb": "Nyhetsbrev — hver uke. Nye prosedyrer, teknikkoppdateringer, kanyleavhending. Ingen reklame.",
+    "newsletter_footer_cta": "Abonnér →"
   },
   "locale_switcher": {
     "label": "Språk",

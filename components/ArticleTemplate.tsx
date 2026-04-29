@@ -27,6 +27,8 @@ import { MedicalWebPageJsonLd } from "./schema/MedicalWebPageJsonLd";
 import { FaqJsonLd } from "./schema/FaqJsonLd";
 import { BreadcrumbJsonLd } from "./schema/BreadcrumbJsonLd";
 import { HowToJsonLd, type HowToStep } from "./schema/HowToJsonLd";
+import { PostReviewStamp } from "./MedicalDisclaimer";
+import { ClinicalCallout } from "./editorial/ClinicalCallout";
 
 const REVIEWER = {
   name: "Dr. Maya Okafor",
@@ -69,7 +71,16 @@ export async function ArticleTemplate({ post }: { post: Post }) {
     ...(post.items && post.items.length > 0
       ? [{ id: "key-points", label: "Key points", level: 2 as const }]
       : []),
-    { id: "deep-dive", label: "Step-by-step technique", level: 2 },
+    ...(post.preChecklist && post.preChecklist.length > 0
+      ? [{ id: "pre-checklist", label: "Pre-injection checklist", level: 2 as const }]
+      : []),
+    { id: "deep-dive", label: "Step-by-step", level: 2 },
+    ...(post.aftercare && post.aftercare.length > 0
+      ? [{ id: "aftercare", label: "After the injection", level: 2 as const }]
+      : []),
+    ...(post.commonMistakes && post.commonMistakes.length > 0
+      ? [{ id: "common-mistakes", label: "Common mistakes", level: 2 as const }]
+      : []),
     ...(post.faq && post.faq.length > 0
       ? [{ id: "faq", label: "Frequently asked questions", level: 2 as const }]
       : []),
@@ -107,9 +118,17 @@ export async function ArticleTemplate({ post }: { post: Post }) {
     post.slug.startsWith("how-to-") ||
     post.hub === "injection-technique" ||
     post.hub === "reconstitution";
-  const howToSteps: HowToStep[] = isProcedure && post.items && post.items.length > 0
-    ? post.items.map((it) => ({ name: it.name, text: it.summary }))
-    : [];
+  // Prefer the granular `steps[]` (with `text` and optional schematic image)
+  // when authors have wired one. Fall back to `items[]` for legacy entries.
+  const howToSteps: HowToStep[] =
+    post.steps && post.steps.length > 0
+      ? post.steps.map((s) => ({ name: s.name, text: s.text, image: s.image }))
+      : isProcedure && post.items && post.items.length > 0
+        ? post.items.map((it) => ({ name: it.name, text: it.summary }))
+        : [];
+  const totalTimeIso = post.totalTimeMinutes
+    ? `PT${post.totalTimeMinutes}M`
+    : undefined;
 
   return (
     <main className="bg-white" data-toc-root>
@@ -143,6 +162,9 @@ export async function ArticleTemplate({ post }: { post: Post }) {
           path={`/${post.slug}`}
           name={post.h1 || post.title}
           description={post.description}
+          totalTimeIso={totalTimeIso}
+          supplies={post.supplies}
+          tools={post.tools}
           steps={howToSteps}
         />
       )}
@@ -219,6 +241,10 @@ export async function ArticleTemplate({ post }: { post: Post }) {
             <TranslationPendingBanner />
             <EducationalBanner />
             {(post.hub === "performance" || post.hub === "recovery") && <WadaBanner />}
+            {/* Brand-book §6.2 patient-education stamp on drug-specific posts. */}
+            {post.medicalDisclaimer === "required" && (
+              <PostReviewStamp reviewedOn={post.updatedAt} />
+            )}
             {/* Mobile-only drug figure (right rail is hidden on mobile, so render inline) */}
             {post.primaryDrug && (
               <div className="lg:hidden">
@@ -274,50 +300,130 @@ export async function ArticleTemplate({ post }: { post: Post }) {
               </>
             )}
 
-            <h2 id="deep-dive">Step-by-step technique</h2>
-            <p>
-              The procedure described here is the same one taught in nursing
-              fundamentals courses. The version below is condensed; if any
-              step is unclear, the manufacturer Instructions for Use that
-              came with your medication is the authoritative source.
-            </p>
+            {/* Pre-injection checklist — Phase 2 depth-pass block 1. */}
+            {post.preChecklist && post.preChecklist.length > 0 && (
+              <>
+                <h2 id="pre-checklist">Before you start, the pre-injection checklist</h2>
+                <ul>
+                  {post.preChecklist.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-            <ol>
-              <li>
-                <strong>Wash your hands.</strong> Twenty seconds, soap and
-                water. Dry on a clean towel. The single highest-yield step in
-                injection safety.
-              </li>
-              <li>
-                <strong>Inspect the medication.</strong> Read the label. Check
-                expiry. Look at the solution, it should match what the IFU
-                describes (clear vs. cloudy is product-specific).
-              </li>
-              <li>
-                <strong>Choose a site and clean it.</strong> Pick a site you
-                have not used in the last week. Wipe with an alcohol swab in
-                a circular motion. Let the alcohol dry, this matters for
-                sting, not just sterility.
-              </li>
-              <li>
-                <strong>Pinch a fold of subcutaneous tissue.</strong> One to
-                two inches of tissue between your thumb and index finger.
-              </li>
-              <li>
-                <strong>Insert at 90°</strong> for normal body composition,
-                or 45° if you have very little subcutaneous fat. The pinch
-                guarantees you stay in the subcutaneous layer.
-              </li>
-              <li>
-                <strong>Push the plunger steadily.</strong> Slow and even.
-                Count to three.
-              </li>
-              <li>
-                <strong>Withdraw and dispose.</strong> Pull the needle out at
-                the same angle you went in. Drop the syringe directly into a
-                sharps container, never recap.
-              </li>
-            </ol>
+            <h2 id="deep-dive">Step-by-step</h2>
+            {post.steps && post.steps.length > 0 ? (
+              <>
+                {(post.supplies && post.supplies.length > 0) ||
+                (post.tools && post.tools.length > 0) ? (
+                  <>
+                    {post.supplies && post.supplies.length > 0 && (
+                      <p>
+                        <strong>Supplies.</strong> {post.supplies.join(" · ")}
+                      </p>
+                    )}
+                    {post.tools && post.tools.length > 0 && (
+                      <p>
+                        <strong>Tools.</strong> {post.tools.join(" · ")}
+                      </p>
+                    )}
+                  </>
+                ) : null}
+                <ol>
+                  {post.steps.map((s, i) => (
+                    <li key={i} id={`step${i + 1}`}>
+                      <strong>{s.name}.</strong> {s.text}
+                    </li>
+                  ))}
+                </ol>
+              </>
+            ) : body?.sections && body.sections.length > 0 ? (
+              <BodySectionsRenderer sections={body.sections} />
+            ) : (
+              <>
+                <p>
+                  The procedure described here is the same one taught in
+                  nursing fundamentals courses. If any step is unclear, the
+                  manufacturer Instructions for Use that came with your
+                  medication is the authoritative source.
+                </p>
+                <ol>
+                  <li>
+                    <strong>Wash your hands.</strong> Twenty seconds, soap and
+                    water. Dry on a clean towel. The single highest-yield step
+                    in injection safety.
+                  </li>
+                  <li>
+                    <strong>Inspect the medication.</strong> Read the label.
+                    Check expiry. Look at the solution, it should match what
+                    the IFU describes (clear vs. cloudy is product-specific).
+                  </li>
+                  <li>
+                    <strong>Choose a site and clean it.</strong> Pick a site
+                    you have not used in the last week. Wipe with an alcohol
+                    swab in a circular motion. Let the alcohol dry, this
+                    matters for sting, not just sterility.
+                  </li>
+                  <li>
+                    <strong>Pinch a fold of subcutaneous tissue.</strong> One
+                    to two inches of tissue between your thumb and index
+                    finger.
+                  </li>
+                  <li>
+                    <strong>Insert at 90°</strong> for normal body composition,
+                    or 45° if you have very little subcutaneous fat. The pinch
+                    guarantees you stay in the subcutaneous layer.
+                  </li>
+                  <li>
+                    <strong>Push the plunger steadily.</strong> Slow and even.
+                    Count to three.
+                  </li>
+                  <li>
+                    <strong>Withdraw and dispose.</strong> Pull the needle out
+                    at the same angle you went in. Drop the syringe directly
+                    into a sharps container, never recap.
+                  </li>
+                </ol>
+              </>
+            )}
+
+            {/* After-injection care — Phase 2 depth-pass block 3. */}
+            {post.aftercare && post.aftercare.length > 0 && (
+              <>
+                <h2 id="aftercare">After the injection</h2>
+                <ul>
+                  {post.aftercare.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {/* Common mistakes — Phase 2 depth-pass block 4. */}
+            {post.commonMistakes && post.commonMistakes.length > 0 && (
+              <>
+                <h2 id="common-mistakes">Common mistakes</h2>
+                <ul>
+                  {post.commonMistakes.map((m, i) => (
+                    <li key={i}>
+                      <strong>{m.mistake}</strong> — {m.correction}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {/* When to call a clinician — red callout. */}
+            {post.redFlags && post.redFlags.length > 0 && (
+              <ClinicalCallout variant="stop" title="Stop and call your prescriber if…">
+                <ul className="list-disc pl-5 space-y-1">
+                  {post.redFlags.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+              </ClinicalCallout>
+            )}
 
             <NewsletterInline />
 
@@ -389,6 +495,92 @@ function ShareIcons({ title }: { title: string }) {
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M6.5 9.5 9.5 6.5" strokeLinecap="round" /><path d="M9 4l1-1a3 3 0 1 1 3 3l-1 1" strokeLinecap="round" /><path d="M7 12l-1 1a3 3 0 1 1-3-3l1-1" strokeLinecap="round" /></svg>
       </button>
     </div>
+  );
+}
+
+/**
+ * Server-rendered renderer for `postBodies[slug].sections`. Used as the
+ * fallback step-by-step block when a post has structured `body.sections`
+ * but no `post.steps[]` HowTo override.
+ *
+ * Mirrors the visual contract of the legacy client `<PostBodyRenderer>` but
+ * stays inside article-prose typography so the existing IBM-Plex stack and
+ * heading styles apply uniformly.
+ */
+function BodySectionsRenderer({
+  sections,
+}: {
+  sections: NonNullable<ReturnType<typeof Object>>;
+}) {
+  // We type-erase here because the imported type is from post-bodies; the
+  // renderer is intentionally tolerant of the lightweight section shape.
+  const list = sections as Array<{
+    heading?: string;
+    kind?: "prose" | "steps" | "callout-red" | "callout-amber" | "sources";
+    body?: string;
+    items?: string[];
+    sources?: Array<{ label: string; url?: string }>;
+  }>;
+  return (
+    <>
+      {list.map((s, i) => {
+        if (s.kind === "callout-red" && s.items) {
+          return (
+            <ClinicalCallout
+              key={i}
+              variant="stop"
+              title={s.heading ?? "Stop and call your prescriber if…"}
+            >
+              <ul className="list-disc pl-5 space-y-1">
+                {s.items.map((it, j) => <li key={j}>{it}</li>)}
+              </ul>
+            </ClinicalCallout>
+          );
+        }
+        if (s.kind === "callout-amber") {
+          return (
+            <ClinicalCallout
+              key={i}
+              variant="caution"
+              title={s.heading ?? "Worth a pause"}
+            >
+              {s.items && (
+                <ul className="list-disc pl-5 space-y-1">
+                  {s.items.map((it, j) => <li key={j}>{it}</li>)}
+                </ul>
+              )}
+              {s.body && <p>{s.body}</p>}
+            </ClinicalCallout>
+          );
+        }
+        if (s.kind === "steps" && s.items) {
+          return (
+            <div key={i}>
+              {s.heading && <h3>{s.heading}</h3>}
+              <ol>
+                {s.items.map((it, j) => <li key={j}>{it}</li>)}
+              </ol>
+            </div>
+          );
+        }
+        if (s.kind === "sources") {
+          // Source lists in postBodies are duplicated by SourcesAccordion;
+          // skip to avoid double rendering.
+          return null;
+        }
+        return (
+          <div key={i}>
+            {s.heading && <h3>{s.heading}</h3>}
+            {s.body && <p>{s.body}</p>}
+            {s.items && (
+              <ul>
+                {s.items.map((it, j) => <li key={j}>{it}</li>)}
+              </ul>
+            )}
+          </div>
+        );
+      })}
+    </>
   );
 }
 

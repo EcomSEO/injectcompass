@@ -24,7 +24,7 @@ export function HowToJsonLd({
   path,
   name,
   description,
-  totalTimeIso = "PT5M",
+  totalTimeIso,
   supplies = [],
   tools = [],
   steps,
@@ -32,6 +32,8 @@ export function HowToJsonLd({
   path: string;
   name: string;
   description: string;
+  /** ISO-8601 duration. Omit when not authored — schema validators tolerate
+   *  the absence better than a fabricated default. */
   totalTimeIso?: string;
   supplies?: string[];
   tools?: string[];
@@ -46,9 +48,13 @@ export function HowToJsonLd({
         "@type": "HowTo",
         name,
         description,
-        totalTime: totalTimeIso,
-        supply: supplies.map((s) => ({ "@type": "HowToSupply", name: s })),
-        tool: tools.map((t) => ({ "@type": "HowToTool", name: t })),
+        ...(totalTimeIso ? { totalTime: totalTimeIso } : {}),
+        ...(supplies.length > 0
+          ? { supply: supplies.map((s) => ({ "@type": "HowToSupply", name: s })) }
+          : {}),
+        ...(tools.length > 0
+          ? { tool: tools.map((t) => ({ "@type": "HowToTool", name: t })) }
+          : {}),
         step: steps.map((s, i) => ({
           "@type": "HowToStep",
           position: i + 1,

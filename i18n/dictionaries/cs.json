@@ -158,7 +158,9 @@
     "copyright": "© {year} InjectCompass. Pouze edukace pacienta. Nejde o lékařskou radu.",
     "cookie_preferences": "Nastavení cookies",
     "cookies_link": "Zásady cookies",
-    "impressum_link": "Tiráž"
+    "impressum_link": "Tiráž",
+    "newsletter_footer_blurb": "Newsletter — každý týden. Nové postupy, technické aktualizace, likvidace jehel. Bez reklam.",
+    "newsletter_footer_cta": "Odebírat →"
   },
   "locale_switcher": {
     "label": "Jazyk",
