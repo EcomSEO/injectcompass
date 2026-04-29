@@ -12,10 +12,6 @@ type Featured = {
   dek: string;
 };
 
-/**
- * MegaMenu. Healthline-style three-column category list with an
- * optional 4th column featuring a single hero article tile.
- */
 export function MegaMenu({
   columns,
   featured,
@@ -28,13 +24,13 @@ export function MegaMenu({
       <div className="grid grid-cols-12 gap-8">
         {columns.map((col) => (
           <div key={col.title} className={featured ? "col-span-3" : "col-span-4"}>
-            <h3 className="eyebrow mb-4">{col.title}</h3>
+            <h3 className="text-eyebrow uppercase text-on-dark-faint mb-4">{col.title}</h3>
             <ul className="space-y-3">
               {col.items.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-ink hover:text-teal-700 transition-colors"
+                    className="text-[15px] text-on-dark-muted hover:text-aqua transition-colors duration-fast focus-visible:outline-none focus-visible:text-aqua"
                   >
                     {item.label}
                   </Link>
@@ -46,21 +42,22 @@ export function MegaMenu({
         {featured && (
           <Link
             href={featured.href}
-            className="col-span-3 group block rounded-md bg-surface-alt border border-rule p-5 hover:shadow-card transition-shadow"
+            className="col-span-3 group block rounded-lg bg-midnight-card border border-midnight-rule p-5 hover:border-aqua/40 hover:shadow-dark-elevated transition-all duration-base focus-visible:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep"
           >
-            <div className="aspect-[16/10] rounded-sm bg-gradient-to-br from-teal-500 to-teal-700 mb-4 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-15"
+            <div className="aspect-[16/10] rounded-md bg-gradient-to-br from-aqua-deep to-aqua-dim mb-4 relative overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-20"
                 style={{
                   backgroundImage:
                     "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7) 0%, transparent 50%)",
                 }}
               />
             </div>
-            <div className="eyebrow mb-2">{featured.eyebrow}</div>
-            <h4 className="text-[16px] font-semibold leading-snug text-ink group-hover:text-teal-700 transition-colors">
+            <div className="text-eyebrow uppercase text-aqua mb-2">{featured.eyebrow}</div>
+            <h4 className="text-[16px] font-semibold leading-snug text-on-dark group-hover:text-aqua transition-colors duration-fast">
               {featured.title}
             </h4>
-            <p className="mt-2 text-[13px] text-ink-muted leading-relaxed line-clamp-2">
+            <p className="mt-2 text-body-sm text-on-dark-muted leading-relaxed line-clamp-2">
               {featured.dek}
             </p>
           </Link>

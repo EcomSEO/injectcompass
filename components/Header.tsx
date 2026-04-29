@@ -287,7 +287,7 @@ export function Header() {
 
       {activeItem && isMega(activeItem) && (
         <div
-          className="absolute left-0 right-0 bg-white border-b border-rule shadow-card"
+          className="absolute left-0 right-0 bg-midnight-overlay border-b border-midnight-rule shadow-dark-overlay"
           onMouseEnter={() => openMega(activeItem.label)}
           onMouseLeave={scheduleClose}
         >
@@ -300,18 +300,18 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-0 z-50 bg-white overflow-auto lg:hidden"
+          className="fixed inset-0 z-nav bg-midnight-deep overflow-auto lg:hidden"
         >
-          <div className="flex items-center justify-between px-6 h-16 border-b border-rule">
-            <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+          <div className="flex items-center justify-between px-6 h-16 border-b border-midnight-rule">
+            <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
               <CompassMark />
-              <span className="font-semibold text-[18px] text-ink">injectcompass</span>
+              <span className="font-semibold text-[18px] text-on-dark">injectcompass</span>
             </Link>
             <button
               type="button"
               onClick={() => setMobileOpen(false)}
               aria-label={tHeader("close_menu")}
-              className="inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
+              className="inline-flex items-center justify-center w-10 h-10 -mr-2 text-on-dark hover:text-aqua transition-colors duration-fast"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
                 <line x1="18" y1="6" x2="6" y2="18" />
@@ -320,13 +320,13 @@ export function Header() {
             </button>
           </div>
           <div className="p-6">
-            <form role="search" action="/" className="flex items-center w-full h-12 px-4 rounded-pill bg-surface-alt border border-rule mb-6">
-              <SearchIcon className="w-5 h-5 text-white/55 shrink-0" />
+            <form role="search" action="/" className="flex items-center w-full h-12 px-4 rounded-pill bg-midnight-raised border border-midnight-rule focus-within:border-aqua/60 transition-colors duration-fast mb-6">
+              <SearchIcon className="w-5 h-5 text-on-dark-faint shrink-0" />
               <input
                 type="search"
                 name="q"
                 placeholder={tCommon("search_placeholder")}
-                className="ml-3 bg-transparent w-full text-[15px] outline-none"
+                className="ml-3 bg-transparent w-full text-[15px] text-on-dark placeholder:text-on-dark-faint outline-none"
                 aria-label={tHeader("search_aria")}
               />
             </form>
@@ -334,22 +334,22 @@ export function Header() {
               {localizedNav.map((item) => {
                 if (isMega(item)) {
                   return (
-                    <details key={item.label} className="border-b border-rule">
-                      <summary className="cursor-pointer flex items-center justify-between py-4 text-[18px] font-semibold text-ink list-none">
+                    <details key={item.label} className="border-b border-midnight-rule">
+                      <summary className="cursor-pointer flex items-center justify-between py-4 text-[18px] font-semibold text-on-dark list-none hover:text-aqua transition-colors duration-fast">
                         {item.label}
                         <ChevronDown />
                       </summary>
                       <div className="pb-4 pl-2">
                         {item.megaMenu.map((col) => (
                           <div key={col.title} className="mb-3">
-                            <div className="eyebrow eyebrow-muted mb-2">{col.title}</div>
+                            <div className="text-eyebrow uppercase text-on-dark-faint mb-2">{col.title}</div>
                             <ul className="space-y-2">
                               {col.items.map((sub) => (
                                 <li key={sub.href}>
                                   <Link
                                     href={sub.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className="text-[15px] text-ink hover:text-teal-700"
+                                    className="text-[15px] text-on-dark-muted hover:text-aqua transition-colors duration-fast"
                                   >
                                     {sub.label}
                                   </Link>
@@ -367,7 +367,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="py-4 text-[18px] font-semibold text-ink border-b border-rule"
+                    className="py-4 text-[18px] font-semibold text-on-dark border-b border-midnight-rule hover:text-aqua transition-colors duration-fast"
                   >
                     {item.label}
                   </Link>
@@ -377,7 +377,7 @@ export function Header() {
             <Link
               href="/newsletter"
               onClick={() => setMobileOpen(false)}
-              className="mt-8 inline-flex w-full items-center justify-center h-12 px-4 rounded-pill bg-teal-500 text-white text-[15px] font-semibold"
+              className="mt-8 inline-flex w-full items-center justify-center h-12 px-4 rounded-pill bg-aqua text-midnight-deep text-[15px] font-semibold hover:bg-aqua-soft transition-colors duration-fast"
             >
               {tHeader("newsletter_cta")}
             </Link>
@@ -394,10 +394,10 @@ export function Header() {
 function CompassMark() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
-      <circle cx="14" cy="14" r="12" stroke="#0E8A7A" strokeWidth="1.6" />
-      <path d="M14 5 L17 14 L14 23 L11 14 Z" fill="#0E8A7A" />
-      <circle cx="14" cy="14" r="2.4" fill="#fff" />
-      <circle cx="14" cy="14" r="1.2" fill="#0A6F61" />
+      <circle cx="14" cy="14" r="12" stroke="#5EEAD4" strokeWidth="1.6" />
+      <path d="M14 5 L17 14 L14 23 L11 14 Z" fill="#5EEAD4" />
+      <circle cx="14" cy="14" r="2.4" fill="#020D12" />
+      <circle cx="14" cy="14" r="1.2" fill="#5EEAD4" />
     </svg>
   );
 }

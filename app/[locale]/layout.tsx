@@ -132,7 +132,7 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${inter.variable} ${merriweather.variable} ${ibmMono.variable}`}
     >
-      <body className="bg-surface text-ink antialiased">
+      <body className="bg-midnight-deep text-on-dark antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <a
             href="#main"
