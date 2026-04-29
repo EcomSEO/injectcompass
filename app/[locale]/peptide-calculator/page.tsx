@@ -54,7 +54,7 @@ export default function PeptideCalculatorPage() {
           <Eyebrow tone="clinical">The Calculator</Eyebrow>
         </div>
 
-        <h1 className="display-headline text-clinical-deep mt-3 text-[2.15rem] md:text-[2.85rem] leading-[1.05]">
+        <h1 className="display-headline text-on-dark mt-3 text-[2.15rem] md:text-[2.85rem] leading-[1.05]">
           Peptide Calculator
         </h1>
 
@@ -64,7 +64,7 @@ export default function PeptideCalculatorPage() {
 
         <ClinicalRule className="mt-7" />
 
-        <p className="mt-7 text-[1.08rem] md:text-[1.14rem] leading-[1.65] text-charcoal/85 max-w-[62ch]">
+        <p className="mt-7 text-[1.08rem] md:text-[1.14rem] leading-[1.65] text-on-dark-muted max-w-[62ch]">
           Enter the amount of peptide in your vial, the volume of bacteriostatic
           water you are adding, and your target dose. The calculator returns
           the number of units to draw on a U-100 insulin syringe, and the
@@ -83,10 +83,10 @@ export default function PeptideCalculatorPage() {
 
         <section className="mt-12">
           <Eyebrow tone="clinical">How it works</Eyebrow>
-          <h2 className="font-serif text-2xl text-clinical-deep mt-2 mb-4">
+          <h2 className="font-serif text-2xl text-on-dark mt-2 mb-4">
             The math behind the calculator
           </h2>
-          <p className="text-charcoal/90 leading-relaxed">
+          <p className="text-on-dark-muted leading-relaxed">
             A peptide vial contains a dry powder that has to be reconstituted
             with bacteriostatic water before it can be drawn into a syringe.
             Once reconstituted, the concentration equals the dry mass divided
@@ -94,13 +94,13 @@ export default function PeptideCalculatorPage() {
             identity described in the USP &lt;797&gt; compounded sterile
             preparation reference.
           </p>
-          <p className="mt-4 text-charcoal/90 leading-relaxed">
+          <p className="mt-4 text-on-dark-muted leading-relaxed">
             On a U-100 insulin syringe, 100 units equals 1 millilitre. The
             number of units to draw for a given dose equals the target dose
             divided by the concentration, then scaled to the U-100 graduation.
           </p>
 
-          <div className="my-6 p-4 md:p-5 bg-paper border border-clinical/25 rounded-sm font-mono text-[13.5px] text-clinical-deep leading-loose">
+          <div className="my-6 p-4 md:p-5 bg-paper border border-aqua/30 rounded-sm font-mono text-[13.5px] text-on-dark leading-loose">
             <div>concentration (mg/mL) = peptide_mg ÷ bac_water_mL</div>
             <div>mL_per_dose = dose_mcg ÷ (concentration × 1000)</div>
             <div>units_per_dose = mL_per_dose × 100</div>
@@ -109,10 +109,10 @@ export default function PeptideCalculatorPage() {
 
         <section className="mt-10">
           <Eyebrow tone="clinical">Worked example</Eyebrow>
-          <h2 className="font-serif text-2xl text-clinical-deep mt-2 mb-4">
+          <h2 className="font-serif text-2xl text-on-dark mt-2 mb-4">
             5 mg vial, 2 mL diluent, 250 mcg target dose
           </h2>
-          <ul className="text-charcoal/90 leading-relaxed space-y-2 list-disc pl-6">
+          <ul className="text-on-dark-muted leading-relaxed space-y-2 list-disc pl-6">
             <li>
               <strong>Concentration:</strong>{" "}
               <span className="num">5 mg ÷ 2 mL = 2.5 mg/mL = 2,500 mcg/mL</span>
@@ -131,10 +131,10 @@ export default function PeptideCalculatorPage() {
 
         <section className="mt-10">
           <Eyebrow tone="clinical">Rounding convention</Eyebrow>
-          <h2 className="font-serif text-2xl text-clinical-deep mt-2 mb-4">
+          <h2 className="font-serif text-2xl text-on-dark mt-2 mb-4">
             Rounded to the nearest whole unit
           </h2>
-          <p className="text-charcoal/90 leading-relaxed">
+          <p className="text-on-dark-muted leading-relaxed">
             U-100 insulin syringes do not subdivide below 1 unit, so the
             calculator rounds to the nearest whole unit. The unrounded value
             appears as a secondary figure. If rounding introduces more than a
@@ -146,10 +146,10 @@ export default function PeptideCalculatorPage() {
 
         <section className="mt-10">
           <Eyebrow tone="amber">When the output looks wrong</Eyebrow>
-          <h2 className="font-serif text-2xl text-clinical-deep mt-2 mb-4">
+          <h2 className="font-serif text-2xl text-on-dark mt-2 mb-4">
             Edge cases the calculator flags
           </h2>
-          <ul className="text-charcoal/90 leading-relaxed space-y-2 list-disc pl-6">
+          <ul className="text-on-dark-muted leading-relaxed space-y-2 list-disc pl-6">
             <li>
               If units &gt; 100, the whole dose cannot be drawn on a single
               U-100 syringe. Reconstitute with less diluent, or split the
@@ -172,7 +172,7 @@ export default function PeptideCalculatorPage() {
 
         <section className="mt-12 border-t border-clinical/15 pt-10">
           <Eyebrow tone="clinical">Related references</Eyebrow>
-          <h2 className="font-serif text-2xl text-clinical-deep mt-2 mb-4">
+          <h2 className="font-serif text-2xl text-on-dark mt-2 mb-4">
             Continue reading
           </h2>
           <ul className="space-y-2">

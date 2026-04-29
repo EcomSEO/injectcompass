@@ -82,7 +82,7 @@ export function Hero({
           <div className="md:col-span-5">
             <Link
               href={`/${featured.slug}`}
-              className="group block rounded-md overflow-hidden bg-white border border-rule hover:shadow-cardHover hover:border-rule-strong transition-all"
+              className="group block rounded-md overflow-hidden bg-midnight-card border border-rule hover:shadow-cardHover hover:border-rule-strong transition-all"
             >
               <div className="relative aspect-[5/3] overflow-hidden">
                 <ArticleThumb

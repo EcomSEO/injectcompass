@@ -56,54 +56,61 @@ const config: Config = {
           muted: "#CBD5E1",
           faint: "#94A3B8",
         },
+        // Legacy `ink` object — re-pointed to dark-theme values so
+        // existing `text-ink`, `bg-ink`, `border-ink-muted` etc. flip
+        // to dark theme without component edits.
         ink: {
-          DEFAULT: "#1A1F2E",
-          muted: "#5A6573",
-          soft: "#8A92A1",
+          DEFAULT: "#F8FAFC",
+          muted: "#CBD5E1",
+          soft: "#94A3B8",
         },
         surface: {
-          DEFAULT: "#FFFFFF",
-          alt: "#F7F9FB",
-          warm: "#F4F1E8",
+          DEFAULT: "#020D12",      // midnight-deep
+          alt: "#061B23",          // midnight
+          warm: "#143A4C",         // midnight-elevated
         },
         rule: {
-          DEFAULT: "#E5E9EE",
-          strong: "#CDD3DA",
+          DEFAULT: "#16384A",      // midnight-rule
+          strong: "#1A4859",       // midnight-overlay
         },
-        success: "#0B7A4D",
-        warn: "#8A5A20",
-        danger: "#9C2F26",
+        success: "#34D399",
+        warn: "#FBBF24",
+        danger: "#F97373",
         reviewed: {
-          bg: "#E8F5F2",
-          text: "#0A6F61",
+          bg: "#103040",
+          text: "#5EEAD4",
         },
-        // Legacy aliases — keep so older imports still compile.
-        clinical: "#0A6F61",
-        "clinical-deep": "#053730",
-        "clinical-tint": "#E8F5F2",
-        paper: "#FFFFFF",
-        "paper-warm": "#F4F1E8",
-        "paper-rule": "#E5E9EE",
-        "paper-soft": "#FFFFFF",
-        "ink-deep": "#1A1F2E",
-        "ink-soft": "#5A6573",
-        surgical: "#9C2F26",
-        "surgical-deep": "#7A2018",
-        slate: "#5A6573",
-        "slate-soft": "#8A92A1",
-        "slate-rule": "#CDD3DA",
-        moss: "#0B7A4D",
-        amber: "#8A5A20",
-        alert: "#9C2F26",
-        stone: "#5A6573",
-        charcoal: "#1A1F2E",
-        sage: "#0B7A4D",
-        cream: "#F4F1E8",
-        pine: "#053730",
-        coral: "#9C2F26",
-        forest: "#0A6F61",
-        "forest-deep": "#053730",
-        terracotta: "#9C2F26",
+        // Legacy aliases — re-pointed to the dark Stitch scale so
+        // older components automatically inherit the new theme without
+        // requiring class-name churn. Source of truth: midnight + aqua
+        // tokens above. New code MUST use the canonical names.
+        clinical: "#5EEAD4",          // → aqua
+        "clinical-deep": "#2DD4BF",   // → aqua-deep
+        "clinical-tint": "#0E2A35",   // → midnight-raised (bg)
+        paper: "#103040",             // → midnight-card
+        "paper-warm": "#143A4C",      // → midnight-elevated
+        "paper-rule": "#16384A",      // → midnight-rule
+        "paper-soft": "#103040",
+        "ink-deep": "#F8FAFC",        // → on-dark
+        "ink-muted": "#CBD5E1",       // → on-dark-muted
+        "ink-soft": "#94A3B8",        // → on-dark-faint
+        surgical: "#F97373",
+        "surgical-deep": "#DC2626",
+        slate: "#CBD5E1",
+        "slate-soft": "#94A3B8",
+        "slate-rule": "#1A4859",
+        moss: "#34D399",
+        amber: "#FBBF24",
+        alert: "#F97373",
+        stone: "#94A3B8",
+        charcoal: "#F8FAFC",          // → on-dark
+        sage: "#34D399",
+        cream: "#143A4C",
+        pine: "#2DD4BF",
+        coral: "#F97373",
+        forest: "#5EEAD4",
+        "forest-deep": "#2DD4BF",
+        terracotta: "#F97373",
       },
       fontFamily: {
         sans: ["var(--font-inter)", '"Inter"', "system-ui", "sans-serif"],

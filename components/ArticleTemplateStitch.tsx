@@ -325,7 +325,7 @@ export async function ArticleTemplateStitch({ post }: { post: Post }) {
                   {post.steps.map((s, i) => (
                     <li
                       key={i}
-                      className="bg-white border border-paper-rule rounded-xl p-5 hover:shadow-card transition"
+                      className="bg-midnight-card border border-paper-rule rounded-xl p-5 hover:shadow-card transition"
                     >
                       <div className="font-serif text-clinical text-[44px] leading-none mb-3">
                         {i + 1}
@@ -475,7 +475,7 @@ export async function ArticleTemplateStitch({ post }: { post: Post }) {
           <aside className="lg:col-span-3 space-y-5">
             {/* Key Facts */}
             {post.items && post.items.length > 0 && (
-              <div className="bg-white border border-paper-rule rounded-xl p-5">
+              <div className="bg-midnight-card border border-paper-rule rounded-xl p-5">
                 <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-clinical mb-3">
                   Key facts
                 </div>
@@ -519,7 +519,7 @@ export async function ArticleTemplateStitch({ post }: { post: Post }) {
             )}
 
             {/* Related Tools */}
-            <div className="bg-white border border-paper-rule rounded-xl p-5">
+            <div className="bg-midnight-card border border-paper-rule rounded-xl p-5">
               <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-clinical mb-3">
                 Related tools
               </div>
@@ -640,7 +640,7 @@ export async function ArticleTemplateStitch({ post }: { post: Post }) {
                 <li key={p.slug}>
                   <Link
                     href={`/${p.slug}` as never}
-                    className="group block bg-white border border-paper-rule rounded-xl overflow-hidden hover:shadow-card transition"
+                    className="group block bg-midnight-card border border-paper-rule rounded-xl overflow-hidden hover:shadow-card transition"
                   >
                     {articleImage(p.slug, p.hub) && (
                       <div className="relative aspect-[16/10]">

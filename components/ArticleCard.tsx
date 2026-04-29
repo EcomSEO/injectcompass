@@ -30,7 +30,7 @@ export function ArticleCard({
   return (
     <Link
       href={`/${data.slug}`}
-      className={`group block rounded-md overflow-hidden bg-white border border-rule hover:shadow-cardHover hover:border-rule-strong transition-all duration-200 ease-out ${className}`}
+      className={`group block rounded-md overflow-hidden bg-midnight-card border border-rule hover:shadow-cardHover hover:border-rule-strong transition-all duration-200 ease-out ${className}`}
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-surface-alt">
         <ArticleThumb

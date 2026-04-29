@@ -13,13 +13,19 @@ export function Eyebrow({
 }) {
   const toneClass =
     tone === "stone"
-      ? "text-stone"
+      ? "text-on-dark-faint"
       : tone === "moss"
-      ? "text-moss"
+      ? "text-aqua-deep"
       : tone === "amber"
       ? "text-amber"
       : tone === "alert"
       ? "text-alert"
-      : "text-clinical";
-  return <span className={`eyebrow ${toneClass} ${className}`}>{children}</span>;
+      : "text-aqua";
+  return (
+    <span
+      className={`inline-block text-eyebrow uppercase font-semibold tracking-wider ${toneClass} ${className}`}
+    >
+      {children}
+    </span>
+  );
 }

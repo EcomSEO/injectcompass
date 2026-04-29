@@ -65,7 +65,7 @@ export function LocaleSwitcher({
         aria-label={t("label")}
       >
         {locales.map((l) => (
-          <option key={l} value={l} lang={l} className="text-ink bg-white">
+          <option key={l} value={l} lang={l} className="text-ink bg-midnight-card">
             {t(shortKey(l))}, {t(fullKey(l))}
           </option>
         ))}

@@ -79,7 +79,7 @@ export default function PipelinePage() {
           <h1 className="atlas-display text-3xl md:text-5xl text-ink-deep mt-3 max-w-3xl leading-[1.05]">
             What we are researching next.
           </h1>
-          <p className="mt-6 max-w-2xl text-ink-deep/80 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-on-dark-muted leading-relaxed">
             The pipeline is public. Each item lists the questions the chapter
             tries to answer and how many sources we have read so far. Items
             move from queued → in research → in draft → published as the

@@ -167,7 +167,7 @@ function LabeledInput({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           aria-describedby={suffixId}
-          className="flex-1 min-h-[44px] rounded-l-md border border-clinical/25 px-3 py-2 font-mono bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clinical focus-visible:ring-offset-2 focus-visible:ring-offset-paper focus-visible:border-clinical"
+          className="flex-1 min-h-[44px] rounded-l-md border border-clinical/25 px-3 py-2 font-mono bg-midnight-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clinical focus-visible:ring-offset-2 focus-visible:ring-offset-paper focus-visible:border-clinical"
         />
         <span
           id={suffixId}

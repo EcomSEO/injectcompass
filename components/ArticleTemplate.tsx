@@ -131,7 +131,7 @@ export async function ArticleTemplate({ post }: { post: Post }) {
     : undefined;
 
   return (
-    <main className="bg-white" data-toc-root>
+    <main className="bg-midnight-card" data-toc-root>
       <ArticleJsonLd
         path={`/${post.slug}`}
         headline={post.h1}

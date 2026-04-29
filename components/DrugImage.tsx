@@ -81,7 +81,7 @@ export function DrugImage({
 
   return (
     <figure
-      className={`drug-figure my-6 overflow-hidden rounded-lg border border-stone-200 bg-white ${className}`}
+      className={`drug-figure my-6 overflow-hidden rounded-lg border border-stone-200 bg-midnight-card ${className}`}
     >
       <div
         className="relative w-full overflow-hidden"

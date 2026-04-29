@@ -36,7 +36,7 @@ export async function NewsletterInline({
             required
             placeholder={t("email_placeholder")}
             aria-label={t("email_placeholder")}
-            className="flex-1 h-11 px-4 rounded-pill bg-white border border-rule focus:border-teal-500 outline-none text-[14px] text-ink placeholder:text-ink-soft"
+            className="flex-1 h-11 px-4 rounded-pill bg-midnight-card border border-rule focus:border-teal-500 outline-none text-[14px] text-ink placeholder:text-ink-soft"
           />
           <button
             type="submit"

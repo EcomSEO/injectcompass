@@ -26,7 +26,7 @@ export default function MethodologyPage() {
             <h1 className="editorial-h1">
               How an article gets written, reviewed, and retired.
             </h1>
-            <p className="mt-5 text-[18px] text-ink-muted leading-relaxed">
+            <p className="mt-5 text-[18px] text-on-dark-muted leading-relaxed">
               The library is only as good as the process behind it. This page
               describes that process in the same level of detail we would
               expect from a journal we relied on for clinical reference.
@@ -35,7 +35,7 @@ export default function MethodologyPage() {
             <div className="mt-6 flex gap-3">
               <Link
                 href="/methodology/v1-2"
-                className="inline-flex items-center h-11 px-5 rounded-pill border border-rule-strong text-ink text-[14px] font-semibold hover:border-teal-500 hover:text-teal-700 transition-colors"
+                className="inline-flex items-center h-11 px-5 rounded-pill border border-midnight-rule text-ink text-[14px] font-semibold hover:border-aqua hover:text-aqua transition-colors"
               >
                 Read v1.2 changelog
               </Link>

@@ -56,7 +56,7 @@ export function EmailCapture({
                 placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-sm border border-clinical/25 border-b-paper-rule px-4 py-3 bg-white focus:outline-none"
+                className="w-full rounded-sm border border-clinical/25 border-b-paper-rule px-4 py-3 bg-midnight-card focus:outline-none"
               />
             </div>
             <button

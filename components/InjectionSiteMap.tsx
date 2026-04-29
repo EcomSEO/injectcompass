@@ -53,7 +53,7 @@ export function InjectionSiteMap({
 
   return (
     <figure
-      className="rounded-md border border-rule bg-white p-4"
+      className="rounded-md border border-rule bg-midnight-card p-4"
       aria-label={`Anatomical map of ${regions.length} injection site${regions.length === 1 ? "" : "s"} discussed in this article`}
     >
       <div className="eyebrow mb-3">Anatomical map</div>

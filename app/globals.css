@@ -12,51 +12,55 @@
  */
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  /* === Locked publisher tokens === */
-  --color-teal-50: #E8F5F2;
-  --color-teal-100: #D1EBE5;
-  --color-teal-500: #0E8A7A;
-  --color-teal-600: #0A6F61;
-  --color-teal-700: #08594E;
-  --color-ink: #1A1F2E;
-  --color-ink-muted: #5A6573;
-  --color-ink-soft: #8A92A1;
-  --color-surface: #FFFFFF;
-  --color-surface-alt: #F7F9FB;
-  --color-rule: #E5E9EE;
-  --color-rule-strong: #CDD3DA;
-  --color-success: #10A26A;
-  --color-danger: #C8463C;
-  --color-reviewed-bg: #E8F5F2;
-  --color-reviewed-text: #0A6F61;
+  /* === Locked Stitch dark-theme tokens (2026-04-30) ===
+     These CSS custom properties feed the legacy class names
+     (.eyebrow, .article-prose, .display-headline, etc.) so older
+     components automatically inherit the dark theme. The Tailwind
+     token scale in tailwind.config.ts is the canonical source. */
+  --color-teal-50: #0E2A35;        /* midnight-raised — used as bg */
+  --color-teal-100: #103040;       /* midnight-card — used as bg */
+  --color-teal-500: #5EEAD4;       /* aqua */
+  --color-teal-600: #2DD4BF;       /* aqua-deep */
+  --color-teal-700: #14B8A6;       /* aqua-deep-2 */
+  --color-ink: #F8FAFC;            /* was #1A1F2E — now on-dark */
+  --color-ink-muted: #CBD5E1;      /* on-dark-muted */
+  --color-ink-soft: #94A3B8;       /* on-dark-faint */
+  --color-surface: #020D12;        /* midnight-deep */
+  --color-surface-alt: #061B23;    /* midnight */
+  --color-rule: #16384A;           /* midnight-rule */
+  --color-rule-strong: #1A4859;    /* midnight-overlay */
+  --color-success: #34D399;
+  --color-danger: #F97373;
+  --color-reviewed-bg: #103040;
+  --color-reviewed-text: #5EEAD4;
 
-  /* Legacy alias parity (keep so legacy components still compile) */
+  /* Legacy alias parity — re-pointed to the dark scale */
   --color-clinical: var(--color-teal-500);
   --color-clinical-deep: var(--color-teal-600);
   --color-clinical-tint: var(--color-teal-50);
   --color-ink-deep: var(--color-ink);
-  --color-paper: #FFFFFF;
-  --color-paper-warm: #F4F1E8;
+  --color-paper: #103040;          /* midnight-card */
+  --color-paper-warm: #143A4C;     /* midnight-elevated */
   --color-paper-rule: var(--color-rule);
-  --color-paper-soft: #FFFFFF;
+  --color-paper-soft: #103040;
   --color-surgical: var(--color-danger);
-  --color-surgical-deep: #9C2F26;
+  --color-surgical-deep: #DC2626;
   --color-slate: var(--color-ink-muted);
   --color-slate-soft: var(--color-ink-soft);
   --color-slate-rule: var(--color-rule-strong);
-  --color-moss: #10A26A;
-  --color-amber: #B8782F;
-  --color-alert: #C8463C;
-  --color-stone: var(--color-ink-muted);
+  --color-moss: #34D399;
+  --color-amber: #FBBF24;
+  --color-alert: #F97373;
+  --color-stone: var(--color-ink-soft);
   --color-charcoal: var(--color-ink);
-  --color-sage: #10A26A;
-  --color-cream: #F4F1E8;
+  --color-sage: #34D399;
+  --color-cream: #143A4C;
   --color-pine: var(--color-teal-600);
-  --color-coral: #C8463C;
+  --color-coral: #F97373;
   --color-forest: var(--color-teal-500);
-  --color-terracotta: #C8463C;
+  --color-terracotta: #F97373;
 }
 
 html {
@@ -84,7 +88,17 @@ h1, h2, h3, h4, h5 {
 
 ::selection {
   background: var(--color-teal-500);
-  color: #fff;
+  color: var(--color-surface);
+}
+
+/* Honor user motion preference site-wide */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 :where(a, button, input, textarea, select, summary, [role="button"], [role="menuitem"], [tabindex]):focus-visible {
@@ -107,11 +121,11 @@ h1, h2, h3, h4, h5 {
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-teal-600);
+  color: #5EEAD4; /* aqua — matches locked Stitch system */
 }
 
-.eyebrow-muted { color: var(--color-ink-muted); }
-.eyebrow-danger { color: var(--color-danger); }
+.eyebrow-muted { color: #94A3B8; /* on-dark-faint */ }
+.eyebrow-danger { color: #F97373; /* readable danger on midnight */ }
 
 .dateline {
   font-family: "Inter", system-ui, sans-serif;
