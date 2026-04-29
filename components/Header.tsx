@@ -189,7 +189,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-midnight-deep border-b border-midnight-rule">
-      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
+      <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label={tHeader("logo_aria")}>
           <CompassMark />
           <span className="font-semibold text-[18px] tracking-tight text-white group-hover:text-aqua transition-colors">
@@ -198,7 +198,7 @@ export function Header() {
         </Link>
 
         <nav
-          className="hidden lg:flex items-center gap-1 ml-4 flex-1"
+          className="hidden lg:flex items-center gap-0.5 flex-1 min-w-0"
           aria-label="Primary"
           onMouseLeave={scheduleClose}
         >
@@ -208,13 +208,13 @@ export function Header() {
               return (
                 <div
                   key={item.label}
-                  className="relative"
+                  className="relative shrink-0"
                   onMouseEnter={() => openMega(item.label)}
                   onFocus={() => openMega(item.label)}
                 >
                   <button
                     type="button"
-                    className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 ${
+                    className={`whitespace-nowrap px-3 py-2 text-[14px] font-medium rounded-md transition-colors duration-fast focus:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
                       isOpen ? "text-aqua bg-aqua/10" : "text-white/85 hover:text-aqua"
                     }`}
                     aria-haspopup="true"
@@ -229,7 +229,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-[15px] font-medium text-white/85 hover:text-aqua transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+                className="whitespace-nowrap px-3 py-2 text-[14px] font-medium text-white/85 hover:text-aqua transition-colors duration-fast rounded-md focus:outline-none focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep shrink-0"
               >
                 {item.label}
               </Link>
@@ -240,7 +240,7 @@ export function Header() {
         <form
           role="search"
           action="/"
-          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-midnight-raised border border-midnight-rule focus-within:border-aqua/60 transition-colors"
+          className="hidden xl:flex items-center w-[240px] h-10 px-4 rounded-pill bg-midnight-raised border border-midnight-rule focus-within:border-aqua/60 transition-colors duration-fast shrink-0"
         >
           <SearchIcon className="w-4 h-4 text-white/55 shrink-0" />
           <input
