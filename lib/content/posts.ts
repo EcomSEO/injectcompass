@@ -174,10 +174,84 @@ export const posts: Post[] = [
     hub: "injection-technique",
     postType: "pillar",
     publishedAt: "2026-04-21",
-    updatedAt: "2026-04-21",
-    readingTime: 12,
+    updatedAt: "2026-04-29",
+    readingTime: 18,
     status: "published",
     medicalDisclaimer: "required",
+    totalTimeMinutes: 8,
+    supplies: [
+      "Prescribed medication (single-dose vial, multi-dose vial, or pre-filled pen)",
+      "Single-use syringe + needle (sterile, in original packaging) OR pen needle (32G x 4mm or 31G x 5mm — manufacturer-supplied)",
+      "70% isopropyl alcohol prep pad (single-use)",
+      "Clean gauze or cotton ball",
+      "FDA-cleared sharps container, 1 quart minimum",
+    ],
+    tools: [
+      "Hand-washing station with soap (or alcohol-based hand sanitiser >= 60% alcohol when soap is unavailable)",
+      "Clean, well-lit, flat work surface",
+    ],
+    preChecklist: [
+      "Wash hands with soap and water for at least 20 seconds (CDC injection-safety guidance).",
+      "Confirm the medication name, strength, expiration date, and prescribed dose against the original prescription.",
+      "Inspect the medication: clear and colourless for most peptide solutions. Cloudy, discoloured, or particulate-containing solutions are not used; the prescriber is contacted.",
+      "Confirm the medication has reached the temperature specified in the package insert. For Ozempic, Wegovy, and Mounjaro the cartridge may be at refrigerated or room temperature; cold injections are reported as more uncomfortable but are not contraindicated.",
+      "Lay supplies on a clean flat surface within reach. Do not open the syringe / pen needle until immediately before use.",
+      "If using a pre-filled pen, dial the dose specified by the prescriber. Confirm the dose window reads the intended dose before each injection.",
+      "Position the sharps container within reach of the dominant hand.",
+    ],
+    aftercare: [
+      "Do not rub the injection site. Gentle pressure with clean gauze for ten to twenty seconds is acceptable if a small bead of fluid or blood appears (Frid et al. 2016).",
+      "Replace the outer needle cover only if the package insert specifies; otherwise dispose of the needle directly into the sharps container without recapping (OSHA bloodborne-pathogen guidance).",
+      "Record the injection: date, time, dose, site (left vs right, abdomen vs thigh vs upper arm). Site logs are described in Forum for Injection Technique recommendations as the primary tool for systematic rotation.",
+      "Wash hands again. Return medication to the storage condition described in the package insert (refrigerated for unopened pens; ambient for in-use pens within the manufacturer-specified window).",
+      "Mild soreness, a small bruise, or a 1 cm patch of pinkness at the injection site that resolves within 24 hours is consistent with normal injection response and does not warrant prescriber contact (Frid et al. 2016).",
+    ],
+    commonMistakes: [
+      {
+        mistake: "Injecting before the alcohol prep pad has dried.",
+        correction:
+          "Allow the alcohol to evaporate before needle insertion. CDC injection-safety guidance describes this as required both for antiseptic effect and to reduce the stinging sensation reported in patient-education literature.",
+      },
+      {
+        mistake: "Recapping the needle after use.",
+        correction:
+          "Place the used needle directly into the sharps container. Recapping is the most-cited cause of needlestick injury per OSHA's bloodborne-pathogen standard (29 CFR 1910.1030).",
+      },
+      {
+        mistake: "Injecting through clothing.",
+        correction:
+          "Expose the injection site fully. Through-clothing injection is associated with incomplete dose delivery and elevated infection risk per published nursing-education literature (Perry & Potter, Clinical Nursing Skills & Techniques).",
+      },
+      {
+        mistake: "Reusing the same site repeatedly.",
+        correction:
+          "Rotate sites systematically across the three documented zones. Repeated use of a single site is associated with lipohypertrophy and altered absorption (Frid et al. 2016; Forum for Injection Technique recommendations).",
+      },
+      {
+        mistake: "Applying ice to the site immediately before injection.",
+        correction:
+          "Bringing the medication and the skin to room temperature is associated with reduced injection discomfort. Numbing the skin with prolonged ice application is not described in any GLP-1 manufacturer prescribing information.",
+      },
+      {
+        mistake: "Pinching too tightly or with the whole hand.",
+        correction:
+          "A two-finger pinch of skin and subcutaneous tissue away from underlying muscle is the technique described in Frid et al. 2016. A whole-hand grip can compress the subcutaneous layer and unintentionally engage muscle.",
+      },
+      {
+        mistake: "Ignoring a 5-to-10-second dwell after dose delivery on a pen.",
+        correction:
+          "Pen package inserts (Ozempic, Mounjaro, Wegovy, Zepbound) specify a 5-to-10-second dwell with the needle in place after the dose dial returns to zero. Premature withdrawal is associated with incomplete dose delivery.",
+      },
+    ],
+    redFlags: [
+      "Bleeding that does not stop after five minutes of gentle pressure — contact prescriber.",
+      "Expanding redness, warmth, or hardness extending beyond a 2 cm radius from the injection site after 24 hours — contact prescriber the same day.",
+      "Fever above 38 degrees C or 100.4 degrees F within 48 hours of injection — contact prescriber.",
+      "Purulent (yellow / green) discharge or a fluctuant lump at the site — same-day prescriber contact; possible soft-tissue infection per IDSA guidelines.",
+      "Unexpected deep, sharp pain at injection that radiates beyond the site — discontinue use and contact prescriber; possible inadvertent intramuscular deposition.",
+      "Hives, swelling of the lips / tongue / throat, difficulty breathing, or fainting within minutes of injection — call emergency services. These are documented anaphylaxis warning signs in the GLP-1 prescribing information.",
+      "Injection-site lipohypertrophy (a soft, painless lump at a frequently used site) — discuss site-rotation protocol with prescriber; absorption from lipohypertrophic tissue is unpredictable per Frid et al. 2016.",
+    ],
     items: [
       {
         rank: 1,
@@ -222,6 +296,40 @@ export const posts: Post[] = [
           "The needle is withdrawn at the insertion angle and placed directly into an FDA-cleared sharps container. Recapping is not performed, per OSHA bloodborne-pathogen guidance.",
       },
     ],
+    steps: [
+      {
+        name: "Prepare a clean work surface and wash hands",
+        text: "Wash hands with soap and water for at least 20 seconds. Lay supplies on a clean flat surface: medication, syringe or pen needle in original packaging, alcohol prep pad, sharps container within reach.",
+      },
+      {
+        name: "Inspect the medication",
+        text: "Confirm the medication name, dose, and expiration date. Inspect the solution: clear and colourless for most peptide products. If cloudy, discoloured, or particulate-containing, do not use and contact the prescriber.",
+      },
+      {
+        name: "Select an injection site",
+        text: "Choose one of the three documented subcutaneous zones: the abdomen (outside a 2-inch radius around the umbilicus), the anterolateral thigh, or the posterior upper arm. Rotate sites systematically — use a different site than the previous injection.",
+      },
+      {
+        name: "Clean the site with the alcohol prep pad",
+        text: "Apply the prep pad in a single outward spiral, covering a roughly 2-inch circle. Allow the alcohol to dry fully before needle insertion (CDC injection-safety guidance). Do not blow on or fan the site.",
+      },
+      {
+        name: "Pinch the skin and insert the needle",
+        text: "Pinch a fold of skin and subcutaneous tissue between thumb and index finger, lifting it away from underlying muscle. Insert the needle at a 90-degree angle for short (4–6 mm) needles in most adults, or at 45 degrees for longer needles in lean individuals. The needle is fully seated.",
+      },
+      {
+        name: "Inject the medication",
+        text: "Depress the plunger or pen button at a steady, even rate. The injection should feel like firm pressure, not sharp pain. If sharp pain is felt, stop and remove the needle without injecting.",
+      },
+      {
+        name: "Hold for 5 to 10 seconds",
+        text: "After the dose dial on a pen returns to zero — or when the syringe plunger is fully depressed — keep the needle in place for 5 to 10 seconds (per Ozempic, Wegovy, Mounjaro, Zepbound prescribing information). This reduces incomplete dose delivery.",
+      },
+      {
+        name: "Withdraw and dispose",
+        text: "Withdraw the needle at the insertion angle. Release the skin pinch. Place the used needle directly into the sharps container without recapping (OSHA 29 CFR 1910.1030). Apply gentle pressure with clean gauze if a bead of blood or fluid appears; do not rub.",
+      },
+    ],
     faq: [
       {
         q: "What angle is described in the published technique literature for subcutaneous injection?",
@@ -251,6 +359,26 @@ export const posts: Post[] = [
         q: "Is the alcohol swab required by the published guidance?",
         a: "CDC injection-safety guidance describes skin antisepsis with 70% isopropyl alcohol prior to parenteral administration. The swab is to be allowed to dry before insertion, per the same guidance, both for antiseptic effect and to reduce the stinging sensation reported in patient-education literature.",
       },
+      {
+        q: "What gauge and length needle is described in the published technique literature?",
+        a: "Frid et al. 2016 (Mayo Clinic Proceedings) and the FIT (Forum for Injection Technique) recommendations describe 4 mm pen needles as appropriate for most adults across the BMI range. The Ozempic, Wegovy, Mounjaro, and Zepbound prescribing information all reference manufacturer-supplied needles in the 32G x 4 mm or 31G x 5 mm range. Insulin-style syringes used for compounded peptide reconstitution are typically 31G x 8 mm with U-100 markings.",
+      },
+      {
+        q: "Does cold injection cause more pain?",
+        a: "Patient-experience reporting in pen-administration trials (cited within the GLP-1 STEP and SURPASS programmes) describes refrigerated cartridges as more uncomfortable than room-temperature cartridges. Pen package inserts permit a manufacturer-specified window during which an in-use pen may be at ambient temperature; consult the specific product insert for the permitted duration.",
+      },
+      {
+        q: "What is lipohypertrophy and why does the literature recommend rotating sites?",
+        a: "Lipohypertrophy is a localised thickening of the subcutaneous tissue caused by repeated injection at the same site. Frid et al. 2016 describe it as one of the most common avoidable causes of erratic absorption. The Forum for Injection Technique recommendations describe rotating across all three documented zones and within each zone via a documented site-log, specifically to prevent lipohypertrophy from developing.",
+      },
+      {
+        q: "Should the needle be primed before each injection?",
+        a: "For pre-filled pens, the package inserts (Ozempic, Wegovy, Mounjaro, Zepbound) describe a flow-check or priming step before the first use of a new pen. Subsequent injections from the same pen do not require re-priming. For vial-and-syringe administration, an air-bubble flick step is described in standard nursing-education references such as Perry & Potter.",
+      },
+      {
+        q: "What if I see a small bruise or pink patch the next day?",
+        a: "A small bruise or a 1 cm patch of pinkness that resolves within 24 hours is consistent with normal injection response and does not warrant prescriber contact, per Frid et al. 2016. Expanding redness or warmth beyond a 2 cm radius after 24 hours, fever, purulent discharge, or unexpected deep pain are flagged in CDC and IDSA guidance as warranting same-day prescriber contact.",
+      },
     ],
     sources: [
       {
@@ -262,16 +390,44 @@ export const posts: Post[] = [
         url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html",
       },
       {
+        label: "OSHA Bloodborne Pathogens Standard, 29 CFR 1910.1030",
+        url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.1030",
+      },
+      {
         label: "Wilding JPH et al., 2021. Semaglutide STEP-1, NEJM (injection administration protocol)",
         url: "https://pubmed.ncbi.nlm.nih.gov/33567185/",
+      },
+      {
+        label: "Jastreboff AM et al., 2022. Tirzepatide SURMOUNT-1, NEJM (injection administration protocol)",
+        url: "https://pubmed.ncbi.nlm.nih.gov/35658024/",
       },
       {
         label: "Ozempic (semaglutide) Prescribing Information. Novo Nordisk",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209637s003lbl.pdf",
       },
       {
+        label: "Wegovy (semaglutide) Prescribing Information. Novo Nordisk",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf",
+      },
+      {
         label: "Mounjaro (tirzepatide) Prescribing Information. Eli Lilly",
         url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf",
+      },
+      {
+        label: "Zepbound (tirzepatide) Prescribing Information. Eli Lilly",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf",
+      },
+      {
+        label: "Stevens DL et al., 2014. IDSA Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections",
+        url: "https://pubmed.ncbi.nlm.nih.gov/24973422/",
+      },
+      {
+        label: "Forum for Injection Technique (FIT). Recommendations for Best Practice in Injection Technique",
+        url: "https://www.fit4diabetes.com/",
+      },
+      {
+        label: "Perry AG, Potter PA. Clinical Nursing Skills & Techniques (Elsevier). Subcutaneous injection chapter.",
+        url: "https://www.elsevier.com/books/clinical-nursing-skills-and-techniques/perry/978-0-323-70863-9",
       },
     ],
   },
