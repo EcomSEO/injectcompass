@@ -201,11 +201,11 @@ export function Header() {
     : null;
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-rule">
+    <header className="sticky top-0 z-40 bg-midnight-deep border-b border-midnight-rule">
       <div className="mx-auto max-w-container px-6 h-16 flex items-center gap-6">
         <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label={tHeader("logo_aria")}>
           <CompassMark />
-          <span className="font-semibold text-[18px] tracking-tight text-ink group-hover:text-teal-600 transition-colors">
+          <span className="font-semibold text-[18px] tracking-tight text-white group-hover:text-aqua transition-colors">
             injectcompass
           </span>
         </Link>
@@ -228,7 +228,7 @@ export function Header() {
                   <button
                     type="button"
                     className={`px-3 py-2 text-[15px] font-medium rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 ${
-                      isOpen ? "text-teal-700 bg-teal-50" : "text-ink hover:text-teal-700"
+                      isOpen ? "text-aqua bg-aqua/10" : "text-white/85 hover:text-aqua"
                     }`}
                     aria-haspopup="true"
                     aria-expanded={isOpen}
@@ -242,7 +242,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-[15px] font-medium text-ink hover:text-teal-700 transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+                className="px-3 py-2 text-[15px] font-medium text-white/85 hover:text-aqua transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
               >
                 {item.label}
               </Link>
@@ -253,14 +253,14 @@ export function Header() {
         <form
           role="search"
           action="/"
-          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-surface-alt border border-rule focus-within:border-teal-500 focus-within:bg-white transition-colors"
+          className="hidden md:flex items-center w-[320px] h-10 px-4 rounded-pill bg-midnight-raised border border-midnight-rule focus-within:border-aqua/60 transition-colors"
         >
-          <SearchIcon className="w-4 h-4 text-ink-muted shrink-0" />
+          <SearchIcon className="w-4 h-4 text-white/55 shrink-0" />
           <input
             type="search"
             name="q"
             placeholder={tCommon("search_placeholder")}
-            className="ml-2 bg-transparent w-full text-[14px] text-ink placeholder:text-ink-soft outline-none"
+            className="ml-2 bg-transparent w-full text-[14px] text-white placeholder:text-white/45 outline-none"
             aria-label={tHeader("search_aria")}
           />
         </form>
@@ -271,7 +271,7 @@ export function Header() {
           </div>
           <Link
             href="/newsletter"
-            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-teal-500 text-white text-[14px] font-semibold hover:bg-teal-600 transition-colors"
+            className="hidden md:inline-flex items-center h-9 px-4 rounded-pill bg-aqua text-midnight-deep text-[14px] font-semibold hover:bg-aqua-soft transition-colors"
           >
             {tHeader("newsletter_cta")}
           </Link>
@@ -279,7 +279,7 @@ export function Header() {
           <button
             type="button"
             aria-label={tCommon("search")}
-            className="md:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 text-white rounded-md"
           >
             <SearchIcon className="w-5 h-5" />
           </button>
@@ -287,7 +287,7 @@ export function Header() {
             type="button"
             onClick={() => setMobileOpen(true)}
             aria-label={tHeader("open_menu")}
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-md"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-white rounded-md"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
               <line x1="3" y1="7" x2="21" y2="7" />
@@ -334,7 +334,7 @@ export function Header() {
           </div>
           <div className="p-6">
             <form role="search" action="/" className="flex items-center w-full h-12 px-4 rounded-pill bg-surface-alt border border-rule mb-6">
-              <SearchIcon className="w-5 h-5 text-ink-muted shrink-0" />
+              <SearchIcon className="w-5 h-5 text-white/55 shrink-0" />
               <input
                 type="search"
                 name="q"

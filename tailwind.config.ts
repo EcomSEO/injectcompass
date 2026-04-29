@@ -27,6 +27,21 @@ const config: Config = {
           700: "#053730",
           900: "#053730",
         },
+        // Stitch design (2026-04-29) — deep navy/teal ground + bright
+        // cyan-teal accent for the new homepage shell. Token names are
+        // additive; legacy `teal-*` and `clinical-*` stay intact so
+        // existing components keep rendering.
+        midnight: {
+          DEFAULT: "#061B23",
+          deep: "#020D12",
+          raised: "#0E2A35",
+          rule: "#16384A",
+        },
+        aqua: {
+          DEFAULT: "#5EEAD4",
+          soft: "#7FF0DD",
+          deep: "#2DD4BF",
+        },
         ink: {
           DEFAULT: "#1A1F2E",
           muted: "#5A6573",
