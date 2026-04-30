@@ -237,21 +237,6 @@ export function Header() {
           })}
         </nav>
 
-        <form
-          role="search"
-          action="/"
-          className="hidden xl:flex items-center w-[240px] h-10 px-4 rounded-pill bg-midnight-raised border border-midnight-rule focus-within:border-aqua/60 transition-colors duration-fast shrink-0"
-        >
-          <SearchIcon className="w-4 h-4 text-white/55 shrink-0" />
-          <input
-            type="search"
-            name="q"
-            placeholder={tCommon("search_placeholder")}
-            className="ml-2 bg-transparent w-full text-[14px] text-white placeholder:text-white/45 outline-none"
-            aria-label={tHeader("search_aria")}
-          />
-        </form>
-
         <div className="flex items-center gap-2 shrink-0">
           <div className="hidden md:inline-flex">
             <LocaleSwitcher />
