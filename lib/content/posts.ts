@@ -1119,6 +1119,534 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "how-to-inject-zepbound",
+    title: "How to Inject Zepbound, Step-Numbered Procedure",
+    h1: "How to inject Zepbound",
+    description:
+      "Zepbound (tirzepatide) single-dose vial and pen administration as described in the current Eli Lilly prescribing information. Step-numbered procedure, supplies checklist, common mistakes. Educational only — not medical advice.",
+    hub: "injection-technique",
+    postType: "cluster",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 12,
+    status: "published",
+    medicalDisclaimer: "required",
+    primaryDrug: "zepbound",
+    totalTimeMinutes: 6,
+    supplies: [
+      "Zepbound single-dose pen or vial (the dose your prescriber wrote — 2.5 / 5 / 7.5 / 10 / 12.5 / 15 mg)",
+      "Alcohol prep pad (70% isopropyl)",
+      "Cotton ball or gauze square",
+      "FDA-cleared sharps container",
+    ],
+    tools: [
+      "Hands washed with soap and water (or alcohol-based hand rub)",
+      "Clean, well-lit work surface",
+    ],
+    preChecklist: [
+      "Wash hands for at least 20 seconds with soap and water, or use an alcohol-based hand rub.",
+      "Check the carton expiry date and the device label match what the prescription says.",
+      "Inspect the solution through the inspection window — Eli Lilly's Instructions for Use describes the solution as clear and colourless to slightly yellow. Discard the device if the solution is cloudy, discoloured, or contains particles.",
+      "Allow the device to sit at room temperature for 30 minutes if it was just removed from the fridge — cold injections sting more and increase the chance of injection-site reactions.",
+      "Choose an injection site (abdomen at least 2 inches from the navel, the front of either thigh, or the back of either upper arm if a caregiver is administering). Rotate sites with each weekly dose.",
+    ],
+    items: [
+      {
+        rank: 1,
+        name: "Inspect the device",
+        summary:
+          "Confirm the dose strength on the label matches the prescription. Eli Lilly's Zepbound Instructions for Use specifies that the solution be clear and colourless to slightly yellow, with no visible particles. A cloudy, discoloured, or particle-containing solution is grounds to discard the device.",
+      },
+      {
+        rank: 2,
+        name: "Clean the injection site",
+        summary:
+          "Swab the chosen site with the alcohol prep pad in a single circular motion, then let the alcohol air-dry for at least 10–15 seconds. Injecting through wet alcohol stings and can carry the alcohol into the subcutaneous tissue.",
+      },
+      {
+        rank: 3,
+        name: "Remove the base cap",
+        summary:
+          "Pull the gray base cap straight off the bottom of the device. The Instructions for Use specifies discarding the cap in regular trash, not in the sharps container, since it does not contain a needle.",
+      },
+      {
+        rank: 4,
+        name: "Place the device against the skin",
+        summary:
+          "Hold the device flat against the chosen injection site so the clear base sits flush against the skin. Eli Lilly's procedure describes a 90-degree angle to the skin surface. The device's hidden needle does not extend until the injection button is pressed.",
+      },
+      {
+        rank: 5,
+        name: "Press and hold the purple button",
+        summary:
+          "Press the purple injection button at the top of the device. The first click signals that the injection has started. Continue holding the device firmly against the skin without lifting.",
+      },
+      {
+        rank: 6,
+        name: "Wait for the second click",
+        summary:
+          "The Instructions for Use specifies holding the device in place until a second click is heard, which indicates the dose has been delivered. Eli Lilly recommends counting slowly to 10 after the first click as a fallback timer if the second click is not audible.",
+      },
+      {
+        rank: 7,
+        name: "Lift the device and inspect",
+        summary:
+          "Pull the device straight up off the skin. Confirm through the inspection window that the gray plunger has descended fully — this is the visual confirmation that the dose was delivered. A small drop of blood at the injection site is expected and not a concern.",
+      },
+      {
+        rank: 8,
+        name: "Dispose of the device",
+        summary:
+          "Drop the entire device into an FDA-cleared sharps container immediately. The Zepbound device is not reusable. Do not recap, do not bend, do not handle the needle.",
+      },
+    ],
+    aftercare: [
+      "Press a clean cotton ball or gauze square to the site for 10–15 seconds if there is any bleeding. Do not rub the site, which can increase bruising.",
+      "Note the date, dose, and injection site (e.g. 'left abdomen, lower-outer') in a dosing log. Rotation is easier with a written record than from memory.",
+      "Return the device's outer carton to a clean, dry storage area. Pen needle covers and the gray base cap go in regular trash; the device itself goes in sharps.",
+    ],
+    commonMistakes: [
+      {
+        mistake: "Injecting before the alcohol dries",
+        correction: "Wait 10–15 seconds after the alcohol swab. Wet alcohol carried into subcutaneous tissue is the most common cause of stinging during a Zepbound injection.",
+      },
+      {
+        mistake: "Lifting the device after the first click",
+        correction: "Hold the device firmly against the skin until the second click. Lifting after the first click can cause a partial dose; the Instructions for Use is explicit that the dose is not complete until the second click sounds.",
+      },
+      {
+        mistake: "Reusing an injection site week after week",
+        correction: "Rotate among abdomen quadrants and the two thighs across consecutive weeks. Repeated injections in the same area increase the risk of lipohypertrophy and injection-site reactions per the Lilly Instructions for Use.",
+      },
+      {
+        mistake: "Storing the device on a kitchen counter for convenience",
+        correction: "Zepbound is stored refrigerated 36–46°F (2–8°C) until use. The Instructions for Use allows a single 21-day window at room temperature up to 86°F (30°C); after that the device must be discarded.",
+      },
+    ],
+    redFlags: [
+      "Severe abdominal pain that does not resolve — pancreatitis is listed in the Zepbound Important Safety Information.",
+      "Difficulty breathing, swelling of the face, throat, or tongue, or hives — signs of serious allergic reaction.",
+      "Severe vomiting or diarrhoea that prevents fluid intake — risk of dehydration and acute kidney injury per the Zepbound prescribing information.",
+      "Severe upper-right abdominal pain, fever, or yellowing of the skin or eyes — possible gallbladder disease.",
+    ],
+    sources: [
+      { label: "Eli Lilly. Zepbound (tirzepatide) Instructions for Use — single-dose pen.", url: "https://uspl.lilly.com/zepbound/zepbound.html" },
+      { label: "Eli Lilly. Zepbound (tirzepatide) Prescribing Information.", url: "https://pi.lilly.com/us/zepbound-uspi.pdf" },
+      { label: "Jastreboff AM et al. 2022. Tirzepatide once weekly for the treatment of obesity (SURMOUNT-1). New England Journal of Medicine 387(3):205–216.", url: "https://pubmed.ncbi.nlm.nih.gov/35658024/" },
+      { label: "FDA. Drugs@FDA — Zepbound labeling.", url: "https://www.accessdata.fda.gov/scripts/cder/daf/" },
+      { label: "FDA. Best Way to Get Rid of Used Needles and Other Sharps.", url: "https://www.fda.gov/medical-devices/consumer-products/best-way-get-rid-used-needles-and-other-sharps" },
+      { label: "CDC. Safe Injection Practices.", url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html" },
+    ],
+    faq: [
+      {
+        q: "Can I store the Zepbound pen in my car or gym bag for the day?",
+        a: "Eli Lilly's Instructions for Use allows a single window of up to 21 days at room temperature, with a maximum of 86°F (30°C). A car interior in summer routinely exceeds 86°F and a single overheated day can require discarding the device. For day-to-day commuting, a Frio cooling wallet or any insulated medication pouch keeps the device within range. See our flying-with-glp-1-medications post for travel-specific storage.",
+      },
+      {
+        q: "What if I do not hear the second click?",
+        a: "Eli Lilly's Instructions for Use addresses this directly: count slowly to 10 after the first click as a fallback timer, then check the inspection window. If the gray plunger has descended fully, the dose was delivered. If the plunger has not moved, the device may not have engaged correctly — call the prescriber's office or Lilly's customer support line printed on the carton before re-attempting.",
+      },
+      {
+        q: "Why does the injection site itch hours after I injected?",
+        a: "Mild itching, redness, or a small raised area at the injection site within the first 24 hours is described in Zepbound's prescribing information as a common injection-site reaction and typically resolves on its own within 1–3 days. A cool compress and avoiding scratching the site help. Persistent itching, spreading rash, or symptoms beyond the injection site are signs to call a clinician — see our injection-site-bruising post for the full self-triage table.",
+      },
+      {
+        q: "Where can I rotate among, exactly?",
+        a: "Eli Lilly's Instructions for Use specifies abdomen (avoiding 2 inches around the navel), front of either thigh, and back of either upper arm (caregiver-only). With a single weekly dose, a four-quadrant abdomen rotation across four weeks plus alternating thighs every fifth and sixth week gives every site a six-week rest before reuse. See our rotating-injection-sites post for the labeled diagram.",
+      },
+      {
+        q: "Do I need to prime the Zepbound pen?",
+        a: "No. Unlike multi-dose Ozempic and Wegovy pens which require a flow-check (priming) step before each new pen, the Zepbound device is a single-dose pen and is delivered already primed. The Instructions for Use does not include a priming step. Each device administers one full dose and is then discarded.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-inject-wegovy",
+    title: "How to Inject Wegovy, Step-Numbered Pen Procedure",
+    h1: "How to inject Wegovy",
+    description:
+      "Wegovy (semaglutide 2.4 mg) pen administration as described in the current Novo Nordisk prescribing information. Step-numbered procedure, supplies checklist, common mistakes. Educational only — not medical advice.",
+    hub: "injection-technique",
+    postType: "cluster",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 11,
+    status: "published",
+    medicalDisclaimer: "required",
+    primaryDrug: "wegovy",
+    totalTimeMinutes: 5,
+    supplies: [
+      "Wegovy single-dose pen (the dose your prescriber wrote — 0.25 / 0.5 / 1.0 / 1.7 / 2.4 mg)",
+      "Alcohol prep pad (70% isopropyl)",
+      "Cotton ball or gauze square",
+      "FDA-cleared sharps container",
+    ],
+    tools: [
+      "Hands washed with soap and water (or alcohol-based hand rub)",
+      "Clean, well-lit work surface",
+    ],
+    preChecklist: [
+      "Wash hands for at least 20 seconds, or use an alcohol-based hand rub.",
+      "Verify the dose strength on the label matches the prescription. Wegovy's five different dose pens are colour-coded; using the wrong colour is the most common pre-injection error.",
+      "Inspect the solution through the inspection window — Novo Nordisk's Instructions for Use describes the solution as clear and colourless. Discard the pen if it is cloudy, discoloured, or contains particles.",
+      "Let the pen warm to room temperature for 30 minutes if it has just come out of the fridge.",
+      "Choose an injection site (abdomen at least 2 inches from the navel, front of either thigh, or back of either upper arm if a caregiver is administering). Rotate weekly.",
+    ],
+    items: [
+      {
+        rank: 1,
+        name: "Inspect the pen",
+        summary:
+          "Confirm the colour-coded label matches the dose strength on the prescription. Novo Nordisk's Instructions for Use specifies that the solution be clear and colourless. A cloudy, discoloured, or particle-containing solution is grounds to discard the pen.",
+      },
+      {
+        rank: 2,
+        name: "Pull off the pen cap",
+        summary:
+          "Pull the cap straight off — do not unscrew it. The cap stores in regular trash, not the sharps container.",
+      },
+      {
+        rank: 3,
+        name: "Clean the injection site",
+        summary:
+          "Swab the chosen site with the alcohol prep pad and let the alcohol air-dry for at least 10–15 seconds. Wet alcohol carried into subcutaneous tissue is the most common cause of stinging.",
+      },
+      {
+        rank: 4,
+        name: "Press the pen against the skin",
+        summary:
+          "Hold the pen flat with the yellow needle guard against the chosen site at a 90-degree angle. Novo Nordisk's procedure describes pressing the pen down firmly so the yellow safety guard retracts and the dose button is unlocked. The hidden needle does not extend until the dose button is pressed.",
+      },
+      {
+        rank: 5,
+        name: "Press and hold the dose button",
+        summary:
+          "Press the green dose button on top of the pen. The Instructions for Use specifies holding the button down throughout the dose delivery. A clicking sound indicates the medication is being delivered.",
+      },
+      {
+        rank: 6,
+        name: "Hold for at least 6 seconds",
+        summary:
+          "Continue holding the button and keep the pen pressed firmly against the skin for at least 6 seconds after the click stops. The Wegovy Instructions for Use is explicit that lifting the pen before 6 seconds can cause an incomplete dose.",
+      },
+      {
+        rank: 7,
+        name: "Lift the pen and confirm",
+        summary:
+          "Pull the pen straight up off the skin. The yellow needle guard automatically extends to cover the needle. Confirm through the inspection window that the dose indicator has reached the 0 mg position, which signals the dose is complete.",
+      },
+      {
+        rank: 8,
+        name: "Dispose of the pen",
+        summary:
+          "Drop the entire used pen into an FDA-cleared sharps container immediately. The Wegovy pen is single-use and is not reusable. Do not recap and do not handle the needle directly.",
+      },
+    ],
+    aftercare: [
+      "Press a clean cotton ball or gauze square to the site for 10–15 seconds if any bleeding occurs.",
+      "Log the date, dose, and injection site for rotation tracking.",
+      "Return the carton to its storage location at room temperature (≤ 86°F / 30°C) for up to 28 days from first use, or to the fridge if continuing refrigerated storage.",
+    ],
+    commonMistakes: [
+      {
+        mistake: "Lifting the pen before 6 seconds",
+        correction: "Hold the pen pressed against the skin and the dose button held down for at least 6 seconds after the clicking stops. Novo Nordisk's Instructions for Use is explicit that early lifting causes incomplete dosing.",
+      },
+      {
+        mistake: "Using the wrong dose pen during titration",
+        correction: "Wegovy ships five colour-coded dose strengths (0.25, 0.5, 1.0, 1.7, 2.4 mg). During the four-week titration period, double-check the colour against the prescription before opening the carton. Mixing up pens is the most-reported pre-injection error in the published patient-experience literature.",
+      },
+      {
+        mistake: "Storing pens in the freezer compartment",
+        correction: "Wegovy is refrigerated 36–46°F (2–8°C). Frozen Wegovy must be discarded — the protein structure of semaglutide is altered by freezing per the prescribing information.",
+      },
+      {
+        mistake: "Same-quadrant injections every week",
+        correction: "Rotate across the four abdomen quadrants and the two thighs. Repeated same-site injections increase the risk of lipohypertrophy per Novo Nordisk's Instructions for Use.",
+      },
+    ],
+    redFlags: [
+      "Severe upper abdominal pain (possibly radiating to the back) — pancreatitis is in the Wegovy boxed warning context.",
+      "Swelling of the face, lips, tongue, or throat, or difficulty breathing — possible serious allergic reaction.",
+      "Severe right-upper-quadrant pain with fever, nausea, or yellowing skin — possible gallbladder disease.",
+      "Persistent vomiting or diarrhoea preventing fluid intake — risk of acute kidney injury.",
+      "Vision changes (blurry vision, vision loss) in adults with type 2 diabetes — diabetic retinopathy is in the prescribing information warnings.",
+    ],
+    sources: [
+      { label: "Novo Nordisk. Wegovy (semaglutide) Instructions for Use — single-dose pen.", url: "https://www.novo-pi.com/wegovy.pdf" },
+      { label: "Novo Nordisk. Wegovy (semaglutide) Prescribing Information.", url: "https://www.novo-pi.com/wegovy.pdf" },
+      { label: "Wilding JPH et al. 2021. Once-weekly semaglutide in adults with overweight or obesity (STEP-1). New England Journal of Medicine 384(11):989–1002.", url: "https://pubmed.ncbi.nlm.nih.gov/33567185/" },
+      { label: "Lincoff AM et al. 2023. Semaglutide and cardiovascular outcomes in obesity without diabetes (SELECT). New England Journal of Medicine 389(24):2221–2232.", url: "https://pubmed.ncbi.nlm.nih.gov/37952131/" },
+      { label: "FDA. Drugs@FDA — Wegovy labeling.", url: "https://www.accessdata.fda.gov/scripts/cder/daf/" },
+      { label: "FDA. Best Way to Get Rid of Used Needles and Other Sharps.", url: "https://www.fda.gov/medical-devices/consumer-products/best-way-get-rid-used-needles-and-other-sharps" },
+    ],
+    faq: [
+      {
+        q: "Why does Wegovy require holding the pen for 6 seconds when Ozempic does not?",
+        a: "The two pens are different mechanical designs even though the molecule is identical. The Ozempic pen is multi-dose with a manual dial and a separate needle; the Wegovy pen is single-dose with a hidden needle and a fixed-volume cartridge. The 6-second hold on Wegovy is what allows the entire pre-set dose to leave the cartridge — the Instructions for Use is explicit that early lifting causes incomplete dosing.",
+      },
+      {
+        q: "Can I split a Wegovy 2.4 mg pen into two doses?",
+        a: "No. The Wegovy pen is engineered as a single-dose, single-use device. The Instructions for Use does not support splitting, and the pen mechanically cannot be re-engaged after the first injection. Patients on a lower maintenance dose use the corresponding lower-strength colour-coded pen, not a split of the 2.4 mg pen.",
+      },
+      {
+        q: "What if I see a small amount of liquid on the needle after injecting?",
+        a: "Novo Nordisk's Instructions for Use describes a small drop on the needle tip after injection as expected. The dose was still delivered — the displayed dose indicator at 0 mg is the authoritative confirmation, not the absence of liquid on the needle.",
+      },
+      {
+        q: "Where do I rotate among?",
+        a: "Wegovy's Instructions for Use specifies abdomen (avoiding 2 inches around the navel), front of either thigh, and back of either upper arm if a caregiver is administering. With weekly dosing, a four-quadrant abdomen rotation gives each site three weeks of rest before reuse. See our rotating-injection-sites post for the diagram.",
+      },
+      {
+        q: "How long can the pen sit out of the fridge once I have started using it?",
+        a: "Novo Nordisk's Instructions for Use allows up to 28 days at room temperature (≤ 86°F / 30°C) once the pen is removed from refrigeration. After 28 days, even if the pen still contains medication, it must be discarded. Store the pen with the cap on between doses.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-inject-mounjaro",
+    title: "How to Inject Mounjaro, Step-Numbered Pen Procedure",
+    h1: "How to inject Mounjaro",
+    description:
+      "Mounjaro (tirzepatide) single-dose pen administration as described in the current Eli Lilly prescribing information. Step-numbered procedure, supplies checklist, common mistakes. Educational only — not medical advice.",
+    hub: "injection-technique",
+    postType: "cluster",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 11,
+    status: "published",
+    medicalDisclaimer: "required",
+    primaryDrug: "mounjaro",
+    totalTimeMinutes: 6,
+    supplies: [
+      "Mounjaro single-dose pen (the dose your prescriber wrote — 2.5 / 5 / 7.5 / 10 / 12.5 / 15 mg)",
+      "Alcohol prep pad (70% isopropyl)",
+      "Cotton ball or gauze square",
+      "FDA-cleared sharps container",
+    ],
+    tools: [
+      "Hands washed with soap and water (or alcohol-based hand rub)",
+      "Clean, well-lit work surface",
+    ],
+    preChecklist: [
+      "Wash hands for at least 20 seconds, or use an alcohol-based hand rub.",
+      "Verify the dose on the carton label matches the prescription.",
+      "Inspect the solution through the inspection window — Eli Lilly's Instructions for Use describes the Mounjaro solution as clear and colourless to slightly yellow. A cloudy or discoloured solution is grounds to discard.",
+      "Allow 30 minutes at room temperature if the pen was just removed from the fridge.",
+      "Choose an injection site (abdomen at least 2 inches from the navel, front of either thigh, or back of either upper arm if a caregiver is administering).",
+    ],
+    items: [
+      {
+        rank: 1,
+        name: "Inspect the pen",
+        summary:
+          "Confirm dose match on the label. The Lilly Instructions for Use specifies that the Mounjaro solution be clear and colourless to slightly yellow. Cloudy, discoloured, or particle-containing solution is discarded.",
+      },
+      {
+        rank: 2,
+        name: "Pull off the gray base cap",
+        summary:
+          "Pull the gray cap straight off the bottom of the pen. The cap is discarded in regular trash, not the sharps container.",
+      },
+      {
+        rank: 3,
+        name: "Clean the injection site",
+        summary:
+          "Swab with the alcohol prep pad and let the alcohol air-dry for at least 10–15 seconds before injecting.",
+      },
+      {
+        rank: 4,
+        name: "Place the pen against the skin",
+        summary:
+          "Hold the pen flat against the skin with the clear base flush against the chosen site at a 90-degree angle. The hidden needle does not extend until the dose button is pressed.",
+      },
+      {
+        rank: 5,
+        name: "Press the purple injection button",
+        summary:
+          "Press the purple button at the top of the pen. The first click signals the injection has started. Continue holding the pen firmly against the skin.",
+      },
+      {
+        rank: 6,
+        name: "Wait for the second click",
+        summary:
+          "Eli Lilly's Instructions for Use specifies holding the pen in place until a second click is heard, which indicates the dose has been delivered. Lilly recommends counting slowly to 10 after the first click as a fallback timer.",
+      },
+      {
+        rank: 7,
+        name: "Lift the pen and confirm",
+        summary:
+          "Pull the pen straight up off the skin. Confirm through the inspection window that the gray plunger has descended fully — this is the visual confirmation that the dose was delivered.",
+      },
+      {
+        rank: 8,
+        name: "Dispose of the pen",
+        summary:
+          "Drop the entire pen into an FDA-cleared sharps container. The Mounjaro pen is single-use. Do not recap or handle the needle.",
+      },
+    ],
+    aftercare: [
+      "Press a cotton ball or gauze square to the site for 10–15 seconds if any bleeding.",
+      "Log date, dose, and injection site.",
+      "Return the carton to refrigerated storage 36–46°F (2–8°C), or hold at room temperature ≤ 86°F (30°C) for up to 21 days.",
+    ],
+    commonMistakes: [
+      {
+        mistake: "Treating Mounjaro and Zepbound as different procedures",
+        correction: "The two pens are mechanically identical. The molecule is identical. Only the indication and the carton labeling differ. The same step-numbered procedure applies to both. Where Mounjaro is prescribed for type-2 diabetes, the timing and dose-titration schedule may differ from Zepbound's chronic-weight-management label.",
+      },
+      {
+        mistake: "Lifting the pen between the first and second click",
+        correction: "Hold the pen against the skin until the second click. Lifting after the first click causes a partial dose.",
+      },
+      {
+        mistake: "Refrigerating the pen after first use without checking the date",
+        correction: "Mounjaro can be returned to the fridge after first use, but must be discarded 21 days from the day it first came out of refrigeration regardless of how it was stored after. Track the day of first use on the carton.",
+      },
+      {
+        mistake: "Skipping the alcohol-dry step under time pressure",
+        correction: "10–15 seconds for the alcohol to evaporate is non-optional. Wet alcohol carried into subcutaneous tissue stings significantly more than the needle itself.",
+      },
+    ],
+    redFlags: [
+      "Severe abdominal pain that does not resolve — pancreatitis warning in the Mounjaro prescribing information.",
+      "Swelling of face, throat, or tongue, or difficulty breathing — serious allergic reaction.",
+      "Severe upper-right abdominal pain, fever, or yellowing of skin or eyes — gallbladder disease.",
+      "Severe vomiting or diarrhoea preventing fluid intake — acute kidney injury risk.",
+      "Vision changes in adults with type-2 diabetes — diabetic retinopathy concern.",
+    ],
+    sources: [
+      { label: "Eli Lilly. Mounjaro (tirzepatide) Instructions for Use — single-dose pen.", url: "https://uspl.lilly.com/mounjaro/mounjaro.html" },
+      { label: "Eli Lilly. Mounjaro (tirzepatide) Prescribing Information.", url: "https://pi.lilly.com/us/mounjaro-uspi.pdf" },
+      { label: "Frias JP et al. 2021. Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes (SURPASS-2). New England Journal of Medicine 385(6):503–515.", url: "https://pubmed.ncbi.nlm.nih.gov/34170647/" },
+      { label: "FDA. Drugs@FDA — Mounjaro labeling.", url: "https://www.accessdata.fda.gov/scripts/cder/daf/" },
+      { label: "FDA. Best Way to Get Rid of Used Needles and Other Sharps.", url: "https://www.fda.gov/medical-devices/consumer-products/best-way-get-rid-used-needles-and-other-sharps" },
+      { label: "CDC. Safe Injection Practices.", url: "https://www.cdc.gov/injection-safety/hcp/clinical-safety/index.html" },
+    ],
+    faq: [
+      {
+        q: "Is Mounjaro the same procedure as Zepbound?",
+        a: "Yes. The two products use the same single-dose hidden-needle pen, the same molecule (tirzepatide), and the same step-numbered procedure. The differences are the FDA-approved indication (Mounjaro for type-2 diabetes; Zepbound for chronic weight management) and the dose-titration cadence the prescriber selects. The pen mechanics, the inspection step, the press-and-wait-for-second-click sequence, and the disposal procedure are identical across the two products.",
+      },
+      {
+        q: "Can I use a Mounjaro pen prescribed in 2024 if it has been refrigerated continuously?",
+        a: "Check the expiration date printed on the carton and the pen. Mounjaro's prescribing information specifies that the device be used by the printed expiration date when stored continuously refrigerated. An expired pen is discarded regardless of how it has been stored. The 21-day room-temperature window does not extend the printed expiration.",
+      },
+      {
+        q: "What if I miss a Mounjaro dose?",
+        a: "Eli Lilly's prescribing information directs that a missed dose be taken within 4 days (96 hours). After 4 days, the missed dose is skipped and the next dose taken on the regular schedule. Doubling up to make up a missed dose is not supported. For a full schedule reset, contact the prescriber's office.",
+      },
+      {
+        q: "Why does the Mounjaro pen sting more than my insulin pen?",
+        a: "Two reasons. Mounjaro is injected weekly at a higher delivered volume than most insulin pens, and the solution may be slightly cooler if the 30-minute room-temperature window was skipped. Allowing the pen to warm and ensuring the alcohol prep pad has dried completely before the needle goes in addresses both. If injection-site pain persists or worsens across multiple doses, raise it with the prescriber.",
+      },
+      {
+        q: "Where do I rotate among?",
+        a: "Eli Lilly's Instructions for Use specifies abdomen (avoiding 2 inches around the navel), front of either thigh, and back of either upper arm if a caregiver administers. Weekly rotation across abdomen quadrants gives each site three weeks of rest. See our rotating-injection-sites post for the labeled site-rotation diagram.",
+      },
+    ],
+  },
+  {
+    slug: "flying-with-glp-1-medications",
+    title: "Flying With GLP-1 Medications, the Travel Storage Reference",
+    h1: "Flying with GLP-1 medications",
+    description:
+      "Travel storage and TSA / EU airport security guidance for Ozempic, Wegovy, Mounjaro, Zepbound, and Saxenda. Cooling-bag specs, in-flight handling, time-out-of-fridge windows. Educational only — not medical advice.",
+    hub: "supplies-storage",
+    postType: "cluster",
+    publishedAt: "2026-04-29",
+    updatedAt: "2026-04-29",
+    readingTime: 10,
+    status: "published",
+    medicalDisclaimer: "required",
+    items: [
+      {
+        rank: 1,
+        name: "Carry-on, never checked",
+        summary:
+          "TSA and EU equivalent agencies (CAA, BfArM-aligned border guidance) classify injectable medications as personal medical supplies that travel in carry-on luggage. Checked-bag holds routinely drop below freezing during cruise and rise above 30°C on tarmac waiting; both extremes are outside the labeled storage window for every GLP-1 in the class. Personal carry-on only.",
+      },
+      {
+        rank: 2,
+        name: "Time-out-of-fridge window",
+        summary:
+          "All current GLP-1 prescribing information allows a defined room-temperature window once the pen leaves refrigeration. Wegovy: up to 28 days at ≤ 30°C from first use. Ozempic: up to 56 days from first use. Mounjaro and Zepbound: up to 21 days from first use. Saxenda (liraglutide): up to 30 days from first use. Note: each pen's window starts when it first leaves refrigeration, not when each individual dose is taken. A 14-hour international flight is well inside every window.",
+      },
+      {
+        rank: 3,
+        name: "Cooling pouch is a hedge, not a requirement",
+        summary:
+          "For flights inside the time-out-of-fridge window, a cooling pouch (Frio, MedAngel, or any insulated medication wallet) is optional. Pouches matter for connecting itineraries with long ground time in tropical climates, multi-day road trips through hot regions, or when the patient prefers to keep the pen cooler than 30°C. Frio's evaporative pouch keeps contents at approximately 18–26°C for 45+ hours when re-saturated; insulated medical wallets with a single ice pack hold 4–8°C for 6–10 hours.",
+      },
+      {
+        rank: 4,
+        name: "TSA security screening",
+        summary:
+          "Pens are X-ray screened with the rest of carry-on. There is no FAA or TSA requirement to declare GLP-1 pens at the security checkpoint, but declaring them up front reduces the chance of secondary screening. Carry the pen in its original carton if possible — the printed prescription label and pharmacy sticker are the simplest proof of legitimacy if a screening officer asks.",
+      },
+      {
+        rank: 5,
+        name: "EU and UK airport security",
+        summary:
+          "EU and UK security follows the same general framework — injectable prescriptions are exempt from the 100ml liquid restriction when carried with a pharmacy label. UK regulator guidance specifies a doctor's letter for over-the-100ml medications; for a Wegovy or Ozempic pen at standard 1.5–3 mL volumes, the pen itself is well under 100ml and a letter is not required. Some EU airports (notably ZRH, MUC) request a copy of the prescription on entry to certain destinations — carry a printed PDF or photo of the original prescription.",
+      },
+      {
+        rank: 6,
+        name: "International prescriptions",
+        summary:
+          "GLP-1 medications are tightly regulated abroad. Sweden's Läkemedelsverket restricts the import of compounded semaglutide as personal medication for a foreign visitor. Saudi Arabia, UAE, Singapore, and Japan require advance import permits for prescription injectables — a copy of the prescription plus the prescribing physician's contact details is sufficient for most personal-use scenarios but border officers may ask. Travel agency or embassy guidance is the canonical source per destination.",
+      },
+      {
+        rank: 7,
+        name: "Time-zone handling",
+        summary:
+          "GLP-1 dose schedules are weekly. Crossing time zones does not require a dose adjustment — the next dose is still due 7 days after the previous one in the patient's local time after landing. The Novo Nordisk and Lilly prescribing information both specify that the day of the week can be changed if at least 48 hours separate the previous and new doses. For a long-haul east- or west-bound trip, the patient picks the day at destination that fits their lifestyle and stays on it.",
+      },
+      {
+        rank: 8,
+        name: "Hotel and arrival storage",
+        summary:
+          "Most hotel mini-fridges run between 2–8°C, which sits inside the labeled refrigerated range. Confirm the mini-fridge is plugged in and operating on arrival; older fridges left unplugged for energy savings warm up over the first day. If the hotel does not provide a mini-fridge, ask reception — many properties keep a small clinical fridge at the front desk for guest medications.",
+      },
+    ],
+    sources: [
+      { label: "Novo Nordisk. Wegovy (semaglutide) Prescribing Information, Storage and Handling section.", url: "https://www.novo-pi.com/wegovy.pdf" },
+      { label: "Novo Nordisk. Ozempic (semaglutide) Prescribing Information, Storage and Handling section.", url: "https://www.novo-pi.com/ozempic.pdf" },
+      { label: "Eli Lilly. Mounjaro and Zepbound Prescribing Information, Storage and Handling sections.", url: "https://pi.lilly.com/us/mounjaro-uspi.pdf" },
+      { label: "Novo Nordisk. Saxenda (liraglutide) Prescribing Information, Storage and Handling section.", url: "https://www.novo-pi.com/saxenda.pdf" },
+      { label: "TSA. What Can I Bring? — Medication.", url: "https://www.tsa.gov/travel/security-screening/whatcanibring/items/medication" },
+      { label: "FDA. Storage and handling of insulin and similar injectable medications.", url: "https://www.fda.gov/drugs/emergency-preparedness-drugs/safe-drug-use-after-natural-disaster" },
+      { label: "Läkemedelsverket. Personal import of medicinal products into Sweden.", url: "https://www.lakemedelsverket.se/en/permission-approval-and-control/personal-import-of-medicinal-products" },
+      { label: "UK CAA. Travelling with medication.", url: "https://www.caa.co.uk/passengers/before-you-fly/baggage/medication/" },
+    ],
+    faq: [
+      {
+        q: "Do I need a doctor's letter to fly with my Wegovy pen?",
+        a: "For most domestic and EU travel, no. The pen's pharmacy label is sufficient documentation. A doctor's letter is recommended for international travel to destinations with stricter import controls (Sweden, Saudi Arabia, UAE, Singapore, Japan), or when the patient is travelling with a multi-month supply. The letter restates the prescription, confirms personal use, and gives the prescribing physician's contact for verification.",
+      },
+      {
+        q: "What happens if my pen is left out of the fridge for an entire day at room temperature?",
+        a: "If room temperature stays at or below 30°C (86°F), the pen remains in spec for its labeled time-out-of-fridge window: 28 days for Wegovy, 56 days for Ozempic, 21 days for Mounjaro and Zepbound, 30 days for Saxenda. A single day at 25–28°C is well inside all of these windows. Heat exposure above 30°C — a car in summer sun, a hotel room with broken air conditioning — is the variable that actually pushes a pen out of spec. For sustained heat, discard.",
+      },
+      {
+        q: "Can I freeze my pen in carry-on if the cabin gets cold?",
+        a: "Cabin temperatures stay above 18°C (65°F) on every commercial flight; a frozen pen in the cabin is essentially impossible. The freezing concern applies only to checked-bag holds at altitude, which is why GLP-1 pens travel in carry-on. If a pen has frozen for any reason — accidental fridge-freezer migration, checked-bag descent through cold air — it must be discarded. Both Novo Nordisk and Lilly are explicit that the protein structure of semaglutide and tirzepatide is altered by freezing.",
+      },
+      {
+        q: "Frio versus single ice pack — does it matter for short flights?",
+        a: "For flights under 6 hours, a single freezer-frozen ice pack in an insulated medication wallet keeps the pen between 4–8°C. For flights over 8 hours or itineraries with significant ground time in heat, the Frio evaporative pouch holds 18–26°C for 45+ hours when re-saturated. Frio does not require a fridge or freezer at the destination, which is its primary advantage on multi-stop trips. Both options keep the pen well inside the labeled storage window for the duration of any normal trip.",
+      },
+      {
+        q: "Do I have to take my dose on the same day of the week when I cross time zones?",
+        a: "No. Both Novo Nordisk's and Eli Lilly's prescribing information allow the day of the week to be changed as long as at least 48 hours separate the previous and new doses. After a long-haul flight, pick the day at destination that fits the patient's life going forward and stay on it. The prior schedule does not need to be preserved.",
+      },
+      {
+        q: "What if airport security wants to inspect the pen physically?",
+        a: "Pens are inspected visually, not opened, in standard procedure. Cooperate, present the pen in its original carton with the pharmacy label visible, and point to the prescription label if asked. The carton and pen are not opened, the seal is not broken. If a security officer requests something beyond visual inspection, ask for a supervisor — the standard global procedure does not require breaking a sealed pharmaceutical package for a personal medication.",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined { return posts.find((p) => p.slug === slug); }
